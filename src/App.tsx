@@ -413,7 +413,8 @@ function BattleView({roster,units,details,selectedDetachments,enhancements,strat
         const enhancement=(enhancements||[]).find(candidate=>candidate.name===entry.enhancement);
         const update=(change:Partial<typeof state>)=>patch({units:{...battle.units,[entry.instanceId]:{...state,...change}}});
         const setRemaining=(value:number)=>update(stateForRemainingWounds(state,entry.models,wounds,value));
-        return <article className={`card battleUnit ${state.destroyed?'destroyed':''}`} key={entry.instanceId}>
+        return <details className={`card battleUnit ${state.destroyed?'destroyed':''}`} key={entry.instanceId} open>
+          <summary><strong>{unit.name}</strong> · {modelsRemaining}/{entry.models} models · {woundsRemaining}/{maximumWounds} Wounds</summary>
           <div className='row'>
             <div><h3>{unit.name}</h3><p>{modelsRemaining}/{entry.models} models · {wounds} Wound{wounds===1?'':'s'} each</p></div>
             <label className='checkLabel'><input type='checkbox' checked={woundsRemaining===0} onChange={event=>setRemaining(event.target.checked?0:Math.min(wounds,maximumWounds))}/> Destroyed</label>
@@ -426,10 +427,10 @@ function BattleView({roster,units,details,selectedDetachments,enhancements,strat
           </div>
           <UnitDetails data={details.get(unit.id)} phase={battle.phase}/>
           <button className='reanimate compact' disabled={woundsRemaining>=maximumWounds} onClick={()=>setRemaining(woundsRemaining+wounds)}><Plus size={13}/> Reanimation Protocols: return 1 model</button>
-        </article>;
+        </details>;
       })}
     </div>
-    <label className='notes panel'>Battle notes<textarea value={battle.notes} onChange={event=>patch({notes:event.target.value})} placeholder='Reserves, once-per-battle abilities, target priorities…'/></label>
+    <label className='notes panel'>Battle notes<textarea value={battle.notes} onChange={event=>patch({notes:event.value})} placeholder='Reserves, once-per-battle abilities, target priorities…'/></label>
   </>;
 }
 
