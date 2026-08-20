@@ -1,5 +1,5 @@
-const CACHE_NAME = 'field-companion-shell-v4';
-const APP_SHELL = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png', './data/version.json'];
+const CACHE_NAME = 'field-companion-shell-v5';
+const APP_SHELL = ['./', './index.html', './manifest.webmanifest', './necron-ankh.svg', './data/version.json'];
 
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(APP_SHELL)));
