@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Necron dynasty ankh">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="38%" r="70%"><stop stop-color="#172c22"/><stop offset="1" stop-color="#070b09"/></radialGradient>
+    <linearGradient id="metal" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#e3ffe7"/><stop offset=".25" stop-color="#76ff9d"/><stop offset=".7" stop-color="#1ca952"/><stop offset="1" stop-color="#0c5428"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="512" height="512" rx="104" fill="url(#bg)"/>
+  <path d="M256 65 329 138 300 218h63l-30 52-50 27v107l-27 42-27-42V297l-50-27-30-52h63l-29-80z" fill="#0a2816" stroke="url(#metal)" stroke-width="18" stroke-linejoin="round"/>
+  <path d="M256 98 302 144l-22 58h-48l-22-58zM206 237h100l-18 31-32 17-32-17z" fill="url(#metal)" filter="url(#glow)"/>
+  <path d="M256 116v76M256 303v94M214 352h84" stroke="#bbffcc" stroke-width="12" stroke-linecap="round" opacity=".88"/>
+  <circle cx="256" cy="155" r="12" fill="#effff2"/>
+</svg>
