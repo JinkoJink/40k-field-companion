@@ -11,6 +11,15 @@ on:
       - 'package.json'
       - 'package-lock.json'
       - '.github/workflows/sync-necron-11e-data.yml'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'scripts/build-necron-data.mjs'
+      - 'scripts/validate-packages.mjs'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/sync-necron-11e-data.yml'
   workflow_dispatch:
 
 permissions:
@@ -22,12 +31,12 @@ concurrency:
 
 jobs:
   sync:
-    if: ${{ !contains(github.event.head_commit.message || '', '[data-sync]') }}
+    if: ${{ github.event_name == 'pull_request' || !contains(github.event.head_commit.message || '', '[data-sync]') }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: ${{ github.ref_name }}
+          ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.ref_name }}
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
@@ -38,6 +47,7 @@ jobs:
       - name: Validate scope and package integrity
         run: npm run validate:data
       - name: Commit generated offline packages
+        if: ${{ github.event_name != 'pull_request' }}
         shell: bash
         run: |
           if git diff --quiet -- public/data; then
