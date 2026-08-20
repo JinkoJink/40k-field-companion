@@ -2,7 +2,29 @@ export type Phase = 'command'|'movement'|'shooting'|'charge'|'fight';
 export type Pricing = {models:number;points:number};
 export type PriceTier = {range?:string;label?:string;costs:Pricing[]};
 export type Constraint = {type:'min'|'max'|string;value:number;scope?:string;childId?:string};
-export type Profile = {id?:string;name:string;type?:string;characteristics:Record<string,string>};
+
+export type RuleSource = 'bsdata'|'40kdc'|'faction-pack'|'official-app-transcription'|'derived';
+export type RuleMeta = {
+  source?:RuleSource;
+  quality?:'official'|'structured'|'provisional'|'derived';
+  phase?:Phase|'any';
+  phases?:(Phase|'any')[];
+  playerTurn?:'your-turn'|'opponent-turn'|'either'|string;
+  behavior?:string;
+  scope?:unknown;
+  usage?:unknown;
+  effect?:unknown;
+  gameVersion?:{edition?:string;dataslate?:string};
+};
+
+export type Profile = {
+  id?:string;
+  name:string;
+  type?:string;
+  characteristics:Record<string,string>;
+  description?:string;
+  rule?:RuleMeta;
+};
 
 export type OptionNode = {
   id:string;
@@ -22,6 +44,14 @@ export type Enhancement = {
   points:number;
   description?:string;
   supportTo?:string[];
+  detachmentId?:string;
+  keywordRestrictions?:string[];
+  allowedHosts?:string[];
+  upgrade?:boolean;
+  maxTargets?:number;
+  abilityId?:string|null;
+  gameVersion?:{edition?:string;dataslate?:string};
+  rule?:RuleMeta;
 };
 
 export type Detachment = {
@@ -30,9 +60,19 @@ export type Detachment = {
   dp:number;
   objective:string;
   unique?:string;
+  tags?:string[];
   enhancements?:Enhancement[];
+  stratagemIds?:string[];
   ruleName?:string;
   summary?:string;
+  ruleText?:string;
+};
+
+export type TargetRestrictions = {
+  requiredKeywords?:string[];
+  anyKeywords?:string[];
+  excludedKeywords?:string[];
+  unitNames?:string[];
 };
 
 export type Stratagem = {
@@ -40,9 +80,17 @@ export type Stratagem = {
   name:string;
   phases:('command'|'movement'|'shooting'|'charge'|'fight'|'any')[];
   cp?:number;
+  type?:string;
   timing?:string;
+  when?:string;
+  target?:string;
+  effect?:string;
   description?:string;
+  playerTurn?:string;
   detachmentId?:string;
+  targetRestrictions?:TargetRestrictions|null;
+  restrictionConfidence?:'exact'|'structured'|'text-derived'|'unknown';
+  gameVersion?:{edition?:string;dataslate?:string};
 };
 
 export type UnitIndex = {
@@ -56,6 +104,7 @@ export type UnitIndex = {
   attachTo?:string[];
   weaponCount:number;
   abilityCount:number;
+  sourceVersion?:{edition?:string;dataslate?:string};
 };
 
 export type UnitDetail = UnitIndex & {
@@ -105,17 +154,8 @@ export type BattleUnitState = {
   woundsPerModel?:number;
 };
 
-export type RoundScore = {
-  primary:number;
-  secondary:number;
-};
-
-export type ObjectiveState = {
-  id:string;
-  name:string;
-  controller:'you'|'opponent'|'contested';
-};
-
+export type RoundScore = {primary:number;secondary:number};
+export type ObjectiveState = {id:string;name:string;controller:'you'|'opponent'|'contested'};
 export type BattleState = {
   active:boolean;
   round:number;
@@ -128,8 +168,4 @@ export type BattleState = {
 };
 
 export type PackageManifest={file:string;hash:string};
-export type RulesManifest={
-  datasetVersion:string;
-  schemaVersion:number;
-  factions:{necrons:{packages:Record<string,PackageManifest>}};
-};
+export type RulesManifest={datasetVersion:string;schemaVersion:number;factions:{necrons:{packages:Record<string,PackageManifest>}}};
