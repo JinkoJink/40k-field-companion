@@ -5,7 +5,10 @@ import {createHash} from 'node:crypto';
 import YAML from 'yaml';
 
 const BS_URL='https://raw.githubusercontent.com/BSData/wh40k-11e/main/Necrons.json';
+const CORE_URL='https://raw.githubusercontent.com/BSData/wh40k-11e/main/Warhammer%2040,000.json';
 const MFM_URL='https://raw.githubusercontent.com/BSData/wh40k-11e-mfm/main/data/necrons.yaml';
+const DC_BASE='https://raw.githubusercontent.com/wn-mitch/40kdc-data/main/data/core/necrons';
+const DC_FILES=['units','weapons','abilities','detachments','enhancements','stratagems','unit-compositions','leader-attachments','wargear','wargear-options','factions'];
 const OUT=new URL('../public/data/necrons/',import.meta.url);
 const version=process.env.DATASET_VERSION || new Date().toISOString().slice(0,10)+'.1';
 const key=value=>String(value).toLowerCase().replace(/[’‘]/g,"'").replace(/\[legends\]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
@@ -13,6 +16,8 @@ const unitId=name=>'necrons:unit:'+key(name);
 const sha=value=>createHash('sha256').update(value).digest('hex');
 const textMap=chars=>Object.fromEntries((chars||[]).map(c=>[c.name||'',String(c.$text??'')]));
 const profile=(raw, owner, type, index)=>({id:`${owner}:${type}:${key(raw.name)}:${index}`,name:raw.name,type:raw.typeName,characteristics:textMap(raw.characteristics)});
+async function getJson(url){const response=await fetch(url);if(!response.ok)throw new Error(`HTTP ${response.status} for ${url}`);return response.json();}
+async function getText(url){const response=await fetch(url);if(!response.ok)throw new Error(`HTTP ${response.status} for ${url}`);return response.text();}
 function walk(node,out){
   for(const item of node.profiles||[])out.push(item);
   for(const item of node.selectionEntries||[])walk(item,out);
@@ -36,9 +41,25 @@ const summaries={
   'Pantheon of Woe':['Cosmic Distortion','Codex rules required.'],
   'Hand Of The Dynasty':['Dynastic Advance','Codex rules required.'],
 };
-const bs=await (await fetch(BS_URL)).json();
-const mfm=YAML.parse(await (await fetch(MFM_URL)).text());
+
+const [bs,core,mfmText,dcEntries]=await Promise.all([
+  getJson(BS_URL),
+  getJson(CORE_URL),
+  getText(MFM_URL),
+  Promise.all(DC_FILES.map(async name=>[name,await getJson(`${DC_BASE}/${name}.json`)])),
+]);
+const mfm=YAML.parse(mfmText);
+const dc=Object.fromEntries(dcEntries);
+
+// Hard scope guard: this publisher may contain only Necrons plus shared 11e rules.
+const dcUnits=(dc.units||[]).filter(unit=>unit.faction_id==='necrons'&&unit.game_version?.edition==='11th');
+if(!dcUnits.length)throw new Error('40kdc returned no 11th-edition Necron units.');
+if(dcUnits.length!==(dc.units||[]).length)console.warn(`40kdc: filtered ${(dc.units||[]).length-dcUnits.length} non-Necron/non-11e unit records.`);
+dc.units=dcUnits;
+
 const mfmByName=new Map((mfm.units||[]).map(x=>[key(x.name),x]));
+const dcDetachByName=new Map((dc.detachments||[]).map(x=>[key(x.name),x]));
+const dcEnhByName=new Map((dc.enhancements||[]).map(x=>[key(x.name),x]));
 const units=[],profiles=[],weapons=[],abilities=[],keywords=[],leaders=[];
 for(const entry of (bs.catalogue?.sharedSelectionEntries||[])){
   const categories=(entry.categoryLinks||[]).map(x=>x.name).filter(Boolean);
@@ -55,16 +76,59 @@ for(const entry of (bs.catalogue?.sharedSelectionEntries||[])){
   keywords.push(...categories.map(name=>({id:`necrons:keyword:${key(name)}:${key(entry.name)}`,keywordId:`necrons:keyword:${key(name)}`,name,unitId:id})));
   if(current?.attachTo?.length)leaders.push({id:`necrons:leader:${key(entry.name)}`,leaderUnitId:id,targetNames:current.attachTo,targetUnitIds:current.attachTo.map(unitId)});
 }
-const detachmentRows=(mfm.detachments||[]).map(d=>{const [ruleName,summary]=summaries[d.name]||['Detachment rule','Codex rules required.'];return {...d,id:`necrons:detachment:${key(d.name)}`,ruleName,summary};});
-const enhancements=detachmentRows.flatMap(d=>(d.enhancements||[]).map(e=>({...e,id:`${d.id}:enhancement:${key(e.name)}`,detachmentId:d.id})));
+
+const detachmentRows=(mfm.detachments||[]).map(d=>{
+  const [ruleName,summary]=summaries[d.name]||['Detachment rule','Codex rules required.'];
+  const supplemental=dcDetachByName.get(key(d.name));
+  return {...d,...(supplemental?{community11e:supplemental}:{}),id:`necrons:detachment:${key(d.name)}`,ruleName,summary};
+});
+const enhancements=detachmentRows.flatMap(d=>(d.enhancements||[]).map(e=>{
+  const supplemental=dcEnhByName.get(key(e.name));
+  return {...e,...(supplemental?{community11e:supplemental}:{}),id:`${d.id}:enhancement:${key(e.name)}`,detachmentId:d.id};
+}));
 const points=units.map(unit=>{const m=mfmByName.get(key(unit.name));return {id:`necrons:points:${key(unit.name)}`,unitId:unit.id,pricing:m?.pricing||null,role:m?.role||null};});
-const packages={units,profiles,weapons,abilities,keywords,detachments:detachmentRows,enhancements,stratagems:[],points,leaders,source:[{id:'necrons:source:current',bsdata:BS_URL,mfm:MFM_URL,generatedAt:new Date().toISOString()}]};
+const stratagems=(dc.stratagems||[]).map(s=>({...s,id:s.id||`necrons:stratagem:${key(s.name)}`}));
+
+const coreRoot=core.gameSystem||core;
+const coreRules=(coreRoot.sharedRules||[]).map(rule=>({
+  id:rule.id||`core11e:rule:${key(rule.name)}`,
+  name:rule.name,
+  description:rule.description||'',
+  profiles:rule.profiles||[],
+  infoLinks:rule.infoLinks||[],
+  edition:'11th',
+  scope:'shared-core',
+}));
+if(!coreRules.length)throw new Error('BSData core file returned no shared 11e rules.');
+
+const community40kdc={
+  edition:'11th',
+  faction:'necrons',
+  upstream:DC_BASE,
+  records:dc,
+};
+const packages={
+  units,profiles,weapons,abilities,keywords,detachments:detachmentRows,enhancements,stratagems,points,leaders,
+  'core-rules':coreRules,
+  'community-40kdc':community40kdc,
+  source:[{
+    id:'necrons:source:current',
+    edition:'11th',
+    faction:'necrons',
+    bsdata:BS_URL,
+    coreRules:CORE_URL,
+    mfm:MFM_URL,
+    community40kdc:DC_BASE,
+    precedence:['BSData/wh40k-11e roster + core rules','BSData/wh40k-11e-mfm points','wn-mitch/40kdc-data supplemental rules/validation'],
+    generatedAt:new Date().toISOString(),
+  }],
+};
 await mkdir(OUT,{recursive:true});
-const manifest={datasetVersion:version,schemaVersion:1,factions:{necrons:{packages:{}}}};
+const manifest={datasetVersion:version,schemaVersion:2,edition:'11th',scope:{factions:['necrons'],includesSharedCoreRules:true},factions:{necrons:{packages:{}}}};
 for(const [name,payload] of Object.entries(packages)){
-  const body=JSON.stringify({schemaVersion:1,package:name,records:payload});
+  const body=JSON.stringify({schemaVersion:2,package:name,edition:'11th',faction:name==='core-rules'?null:'necrons',records:payload});
   await writeFile(new URL(`${name}.json`,OUT),body+'\n');
   manifest.factions.necrons.packages[name]={file:`data/necrons/${name}.json`,hash:sha(body)};
 }
 await writeFile(new URL('../version.json',OUT),JSON.stringify(manifest,null,2)+'\n');
-console.log(`Published ${units.length} Necron units (${version}).`);
+console.log(`Published ${units.length} Necron units, ${stratagems.length} stratagems and ${coreRules.length} shared 11e rules (${version}).`);
