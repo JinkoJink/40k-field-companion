@@ -30,6 +30,13 @@ describe('legacy conditional data compatibility',()=>{
     expect(enhancement.countsTowardLimit).toBe(false);
   });
 
+  it('keeps ordinary host-limited Enhancements out of the Binding class',()=>{
+    const enhancement=normalizeEnhancementRuntime({name:'Dread Majesty',points:30,allowedHosts:['Overlord','Catacomb Command Barge']},{});
+    expect(enhancement.kind).toBe('enhancement');
+    expect(enhancement.mandatory).toBe(false);
+    expect(enhancement.countsTowardLimit).toBe(true);
+  });
+
   it('normalizes Support, conditional-keyword and transport fields from snake_case community records',()=>{
     const connections=normalizeUnitConnections({}, {
       id:'technomancer',
