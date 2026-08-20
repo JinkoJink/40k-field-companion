@@ -33,7 +33,13 @@ jobs:
       - name: Validate offline rules packages
         run: npm run validate:data
       - name: Reject stale generated rules packages
-        run: git diff --exit-code -- public/data
+        shell: bash
+        run: |
+          # source.json carries a generated timestamp, and version.json therefore has a timestamp-driven source hash.
+          # Gate every substantive package while validate:data still verifies the regenerated manifest/hash graph.
+          git diff --exit-code -- public/data \
+            ':(exclude)public/data/version.json' \
+            ':(exclude)public/data/necrons/source.json'
       - name: Check service worker syntax
         run: node --check public/sw.js
       - name: Production build
