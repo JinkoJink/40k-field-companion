@@ -17,12 +17,15 @@ export type OptionNode = {
 };
 
 export type Enhancement = {
+  id?:string;
   name:string;
   points:number;
+  description?:string;
   supportTo?:string[];
 };
 
 export type Detachment = {
+  id?:string;
   name:string;
   dp:number;
   objective:string;
@@ -30,6 +33,16 @@ export type Detachment = {
   enhancements?:Enhancement[];
   ruleName?:string;
   summary?:string;
+};
+
+export type Stratagem = {
+  id:string;
+  name:string;
+  phases:('command'|'movement'|'shooting'|'charge'|'fight'|'any')[];
+  cp?:number;
+  timing?:string;
+  description?:string;
+  detachmentId?:string;
 };
 
 export type UnitIndex = {

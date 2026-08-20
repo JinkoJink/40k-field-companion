@@ -1,10 +1,10 @@
 import React,{useEffect,useMemo,useState} from 'react';
 import {AlertTriangle,CheckCircle2,ChevronDown,Database,ExternalLink,Minus,Plus,RotateCcw,Search,Shield,Trash2,Settings} from 'lucide-react';
 import {checkForUpdates,migrateLegacy,readBattle,readUser,system,writeBattle,writeUser} from './db';
-import {createBattleState,phases,syncBattleUnits,totalScore,unitWounds} from './battle';
-import {availableSizes,defaultSize,isCategory,loadNecrons,pointsFor,synergy} from './data';
-import {compatibleBodyguards,configurationGroups,createRosterUnit,defaultWargear,rosterPoints,validateRoster} from './roster';
-import type {BattleState,Detachment,Phase,RosterUnit,UnitDetail,UnitIndex,ValidationIssue} from './types';
+import {createBattleState,phases,remainingUnitWounds,stateForRemainingWounds,syncBattleUnits,totalScore,totalUnitWounds,unitWounds} from './battle';
+import {availableSizes,defaultSize,isCategory,loadNecrons,pointsFor,subfactionKeyword,synergy} from './data';
+import {compatibleBodyguards,configurationGroups,createRosterUnit,defaultWargear,removeUnavailableEnhancements,rosterPoints,validateRoster} from './roster';
+import type {BattleState,Detachment,Phase,RosterUnit,Stratagem,UnitDetail,UnitIndex,ValidationIssue} from './types';
 
 const CORE_RULES_URL='https://www.warhammer-community.com/en-gb/downloads/warhammer-40000/';
 const POINTS_LIMIT=2000;
@@ -13,6 +13,7 @@ export function App(){
   const[units,setUnits]=useState<UnitIndex[]>([]);
   const[details,setDetails]=useState<Map<string,UnitDetail>>(new Map());
   const[detachments,setDetachments]=useState<Detachment[]>([]);
+  const[stratagems,setStratagems]=useState<Stratagem[]>([]);
   const[selected,setSelected]=useState<string[]>(['Cursed Legion']);
   const[roster,setRoster]=useState<RosterUnit[]>([]);
   const[battle,setBattle]=useState<BattleState|null>(null);
@@ -30,6 +31,7 @@ export function App(){
         setUnits(data.index);
         setDetails(data.detailMap);
         setDetachments(data.detachments);
+        setStratagems(data.stratagems);
         setSelected(storedDetachments);setRoster(storedRoster);setBattle(storedBattle);setSettings(storedSettings);return system('installed',null);
       })
       .then(setInstalled)
@@ -46,6 +48,7 @@ export function App(){
   },[roster.length]);
 
   const selectedDetachments=detachments.filter(detachment=>selected.includes(detachment.name));
+  const selectedEnhancements=selectedDetachments.flatMap(detachment=>detachment.enhancements||[]);
   const totalDP=selectedDetachments.reduce((sum,detachment)=>sum+detachment.dp,0);
   const totalPoints=useMemo(()=>rosterPoints(roster,units,selectedDetachments),[roster,units,selectedDetachments]);
   const issues=useMemo(()=>validateRoster({
@@ -58,7 +61,11 @@ export function App(){
   }).toLowerCase().includes(query.toLowerCase())));
 
   function toggleDetachment(detachment:Detachment){
-    if(selected.includes(detachment.name))setSelected(selected.filter(name=>name!==detachment.name));
+    if(selected.includes(detachment.name)){
+      const nextSelected=selected.filter(name=>name!==detachment.name);
+      setSelected(nextSelected);
+      setRoster(current=>removeUnavailableEnhancements(current,detachments.filter(candidate=>nextSelected.includes(candidate.name))));
+    }
     else if(totalDP+detachment.dp<=3)setSelected([...selected,detachment.name]);
   }
 
@@ -131,6 +138,8 @@ export function App(){
       units={units}
       details={details}
       selectedDetachments={selectedDetachments}
+      enhancements={selectedEnhancements}
+      stratagems={stratagems}
       issues={errors}
       battle={battle}
       setBattle={setBattle}
@@ -175,9 +184,14 @@ function BuildView(props:{
   onRemove:(instanceId:string)=>void;
 }){
   const{units,details,detachments,selected,totalDP,roster,issues}=props;
+  const[catalogueQuery,setCatalogueQuery]=useState('');
   const selectedDetachments=detachments.filter(detachment=>selected.includes(detachment.name));
   const enhancements=selectedDetachments.flatMap(detachment=>detachment.enhancements||[]);
   const instanceIssues=(id:string)=>issues.filter(issue=>issue.unitInstanceId===id);
+  const catalogue=units.filter(unit=>!unit.legends&&(!catalogueQuery||JSON.stringify({...unit,details:details.get(unit.id)}).toLowerCase().includes(catalogueQuery.toLowerCase())));
+  const categories=Array.from(catalogue.reduce((groups,unit)=>{
+    const category=catalogueCategory(unit);groups.set(category,[...(groups.get(category)||[]),unit]);return groups;
+  },new Map<string,UnitIndex[]>()).entries()).sort(([a],[b])=>a.localeCompare(b));
 
   return <>
     <section className='panel'>
@@ -228,12 +242,7 @@ function BuildView(props:{
               <input type='radio' name='warlord' checked={Boolean(entry.warlord)} onChange={()=>props.onWarlord(entry.instanceId)}/>
               Warlord
             </label>}
-            {eligibleEnhancement&&<label>Enhancement
-              <select value={entry.enhancement||''} onChange={event=>props.onPatch(entry.instanceId,{enhancement:event.target.value||undefined})}>
-                <option value=''>None</option>
-                {enhancements.map(enhancement=><option key={enhancement.name} value={enhancement.name}>{enhancement.name} (+{enhancement.points})</option>)}
-              </select>
-            </label>}
+            {eligibleEnhancement&&<EnhancementToggles name={`enhancement-${entry.instanceId}`} selected={entry.enhancement} enhancements={enhancements} onChange={enhancement=>props.onPatch(entry.instanceId,{enhancement})}/>}
             {!!unit.attachTo?.length&&<label>Lead bodyguard
               <select value={entry.attachedTo||''} onChange={event=>props.onPatch(entry.instanceId,{attachedTo:event.target.value||undefined})}>
                 <option value=''>Not attached</option>
@@ -251,11 +260,27 @@ function BuildView(props:{
       })}
     </div>
 
-    <section className='sectionHead'><div><h2>Necron unit catalogue</h2><p>Add another individual unit instance to the roster.</p></div></section>
-    <div className='grid'>
-      {units.filter(unit=>!unit.legends).map(unit=><UnitCard unit={unit} detail={details.get(unit.id)} selected={selected} onAdd={()=>props.onAdd(unit)} key={unit.id}/>)}
-    </div>
+    <section className='sectionHead'><div><h2>Necron unit catalogue</h2><p>Search, then drill into the unit category you want.</p></div></section>
+    <div className='search catalogueSearch'><Search size={18}/><input value={catalogueQuery} onChange={event=>setCatalogueQuery(event.target.value)} placeholder='Search this catalogue by unit, role, keyword, weapon…'/></div>
+    {!categories.length&&<div className='empty'>No units match that search.</div>}
+    <div className='catalogueGroups'>{categories.map(([category,group])=><details className='catalogueGroup' open={Boolean(catalogueQuery)} key={category}>
+      <summary><span>{category}</span><small>{group.length} unit{group.length===1?'':'s'}</small></summary>
+      <div className='grid'>{group.map(unit=><UnitCard unit={unit} detail={details.get(unit.id)} selected={selected} onAdd={()=>props.onAdd(unit)} key={unit.id}/>)}</div>
+    </details>)}</div>
   </>;
+}
+
+function catalogueCategory(unit:UnitIndex){
+  if(isCategory(unit,'epic hero'))return 'Epic Heroes';
+  if(isCategory(unit,'character'))return 'Characters';
+  if(isCategory(unit,'battleline'))return 'Battleline';
+  if(isCategory(unit,'dedicated transport'))return 'Dedicated Transports';
+  if(isCategory(unit,'vehicle'))return 'Vehicles';
+  if(isCategory(unit,'monster'))return 'Monsters';
+  if(isCategory(unit,'mounted'))return 'Mounted';
+  if(isCategory(unit,'swarm'))return 'Swarms';
+  if(isCategory(unit,'infantry'))return 'Infantry';
+  return unit.role?`${unit.role[0].toUpperCase()}${unit.role.slice(1)} units`:'Other units';
 }
 
 function WargearEditor({entry,detail,onPatch}:{entry:RosterUnit;detail?:UnitDetail;onPatch:(id:string,patch:Partial<RosterUnit>)=>void}){
@@ -285,6 +310,26 @@ function WargearEditor({entry,detail,onPatch}:{entry:RosterUnit;detail?:UnitDeta
   </details>;
 }
 
+function enhancementDescription(enhancement:{description?:string;supportTo?:string[]}){
+  if(enhancement.description)return enhancement.description;
+  if(enhancement.supportTo?.length)return `Bearer can support: ${enhancement.supportTo.join(', ')}.`;
+  return 'Enhancement rules text is not installed locally. Consult the current Codex: Necrons.';
+}
+
+function EnhancementToggles({name,selected,enhancements,onChange}:{name:string;selected?:string;enhancements:Detachment['enhancements'];onChange:(enhancement?:string)=>void}){
+  return <fieldset className='enhancementToggles'><legend>Enhancement</legend>
+    <label className='enhancementToggle'>
+      <input type='radio' name={name} checked={!selected} onChange={()=>onChange(undefined)}/>
+      <span><strong>None</strong><small>No Enhancement assigned.</small></span>
+    </label>
+    {(enhancements||[]).map(enhancement=><label className={`enhancementToggle ${selected===enhancement.name?'selected':''}`} key={enhancement.id||enhancement.name}>
+      <input type='radio' name={name} checked={selected===enhancement.name} onChange={()=>onChange(enhancement.name)}/>
+      <span><strong>{enhancement.name} <em>+{enhancement.points} pts</em></strong><small>{enhancementDescription(enhancement)}</small></span>
+    </label>)}
+    {!enhancements?.length&&<p className='muted'>Select a detachment to make its Enhancements available.</p>}
+  </fieldset>;
+}
+
 function UnitCard({unit,detail,selected,onAdd}:{unit:UnitIndex;detail?:UnitDetail;selected:string[];onAdd:()=>void}){
   const tags=synergy(selected,unit);
   return <article className='card'>
@@ -294,24 +339,26 @@ function UnitCard({unit,detail,selected,onAdd}:{unit:UnitIndex;detail?:UnitDetai
     </div>
     {!!tags.length&&<div className='synergy'>{tags.map(tag=><span key={tag}>{tag}</span>)}</div>}
     <Stats unit={unit}/>
-    <div className='chips'>{unit.categories.slice(0,8).map(category=><span key={category}>{category}</span>)}</div>
+    <KeywordChips unit={unit}/>
     {!!unit.attachTo?.length&&<div className='leader'>Can lead: {unit.attachTo.join(', ')}</div>}
     <details><summary>Datasheet details</summary><UnitDetails data={detail}/></details>
   </article>;
 }
 
-function BattleView({roster,units,details,selectedDetachments,issues,battle,setBattle}:{
+function BattleView({roster,units,details,selectedDetachments,enhancements,stratagems,issues,battle,setBattle}:{
   roster:RosterUnit[];
   units:UnitIndex[];
   details:Map<string,UnitDetail>;
   selectedDetachments:Detachment[];
+  enhancements:Detachment['enhancements'];
+  stratagems:Stratagem[];
   issues:ValidationIssue[];
   battle:BattleState|null;
   setBattle:React.Dispatch<React.SetStateAction<BattleState|null>>;
 }){
   if(!battle)return <section className='panel battleStart'>
     <Shield size={36}/><h2>Start Battle Mode</h2>
-    <p>Your configured roster becomes a persistent tabletop tracker for wounds, models, reanimation, CP, scoring and objective control.</p>
+    <p>Your army roster becomes a persistent tabletop tracker for Wounds, models, Reanimation Protocols, CP and Victory Points.</p>
     {!!issues.length&&<div className='error'>Resolve the {issues.length} army legality issue{issues.length===1?'':'s'} before starting.</div>}
     <button disabled={!roster.length||Boolean(issues.length)} onClick={()=>setBattle(createBattleState(roster))}>Start battle</button>
   </section>;
@@ -347,15 +394,7 @@ function BattleView({roster,units,details,selectedDetachments,issues,battle,setB
       </div>
     </section>
 
-    <section className='panel'>
-      <div className='eyebrow'>OBJECTIVE CONTROL</div>
-      <div className='objectiveGrid'>
-        {battle.objectives.map(objective=><div className='objective' key={objective.id}>
-          <input value={objective.name} onChange={event=>patch({objectives:battle.objectives.map(item=>item.id===objective.id?{...item,name:event.target.value}:item)})}/>
-          <div>{(['you','contested','opponent'] as const).map(controller=><button className={objective.controller===controller?controller:''} onClick={()=>patch({objectives:battle.objectives.map(item=>item.id===objective.id?{...item,controller}:item)})} key={controller}>{controller}</button>)}</div>
-        </div>)}
-      </div>
-    </section>
+    <StratagemPanel phase={battle.phase} stratagems={stratagems} selectedDetachments={selectedDetachments}/>
 
     <section className='panel'>
       <div className='eyebrow'>ACTIVE DETACHMENT RULES</div>
@@ -368,23 +407,41 @@ function BattleView({roster,units,details,selectedDetachments,issues,battle,setB
         if(!unit)return null;
         const state=battle.units[entry.instanceId]||{modelsRemaining:entry.models,woundsLost:0,destroyed:false};
         const wounds=unitWounds(unit);
+        const maximumWounds=totalUnitWounds(entry.models,wounds);
+        const woundsRemaining=remainingUnitWounds(state,entry.models,wounds);
+        const modelsRemaining=Math.ceil(woundsRemaining/wounds);
+        const enhancement=(enhancements||[]).find(candidate=>candidate.name===entry.enhancement);
         const update=(change:Partial<typeof state>)=>patch({units:{...battle.units,[entry.instanceId]:{...state,...change}}});
+        const setRemaining=(value:number)=>update(stateForRemainingWounds(state,entry.models,wounds,value));
         return <article className={`card battleUnit ${state.destroyed?'destroyed':''}`} key={entry.instanceId}>
           <div className='row'>
-            <div><h3>{unit.name}</h3><p>{entry.models} models · {wounds} wound{wounds===1?'':'s'} each</p></div>
-            <label className='checkLabel'><input type='checkbox' checked={state.destroyed} onChange={event=>update({destroyed:event.target.checked,modelsRemaining:event.target.checked?0:Math.max(1,state.modelsRemaining)})}/> Destroyed</label>
+            <div><h3>{unit.name}</h3><p>{modelsRemaining}/{entry.models} models · {wounds} Wound{wounds===1?'':'s'} each</p></div>
+            <label className='checkLabel'><input type='checkbox' checked={woundsRemaining===0} onChange={event=>setRemaining(event.target.checked?0:Math.min(wounds,maximumWounds))}/> Destroyed</label>
           </div>
+          {enhancement&&<div className='assignedEnhancement'><div className='eyebrow'>ASSIGNED ENHANCEMENT</div><strong>{enhancement.name} <span>+{enhancement.points} pts</span></strong><p>{enhancementDescription(enhancement)}</p></div>}
+          <Stats unit={unit}/>
           <div className='trackerGrid'>
-            <Counter label='Models remaining' value={state.modelsRemaining} max={entry.models} onChange={modelsRemaining=>update({modelsRemaining,destroyed:modelsRemaining===0})}/>
-            <Counter label='Wounds on damaged model' value={state.woundsLost} max={Math.max(0,wounds-1)} onChange={woundsLost=>update({woundsLost})}/>
+            <Counter label={`Wounds remaining (${maximumWounds} Starting Strength)`} value={woundsRemaining} max={maximumWounds} onChange={setRemaining}/>
+            <div className='counterBox'><span>Models remaining</span><div><b>{modelsRemaining}</b><small>of {entry.models}</small></div></div>
           </div>
-          <button className='reanimate' disabled={state.modelsRemaining>=entry.models} onClick={()=>update({modelsRemaining:Math.min(entry.models,state.modelsRemaining+1),destroyed:false})}><Plus size={14}/> Reanimate one model</button>
           <UnitDetails data={details.get(unit.id)} phase={battle.phase}/>
+          <button className='reanimate compact' disabled={woundsRemaining>=maximumWounds} onClick={()=>setRemaining(woundsRemaining+wounds)}><Plus size={13}/> Reanimation Protocols: return 1 model</button>
         </article>;
       })}
     </div>
     <label className='notes panel'>Battle notes<textarea value={battle.notes} onChange={event=>patch({notes:event.target.value})} placeholder='Reserves, once-per-battle abilities, target priorities…'/></label>
   </>;
+}
+
+function StratagemPanel({phase,stratagems,selectedDetachments}:{phase:Phase;stratagems:Stratagem[];selectedDetachments:Detachment[]}){
+  const selectedIds=new Set(selectedDetachments.map(detachment=>detachment.id));
+  const available=stratagems.filter(stratagem=>(!stratagem.detachmentId||selectedIds.has(stratagem.detachmentId))&&(stratagem.phases.includes('any')||stratagem.phases.includes(phase)));
+  return <section className='panel stratagemPanel'><div className='row'><div><div className='eyebrow'>STRATAGEMS</div><h2>{phase[0].toUpperCase()+phase.slice(1)} phase</h2></div><span className='muted'>{available.length} available</span></div>
+    {!available.length?<p className='muted'>No phase-tagged Stratagems are installed for this phase and selected detachment set.</p>:<div className='stratagemList'>{available.map(stratagem=><details className='stratagem' key={stratagem.id}>
+      <summary><span>{stratagem.name}</span><small>{stratagem.cp===undefined?'CP varies':`${stratagem.cp} CP`}</small></summary>
+      <p>{stratagem.timing||'Use in the listed phase.'}</p>{stratagem.description&&<p className='muted'>{stratagem.description}</p>}
+    </details>)}</div>}
+  </section>;
 }
 
 function Counter({label,value,onChange,max=99}:{label:string;value:number;onChange:(value:number)=>void;max?:number}){
@@ -405,6 +462,16 @@ function Stats({unit}:{unit:UnitIndex}){
   return <div className='stats'>{['M','T','Sv','W','LD','OC','InSv'].map(key=>unit.stats[key]?<div key={key}><span>{key}</span><b>{unit.stats[key]}</b></div>:null)}</div>;
 }
 
+function KeywordChips({unit}:{unit:UnitIndex}){
+  const factionKeywords=unit.categories.filter(category=>category.toLowerCase().startsWith('faction:'));
+  const keywords=unit.categories.filter(category=>!category.toLowerCase().startsWith('faction:'));
+  const subfaction=subfactionKeyword(unit);
+  return <div className='keywordChips'>
+    {subfaction?<p><span>SUBFACTION</span><b>{subfaction}</b></p>:!!factionKeywords.length&&<p><span>FACTION KEYWORDS</span>{factionKeywords.map(keyword=><b key={keyword}>{keyword.replace(/^Faction:\s*/i,'')}</b>)}</p>}
+    {!!keywords.length&&<p><span>KEYWORDS</span>{keywords.map(keyword=><b key={keyword}>{keyword}</b>)}</p>}
+  </div>;
+}
+
 function UnitDetails({data,phase}:{data?:UnitDetail;phase?:Phase}){
   if(!data)return <p className='muted'>Loading datasheet…</p>;
   const weapons=(data.weapons||[]).filter(weapon=>!phase||(phase==='shooting'&&weapon.type==='Ranged Weapons')||(phase==='fight'&&weapon.type==='Melee Weapons'));
@@ -414,6 +481,7 @@ function UnitDetails({data,phase}:{data?:UnitDetail;phase?:Phase}){
     return text.includes(phase)||phase==='command'||!/(movement|shooting|charge|fight) phase/.test(text);
   });
   return <div className='details'>
+    <KeywordChips unit={data}/>
     {abilities.map(ability=><div className='ability' key={ability.id||ability.name}><strong>{ability.name}</strong><p>{Object.values(ability.characteristics).filter(Boolean).join(' ')}</p></div>)}
     {weapons.map(weapon=><div className='weapon' key={weapon.id||weapon.name}><strong>{weapon.name}</strong><div className='weaponGrid'>{Object.entries(weapon.characteristics).map(([key,value])=><div key={key}><span>{key}</span><b>{value||'—'}</b></div>)}</div></div>)}
   </div>;

@@ -1,4 +1,4 @@
-import type {BattleState,Detachment,PackageManifest,RosterUnit,RulesManifest,UnitDetail,UnitIndex} from './types';
+import type {BattleState,Detachment,PackageManifest,RosterUnit,RulesManifest,Stratagem,UnitDetail,UnitIndex} from './types';
 
 const DB='field-companion';
 const VERSION=1;
@@ -95,11 +95,11 @@ export async function checkForUpdates(force=false){
 
 export async function loadRules(){
   await initializeRules();
-  const [units,profiles,weapons,abilities,points,leaders,detachments,enhancements]=await Promise.all(['units','profiles','weapons','abilities','points','leaders','detachments','enhancements'].map(getAll));
+  const [units,profiles,weapons,abilities,points,leaders,detachments,enhancements,stratagems]=await Promise.all(['units','profiles','weapons','abilities','points','leaders','detachments','enhancements','stratagems'].map(getAll));
   const pointMap=new Map((points as any[]).map(x=>[x.unitId,x])); const leaderMap=new Map((leaders as any[]).map(x=>[x.leaderUnitId,x]));
   const details=new Map<string,UnitDetail>(); const index=(units as any[]).map(raw=>{const p=pointMap.get(raw.id);const profile=(profiles as any[]).find(x=>x.unitId===raw.id);const leader=leaderMap.get(raw.id);const unit:UnitDetail={...raw,stats:profile?.characteristics||{},pricing:p?.pricing||null,role:p?.role||raw.role||null,attachTo:leader?.targetNames||[],weapons:(weapons as any[]).filter(x=>x.unitId===raw.id),abilities:(abilities as any[]).filter(x=>x.unitId===raw.id)};details.set(unit.id,unit);const{weapons:_w,abilities:_a,options:_o,rules:_r,...summary}=unit;return summary;}) as UnitIndex[];
   const dets=(detachments as any[]).map(d=>({...d,enhancements:(enhancements as any[]).filter(e=>e.detachmentId===d.id)})) as Detachment[];
-  return {index,detailMap:details,detachments:dets,version:(await system<any>('installed',null))?.datasetVersion};
+  return {index,detailMap:details,detachments:dets,stratagems:stratagems as Stratagem[],version:(await system<any>('installed',null))?.datasetVersion};
 }
 
 export async function readUser<T>(id:string,fallback:T):Promise<T>{const db=await open();const tx=db.transaction('user','readonly');const row=await request<any>(tx.objectStore('user').get(id));await done(tx);return row?.value??fallback;}

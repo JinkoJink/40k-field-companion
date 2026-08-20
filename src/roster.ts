@@ -57,6 +57,12 @@ export function rosterPoints(roster:RosterUnit[],units:UnitIndex[],detachments:D
   },0);
 }
 
+/** Keeps a roster from retaining an Enhancement after its owning detachment is deselected. */
+export function removeUnavailableEnhancements(roster:RosterUnit[],detachments:Detachment[]){
+  const available=new Set(detachments.flatMap(detachment=>detachment.enhancements||[]).map(enhancement=>enhancement.name));
+  return roster.map(entry=>entry.enhancement&&!available.has(entry.enhancement)?{...entry,enhancement:undefined}:entry);
+}
+
 export function validateRoster(args:{
   roster:RosterUnit[];
   units:UnitIndex[];

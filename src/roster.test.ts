@@ -1,5 +1,5 @@
 import {describe,expect,it} from 'vitest';
-import {rosterPoints,validateRoster} from './roster';
+import {removeUnavailableEnhancements,rosterPoints,validateRoster} from './roster';
 import type {Detachment,RosterUnit,UnitDetail,UnitIndex} from './types';
 
 const unit=(overrides:Partial<UnitIndex>):UnitIndex=>({
@@ -45,6 +45,12 @@ describe('roster pricing',()=>{
     const character=unit({categories:['Faction: Necrons','Character']});
     const detachment:Detachment={name:'Test',dp:3,objective:'TAKE AND HOLD',enhancements:[{name:'Relic',points:25}]};
     expect(rosterPoints([entry({enhancement:'Relic'})],[character],[detachment])).toBe(125);
+  });
+
+  it('removes an Enhancement when its detachment is no longer selected',()=>{
+    const roster=[entry({enhancement:'Relic'})];
+    expect(removeUnavailableEnhancements(roster,[])[0].enhancement).toBeUndefined();
+    expect(removeUnavailableEnhancements(roster,[{name:'Test',dp:3,objective:'TAKE AND HOLD',enhancements:[{name:'Relic',points:25}]}])[0].enhancement).toBe('Relic');
   });
 });
 
