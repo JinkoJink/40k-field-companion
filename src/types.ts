@@ -78,6 +78,10 @@ export type RosterUnit = {
   attachedTo?:string;
   warlord?:boolean;
   wargear:WargearConfig;
+  /** Datasheet snapshot captured when this configured roster instance is created. */
+  stats?:Record<string,string>;
+  weapons?:Profile[];
+  abilities?:Profile[];
 };
 
 export type ValidationIssue = {
@@ -89,7 +93,16 @@ export type ValidationIssue = {
 export type BattleUnitState = {
   modelsRemaining:number;
   woundsLost:number;
+  woundsRemaining?:number;
   destroyed:boolean;
+  /** Exact current wounds for each model in this unit, in stable model order. */
+  modelWounds?:number[];
+  /** Frozen build-time datasheet values for this battle snapshot. */
+  stats?:Record<string,string>;
+  weapons?:Profile[];
+  abilities?:Profile[];
+  startingModels?:number;
+  woundsPerModel?:number;
 };
 
 export type RoundScore = {
