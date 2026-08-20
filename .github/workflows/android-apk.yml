@@ -7,6 +7,7 @@ on:
       - 'android/**'
       - 'src/**'
       - 'public/**'
+      - 'scripts/**'
       - 'package.json'
       - 'package-lock.json'
       - 'capacitor.config.ts'
@@ -21,23 +22,67 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: 21
+
       - uses: actions/setup-node@v4
         with:
           node-version: 24
           cache: npm
+
       - run: npm ci
-      - run: npm run build
-      - run: npx cap sync android
+
+      - name: Build bundled Necron 11e data
+        run: |
+          npm run build:data
+          npm run validate:data
+
+      - name: Build web app
+        run: npm run build
+
+      - name: Verify Vite output contains rules data
+        run: |
+          test -f dist/data/version.json
+          test -f dist/data/necrons/units.json
+          test -f dist/data/necrons/core-rules.json
+          test -f dist/data/necrons/community-40kdc.json
+          node -e "const fs=require('fs'); const m=JSON.parse(fs.readFileSync('dist/data/version.json','utf8')); if(m.schemaVersion!==2||m.scope?.factions?.join(',')!=='necrons') process.exit(1); console.log('dist contains Necron schema v2 data');"
+
+      - name: Sync web bundle into Android assets
+        run: npx cap sync android
+
+      - name: Verify Android assets contain rules data
+        run: |
+          test -f android/app/src/main/assets/public/data/version.json
+          test -f android/app/src/main/assets/public/data/necrons/units.json
+          test -f android/app/src/main/assets/public/data/necrons/core-rules.json
+          test -f android/app/src/main/assets/public/data/necrons/community-40kdc.json
+          echo "Android asset tree contains bundled Necron data"
+
       - run: chmod +x android/gradlew
-      - run: cd android && ./gradlew assembleDebug --no-daemon
-      - name: Publish installer
+
+      - name: Build APK
+        run: cd android && ./gradlew assembleDebug --no-daemon
+
+      - name: Verify APK physically contains rules data
+        run: |
+          APK=android/app/build/outputs/apk/debug/app-debug.apk
+          unzip -l "$APK" | grep -q 'assets/public/data/version.json'
+          unzip -l "$APK" | grep -q 'assets/public/data/necrons/units.json'
+          unzip -l "$APK" | grep -q 'assets/public/data/necrons/core-rules.json'
+          unzip -l "$APK" | grep -q 'assets/public/data/necrons/community-40kdc.json'
+          echo "APK contains bundled Necron 11e rules data"
+
+      - name: Publish fresh installer release
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           cp android/app/build/outputs/apk/debug/app-debug.apk Command-Protocols.apk
-          gh release view command-protocols-apk >/dev/null 2>&1 || gh release create command-protocols-apk --title "Command Protocols APK" --notes "Latest debug installer built from main."
-          gh release upload command-protocols-apk Command-Protocols.apk --clobber
+          TAG="command-protocols-${GITHUB_RUN_NUMBER}"
+          gh release create "$TAG" Command-Protocols.apk \
+            --title "Command Protocols Android ${GITHUB_RUN_NUMBER}" \
+            --notes "Fresh installer built from ${GITHUB_SHA}. Includes bundled Necron 11e rules data and works without a first-run data download." \
+            --latest
