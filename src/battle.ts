@@ -1,3 +1,4 @@
+import {battleSnapshotFor} from './data';
 import type {BattleState,BattleUnitState,Phase,RosterUnit,UnitIndex} from './types';
 
 export const phases:Phase[]=['command','movement','shooting','charge','fight'];
@@ -8,16 +9,20 @@ function woundsFromStats(stats:Record<string,string>|undefined){
 }
 
 function initialBattleUnit(entry:RosterUnit):BattleUnitState{
-  const woundsPerModel=woundsFromStats(entry.stats);
+  const fallback=battleSnapshotFor(entry.unitId);
+  const stats=entry.stats||fallback?.stats;
+  const weapons=entry.weapons||fallback?.weapons;
+  const abilities=entry.abilities||fallback?.abilities;
+  const woundsPerModel=woundsFromStats(stats);
   return {
     modelsRemaining:entry.models,
     woundsLost:0,
     woundsRemaining:entry.models*woundsPerModel,
     destroyed:false,
     modelWounds:Array.from({length:entry.models},()=>woundsPerModel),
-    stats:entry.stats?{...entry.stats}:undefined,
-    weapons:entry.weapons?.map(profile=>({...profile,characteristics:{...profile.characteristics}})),
-    abilities:entry.abilities?.map(profile=>({...profile,characteristics:{...profile.characteristics}})),
+    stats:stats?{...stats}:undefined,
+    weapons:weapons?.map(profile=>({...profile,characteristics:{...profile.characteristics}})),
+    abilities:abilities?.map(profile=>({...profile,characteristics:{...profile.characteristics}})),
     startingModels:entry.models,
     woundsPerModel,
   };
