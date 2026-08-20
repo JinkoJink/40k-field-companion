@@ -430,7 +430,7 @@ function BattleView({roster,units,details,selectedDetachments,enhancements,strat
         </details>;
       })}
     </div>
-    <label className='notes panel'>Battle notes<textarea value={battle.notes} onChange={event=>patch({notes:event.value})} placeholder='Reserves, once-per-battle abilities, target priorities…'/></label>
+    <label className='notes panel'>Battle notes<textarea value={battle.notes} onChange={event=>patch({notes:event.target.value})} placeholder='Reserves, once-per-battle abilities, target priorities…'/></label>
   </>;
 }
 
