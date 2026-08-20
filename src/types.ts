@@ -1,9 +1,22 @@
 export type Phase = 'command'|'movement'|'shooting'|'charge'|'fight';
 export type AttachmentRole = 'leader'|'support';
 export type EnhancementKind = 'enhancement'|'upgrade'|'binding';
-export type Pricing = {models:number;points:number};export type PriceTier = {range?:string;label?:string;costs:Pricing[]};export type Constraint = {type:'min'|'max'|string;value:number;scope?:string;childId?:string};
+export type Pricing = {models:number;points:number};
+export type PriceTier = {range?:string;label?:string;costs:Pricing[]};
+export type Constraint = {type:'min'|'max'|string;value:number;scope?:string;childId?:string};
 export type RuleSource = 'bsdata'|'40kdc'|'faction-pack'|'official-app-transcription'|'derived';
-export type RuleMeta = {source?:RuleSource;quality?:'official'|'structured'|'provisional'|'derived';phase?:Phase|'any';phases?:(Phase|'any')[];playerTurn?:'your-turn'|'opponent-turn'|'either'|string;behavior?:string;scope?:unknown;usage?:unknown;effect?:unknown;gameVersion?:{edition?:string;dataslate?:string};};
+export type RuleMeta = {
+  source?:RuleSource;
+  quality?:'official'|'structured'|'provisional'|'derived';
+  phase?:Phase|'any';
+  phases?:(Phase|'any')[];
+  playerTurn?:'your-turn'|'opponent-turn'|'either'|string;
+  behavior?:string;
+  scope?:unknown;
+  usage?:unknown;
+  effect?:unknown;
+  gameVersion?:{edition?:string;dataslate?:string};
+};
 export type Profile = {id?:string;name:string;type?:string;characteristics:Record<string,string>;description?:string;rule?:RuleMeta;};
 export type OptionNode = {id:string;name:string;kind:'entry'|'group';type?:string;hidden:boolean;costs:{name:string;type:string;value:number}[];constraints:Constraint[];profiles:Profile[];options:OptionNode[];};
 export type Enhancement = {id?:string;name:string;points:number;description?:string;supportTo?:string[];detachmentId?:string;keywordRestrictions?:string[];keywordRestrictionGroups?:string[][];exclusionKeywords?:string[];allowedHosts?:string[];attachmentBodyguardIds?:string[];grantKeywords?:string[];upgrade?:boolean;kind?:EnhancementKind;countsTowardLimit?:boolean;mandatory?:boolean;maxTargets?:number;abilityId?:string|null;gameModes?:string[];gameVersion?:{edition?:string;dataslate?:string};rule?:RuleMeta;};
@@ -19,6 +32,22 @@ export type WargearConfig = {choices:Record<string,string>;modelCounts:Record<st
 export type RosterUnit = {instanceId:string;unitId:string;models:number;enhancement?:string;attachedTo?:string;warlord?:boolean;wargear:WargearConfig;stats?:Record<string,string>;weapons?:Profile[];abilities?:Profile[];};
 export type ValidationIssue = {level:'error'|'warning';message:string;unitInstanceId?:string;};
 export type BattleUnitState = {modelsRemaining:number;woundsLost:number;woundsRemaining?:number;destroyed:boolean;modelWounds?:number[];stats?:Record<string,string>;weapons?:Profile[];abilities?:Profile[];startingModels?:number;woundsPerModel?:number;};
-export type RoundScore = {primary:number;secondary:number};export type ObjectiveState = {id:string;name:string;controller:'you'|'opponent'|'contested'};
-export type BattleState = {active:boolean;round:number;phase:Phase;cp:number;score:Record<number,RoundScore>;objectives:ObjectiveState[];units:Record<string,BattleUnitState>;notes:string;};
-export type PackageManifest={file:string;hash:string};export type RulesManifest={datasetVersion:string;schemaVersion:number;factions:{necrons:{packages:Record<string,PackageManifest>}}};
+export type RoundScore = {primary:number;secondary:number};
+export type ObjectiveState = {id:string;name:string;controller:'you'|'opponent'|'contested'};
+export type BattleState = {
+  active:boolean;
+  round:number;
+  phase:Phase;
+  cp:number;
+  score:Record<number,RoundScore>;
+  objectives:ObjectiveState[];
+  units:Record<string,BattleUnitState>;
+  notes:string;
+  /** Frozen army configuration for this battle. Older saved battles fall back to the live roster. */
+  rosterSnapshot?:RosterUnit[];
+  /** Frozen selected detachments/rules for this battle. */
+  detachmentSnapshot?:Detachment[];
+};
+export type PackageManifest={file:string;hash:string};
+export type RulesManifest={datasetVersion:string;schemaVersion:number;factions:{necrons:{packages:Record<string,PackageManifest>}}};
+export type InstalledRulesMeta={datasetVersion:string;schemaVersion:number;packages:Record<string,PackageManifest>;lastSuccessfulUpdate?:string;lastKnownGood?:string;mode?:'bootstrap'|'update';};

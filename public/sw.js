@@ -1,5 +1,5 @@
-const CACHE_NAME = 'field-companion-shell-v6';
-const APP_SHELL = ['./', './index.html', './manifest.webmanifest', './necron-ankh.svg'];
+const CACHE_NAME = 'field-companion-shell-v7';
+const APP_SHELL = ['./', './index.html', './manifest.webmanifest', './necron-ankh.svg', './icon-192.png', './icon-512.png'];
 const INDEX_URL = new URL('./index.html', self.registration.scope).href;
 const ROOT_URL = new URL('./', self.registration.scope).href;
 const DATA_PATH = new URL('./data/', self.registration.scope).pathname;
@@ -43,13 +43,14 @@ self.addEventListener('fetch', event => {
   }
 
   // Vite fingerprints scripts/styles. Cache-first is safe for those immutable URLs; a new index points at new hashes.
-  event.respondWith(
-    caches.match(request).then(cached => cached || fetch(request).then(response => {
-      if (response.ok) {
-        const copy = response.clone();
-        caches.open(CACHE_NAME).then(cache => cache.put(request, copy));
-      }
-      return response;
-    }))
-  );
+  event.respondWith((async () => {
+    const cached = await caches.match(request);
+    if (cached) return cached;
+    const response = await fetch(request);
+    if (response.ok) {
+      const copy = response.clone();
+      event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.put(request, copy)));
+    }
+    return response;
+  })());
 });

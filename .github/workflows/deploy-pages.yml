@@ -37,6 +37,9 @@ jobs:
       - name: Unit tests
         run: npm test
 
+      - name: Check service worker syntax
+        run: node --check public/sw.js
+
       - name: Regenerate current Necron rules data
         run: npm run build:data
 

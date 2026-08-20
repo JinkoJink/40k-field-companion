@@ -1,10 +1,18 @@
 import {describe,expect,it} from 'vitest';
-import {changedPackageNames,normalizeEnhancementRuntime,normalizeUnitConnections,validatePackagePayload} from './db';
+import {changedPackageNames,installStoreNamesForPackages,normalizeEnhancementRuntime,normalizeUnitConnections,validatePackagePayload} from './db';
 import type {RulesManifest} from './types';
 
 const manifest=(points='a'):RulesManifest=>({datasetVersion:'test',schemaVersion:2,factions:{necrons:{packages:{units:{file:'units.json',hash:'u'},points:{file:'points.json',hash:points}}}}});
+
 describe('offline rules package guards',()=>{
   it('plans a points-only update without touching units',()=>expect(changedPackageNames(manifest('a'),manifest('b'))).toEqual(['points']));
+
+  it('includes the units store whenever a dependent package rebuilds unit indexes',()=>{
+    expect(installStoreNamesForPackages({abilities:{records:[]}})).toContain('units');
+    expect(installStoreNamesForPackages({weapons:{records:[]}})).toContain('units');
+    expect(installStoreNamesForPackages({points:{records:[]}})).not.toContain('units');
+  });
+
   it('accepts supported package schemas and rejects corrupt/duplicate records',()=>{
     expect(()=>validatePackagePayload('units',{schemaVersion:2,package:'units',records:[{id:'x'}]})).not.toThrow();
     expect(()=>validatePackagePayload('units',{schemaVersion:2,package:'units',records:[{id:'x'},{id:'x'}]})).toThrow('Duplicate');
@@ -28,6 +36,12 @@ describe('legacy conditional data compatibility',()=>{
     expect(enhancement.allowedHosts).toEqual(["C’tan Shard of the Nightbringer"]);
     expect(enhancement.mandatory).toBe(true);
     expect(enhancement.countsTowardLimit).toBe(false);
+  });
+
+  it('normalizes binding names case-insensitively',()=>{
+    const enhancement=normalizeEnhancementRuntime({name:'QUANTUM GOAD',points:45,community11e:{keyword_restrictions:['DNU','Necrons']}});
+    expect(enhancement.kind).toBe('binding');
+    expect(enhancement.allowedHosts).toEqual(["C’tan Shard of the Nightbringer"]);
   });
 
   it('keeps ordinary host-limited Enhancements out of the Binding class',()=>{
