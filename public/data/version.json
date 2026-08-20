@@ -1,52 +1,67 @@
 {
   "datasetVersion": "2026-08-20.1",
-  "schemaVersion": 1,
+  "schemaVersion": 2,
+  "edition": "11th",
+  "scope": {
+    "factions": [
+      "necrons"
+    ],
+    "includesSharedCoreRules": true
+  },
   "factions": {
     "necrons": {
       "packages": {
         "units": {
           "file": "data/necrons/units.json",
-          "hash": "68d80ddbb5c0f5a253ae8f570ef235d0952854efc16215773f8201956b1a9a5d"
+          "hash": "16c1c52fd0c8f250b87bf6cdc38c530178e95bf5e64b63e9eb34f0b6a29849ce"
         },
         "profiles": {
           "file": "data/necrons/profiles.json",
-          "hash": "865857e886450d484856248fcc1adf203dbe9ab3c9549754ecb17493750996ae"
+          "hash": "1c95b758df351e5211bf05af6719efabb0aa15b1ae0289a36e100f95b6cda7cf"
         },
         "weapons": {
           "file": "data/necrons/weapons.json",
-          "hash": "4d21a2ea4ce898ba649633d43cfe501933ee9e09c9429e1edd43c5af18ce4a5e"
+          "hash": "1eb19ed960d9459fb1593351053f49475e75ba33022b4a8382f5a7109eec63fd"
         },
         "abilities": {
           "file": "data/necrons/abilities.json",
-          "hash": "d6a4a0ae7d8662419c1139048b21f4315d79866bdb1c0650b112fa3ae342aabe"
+          "hash": "92ae9c5058b4a4e8b3f231fcd92946702c34c36afe0f6df73e788d620ebb7785"
         },
         "keywords": {
           "file": "data/necrons/keywords.json",
-          "hash": "ce82b14da31480082b0bb5fd6f384bdff9df9ff4e12722c9218ba5000c624982"
+          "hash": "e583f3c6ec9a8c297cf8dafe14eccea68f82d1bbe5daffc9af538394b14769c5"
         },
         "detachments": {
           "file": "data/necrons/detachments.json",
-          "hash": "d051a97e9eae1d09f1d17928e61df96949a37483ac8091531716341bb31b940f"
+          "hash": "8aeccd13f7323b761dcb86e44afbef648fc85d00e57eecb79a9a964153137312"
         },
         "enhancements": {
           "file": "data/necrons/enhancements.json",
-          "hash": "4d798fd7e886325c7b80c1375bc1fc172625f23648838b4191ca71a011fe4a9b"
+          "hash": "52a8862b851d6d8d1fb971dd4cf01b8275397685f54396bbd416135d196c7d0e"
         },
         "stratagems": {
           "file": "data/necrons/stratagems.json",
-          "hash": "4c30f91a39361bcce8eed7c41146bb5ed3d8bc140366692e0a1735420891ff95"
+          "hash": "2b0b28389487ff1d5dd5e9944e06b2053446eae05d321588efa42afc005a687a"
         },
         "points": {
           "file": "data/necrons/points.json",
-          "hash": "1a996645012fc281d73c3a88f1658f2408e015ca4c5a059107017496eb62a7bf"
+          "hash": "e6e751d0985c6d6212e84b648010a429a0c0c16e70ff91e670a483ae0ef2e7a0"
         },
         "leaders": {
           "file": "data/necrons/leaders.json",
-          "hash": "734a35160e76704438acb697edbb14e9fa8b9a381723f86b4d3b0f1b6824372f"
+          "hash": "ce418c45e5e1c9ad971e5a07a92e183bce4c675de683342014ee19f21ca962a7"
+        },
+        "core-rules": {
+          "file": "data/necrons/core-rules.json",
+          "hash": "7c82b0fc038b16584fbbbda8db787d7b4cb7fc893f6c29b05f4fbfa9807c9de1"
+        },
+        "community-40kdc": {
+          "file": "data/necrons/community-40kdc.json",
+          "hash": "ad5d963f98651beb58c9ad4a0562c736abf38f636d964bc155d817ecaff692b9"
         },
         "source": {
           "file": "data/necrons/source.json",
-          "hash": "4aa4768c221b2d6a1ee3b7d26feb9290523111d849e0330742cae1443003a52b"
+          "hash": "d4803d5515095f353896373a29311d117e320c4c15e1b825443df9d6f3fff5b9"
         }
       }
     }
