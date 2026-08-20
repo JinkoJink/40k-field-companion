@@ -5,7 +5,7 @@ import './styles.css';
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register(new URL('./sw.js', window.location.href)).catch(console.error);
+    navigator.serviceWorker.register(new URL('./sw.js', window.location.href), {updateViaCache: 'none'}).catch(console.error);
   });
 }
 
