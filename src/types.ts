@@ -1,4 +1,6 @@
 export type Phase = 'command'|'movement'|'shooting'|'charge'|'fight';
+export type AttachmentRole = 'leader'|'support';
+export type EnhancementKind = 'enhancement'|'upgrade'|'binding';
 export type Pricing = {models:number;points:number};
 export type PriceTier = {range?:string;label?:string;costs:Pricing[]};
 export type Constraint = {type:'min'|'max'|string;value:number;scope?:string;childId?:string};
@@ -46,10 +48,21 @@ export type Enhancement = {
   supportTo?:string[];
   detachmentId?:string;
   keywordRestrictions?:string[];
+  /** OR between groups; AND between keywords in one group. */
+  keywordRestrictionGroups?:string[][];
+  exclusionKeywords?:string[];
   allowedHosts?:string[];
+  /** Extra bodyguards unlocked while the bearer has this Enhancement. */
+  attachmentBodyguardIds?:string[];
+  /** Keywords granted to the bearer while this rule is active. */
+  grantKeywords?:string[];
   upgrade?:boolean;
+  kind?:EnhancementKind;
+  countsTowardLimit?:boolean;
+  mandatory?:boolean;
   maxTargets?:number;
   abilityId?:string|null;
+  gameModes?:string[];
   gameVersion?:{edition?:string;dataslate?:string};
   rule?:RuleMeta;
 };
@@ -95,13 +108,17 @@ export type Stratagem = {
 
 export type UnitIndex = {
   id:string;
+  /** Stable upstream 40kdc unit ID when available. */
+  externalId?:string;
   name:string;
   legends:boolean;
   categories:string[];
   stats:Record<string,string>;
   pricing?:PriceTier[]|null;
   role?:string|null;
+  attachmentRole?:AttachmentRole|null;
   attachTo?:string[];
+  transportCapacity?:{capacity?:number;[key:string]:unknown}|null;
   weaponCount:number;
   abilityCount:number;
   sourceVersion?:{edition?:string;dataslate?:string};
