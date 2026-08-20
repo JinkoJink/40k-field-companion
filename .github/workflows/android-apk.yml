@@ -1,0 +1,39 @@
+name: Build Android installer
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'android/**'
+      - 'src/**'
+      - 'public/**'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'capacitor.config.ts'
+      - '.github/workflows/android-apk.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: npx cap sync android
+      - run: chmod +x android/gradlew
+      - run: cd android && ./gradlew assembleDebug --no-daemon
+      - name: Publish installer
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cp android/app/build/outputs/apk/debug/app-debug.apk Command-Protocols.apk
+          gh release view command-protocols-apk >/dev/null 2>&1 || gh release create command-protocols-apk --title "Command Protocols APK" --notes "Latest debug installer built from main."
+          gh release upload command-protocols-apk Command-Protocols.apk --clobber

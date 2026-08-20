@@ -1,5 +1,11 @@
 # 40K Field Companion
 
+## Android installer
+
+[**Download and install Command Protocols for Android (.apk)**](https://github.com/JinkoJink/40k-field-companion/releases/latest/download/Command-Protocols.apk)
+
+Android may ask you to allow installs from your browser or file manager. The installer is built from this repository by GitHub Actions.
+
 A mobile-first Progressive Web App for building and playing a Necron army at the table. Its deliberately narrow faction scope supports deeper roster configuration and battle tracking.
 
 ## Current features
