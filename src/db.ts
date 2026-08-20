@@ -1,10 +1,10 @@
 import type {BattleState,Detachment,PackageManifest,RosterUnit,RulesManifest,Stratagem,UnitDetail,UnitIndex} from './types';
 
 const DB='field-companion';
-const VERSION=1;
-const RULE_STORES=['factions','units','profiles','weapons','abilities','keywords','detachments','enhancements','stratagems','points','leaders','source','dependencies','searchIndex'] as const;
+const VERSION=2;
+const RULE_STORES=['factions','units','profiles','weapons','abilities','keywords','detachments','enhancements','stratagems','points','leaders','source','coreRules','community40kdc','dependencies','searchIndex'] as const;
 type RuleStore=typeof RULE_STORES[number];
-const PACKAGE_STORE:Record<string,RuleStore>={units:'units',profiles:'profiles',weapons:'weapons',abilities:'abilities',keywords:'keywords',detachments:'detachments',enhancements:'enhancements',stratagems:'stratagems',points:'points',leaders:'leaders',source:'source'};
+const PACKAGE_STORE:Record<string,RuleStore>={units:'units',profiles:'profiles',weapons:'weapons',abilities:'abilities',keywords:'keywords',detachments:'detachments',enhancements:'enhancements',stratagems:'stratagems',points:'points',leaders:'leaders',source:'source','core-rules':'coreRules','community-40kdc':'community40kdc'};
 
 function open(){return new Promise<IDBDatabase>((resolve,reject)=>{
   const request=indexedDB.open(DB,VERSION);
@@ -20,7 +20,7 @@ function done(tx:IDBTransaction){return new Promise<void>((resolve,reject)=>{tx.
 function request<T>(r:IDBRequest<T>){return new Promise<T>((resolve,reject)=>{r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error);});}
 const json=(value:unknown)=>JSON.stringify(value);
 async function digest(value:string){const bytes=new TextEncoder().encode(value);const hash=await crypto.subtle.digest('SHA-256',bytes);return Array.from(new Uint8Array(hash)).map(b=>b.toString(16).padStart(2,'0')).join('');}
-function packageUrl(file:string, remote:boolean){return remote?`https://raw.githubusercontent.com/JinkoJink/40k-field-companion/main/${file}`:`./${file}`;}
+function packageUrl(file:string, remote:boolean){return remote?`https://raw.githubusercontent.com/JinkoJink/40k-field-companion/main/public/${file}`:`./${file}`;}
 
 export async function system<T>(id:string,fallback:T):Promise<T>{const db=await open();const tx=db.transaction('system','readonly');const record=await request<any>(tx.objectStore('system').get(id));await done(tx);return record?.value??fallback;}
 export async function putSystem(id:string,value:unknown){const db=await open();const tx=db.transaction('system','readwrite');tx.objectStore('system').put({id,value});await done(tx);}
@@ -35,7 +35,7 @@ function normalizeRecord(packageName:string,row:any,index:number){
   return {...row,id:`${packageName}:${index}`};
 }
 export function validatePackagePayload(name:string,payload:any){
-  if(payload?.schemaVersion!==1||payload?.package!==name||!Array.isArray(payload.records))throw new Error(`Invalid ${name} package schema.`);
+  if(![1,2].includes(payload?.schemaVersion)||payload?.package!==name||!Array.isArray(payload.records))throw new Error(`Invalid ${name} package schema.`);
   const seen=new Set<string>();
   for(const [index,raw] of payload.records.entries()){const row=normalizeRecord(name,raw,index);if(!row.id||seen.has(row.id))throw new Error(`Duplicate or missing stable ID in ${name}.`);seen.add(row.id);}
 }
@@ -60,11 +60,12 @@ async function validationContext(changed:Record<string,any>){
 }
 async function install(manifest:RulesManifest, packages:Record<string,any>, mode:'bootstrap'|'update'){
   await validationContext(packages);
-  const db=await open(); const stores=['system','staging','dependencies','searchIndex',...new Set(Object.keys(packages).map(name=>PACKAGE_STORE[name]))]; const tx=db.transaction(stores,'readwrite');
+  const db=await open(); const stores=['system','staging','dependencies','searchIndex',...new Set(Object.keys(packages).map(name=>PACKAGE_STORE[name]).filter(Boolean))]; const tx=db.transaction(stores,'readwrite');
   const staging=tx.objectStore('staging');
   for(const [name,payload] of Object.entries(packages))staging.put({id:`${manifest.datasetVersion}:${name}`,payload});
   for(const [name,payload] of Object.entries(packages)){
-    const store=tx.objectStore(PACKAGE_STORE[name]); store.clear();
+    const mappedStore=PACKAGE_STORE[name]; if(!mappedStore)continue;
+    const store=tx.objectStore(mappedStore); store.clear();
     payload.records.forEach((row:any,index:number)=>store.put(normalizeRecord(name,row,index)));
   }
   const dependencies=tx.objectStore('dependencies'); const search=tx.objectStore('searchIndex');
@@ -76,14 +77,15 @@ async function install(manifest:RulesManifest, packages:Record<string,any>, mode
 
 export async function initializeRules(){
   const installed=await system<any>('installed',null); if(installed)return installed;
-  const manifest=await fetch('./data/version.json').then(r=>r.json()) as RulesManifest;
+  const manifest=await fetch('./data/version.json').then(r=>{if(!r.ok)throw new Error('Bundled rules manifest unavailable.');return r.json()}) as RulesManifest;
+  if(manifest.schemaVersion>VERSION)throw new Error('Bundled rules need a newer app database schema.');
   const packages:Record<string,any>={}; for(const [name,info] of Object.entries(manifest.factions.necrons.packages))packages[name]=await fetchPackage(info,false);
   await install(manifest,packages,'bootstrap'); return system<any>('installed',null);
 }
 export async function checkForUpdates(force=false){
   const installed=await system<any>('installed',null); if(!installed)throw new Error('Initialize local rules first.');
   if(!force&&!navigator.onLine)return {status:'offline' as const,changed:[] as string[]};
-  const manifest=await fetch('https://raw.githubusercontent.com/JinkoJink/40k-field-companion/main/data/version.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('Update manifest unavailable.');return r.json()}) as RulesManifest;
+  const manifest=await fetch('https://raw.githubusercontent.com/JinkoJink/40k-field-companion/main/public/data/version.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('Update manifest unavailable.');return r.json()}) as RulesManifest;
   if(manifest.schemaVersion>VERSION)throw new Error('This update needs a newer app database schema.');
   const changed=Object.entries(manifest.factions.necrons.packages).filter(([name,info])=>installed.packages?.[name]?.hash!==info.hash);
   if(!changed.length)return {status:'current' as const,changed:[] as string[]};
