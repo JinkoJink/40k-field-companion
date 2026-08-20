@@ -100,3 +100,10 @@ export type BattleState = {
   units:Record<string,BattleUnitState>;
   notes:string;
 };
+
+export type PackageManifest={file:string;hash:string};
+export type RulesManifest={
+  datasetVersion:string;
+  schemaVersion:number;
+  factions:{necrons:{packages:Record<string,PackageManifest>}};
+};

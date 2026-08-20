@@ -1,5 +1,5 @@
-const CACHE_NAME = 'field-companion-shell-v3';
-const APP_SHELL = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png'];
+const CACHE_NAME = 'field-companion-shell-v4';
+const APP_SHELL = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png', './data/version.json'];
 
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(APP_SHELL)));
@@ -29,19 +29,5 @@ self.addEventListener('fetch', event => {
     return;
   }
 
-  if (url.hostname === 'raw.githubusercontent.com') {
-    event.respondWith(
-      caches.open(CACHE_NAME).then(async cache => {
-        const cached = await cache.match(req);
-        try {
-          const fresh = await fetch(req);
-          if (fresh.ok) cache.put(req, fresh.clone());
-          return fresh;
-        } catch {
-          if (cached) return cached;
-          throw new Error('Offline and no cached rules data is available yet.');
-        }
-      })
-    );
-  }
+  // Rules are deliberately not cached here: IndexedDB owns validated structured rules.
 });

@@ -1,48 +1,46 @@
 import React,{useEffect,useMemo,useState} from 'react';
-import {AlertTriangle,CheckCircle2,ChevronDown,Database,ExternalLink,Minus,Plus,RotateCcw,Search,Shield,Trash2} from 'lucide-react';
+import {AlertTriangle,CheckCircle2,ChevronDown,Database,ExternalLink,Minus,Plus,RotateCcw,Search,Shield,Trash2,Settings} from 'lucide-react';
+import {checkForUpdates,migrateLegacy,readBattle,readUser,system,writeBattle,writeUser} from './db';
 import {createBattleState,phases,syncBattleUnits,totalScore,unitWounds} from './battle';
 import {availableSizes,defaultSize,isCategory,loadNecrons,pointsFor,synergy} from './data';
 import {compatibleBodyguards,configurationGroups,createRosterUnit,defaultWargear,rosterPoints,validateRoster} from './roster';
 import type {BattleState,Detachment,Phase,RosterUnit,UnitDetail,UnitIndex,ValidationIssue} from './types';
 
 const CORE_RULES_URL='https://www.warhammer-community.com/en-gb/downloads/warhammer-40000/';
-const ROSTER_KEY='field-companion-roster-v2';
-const DETACHMENT_KEY='field-companion-detachments-v1';
-const BATTLE_KEY='field-companion-battle-v1';
 const POINTS_LIMIT=2000;
-
-function readStored<T>(key:string,fallback:T):T{
-  try{return JSON.parse(localStorage.getItem(key)||'') as T}catch{return fallback}
-}
 
 export function App(){
   const[units,setUnits]=useState<UnitIndex[]>([]);
   const[details,setDetails]=useState<Map<string,UnitDetail>>(new Map());
   const[detachments,setDetachments]=useState<Detachment[]>([]);
-  const[selected,setSelected]=useState<string[]>(()=>readStored(DETACHMENT_KEY,['Cursed Legion']));
-  const[roster,setRoster]=useState<RosterUnit[]>(()=>readStored(ROSTER_KEY,[]));
-  const[battle,setBattle]=useState<BattleState|null>(()=>readStored(BATTLE_KEY,null));
-  const[tab,setTab]=useState<'build'|'battle'|'search'>('build');
+  const[selected,setSelected]=useState<string[]>(['Cursed Legion']);
+  const[roster,setRoster]=useState<RosterUnit[]>([]);
+  const[battle,setBattle]=useState<BattleState|null>(null);
+  const[tab,setTab]=useState<'build'|'battle'|'search'|'settings'>('build');
   const[query,setQuery]=useState('');
   const[error,setError]=useState('');
   const[loading,setLoading]=useState(true);
+  const[installed,setInstalled]=useState<any>(null);
+  const[updateMessage,setUpdateMessage]=useState('');
+  const[settings,setSettings]=useState({automatic:true,wifiOnly:false,manualOnly:false});
 
   useEffect(()=>{
-    loadNecrons()
-      .then(data=>{
+    Promise.all([migrateLegacy(),loadNecrons(),readUser<string[]>('detachments',['Cursed Legion']),readUser<RosterUnit[]>('roster',[]),readBattle(),readUser('settings',{automatic:true,wifiOnly:false,manualOnly:false})])
+      .then(([,data,storedDetachments,storedRoster,storedBattle,storedSettings])=>{
         setUnits(data.index);
         setDetails(data.detailMap);
         setDetachments(data.detachments);
+        setSelected(storedDetachments);setRoster(storedRoster);setBattle(storedBattle);setSettings(storedSettings);return system('installed',null);
       })
+      .then(setInstalled)
       .catch(cause=>setError(String(cause)))
       .finally(()=>setLoading(false));
   },[]);
-  useEffect(()=>localStorage.setItem(ROSTER_KEY,JSON.stringify(roster)),[roster]);
-  useEffect(()=>localStorage.setItem(DETACHMENT_KEY,JSON.stringify(selected)),[selected]);
-  useEffect(()=>{
-    if(battle)localStorage.setItem(BATTLE_KEY,JSON.stringify(battle));
-    else localStorage.removeItem(BATTLE_KEY);
-  },[battle]);
+  useEffect(()=>{if(!loading)void writeUser('roster',roster)},[roster,loading]);
+  useEffect(()=>{if(!loading)void writeUser('detachments',selected)},[selected,loading]);
+  useEffect(()=>{if(!loading)void writeBattle(battle)},[battle,loading]);
+  useEffect(()=>{if(!loading)void writeUser('settings',settings)},[settings,loading]);
+  useEffect(()=>{const connection=(navigator as Navigator&{connection?:{type?:string}}).connection;const wifiBlocked=settings.wifiOnly&&(!connection||connection.type!=='wifi');if(!loading&&settings.automatic&&!settings.manualOnly&&navigator.onLine&&!battle&&!wifiBlocked){void checkForUpdates().then(async result=>{if(result.status==='updated'){setUpdateMessage(`Background update installed: ${result.changed.join(', ')}`);setInstalled(await system('installed',null));}}).catch(()=>{/* startup stays usable if the optional check fails */})}},[loading,settings.automatic,settings.manualOnly,settings.wifiOnly,battle]);
   useEffect(()=>{
     if(battle)setBattle(current=>current?syncBattleUnits(current,roster):current);
   },[roster.length]);
@@ -106,7 +104,7 @@ export function App(){
     {error&&<div className='error'>{error}</div>}
 
     <nav className='tabs'>
-      {(['build','battle','search'] as const).map(name=>
+      {(['build','battle','search','settings'] as const).map(name=>
         <button className={tab===name?'active':''} onClick={()=>setTab(name)} key={name}>
           {name[0].toUpperCase()+name.slice(1)}
         </button>
@@ -144,7 +142,21 @@ export function App(){
       details={details}
       onAdd={addUnit}
     />}
+    {tab==='settings'&&<SettingsView
+      installed={installed} settings={settings} setSettings={setSettings} updateMessage={updateMessage}
+      onCheck={async()=>{try{setUpdateMessage('Checking…');const result=await checkForUpdates(true);setUpdateMessage(result.status==='updated'?`Installed: ${result.changed.join(', ')}`:result.status==='current'?'Local rules are current.':'Offline — local rules remain active.');setInstalled(await system('installed',null));}catch(cause){setUpdateMessage(`Update rejected: ${String(cause)}`)}}}
+    />}
   </main>;
+}
+
+function SettingsView({installed,settings,setSettings,updateMessage,onCheck}:{installed:any;settings:{automatic:boolean;wifiOnly:boolean;manualOnly:boolean};setSettings:React.Dispatch<React.SetStateAction<{automatic:boolean;wifiOnly:boolean;manualOnly:boolean}>>;updateMessage:string;onCheck:()=>Promise<void>}){
+  const patch=(change:Partial<typeof settings>)=>setSettings(current=>({...current,...change}));
+  return <section className='panel'><div className='row'><div><div className='eyebrow'>LOCAL RULES DATABASE</div><h2>Offline settings</h2></div><Settings size={22}/></div>
+    <p className='muted'>Rules, rosters and active battles live on this phone. Network checks only fetch a tiny manifest, then only changed packages.</p>
+    <div className='formGrid'><label className='checkLabel'><input type='checkbox' checked={settings.automatic} onChange={e=>patch({automatic:e.target.checked,manualOnly:!e.target.checked})}/> Automatic update checks</label><label className='checkLabel'><input type='checkbox' checked={settings.manualOnly} onChange={e=>patch({manualOnly:e.target.checked,automatic:!e.target.checked})}/> Manual updates only</label><label className='checkLabel'><input type='checkbox' checked={settings.wifiOnly} onChange={e=>patch({wifiOnly:e.target.checked})}/> Wi‑Fi only (automatic checks pause when detection is unavailable)</label></div>
+    <div className='rulePanel'><strong>Installed dataset: {installed?.datasetVersion||'initializing'}</strong><p>Schema {installed?.schemaVersion||1} · Last successful update: {installed?.lastSuccessfulUpdate?new Date(installed.lastSuccessfulUpdate).toLocaleString():'—'} · {navigator.onLine?'Online':'Offline'}</p></div>
+    <button className='addButton' onClick={()=>void onCheck()}>Check for updates now</button>{updateMessage&&<p className='muted'>{updateMessage}</p>}
+  </section>;
 }
 
 function BuildView(props:{

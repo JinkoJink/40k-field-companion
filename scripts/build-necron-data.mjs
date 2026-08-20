@@ -1,0 +1,70 @@
+#!/usr/bin/env node
+/* Build-time publisher. This never runs in the installed PWA. */
+import {mkdir, writeFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import YAML from 'yaml';
+
+const BS_URL='https://raw.githubusercontent.com/BSData/wh40k-11e/main/Necrons.json';
+const MFM_URL='https://raw.githubusercontent.com/BSData/wh40k-11e-mfm/main/data/necrons.yaml';
+const OUT=new URL('../public/data/necrons/',import.meta.url);
+const version=process.env.DATASET_VERSION || new Date().toISOString().slice(0,10)+'.1';
+const key=value=>String(value).toLowerCase().replace(/[’‘]/g,"'").replace(/\[legends\]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+const unitId=name=>'necrons:unit:'+key(name);
+const sha=value=>createHash('sha256').update(value).digest('hex');
+const textMap=chars=>Object.fromEntries((chars||[]).map(c=>[c.name||'',String(c.$text??'')]));
+const profile=(raw, owner, type, index)=>({id:`${owner}:${type}:${key(raw.name)}:${index}`,name:raw.name,type:raw.typeName,characteristics:textMap(raw.characteristics)});
+function walk(node,out){
+  for(const item of node.profiles||[])out.push(item);
+  for(const item of node.selectionEntries||[])walk(item,out);
+  for(const item of node.selectionEntryGroups||[])walk(item,out);
+}
+function options(node, depth=0){
+  if(depth>8)return [];
+  const children=[...(node.selectionEntries||[]).map(x=>({...x,_kind:'entry'})),...(node.selectionEntryGroups||[]).map(x=>({...x,_kind:'group'}))];
+  return children.filter(x=>!x.hidden).map(x=>({id:x.id,name:x.name,kind:x._kind,type:x.type,hidden:Boolean(x.hidden),costs:(x.costs||[]).map(c=>({name:c.name,type:c.typeId,value:Number(c.value)})),constraints:(x.constraints||[]).map(c=>({type:c.type,value:Number(c.value),scope:c.scope,childId:c.childId})),profiles:(x.profiles||[]).map((p,i)=>profile(p,'option:'+x.id,'profile',i)),options:options(x,depth+1)}));
+}
+const summaries={
+  'Awakened Dynasty':['Command Protocols','Codex rules required.'],
+  'Annihilation Legion':['Annihilation Protocol','Codex rules required.'],
+  'Canoptek Court':['Power Matrix','Codex rules required.'],
+  'Obeisance Phalanx':['Worthy Foes','Codex rules required.'],
+  'Hypercrypt Legion':['Hyperphasing','Codex rules required.'],
+  'Starshatter Arsenal':['Relentless Onslaught','Codex rules required.'],
+  'Cryptek Conclave':['Technosorcerous Augmentations','Codex rules required.'],
+  'Cursed Legion':['Cold Fervour','Codex rules required.'],
+  'Pantheon Of Woe':['Cosmic Distortion','Codex rules required.'],
+  'Pantheon of Woe':['Cosmic Distortion','Codex rules required.'],
+  'Hand Of The Dynasty':['Dynastic Advance','Codex rules required.'],
+};
+const bs=await (await fetch(BS_URL)).json();
+const mfm=YAML.parse(await (await fetch(MFM_URL)).text());
+const mfmByName=new Map((mfm.units||[]).map(x=>[key(x.name),x]));
+const units=[],profiles=[],weapons=[],abilities=[],keywords=[],leaders=[];
+for(const entry of (bs.catalogue?.sharedSelectionEntries||[])){
+  const categories=(entry.categoryLinks||[]).map(x=>x.name).filter(Boolean);
+  if(!categories.includes('Faction: Necrons'))continue;
+  const raw=[]; walk(entry,raw);
+  const unitRaw=raw.find(x=>x.typeName==='Unit'&&x.name===entry.name)||raw.find(x=>x.typeName==='Unit');
+  if(!unitRaw)continue;
+  const id=unitId(entry.name), all=raw.map((x,i)=>profile(x,id,'profile',i));
+  const current=mfmByName.get(key(entry.name));
+  units.push({id,name:entry.name,legends:/\[Legends\]/i.test(entry.name),categories,role:current?.role||null,weaponCount:all.filter(x=>/Weapons$/.test(x.type||'')).length,abilityCount:all.filter(x=>x.type==='Abilities').length,options:options(entry),rules:(entry.infoLinks||[]).map(x=>({name:x.name,type:x.type,targetId:x.targetId}))});
+  profiles.push({id:unitRaw.id,unitId:id,characteristics:unitRaw.characteristics});
+  weapons.push(...all.filter(x=>x.type==='Ranged Weapons'||x.type==='Melee Weapons').map(x=>({...x,unitId:id})));
+  abilities.push(...all.filter(x=>x.type==='Abilities').map(x=>({...x,unitId:id})));
+  keywords.push(...categories.map(name=>({id:`necrons:keyword:${key(name)}:${key(entry.name)}`,keywordId:`necrons:keyword:${key(name)}`,name,unitId:id})));
+  if(current?.attachTo?.length)leaders.push({id:`necrons:leader:${key(entry.name)}`,leaderUnitId:id,targetNames:current.attachTo,targetUnitIds:current.attachTo.map(unitId)});
+}
+const detachmentRows=(mfm.detachments||[]).map(d=>{const [ruleName,summary]=summaries[d.name]||['Detachment rule','Codex rules required.'];return {...d,id:`necrons:detachment:${key(d.name)}`,ruleName,summary};});
+const enhancements=detachmentRows.flatMap(d=>(d.enhancements||[]).map(e=>({...e,id:`${d.id}:enhancement:${key(e.name)}`,detachmentId:d.id})));
+const points=units.map(unit=>{const m=mfmByName.get(key(unit.name));return {id:`necrons:points:${key(unit.name)}`,unitId:unit.id,pricing:m?.pricing||null,role:m?.role||null};});
+const packages={units,profiles,weapons,abilities,keywords,detachments:detachmentRows,enhancements,stratagems:[],points,leaders,source:[{id:'necrons:source:current',bsdata:BS_URL,mfm:MFM_URL,generatedAt:new Date().toISOString()}]};
+await mkdir(OUT,{recursive:true});
+const manifest={datasetVersion:version,schemaVersion:1,factions:{necrons:{packages:{}}}};
+for(const [name,payload] of Object.entries(packages)){
+  const body=JSON.stringify({schemaVersion:1,package:name,records:payload});
+  await writeFile(new URL(`${name}.json`,OUT),body+'\n');
+  manifest.factions.necrons.packages[name]={file:`data/necrons/${name}.json`,hash:sha(body)};
+}
+await writeFile(new URL('../version.json',OUT),JSON.stringify(manifest,null,2)+'\n');
+console.log(`Published ${units.length} Necron units (${version}).`);

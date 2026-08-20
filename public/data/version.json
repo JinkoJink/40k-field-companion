@@ -1,0 +1,54 @@
+{
+  "datasetVersion": "2026-08-20.1",
+  "schemaVersion": 1,
+  "factions": {
+    "necrons": {
+      "packages": {
+        "units": {
+          "file": "data/necrons/units.json",
+          "hash": "68d80ddbb5c0f5a253ae8f570ef235d0952854efc16215773f8201956b1a9a5d"
+        },
+        "profiles": {
+          "file": "data/necrons/profiles.json",
+          "hash": "865857e886450d484856248fcc1adf203dbe9ab3c9549754ecb17493750996ae"
+        },
+        "weapons": {
+          "file": "data/necrons/weapons.json",
+          "hash": "4d21a2ea4ce898ba649633d43cfe501933ee9e09c9429e1edd43c5af18ce4a5e"
+        },
+        "abilities": {
+          "file": "data/necrons/abilities.json",
+          "hash": "d6a4a0ae7d8662419c1139048b21f4315d79866bdb1c0650b112fa3ae342aabe"
+        },
+        "keywords": {
+          "file": "data/necrons/keywords.json",
+          "hash": "ce82b14da31480082b0bb5fd6f384bdff9df9ff4e12722c9218ba5000c624982"
+        },
+        "detachments": {
+          "file": "data/necrons/detachments.json",
+          "hash": "d051a97e9eae1d09f1d17928e61df96949a37483ac8091531716341bb31b940f"
+        },
+        "enhancements": {
+          "file": "data/necrons/enhancements.json",
+          "hash": "4d798fd7e886325c7b80c1375bc1fc172625f23648838b4191ca71a011fe4a9b"
+        },
+        "stratagems": {
+          "file": "data/necrons/stratagems.json",
+          "hash": "4c30f91a39361bcce8eed7c41146bb5ed3d8bc140366692e0a1735420891ff95"
+        },
+        "points": {
+          "file": "data/necrons/points.json",
+          "hash": "1a996645012fc281d73c3a88f1658f2408e015ca4c5a059107017496eb62a7bf"
+        },
+        "leaders": {
+          "file": "data/necrons/leaders.json",
+          "hash": "734a35160e76704438acb697edbb14e9fa8b9a381723f86b4d3b0f1b6824372f"
+        },
+        "source": {
+          "file": "data/necrons/source.json",
+          "hash": "4aa4768c221b2d6a1ee3b7d26feb9290523111d849e0330742cae1443003a52b"
+        }
+      }
+    }
+  }
+}

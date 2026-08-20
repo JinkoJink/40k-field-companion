@@ -7,7 +7,9 @@
     "build": "vite build",
     "preview": "vite preview",
     "test": "vitest run",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "build:data": "node scripts/build-necron-data.mjs",
+    "validate:data": "node scripts/validate-packages.mjs"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^4.3.1",
