@@ -40,6 +40,9 @@ export function createRosterUnit(unit:UnitIndex,detail:UnitDetail|undefined):Ros
     unitId:unit.id,
     models,
     wargear:defaultWargear(detail,models),
+    stats:{...(detail?.stats||unit.stats)},
+    weapons:(detail?.weapons||[]).map(profile=>({...profile,characteristics:{...profile.characteristics}})),
+    abilities:(detail?.abilities||[]).map(profile=>({...profile,characteristics:{...profile.characteristics}})),
   };
 }
 
