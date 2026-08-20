@@ -1,8 +1,19 @@
 import {loadRules} from './db';
-import type {PriceTier,UnitIndex} from './types';
+import type {PriceTier,UnitDetail,UnitIndex} from './types';
+
+const battleSnapshotCache=new Map<string,UnitDetail>();
 
 /** Reads only the installed IndexedDB rule tree. No BSData request is made at runtime. */
-export const loadNecrons=loadRules;
+export async function loadNecrons(){
+  const data=await loadRules();
+  battleSnapshotCache.clear();
+  for(const [id,detail] of data.detailMap)battleSnapshotCache.set(id,detail);
+  return data;
+}
+
+/** Fallback for rosters saved before build-time datasheet snapshots were added. */
+export function battleSnapshotFor(unitId:string){return battleSnapshotCache.get(unitId);}
+
 function occurrenceMatches(range:string|undefined,occurrence:number){if(!range)return false;const exact=range.match(/^\[(\d+),(\d+)\]$/);if(exact)return occurrence>=Number(exact[1])&&occurrence<=Number(exact[2]);const open=range.match(/^\[(\d+),\)$/);return Boolean(open&&occurrence>=Number(open[1]));}
 export function tierForOccurrence(unit:UnitIndex,occurrence:number):PriceTier|undefined{return unit.pricing?.find(tier=>occurrenceMatches(tier.range,occurrence))||unit.pricing?.[0];}
 export function availableSizes(unit:UnitIndex){return Array.from(new Set((unit.pricing||[]).flatMap(tier=>tier.costs||[]).map(cost=>cost.models))).sort((a,b)=>a-b);}
