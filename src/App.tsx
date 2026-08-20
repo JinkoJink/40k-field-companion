@@ -1,7 +1,7 @@
 import React,{useEffect,useMemo,useRef,useState} from 'react';
 import {AlertTriangle,CheckCircle2,ChevronDown,Database,ExternalLink,Minus,Plus,RotateCcw,Search,Settings,Shield,Trash2} from 'lucide-react';
 import {checkForUpdates,migrateLegacy,readBattle,readUser,system,writeBattle,writeUser} from './db';
-import {createBattleState,phases,remainingUnitWounds,stateForModelWounds,stateForRemainingWounds,totalScore,totalUnitWounds,unitWounds} from './battle';
+import {createBattleState,ensureBattleSnapshots,phases,remainingUnitWounds,stateForModelWounds,stateForRemainingWounds,totalScore,totalUnitWounds,unitWounds} from './battle';
 import {availableSizes,defaultSize,isCategory,loadNecrons,pointsFor,subfactionKeyword} from './data';
 import {applyRequiredBindings,compatibleBodyguards,configurationGroups,createRosterUnit,defaultWargear,removeUnavailableEnhancements,rosterPoints,validateRoster} from './roster';
 import {attachmentRoleFor,connectionNotesForEntry,eligibleEnhancementsForUnit,eligibleStratagemTargets,requiredBindingForUnit,retinueConditionFor,ruleMetaLine,stratagemAvailable} from './rules';
@@ -14,6 +14,21 @@ type LoadedRules=Awaited<ReturnType<typeof loadNecrons>>;
 
 function unitSearchText(unit:UnitIndex,detail?:UnitDetail){
   return JSON.stringify({...unit,details:detail}).toLowerCase();
+}
+
+function refreshRosterSnapshots(roster:RosterUnit[],units:UnitIndex[],details:Map<string,UnitDetail>){
+  const unitById=new Map(units.map(unit=>[unit.id,unit]));
+  return roster.map(entry=>{
+    const unit=unitById.get(entry.unitId);
+    if(!unit)return entry;
+    const detail=details.get(entry.unitId);
+    return{
+      ...entry,
+      stats:{...(detail?.stats||unit.stats)},
+      weapons:(detail?.weapons||[]).map(profile=>({...profile,characteristics:{...profile.characteristics}})),
+      abilities:(detail?.abilities||[]).map(profile=>({...profile,characteristics:{...profile.characteristics}})),
+    };
+  });
 }
 
 export function App(){
@@ -47,7 +62,10 @@ export function App(){
     }
     const activeDetachments=data.detachments.filter(detachment=>validSelected.includes(detachment.name));
     const activeEnhancements=activeDetachments.flatMap(detachment=>detachment.enhancements||[]);
-    setRoster(current=>applyRequiredBindings(removeUnavailableEnhancements(current,activeDetachments),data.index,activeEnhancements));
+    setRoster(current=>{
+      const legal=applyRequiredBindings(removeUnavailableEnhancements(current,activeDetachments),data.index,activeEnhancements);
+      return refreshRosterSnapshots(legal,data.index,data.detailMap);
+    });
   }
 
   useEffect(()=>{
@@ -65,17 +83,17 @@ export function App(){
         ]);
         if(cancelled)return;
         const validSelected=storedDetachments.filter(name=>data.detachments.some(detachment=>detachment.name===name));
+        const activeDetachments=data.detachments.filter(detachment=>validSelected.includes(detachment.name));
+        const activeEnhancements=activeDetachments.flatMap(detachment=>detachment.enhancements||[]);
+        const currentRoster=refreshRosterSnapshots(applyRequiredBindings(storedRoster,data.index,activeEnhancements),data.index,data.detailMap);
         selectedRef.current=validSelected;
         setUnits(data.index);
         setDetails(data.detailMap);
         setDetachments(data.detachments);
         setStratagems(data.stratagems);
         setSelected(validSelected);
-        const activeEnhancements=data.detachments
-          .filter(detachment=>validSelected.includes(detachment.name))
-          .flatMap(detachment=>detachment.enhancements||[]);
-        setRoster(applyRequiredBindings(storedRoster,data.index,activeEnhancements));
-        setBattle(storedBattle);
+        setRoster(currentRoster);
+        setBattle(ensureBattleSnapshots(storedBattle,currentRoster,activeDetachments));
         setSettings(storedSettings);
         setInstalled(await system<InstalledRulesMeta|null>('installed',null));
       }catch(cause){
@@ -272,6 +290,7 @@ function BuildView(props:{units:UnitIndex[];details:Map<string,UnitDetail>;detac
       const entryIssues=issuesByInstance.get(entry.instanceId)||[];
       return <article className={`card rosterCard ${entryIssues.length?'cardInvalid':''}`} key={entry.instanceId}>
         <div className='row'><div><div className='eyebrow'>UNIT {index+1}{attachmentLabel?` · ${attachmentLabel.toUpperCase()}`:''}</div><h3>{unit.name}</h3></div><button className='iconButton danger' onClick={()=>props.onRemove(entry.instanceId)} aria-label={`Remove ${unit.name}`}><Trash2 size={17}/></button></div>
+        <Stats stats={unit.stats}/>
         <div className='formGrid'>
           <label>Unit size<select value={entry.models} onChange={event=>props.onSize(entry,Number(event.target.value))}>{availableSizes(unit).map(size=><option key={size} value={size}>{size} models</option>)}</select></label>
           {isCategory(unit,'character')&&<label className='checkLabel'><input type='radio' name='warlord' checked={Boolean(entry.warlord)} onChange={()=>props.onWarlord(entry.instanceId)}/> Warlord</label>}
@@ -442,7 +461,7 @@ function Counter({label,value,onChange,max=99}:{label:string;value:number;onChan
 }
 
 function SearchView({query,setQuery,units,details,onAdd}:{query:string;setQuery:(value:string)=>void;units:UnitIndex[];details:Map<string,UnitDetail>;onAdd:(unit:UnitIndex)=>void}){
-  return <><div className='search'><Search size={18}/><input value={query} onChange={event=>setQuery(event.target.value)} placeholder='Search units, keywords, roles, weapons…'/></div><div className='stack'>{units.map(unit=>{const label=retinueConditionFor(unit)?.label||attachmentRoleFor(unit);return <article className='card' key={unit.id}><div className='row'><div><h3>{unit.name}</h3><p>{pointsFor(unit)} pts · {unit.role||'unit'}{label?` · ${label}`:''}</p></div><button className='addButton' onClick={()=>onAdd(unit)}><Plus size={15}/> Add</button></div><UnitDetails data={details.get(unit.id)}/></article>;})}</div></>;
+  return <><div className='search'><Search size={18}/><input value={query} onChange={event=>setQuery(event.target.value)} placeholder='Search units, keywords, roles, weapons…'/></div><div className='stack'>{units.map(unit=>{const label=retinueConditionFor(unit)?.label||attachmentRoleFor(unit);return <article className='card' key={unit.id}><div className='row'><div><h3>{unit.name}</h3><p>{pointsFor(unit)} pts · {unit.role||'unit'}{label?` · ${label}`:''}</p></div><button className='addButton' onClick={()=>onAdd(unit)}><Plus size={15}/> Add</button></div><Stats stats={unit.stats}/><UnitDetails data={details.get(unit.id)}/></article>;})}</div></>;
 }
 
 function Stats({stats}:{stats:Record<string,string>}){
