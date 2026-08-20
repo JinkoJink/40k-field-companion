@@ -401,34 +401,37 @@ function BattleView({roster,units,details,selectedDetachments,enhancements,strat
       {selectedDetachments.map(detachment=><div className='rulePanel' key={detachment.name}><strong>{detachment.name} · {detachment.ruleName}</strong><p>{detachment.summary}</p></div>)}
     </section>
 
-    <div className='stack'>
-      {roster.map(entry=>{
-        const unit=units.find(candidate=>candidate.id===entry.unitId);
-        if(!unit)return null;
-        const state=battle.units[entry.instanceId]||{modelsRemaining:entry.models,woundsLost:0,destroyed:false};
-        const wounds=unitWounds(unit);
-        const maximumWounds=totalUnitWounds(entry.models,wounds);
-        const woundsRemaining=remainingUnitWounds(state,entry.models,wounds);
-        const modelsRemaining=Math.ceil(woundsRemaining/wounds);
-        const enhancement=(enhancements||[]).find(candidate=>candidate.name===entry.enhancement);
-        const update=(change:Partial<typeof state>)=>patch({units:{...battle.units,[entry.instanceId]:{...state,...change}}});
-        const setRemaining=(value:number)=>update(stateForRemainingWounds(state,entry.models,wounds,value));
-        return <article className={`card battleUnit ${state.destroyed?'destroyed':''}`} key={entry.instanceId}>
-          <div className='row'>
-            <div><h3>{unit.name}</h3><p>{modelsRemaining}/{entry.models} models · {wounds} Wound{wounds===1?'':'s'} each</p></div>
-            <label className='checkLabel'><input type='checkbox' checked={woundsRemaining===0} onChange={event=>setRemaining(event.target.checked?0:Math.min(wounds,maximumWounds))}/> Destroyed</label>
-          </div>
-          {enhancement&&<div className='assignedEnhancement'><div className='eyebrow'>ASSIGNED ENHANCEMENT</div><strong>{enhancement.name} <span>+{enhancement.points} pts</span></strong><p>{enhancementDescription(enhancement)}</p></div>}
-          <Stats unit={unit}/>
-          <div className='trackerGrid'>
-            <Counter label={`Wounds remaining (${maximumWounds} Starting Strength)`} value={woundsRemaining} max={maximumWounds} onChange={setRemaining}/>
-            <div className='counterBox'><span>Models remaining</span><div><b>{modelsRemaining}</b><small>of {entry.models}</small></div></div>
-          </div>
-          <UnitDetails data={details.get(unit.id)} phase={battle.phase}/>
-          <button className='reanimate compact' disabled={woundsRemaining>=maximumWounds} onClick={()=>setRemaining(woundsRemaining+wounds)}><Plus size={13}/> Reanimation Protocols: return 1 model</button>
-        </article>;
-      })}
-    </div>
+    <details className='catalogueGroup battleArmyList' open>
+      <summary><span>Army list</span><small>{roster.length} unit{roster.length===1?'':'s'}</small></summary>
+      <div className='stack'>
+        {roster.map(entry=>{
+          const unit=units.find(candidate=>candidate.id===entry.unitId);
+          if(!unit)return null;
+          const state=battle.units[entry.instanceId]||{modelsRemaining:entry.models,woundsLost:0,destroyed:false};
+          const wounds=unitWounds(unit);
+          const maximumWounds=totalUnitWounds(entry.models,wounds);
+          const woundsRemaining=remainingUnitWounds(state,entry.models,wounds);
+          const modelsRemaining=Math.ceil(woundsRemaining/wounds);
+          const enhancement=(enhancements||[]).find(candidate=>candidate.name===entry.enhancement);
+          const update=(change:Partial<typeof state>)=>patch({units:{...battle.units,[entry.instanceId]:{...state,...change}}});
+          const setRemaining=(value:number)=>update(stateForRemainingWounds(state,entry.models,wounds,value));
+          return <article className={`card battleUnit ${state.destroyed?'destroyed':''}`} key={entry.instanceId}>
+            <div className='row'>
+              <div><h3>{unit.name}</h3><p>{modelsRemaining}/{entry.models} models · {wounds} Wound{wounds===1?'':'s'} each</p></div>
+              <label className='checkLabel'><input type='checkbox' checked={woundsRemaining===0} onChange={event=>setRemaining(event.target.checked?0:Math.min(wounds,maximumWounds))}/> Destroyed</label>
+            </div>
+            {enhancement&&<div className='assignedEnhancement'><div className='eyebrow'>ASSIGNED ENHANCEMENT</div><strong>{enhancement.name} <span>+{enhancement.points} pts</span></strong><p>{enhancementDescription(enhancement)}</p></div>}
+            <Stats unit={unit}/>
+            <div className='trackerGrid'>
+              <Counter label={`Wounds remaining (${maximumWounds} Starting Strength)`} value={woundsRemaining} max={maximumWounds} onChange={setRemaining}/>
+              <div className='counterBox'><span>Models remaining</span><div><b>{modelsRemaining}</b><small>of {entry.models}</small></div></div>
+            </div>
+            <UnitDetails data={details.get(unit.id)} phase={battle.phase}/>
+            <button className='reanimate compact' disabled={woundsRemaining>=maximumWounds} onClick={()=>setRemaining(woundsRemaining+wounds)}><Plus size={13}/> Reanimation Protocols: return 1 model</button>
+          </article>;
+        })}
+      </div>
+    </details>
     <label className='notes panel'>Battle notes<textarea value={battle.notes} onChange={event=>patch({notes:event.target.value})} placeholder='Reserves, once-per-battle abilities, target priorities…'/></label>
   </>;
 }
