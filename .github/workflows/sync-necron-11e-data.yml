@@ -2,12 +2,12 @@ name: Sync Necron 11e data
 
 on:
   push:
-    branches:
-      - main
-      - data/necrons-11e-three-source
     paths:
       - 'scripts/build-necron-data.mjs'
       - 'scripts/validate-packages.mjs'
+      - 'src/types.ts'
+      - 'src/rules.ts'
+      - 'src/db.ts'
       - 'package.json'
       - 'package-lock.json'
       - '.github/workflows/sync-necron-11e-data.yml'
@@ -17,6 +17,9 @@ on:
     paths:
       - 'scripts/build-necron-data.mjs'
       - 'scripts/validate-packages.mjs'
+      - 'src/types.ts'
+      - 'src/rules.ts'
+      - 'src/db.ts'
       - 'package.json'
       - 'package-lock.json'
       - '.github/workflows/sync-necron-11e-data.yml'
@@ -39,7 +42,7 @@ jobs:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.ref_name }}
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: 24
           cache: npm
       - run: npm ci
       - name: Build Necron-only 11e dataset
