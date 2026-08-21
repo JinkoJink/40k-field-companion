@@ -24,6 +24,14 @@ A mobile-first, offline-first Necron army builder, rules reference, and tabletop
 - Roster-aware Stratagem availability with CP, WHEN, TARGET, EFFECT, phase, detachment, and target restrictions
 - Installable Android package and PWA shell with the validated rules dataset included locally
 
+## Supabase rules source
+
+Canonical rules data is maintained in Supabase and mirrored into the offline release bundle.
+
+**Read-only Supabase project endpoint:** https://mvslxmzuecwtsbkhocpg.supabase.co
+
+The published runtime data is exposed through read-only Data API access (including the `runtime_rule_graph` view). No `service_role` or secret key is stored in this repository; public reads use the project's publishable key with database permissions/RLS enforcing the read-only access model.
+
 ## Current release mode
 
 Automatic 11e data publishing and client-side network rules updates are quarantined. Production builds use the checked-in, validated rules dataset in `public/data/` and do not regenerate or install a different rules tree during release. The quarantined updater/publisher implementation is preserved on the `quarantine/automatic-rules-updates` branch until development on it is explicitly resumed.
