@@ -1,17 +1,20 @@
 apply plugin: 'com.android.application'
 
+def ciVersionCode = System.getenv('COMMAND_PROTOCOLS_VERSION_CODE')
+def ciVersionName = System.getenv('COMMAND_PROTOCOLS_VERSION_NAME')
+
 android {
     namespace = "com.jinkojink.commandprotocols"
     compileSdk = rootProject.ext.compileSdkVersion
     defaultConfig {
-        // The original debug-signed package cannot be upgraded by a build signed
-        // on a new GitHub runner. Keep this installer distinct so Android can
-        // install it cleanly without rejecting the existing copy.
+        // v2 is intentionally distinct from the original one-off debug-signed package.
+        // Keep this applicationId stable from here forward so every CI build upgrades
+        // the same installed test application instead of creating another copy.
         applicationId "com.jinkojink.commandprotocols.v2"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 2
-        versionName "2.0"
+        versionCode ciVersionCode ? ciVersionCode.toInteger() : 2
+        versionName ciVersionName ?: "2.0-dev"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         aaptOptions {
              // Files and dirs to omit from the packaged assets dir, modified to accommodate modern web apps.
@@ -41,7 +44,7 @@ dependencies {
     implementation project(':capacitor-android')
     testImplementation "junit:junit:$junitVersion"
     androidTestImplementation "androidx.test.ext:junit:$androidxJunitVersion"
-    androidTestImplementation "androidx.test.espresso:espresso-core:$androidxEspressoCoreVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCoreVersion"
     implementation project(':capacitor-cordova-android-plugins')
 }
 
