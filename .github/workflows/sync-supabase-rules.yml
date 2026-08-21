@@ -24,13 +24,20 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: '24'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
 
       - name: Pull published rules from Supabase
         run: node scripts/sync-supabase-rules.mjs
 
       - name: Validate synchronized rules
-        run: npm test -- --run
+        run: npm test
+
+      - name: Validate offline package structure
+        run: npm run validate:data
 
       - name: Commit changed rules packages
         shell: bash
