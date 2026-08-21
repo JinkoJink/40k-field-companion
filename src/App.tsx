@@ -234,6 +234,7 @@ function SettingsView({installed,settings,setSettings,updateMessage,onCheck}:{in
 function BuildView(props:{units:UnitIndex[];details:Map<string,UnitDetail>;detachments:Detachment[];selected:string[];totalDP:number;roster:RosterUnit[];issues:ValidationIssue[];onToggleDetachment:(detachment:Detachment)=>void;onAdd:(unit:UnitIndex)=>void;onPatch:(instanceId:string,patch:Partial<RosterUnit>)=>void;onSize:(entry:RosterUnit,models:number)=>void;onWarlord:(instanceId:string)=>void;onRemove:(instanceId:string)=>void;}){
   const{units,details,detachments,selected,totalDP,roster,issues}=props;
   const[catalogueQuery,setCatalogueQuery]=useState('');
+  const[quickUnitId,setQuickUnitId]=useState('');
   const[detachmentOpen,setDetachmentOpen]=useState(true);
   const selectedDetachments=useMemo(()=>detachments.filter(detachment=>selected.includes(detachment.name)),[detachments,selected]);
   const enhancements=useMemo(()=>selectedDetachments.flatMap(detachment=>detachment.enhancements||[]),[selectedDetachments]);
@@ -274,6 +275,10 @@ function BuildView(props:{units:UnitIndex[];details:Map<string,UnitDetail>;detac
 
     {!!connectionRows.length&&<section className='panel'><div className='eyebrow'>CONDITIONAL RULE CONNECTIONS</div>{connectionRows.map(({entry,unit,notes})=><div className='rulePanel' key={entry.instanceId}><strong>{unit.name}</strong>{notes.map((note,index)=><p key={index}>{note}</p>)}</div>)}</section>}
 
+    {!!selectedDetachments.length&&<section className='panel'><div className='eyebrow'>SELECTED DETACHMENT RULES</div>{selectedDetachments.map(detachment=><div className='rulePanel' key={detachment.id||detachment.name}><strong>{detachment.name}{detachment.ruleName?` · ${detachment.ruleName}`:''}</strong><p>{detachment.ruleText||detachment.summary||'Rule text has not been supplied by the installed data package.'}</p>{(detachment.enhancements||[]).map(enhancement=><p key={enhancement.id||enhancement.name}><b>{enhancement.name} · {enhancement.points} pts:</b> {enhancementDescription(enhancement)}</p>)}</div>)}</section>}
+
+    <section className='panel quickAdd'><div className='eyebrow'>ADD UNIT</div><div className='formGrid'><label>Unit<select value={quickUnitId} onChange={event=>setQuickUnitId(event.target.value)}><option value=''>Choose a Necron unit…</option>{[...units].filter(unit=>!unit.legends).sort((a,b)=>a.name.localeCompare(b.name)).map(unit=><option key={unit.id} value={unit.id}>{unit.name} · {pointsFor(unit,defaultSize(unit))} pts</option>)}</select></label><button className='addButton' disabled={!quickUnitId} onClick={()=>{const unit=units.find(candidate=>candidate.id===quickUnitId);if(unit){props.onAdd(unit);setQuickUnitId('');}}}><Plus size={15}/> Add selected unit</button></div></section>
+
     <section className='sectionHead'><div><h2>Your roster</h2><p>Each copy is configured separately, including unit size, loadout, Leader, Support, Retinue, Upgrade, Binding and Enhancement.</p></div></section>
     {!roster.length&&<div className='empty'>Add units from the catalogue below.</div>}
     <div className='stack'>{roster.map((entry,index)=>{
@@ -283,6 +288,7 @@ function BuildView(props:{units:UnitIndex[];details:Map<string,UnitDetail>;detac
       const bodyguards=compatibleBodyguards(entry,unit,roster,units,enhancements);
       const availableEnhancements=eligibleEnhancementsForUnit(unit,enhancements);
       const requiredBinding=requiredBindingForUnit(unit,enhancements);
+      const murdermind=entry.enhancement?.toLowerCase()==='murdermind';
       const retinue=retinueConditionFor(unit);
       const role=attachmentRoleFor(unit);
       const attachmentLabel=retinue?.label||role;
@@ -295,7 +301,7 @@ function BuildView(props:{units:UnitIndex[];details:Map<string,UnitDetail>;detac
           <label>Unit size<select value={entry.models} onChange={event=>props.onSize(entry,Number(event.target.value))}>{availableSizes(unit).map(size=><option key={size} value={size}>{size} models</option>)}</select></label>
           {isCategory(unit,'character')&&<label className='checkLabel'><input type='radio' name='warlord' checked={Boolean(entry.warlord)} onChange={()=>props.onWarlord(entry.instanceId)}/> Warlord</label>}
           {(availableEnhancements.length>0||entry.enhancement)&&<EnhancementToggles name={`enhancement-${entry.instanceId}`} selected={entry.enhancement} enhancements={availableEnhancements} required={Boolean(requiredBinding)} onChange={enhancement=>props.onPatch(entry.instanceId,{enhancement})}/>} 
-          {attachmentLabel&&<label>{retinue?`${retinue.label} bodyguard (optional)`:role==='support'?'Support bodyguard (required)':'Leader bodyguard'}<select value={entry.attachedTo||''} onChange={event=>props.onPatch(entry.instanceId,{attachedTo:event.target.value||undefined})}><option value=''>{retinue||role==='leader'?'Not attached':'Select bodyguard'}</option>{bodyguards.map(target=>{const targetUnit=units.find(candidate=>candidate.id===target.unitId);return <option key={target.instanceId} value={target.instanceId}>{targetUnit?.name}</option>})}</select></label>}
+          {attachmentLabel&&<label>{murdermind?'Murdermind Destroyer Cult bodyguard':retinue?`${retinue.label} bodyguard (optional)`:role==='support'?'Support bodyguard (required)':'Leader bodyguard'}<select value={entry.attachedTo||''} onChange={event=>props.onPatch(entry.instanceId,{attachedTo:event.target.value||undefined})}><option value=''>{murdermind?'Choose eligible Destroyer Cult unit…':retinue||role==='leader'?'Not attached':'Select bodyguard'}</option>{bodyguards.map(target=>{const targetUnit=units.find(candidate=>candidate.id===target.unitId);return <option key={target.instanceId} value={target.instanceId}>{targetUnit?.name}{murdermind?' · Murdermind connection':''}</option>})}</select></label>}
         </div>
         <WargearEditor entry={entry} detail={detail} onPatch={props.onPatch}/>
         {!!notes.length&&<div className='rulePanel'><strong>Active connections</strong>{notes.map((note,noteIndex)=><p key={noteIndex}>{note}</p>)}</div>}
@@ -342,7 +348,8 @@ function enhancementDescription(enhancement:Enhancement){
 }
 
 function EnhancementToggles({name,selected,enhancements,required,onChange}:{name:string;selected?:string;enhancements:Enhancement[]|undefined;required?:boolean;onChange:(enhancement?:string)=>void}){
-  return <fieldset className='enhancementToggles'><legend>Enhancement / Upgrade / Binding</legend><label className='enhancementToggle'><input type='radio' name={name} checked={!selected} disabled={required} onChange={()=>onChange(undefined)}/><span><strong>None</strong><small>{required?'A mandatory Binding applies to this unit.':'No Enhancement, Upgrade or Binding assigned.'}</small></span></label>{(enhancements||[]).map(enhancement=><label className={`enhancementToggle ${selected===enhancement.name?'selected':''}`} key={enhancement.id||enhancement.name}><input type='radio' name={name} checked={selected===enhancement.name} onChange={()=>onChange(enhancement.name)}/><span><strong>{enhancement.name} <em>+{enhancement.points} pts</em></strong><small>{enhancementDescription(enhancement)}</small></span></label>)}</fieldset>;
+  const choices=enhancements||[],active=choices.find(enhancement=>enhancement.name===selected);
+  return <fieldset className='enhancementToggles'><legend>Enhancement / Upgrade / Binding</legend><label>Assigned rule<select aria-label={name} value={selected||''} disabled={required} onChange={event=>onChange(event.target.value||undefined)}>{!required&&<option value=''>None</option>}{choices.map(enhancement=><option key={enhancement.id||enhancement.name} value={enhancement.name}>{enhancement.name} · +{enhancement.points} pts</option>)}</select></label><div className='enhancementDescription'><strong>{active?.name||'No Enhancement assigned'}</strong><small>{active?enhancementDescription(active):required?'A mandatory Binding applies to this unit.':'Choose an eligible Enhancement, Upgrade or Binding from the dropdown.'}</small></div></fieldset>;
 }
 
 function UnitCard({unit,detail,onAdd}:{unit:UnitIndex;detail?:UnitDetail;onAdd:()=>void}){
