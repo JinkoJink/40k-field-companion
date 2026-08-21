@@ -4,13 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "prebuild": "node scripts/enrich-necron-stratagems.mjs && node scripts/polish-app-ui.mjs",
-    "build": "vite build",
+    "build": "vite build && node scripts/validate-built-packages.mjs",
     "preview": "vite preview",
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
     "build:data": "node -e \"console.log('11e data regeneration quarantined; using checked-in validated dataset')\"",
-    "validate:data": "node scripts/validate-packages.mjs"
+    "validate:data": "node scripts/validate-packages.mjs",
+    "enrich:stratagems": "node scripts/enrich-necron-stratagems.mjs",
+    "polish:ui": "node scripts/polish-app-ui.mjs"
   },
   "dependencies": {
     "@capacitor/android": "^8.5.0",
