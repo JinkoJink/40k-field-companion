@@ -13,7 +13,6 @@ async function rest(resource,query){
   const response=await fetch(`${SUPABASE_URL}/rest/v1/${resource}?${query}`,{
     headers:{
       apikey:SUPABASE_PUBLISHABLE_KEY,
-      Authorization:`Bearer ${SUPABASE_PUBLISHABLE_KEY}`,
       Accept:'application/json',
     },
     cache:'no-store',
