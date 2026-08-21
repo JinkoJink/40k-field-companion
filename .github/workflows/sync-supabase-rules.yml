@@ -1,6 +1,11 @@
 name: Sync Supabase rules
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/sync-supabase-rules.yml'
+      - 'scripts/sync-supabase-rules.mjs'
   workflow_dispatch:
   schedule:
     - cron: '17 */6 * * *'
