@@ -1,0 +1,2 @@
+Manual Android release trigger file.
+Last triggered: 2026-08-21T12:08:00-04:00
