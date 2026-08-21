@@ -6,7 +6,8 @@
     "factions": [
       "necrons"
     ],
-    "includesSharedCoreRules": true
+    "includesSharedCoreRules": true,
+    "matchedPlayPackagesExcludeCombatPatrolOnly": true
   },
   "resolved": {
     "runtimeGraph": "data/resolved/runtime-graph.json",
@@ -14,6 +15,14 @@
     "detachments": "data/resolved/detachments.json",
     "relationships": "data/resolved/relationships.json",
     "coreRules": "data/resolved/core-rules.json"
+  },
+  "resolvedCounts": {
+    "units": 72,
+    "detachments": 13,
+    "matchedPlayDetachments": 12,
+    "combatPatrolOnlyDetachments": 1,
+    "relationships": 627,
+    "coreRules": 47
   },
   "factions": {
     "necrons": {
