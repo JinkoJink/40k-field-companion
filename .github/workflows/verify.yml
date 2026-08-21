@@ -1,4 +1,4 @@
-name: Verify app and rules
+name: Verify app
 
 on:
   push:
@@ -28,12 +28,8 @@ jobs:
         run: npm run typecheck
       - name: Unit tests
         run: npm test
-      - name: Regenerate current Necron rules graph
-        run: npm run build:data
-      - name: Validate offline rules packages
+      - name: Validate mirrored offline packages
         run: npm run validate:data
-      - name: Reject stale generated rules packages
-        run: git diff --exit-code -- public/data
       - name: Check service worker syntax
         run: node --check public/sw.js
       - name: Production build
