@@ -14,7 +14,10 @@ android {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode ciVersionCode ? ciVersionCode.toInteger() : 2
-        versionName ciVersionName ?: "2.0-dev"
+        // Give every CI-produced APK a visibly unique versionName even if the workflow
+        // supplies only COMMAND_PROTOCOLS_VERSION_CODE. This makes stale installs easy
+        // to distinguish in Android's App info screen.
+        versionName ciVersionName ?: (ciVersionCode ? "2.${ciVersionCode}" : "2.0-dev")
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         aaptOptions {
              // Files and dirs to omit from the packaged assets dir, modified to accommodate modern web apps.
