@@ -22,11 +22,27 @@ const replacements=[
   ["readUser<string[]>('detachments',['Cursed Legion']),","readUser<string[]>('detachments',['Annihilation Legion','Hand of The Dynasty']),"],
   ["readUser<RosterUnit[]>('roster',[]),","readUser<RosterUnit[]|null>('roster',null),"],
   ["const currentRoster=refreshRosterSnapshots(applyRequiredBindings(storedRoster,data.index,activeEnhancements),data.index,data.detailMap);","const initialRoster=storedRoster??buildNarcosTestRoster(data.index,data.detailMap);\n        const currentRoster=refreshRosterSnapshots(applyRequiredBindings(initialRoster,data.index,activeEnhancements),data.index,data.detailMap);"],
+  ["    <section className='panel'><div className='eyebrow'>OBJECTIVE CONTROL</div><div className='objectiveGrid'>{battle.objectives.map(objective=><div className='objective' key={objective.id}><strong>{objective.name}</strong><div>{(['you','opponent','contested'] as const).map(controller=><button className={objective.controller===controller?controller:''} aria-pressed={objective.controller===controller} onClick={()=>patch({objectives:battle.objectives.map(item=>item.id===objective.id?{...item,controller}:item)})} key={controller}>{controller==='you'?'You':controller==='opponent'?'Opponent':'Contested'}</button>)}</div></div>)}</div></section>\n\n",""]
 ];
 
 for(const [from,to] of replacements){
   if(source.includes(from))source=source.replaceAll(from,to);
 }
+
+// Stratagem records in the frozen dataset are incomplete. Never silently hide a selected
+// detachment's records merely because provisional phase/target metadata says they are unavailable.
+source=source.replace(
+  "const available=useMemo(()=>stratagems.filter(stratagem=>stratagemAvailable(stratagem,phase,selectedDetachments,roster,units)),[stratagems,phase,selectedDetachments,roster,units]);",
+  "const selectedIds=new Set(selectedDetachments.map(detachment=>detachment.id));\n  const detachmentStratagems=useMemo(()=>stratagems.filter(stratagem=>!stratagem.detachmentId||selectedIds.has(stratagem.detachmentId)),[stratagems,selectedDetachments]);\n  const available=useMemo(()=>detachmentStratagems.filter(stratagem=>stratagemAvailable(stratagem,phase,selectedDetachments,roster,units)),[detachmentStratagems,phase,selectedDetachments,roster,units]);"
+);
+source=source.replace(
+  "</div>{!available.length?<p className='muted'>No Stratagems match this phase, selected detachments and your roster’s eligible targets.</p>:<div className='stratagemList'>{available.map",
+  "</div>{available.length!==detachmentStratagems.length&&<p className='muted'>{available.length} usable in this phase · {detachmentStratagems.length} total from selected detachments</p>}{!detachmentStratagems.length?<p className='muted'>No Stratagem records are bundled for the selected detachments.</p>:<div className='stratagemList'>{detachmentStratagems.map"
+);
+source=source.replace(
+  "{stratagem.description&&<p className='muted'>{stratagem.description}</p>}",
+  "{stratagem.description?<p className='muted'>{stratagem.description}</p>:(!stratagem.when&&!stratagem.target&&!stratagem.effect)&&<div className='rulePanel'><strong>RULE TEXT</strong><p>Full rule text is missing from the bundled dataset. This Stratagem is retained so it is not silently omitted.</p></div>}"
+);
 
 if(!source.includes('function buildNarcosTestRoster(')){
   const helper=`function buildNarcosTestRoster(units:UnitIndex[],details:Map<string,UnitDetail>):RosterUnit[]{
@@ -69,9 +85,11 @@ const forbidden=[
 for(const value of forbidden){
   if(source.includes(value))throw new Error(`Production UI still exposes internal text: ${value}`);
 }
+if(source.includes("<div className='eyebrow'>OBJECTIVE CONTROL</div>"))throw new Error('Objective tracker was not removed.');
+if(!source.includes('Full rule text is missing from the bundled dataset.'))throw new Error('Stratagem missing-rule-text fallback was not applied.');
 if(!source.includes('Rules updates quarantined'))throw new Error('Rules updater quarantine banner was not applied.');
 if(!source.includes('buildNarcosTestRoster'))throw new Error('Narcos fresh-install test roster was not applied.');
 if(!source.includes("['Annihilation Legion','Hand of The Dynasty']"))throw new Error('Narcos detachments were not applied.');
 
 fs.writeFileSync(path,source);
-console.log('Applied production UI polish, rules-updater quarantine, and Narcos fresh-install test roster');
+console.log('Applied production UI polish, objective removal, stratagem visibility, rules-updater quarantine, and Narcos fresh-install test roster');
