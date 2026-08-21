@@ -80,13 +80,15 @@ const stratagemPackage=packages.find(row=>row.package_name==='stratagems');
 if(!stratagemPackage?.payload?.records)throw new Error('Published release has no stratagems package.');
 const stratagemRecords=stratagemPackage.payload.records;
 const coreStratagems=stratagemRecords.filter(row=>!row.detachmentId);
+const describedStratagems=stratagemRecords.filter(row=>row.when&&row.target&&row.effect);
+if(stratagemRecords.length<77)throw new Error(`Expected the current published Stratagem package (77+ records), found ${stratagemRecords.length}.`);
 if(coreStratagems.length<11)throw new Error(`Expected at least 11 core Stratagems, found ${coreStratagems.length}.`);
 for(const row of coreStratagems){
   if(!row.name||!row.phases?.length||!row.when||!row.target||!row.effect)throw new Error(`Core Stratagem is incomplete: ${row.id||row.name||'unknown'}`);
 }
 const mustHaveText=new Set(['necrons:detachment:cursed-legion','necrons:detachment:hand-of-the-dynasty']);
 for(const row of stratagemRecords.filter(row=>mustHaveText.has(row.detachmentId))){
-  if(!row.when||!row.target||!row.effect)throw new Error(`Playable Stratagem text is incomplete: ${row.id||row.name||'unknown'}`);
+  if(!row.when||!row.target||!row.effect||!row.description)throw new Error(`Playable Stratagem text is incomplete: ${row.id||row.name||'unknown'}`);
 }
 
 await mkdir(FACTION_DIR,{recursive:true});
@@ -139,8 +141,9 @@ const manifest={
     coreRules:coreRules.length,
     stratagems:stratagemRecords.length,
     coreStratagems:coreStratagems.length,
+    describedStratagems:describedStratagems.length,
   },
   factions:{[FACTION]:{packages:manifestPackages}},
 };
 await writeFile(path.join(DATA_DIR,'version.json'),`${JSON.stringify(manifest,null,2)}\n`,'utf8');
-console.log(`Mirrored Supabase runtime release ${release.dataset_version}: ${resolvedUnits.length} units, ${resolvedDetachments.length} total detachments (${matchedPlayDetachments.length} matched-play + ${combatPatrolOnlyDetachments.length} Combat Patrol-only), ${relationships.length} relationships, ${coreRules.length} core rules, ${stratagemRecords.length} Stratagems (${coreStratagems.length} core).`);
+console.log(`Mirrored Supabase runtime release ${release.dataset_version}: ${resolvedUnits.length} units, ${resolvedDetachments.length} total detachments (${matchedPlayDetachments.length} matched-play + ${combatPatrolOnlyDetachments.length} Combat Patrol-only), ${relationships.length} relationships, ${coreRules.length} core rules, ${stratagemRecords.length} Stratagems (${coreStratagems.length} core; ${describedStratagems.length} with full WHEN/TARGET/EFFECT text).`);
