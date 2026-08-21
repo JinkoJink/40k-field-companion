@@ -13,7 +13,7 @@
       "packages": {
         "units": {
           "file": "data/necrons/units.json",
-          "hash": "bc0e354680b7e33e5507b828d85e0e3c7c4691f8bee3467c70d03993177f0498"
+          "hash": "77f1f297533776f09ab5265985bf1de059313f76c3f238a17e76481dcdddc22a"
         },
         "profiles": {
           "file": "data/necrons/profiles.json",
@@ -25,7 +25,7 @@
         },
         "abilities": {
           "file": "data/necrons/abilities.json",
-          "hash": "ce8a7a43ef23e4be614a833bbdb8819b3a6f8a9cdbcb428006359c283c5cfa2e"
+          "hash": "7155d0ba4135adac69335e8a389da6101675f7a355de850c791e30c7f8a77582"
         },
         "keywords": {
           "file": "data/necrons/keywords.json",
@@ -53,7 +53,7 @@
         },
         "core-rules": {
           "file": "data/necrons/core-rules.json",
-          "hash": "7c82b0fc038b16584fbbbda8db787d7b4cb7fc893f6c29b05f4fbfa9807c9de1"
+          "hash": "1c2f0ac141c7696f5c3ddda0a9a0001b3624eb62385dcab0719df3dea3efe31c"
         },
         "community-40kdc": {
           "file": "data/necrons/community-40kdc.json",
