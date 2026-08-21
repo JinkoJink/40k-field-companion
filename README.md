@@ -2,14 +2,6 @@
 
 A mobile-first, offline-first Necron army builder, rules reference, and tabletop battle tracker for Warhammer 40,000 11th edition.
 
-## Android installer
-
-[**Download Command Protocols Android installer (.apk)**](https://github.com/JinkoJink/40k-field-companion/releases/download/command-protocols-26/Command-Protocols.apk)
-
-If your browser blocks the direct download, open the [Command Protocols releases page](https://github.com/JinkoJink/40k-field-companion/releases) and select `Command-Protocols.apk` from the newest release.
-
-Android may ask you to allow installs from your browser or file manager. The APK is built and verified from this repository by GitHub Actions and includes the Necron rules packages in the installer.
-
 ## Current features
 
 - Offline-first normalized Necron rules database in IndexedDB
