@@ -24,6 +24,15 @@ function hash(text){
   return createHash('sha256').update(text.trimEnd()).digest('hex');
 }
 
+function gameModes(detachment){
+  return detachment?.metadata?.gameModes||detachment?.metadata?.community11e?.game_modes||detachment?.gameModes||[];
+}
+
+function isCombatPatrolOnly(detachment){
+  const modes=gameModes(detachment);
+  return Array.isArray(modes)&&modes.length>0&&modes.every(mode=>String(mode).toLowerCase()==='combat-patrol');
+}
+
 const runtimeRows=await rest(
   'runtime_rule_graph',
   `select=release_id,dataset_version,schema_version,edition,faction_id,graph&faction_id=eq.${FACTION}&limit=1`,
@@ -41,9 +50,12 @@ const resolvedUnits=Array.isArray(graph.units)?graph.units:[];
 const resolvedDetachments=Array.isArray(graph.detachments)?graph.detachments:[];
 const relationships=Array.isArray(graph.relationships)?graph.relationships:[];
 const coreRules=Array.isArray(graph.coreRules)?graph.coreRules:[];
+const matchedPlayDetachments=resolvedDetachments.filter(detachment=>!isCombatPatrolOnly(detachment));
+const combatPatrolOnlyDetachments=resolvedDetachments.filter(isCombatPatrolOnly);
 
 if(!resolvedUnits.length)throw new Error('Supabase runtime graph has no units.');
 if(!resolvedDetachments.length)throw new Error('Supabase runtime graph has no detachments.');
+if(!relationships.length)throw new Error('Supabase runtime graph has no resolved relationships.');
 for(const edge of relationships){
   if(!edge.source_id||!edge.target_id||!edge.relationship_type)throw new Error('Malformed Supabase resolved relationship.');
 }
@@ -53,6 +65,16 @@ const packages=await rest(
   `select=package_name,schema_version,payload,record_count&release_id=eq.${encodeURIComponent(release.id)}&faction_id=eq.${FACTION}&order=package_name`,
 );
 if(!packages.some(row=>row.package_name==='units'))throw new Error('Published release has no units package.');
+
+const detachmentPackage=packages.find(row=>row.package_name==='detachments');
+if(!detachmentPackage?.payload?.records)throw new Error('Published release has no detachments package.');
+const packageDetachmentIds=new Set(detachmentPackage.payload.records.map(row=>row.id));
+const matchedPlayIds=new Set(matchedPlayDetachments.map(row=>row.id));
+const missingMatchedPlay=[...matchedPlayIds].filter(id=>!packageDetachmentIds.has(id));
+const extraMatchedPlay=[...packageDetachmentIds].filter(id=>!matchedPlayIds.has(id));
+if(missingMatchedPlay.length||extraMatchedPlay.length){
+  throw new Error(`Detachments package differs from matched-play runtime graph. Missing: ${missingMatchedPlay.join(', ')||'none'}; extra: ${extraMatchedPlay.join(', ')||'none'}`);
+}
 
 await mkdir(FACTION_DIR,{recursive:true});
 await mkdir(RESOLVED_DIR,{recursive:true});
@@ -83,7 +105,11 @@ const manifest={
   datasetVersion:release.dataset_version,
   schemaVersion:Number(release.schema_version),
   edition:release.edition||'11th',
-  scope:{factions:[FACTION],includesSharedCoreRules:Boolean(coreRules.length)},
+  scope:{
+    factions:[FACTION],
+    includesSharedCoreRules:Boolean(coreRules.length),
+    matchedPlayPackagesExcludeCombatPatrolOnly:true,
+  },
   resolved:{
     runtimeGraph:'data/resolved/runtime-graph.json',
     units:'data/resolved/units.json',
@@ -91,7 +117,15 @@ const manifest={
     relationships:'data/resolved/relationships.json',
     coreRules:'data/resolved/core-rules.json',
   },
+  resolvedCounts:{
+    units:resolvedUnits.length,
+    detachments:resolvedDetachments.length,
+    matchedPlayDetachments:matchedPlayDetachments.length,
+    combatPatrolOnlyDetachments:combatPatrolOnlyDetachments.length,
+    relationships:relationships.length,
+    coreRules:coreRules.length,
+  },
   factions:{[FACTION]:{packages:manifestPackages}},
 };
 await writeFile(path.join(DATA_DIR,'version.json'),`${JSON.stringify(manifest,null,2)}\n`,'utf8');
-console.log(`Mirrored Supabase runtime release ${release.dataset_version}: ${resolvedUnits.length} units, ${resolvedDetachments.length} detachments, ${relationships.length} relationships, ${coreRules.length} core rules.`);
+console.log(`Mirrored Supabase runtime release ${release.dataset_version}: ${resolvedUnits.length} units, ${resolvedDetachments.length} total detachments (${matchedPlayDetachments.length} matched-play + ${combatPatrolOnlyDetachments.length} Combat Patrol-only), ${relationships.length} relationships, ${coreRules.length} core rules.`);
