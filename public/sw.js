@@ -1,5 +1,5 @@
-const CACHE_NAME = 'field-companion-shell-v7';
-const APP_SHELL = ['./', './index.html', './manifest.webmanifest', './necron-ankh.svg', './icon-192.png', './icon-512.png'];
+const CACHE_NAME = 'field-companion-shell-v8';
+const APP_SHELL = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './command-protocols-icon.svg'];
 const INDEX_URL = new URL('./index.html', self.registration.scope).href;
 const ROOT_URL = new URL('./', self.registration.scope).href;
 const DATA_PATH = new URL('./data/', self.registration.scope).pathname;
