@@ -18,10 +18,44 @@ const replacements=[
   ["<label className='checkLabel'><input type='checkbox' checked={settings.wifiOnly}","<label className='checkLabel'><input disabled type='checkbox' checked={false}"],
   ["<button className='addButton' onClick={()=>void onCheck()}>Check for updates now</button>","<div className='rulePanel'><strong>Rules updates quarantined</strong><p>This release uses only the validated rules dataset bundled inside the installer. Network rules updates remain disabled until development resumes.</p></div>"],
   ["Rules, rosters and active battles live on this phone. Network checks only fetch a tiny manifest, then only changed packages.","Rules, rosters and active battles live on this phone. This release uses the frozen rules dataset bundled with the installer."],
+  ["const[selected,setSelected]=useState<string[]>(['Cursed Legion']);","const[selected,setSelected]=useState<string[]>(['Annihilation Legion','Hand of The Dynasty']);"],
+  ["readUser<string[]>('detachments',['Cursed Legion']),","readUser<string[]>('detachments',['Annihilation Legion','Hand of The Dynasty']),"],
+  ["readUser<RosterUnit[]>('roster',[]),","readUser<RosterUnit[]|null>('roster',null),"],
+  ["const currentRoster=refreshRosterSnapshots(applyRequiredBindings(storedRoster,data.index,activeEnhancements),data.index,data.detailMap);","const initialRoster=storedRoster??buildNarcosTestRoster(data.index,data.detailMap);\n        const currentRoster=refreshRosterSnapshots(applyRequiredBindings(initialRoster,data.index,activeEnhancements),data.index,data.detailMap);"],
 ];
 
 for(const [from,to] of replacements){
   if(source.includes(from))source=source.replaceAll(from,to);
+}
+
+if(!source.includes('function buildNarcosTestRoster(')){
+  const helper=`function buildNarcosTestRoster(units:UnitIndex[],details:Map<string,UnitDetail>):RosterUnit[]{
+  const normalize=(value:string)=>value.toLowerCase().replace(/[’‘]/g,"'").replace(/[^a-z0-9]+/g,' ').trim();
+  const byName=(name:string)=>{const unit=units.find(candidate=>normalize(candidate.name)===normalize(name));if(!unit)throw new Error(\`Default Narcos roster unit missing from dataset: \${name}\`);return unit;};
+  const make=(name:string,models?:number,extra:Partial<RosterUnit>={})=>{const unit=byName(name);const entry=createRosterUnit(unit,details.get(unit.id));const count=models??entry.models;return{...entry,models:count,wargear:defaultWargear(details.get(unit.id),count),...extra};};
+
+  const nightbringer=make("C'tan Shard of The Nightbringer");
+  const ammentar=make('Nekrosor Ammentar');
+  const wraiths=make('Canoptek Wraiths',3);
+  const technomancer=make('Technomancer',undefined,{attachedTo:wraiths.instanceId});
+  const warriors=make('Necron Warriors',20);
+  const chronomancer=make('Chronomancer',undefined,{attachedTo:warriors.instanceId});
+  const royalWarden=make('Royal Warden',undefined,{attachedTo:warriors.instanceId});
+  const immortals=make('Immortals',10);
+  const overlord=make('Overlord',undefined,{attachedTo:immortals.instanceId,warlord:true,enhancement:'Eternal Madness'});
+  const plasmancer=make('Plasmancer',undefined,{attachedTo:immortals.instanceId});
+  const lokhustDestroyers=make('Lokhust Destroyers',4);
+  const lokhustLord=make('Lokhust Lord',undefined,{attachedTo:lokhustDestroyers.instanceId,enhancement:'Ingrained Superiority'});
+  const scarabsA=make('Canoptek Scarab Swarms',6);
+  const scarabsB=make('Canoptek Scarab Swarms',6);
+  const flayedOnes=make('Flayed Ones',10);
+  const ophydians=make('Ophydian Destroyers',3);
+
+  return[nightbringer,ammentar,technomancer,wraiths,chronomancer,royalWarden,warriors,overlord,plasmancer,immortals,lokhustLord,lokhustDestroyers,scarabsA,scarabsB,flayedOnes,ophydians];
+}
+
+`;
+  source=source.replace('export function App(){',helper+'export function App(){');
 }
 
 const forbidden=[
@@ -36,6 +70,8 @@ for(const value of forbidden){
   if(source.includes(value))throw new Error(`Production UI still exposes internal text: ${value}`);
 }
 if(!source.includes('Rules updates quarantined'))throw new Error('Rules updater quarantine banner was not applied.');
+if(!source.includes('buildNarcosTestRoster'))throw new Error('Narcos fresh-install test roster was not applied.');
+if(!source.includes("['Annihilation Legion','Hand of The Dynasty']"))throw new Error('Narcos detachments were not applied.');
 
 fs.writeFileSync(path,source);
-console.log('Applied production UI polish and rules-updater quarantine');
+console.log('Applied production UI polish, rules-updater quarantine, and Narcos fresh-install test roster');
