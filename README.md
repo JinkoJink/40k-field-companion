@@ -5,12 +5,12 @@ A mobile-first, offline-first Necron army builder, rules reference, and tabletop
 ## Current features
 
 - Offline-first normalized Necron rules database in IndexedDB
-- Current unit, Detachment Point, detachment, Enhancement, Upgrade, Binding, Stratagem, ability, keyword, points, and attachment data
+- Bundled Necron unit, Detachment Point, detachment, Enhancement, Upgrade, Binding, Stratagem, ability, keyword, points, and attachment data
 - Conditional rules graph for Leader, Support, Retinue, Enhancement-granted keywords, special bodyguards, transport restrictions, and host-specific Bindings
 - Individually configured unit instances, including differently sized duplicate units
 - Unit-size, occurrence-tier, and Enhancement-aware roster points
 - Wargear and per-model loadout configuration
-- Leader, Support, Cryptek Retinue, Canoptek Retinue, and conditional bodyguard attachment validation
+- Leader, Support, Cryptek Retinue, Canoptek Retinue, Murdermind, and conditional bodyguard attachment validation
 - Army legality validation for points, Detachment Points, Characters, Warlords, Epic Heroes, datasheet limits, Enhancements/Upgrades/Bindings, attachments, unit sizes, and loadout totals
 - Persistent local roster, preferences, and battle state
 - Detachment selection with the 3 DP limit and local rules text
@@ -18,12 +18,15 @@ A mobile-first, offline-first Necron army builder, rules reference, and tabletop
 - Build, Battle, Search, and Settings views
 - Battle-round and phase navigation
 - Command Point, primary score, secondary score, and objective-control tracking
-- Frozen battle snapshots so mid-game Build edits or later rules updates cannot rewrite the active battle
+- Frozen battle snapshots so Build edits cannot rewrite an active battle
 - Aggregate and exact per-model wound tracking for multi-wound units
-- Collapsible Battle unit cards with configured loadouts and active conditional-rule notes
+- Collapsible Battle unit cards with configured loadouts and attachment-rule notes
 - Roster-aware Stratagem availability with CP, WHEN, TARGET, EFFECT, phase, detachment, and target restrictions
-- Installable PWA shell with network-first document updates and airplane-mode startup after initialization
-- Optional hash-addressed GitHub rules updates; normal play never fetches BSData or community sources directly
+- Installable Android package and PWA shell with the validated rules dataset included locally
+
+## Current release mode
+
+Automatic 11e data publishing and client-side network rules updates are quarantined. Production builds use the checked-in, validated rules dataset in `public/data/` and do not regenerate or install a different rules tree during release. The quarantined updater/publisher implementation is preserved on the `quarantine/automatic-rules-updates` branch until development on it is explicitly resumed.
 
 ## Development
 
@@ -32,22 +35,16 @@ npm install
 npm run dev
 ```
 
-Production build:
-
-```bash
-npm run build
-npm run preview
-```
-
-Full local verification:
+Production verification:
 
 ```bash
 npm run typecheck
 npm test
-npm run build:data
 npm run validate:data
 npm run build
 ```
+
+`npm run build:data` intentionally does not regenerate rules while the publisher is quarantined.
 
 The Vite build uses relative asset paths so it can be hosted beneath a repository path, including GitHub Pages.
 
@@ -55,27 +52,22 @@ The Vite build uses relative asset paths so it can be hosted beneath a repositor
 
 The installed client owns its database. IndexedDB object stores are partitioned into:
 
-- `system`: schema/version, package hashes, pending updates, and last-known-good metadata
+- `system`: schema/version and last-known-good metadata
 - rule stores: factions, units, profiles, weapons, abilities, keywords, detachments, enhancements, stratagems, points, leader links, source metadata, and supplemental structured data
 - `dependencies` / `searchIndex`: derived local indexes
 - `user`: roster, selected detachments, and preferences
 - `battle`: the active game and its frozen/mutable tabletop state
-- `staging`: validated update packages before atomic installation
+- `staging`: retained for validated package handling when updater development resumes
 
-Rules are published under `public/data/necrons/` as independently hashed packages. First initialization loads those packaged files into IndexedDB; thereafter the app reads IndexedDB immediately and never waits on a network request. The service worker caches the application shell but deliberately does not cache `/data/`, so IndexedDB remains the single validated rules source.
+Rules are bundled under `public/data/necrons/`. First initialization loads those packaged files into IndexedDB; thereafter normal play reads the validated local database. Active battles keep their own roster, detachment, datasheet, weapon, ability, and wound-state snapshots.
 
-`data/version.json` is the small package manifest. Update checks compare hashes first; unchanged packages are not downloaded. Downloads are hash-checked and schema/referentially validated before the active tree is replaced. Partial updates rebuild only the dependent indexes they need, and an active battle defers rules installation until that battle ends.
+## Rules data publishing
 
-## Publishing rules data
-
-`scripts/build-necron-data.mjs` is a development/publishing-only importer. It reads the configured 11e Necron sources, normalizes stable internal IDs and relationships, writes package-level JSON, and calculates manifest hashes. It never runs inside the installed app.
+The live publisher is not present on `main` while quarantined. Its implementation is preserved on `quarantine/automatic-rules-updates`. The checked-in data can still be validated with:
 
 ```bash
-npm run build:data
 npm run validate:data
 ```
-
-CI regenerates and validates the rules graph, rejects stale substantive generated packages, typechecks, runs unit tests, syntax-checks the service worker, and production-builds the app. Pages and Android publishing repeat the critical verification steps before deployment.
 
 ## Scope
 
