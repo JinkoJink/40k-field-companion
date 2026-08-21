@@ -1,1 +1,1870 @@
-{"schemaVersion":2,"package":"enhancements","edition":"11th","faction":"necrons","records":[{"name":"Eldritch Nightmare","points":10,"community11e":{"id":"eldritch-nightmare-annihilation-legion","name":"Eldritch Nightmare","detachment_id":"annihilation-legion","cost":10,"keyword_restrictions":["Destroyer Cult"],"ability_id":null,"is_unique":true,"game_version":{"edition":"11th","dataslate":"launch"},"points_provisional":false,"upgrade_tag":false,"max_targets":1},"id":"necrons:detachment:annihilation-legion:enhancement:eldritch-nightmare","detachmentId":"necrons:detachment:annihilation-legion","description":"DESTROYER CULT model only. At the start of the Fight phase, each enemy unit within Engagement Range of the bearer must take a Battle-shock test.","keywordRestrictions":["Destroyer Cult"],"keywordRestrictionGroups":[],"exclusionKeywords":[],"allowedHosts":[],"attachmentBodyguardIds":[],"grantKeywords":[],"upgrade":false,"kind":"enhancement","countsTowardLimit":true,"mandatory":false,"maxTargets":1,"abilityId":null,"gameModes":[],"gameVersion":{"edition":"11th","dataslate":"launch"}},{"name":"Eternal Madness","points":20,"community11e":{"id":"eternal-madness-annihilation-legion","name":"Eternal Madness","detachment_id":"annihilation-legion","cost":20,"keyword_restrictions":["Necrons"],"ability_id":null,"is_unique":true,"game_version":{"edition":"11th","dataslate":"launch"},"points_provisional":false,"upgrade_tag":false,"max_targets":1},"id":"necrons:detachment:annihilation-legion:enhancement:eternal-madness","detachmentId":"necrons:detachment:annihilation-legion","description":"NECRONS model only. In the Fight phase, each time a model in the bearer's unit is destroyed, if that model had not fought this phase, roll one D6. On a 4+, do not remove the destroyed model from play; it can fight after the attacking model's unit has finished making its attacks, and is then removed from play.","keywordRestrictions":["Necrons"],"keywordRestrictionGroups":[],"exclusionKeywords":[],"allowedHosts":[],"attachmentBodyguardIds":[],"grantKeywords":[],"upgrade":false,"kind":"enhancement","countsTowardLimit":true,"mandatory":false,"maxTargets":1,"abilityId":null,"gameModes":[],"gameVersion":{"edition":"11th","dataslate":"launch"}},{"name":"Ingrained Superiority","points":5,"community11e":{"id":"ingrained-superiority-annihilation-legion","name":"Ingrained Superiority","detachment_id":"annihilation-legion","cost":5,"keyword_restrictions":["Necrons"],"ability_id":null,"is_unique":true,"game_version":{"edition":"11th","dataslate":"launch"},"points_provisional":false,"upgrade_tag":false,"max_targets":1},"id":"necrons:detachment:annihilation-legion:enhancement:ingrained-superiority","detachmentId":"necrons:detachment:annihilation-legion","description":"NECRONS model only. Each time a model in the bearer's unit makes an attack, on a Critical Wound, improve the Armour Penetration characteristic of that attack by 1.","keywordRestrictions":["Necrons"],"keywordRestrictionGroups":[],"exclusionKeywords":[],"allowedHosts":[],"attachmentBodyguardIds":[],"grantKeywords":[],"upgrade":false,"kind":"enhancement","countsTowardLimit":true,"mandatory":false,"maxTargets":1,"abilityId":null,"gameModes":[],"gameVersion":{"edition":"11th","dataslate":"launch"}},{"name":"Soulless Reaper","points":15,"community11e":{"id":"soulless-reaper-annihilation-legion","name":"Soulless Reaper","detachment_id":"annihilation-legion","cost":15,"keyword_restrictions":["Destroyer Cult"],"ability_id":null,"is_unique":true,"game_version":{"edition":"11th","dataslate":"launch"},"points_provisional":false,"upgrade_tag":false,"max_targets":1},"id":"necrons:detachment:annihilation-legion:enhancement:soulless-reaper","detachmentId":"necrons:detachment:annihilation-legion","description":"DESTROYER CULT model only. Each time an enemy unit within Engagement Range of the bearer's unit is selected to Fall Back, roll one D6. On a 3+, that unit cannot Fall Back and must Remain Stationary.","keywordRestrictions":["Destroyer Cult"],"keywordRestrictionGroups":[],"exclusionKeywords":[],"allowedHosts":[],"attachmentBodyguardIds":[],"grantKeywords":[],"upgrade":false,"kind":"enhancement","countsTowardLimit":true,"mandatory":false,"maxTargets":1,"abilityId":null,"gameModes":[],"gameVersion":{"edition":"11th","dataslate":"launch"}},{"name":"Enaegic Dermal Bond","points":30,"community11e":{"id":"enaegic-dermal-bond-awakened-dynasty","name":"Enaegic Dermal Bond","detachment_id":"awakened-dynasty","cost":30,"keyword_restrictions":["Necrons"],"ability_id":null,"is_unique":true,"game_version":{"edition":"11th","dataslate":"launch"},"points_provisional":false,"upgrade_tag":false,"max_targets":1},"id":"necrons:detachment:awakened-dynasty:enhancement:enaegic-dermal-bond","detachmentId":"necrons:detachment:awakened-dynasty","description":"NECRONS model only. The bearer has the Feel No Pain 4+ ability.","keywordRestrictions":["Necrons"],"keywordRestrictionGroups":[],"exclusionKeywords":[],"allowedHosts":[],"attachmentBodyguardIds":[],"grantKeywords":[],"upgrade":false,"kind":"enhancement","countsTowardLimit":true,"mandatory":false,"maxTargets":1,"abilityId":null,"gameModes":[],"gameVersion":{"edition":"11th","dataslate":"launch"}},{"name":"Nether-realm Casket","points":20,"community11e":{"id":"nether-realm-casket-awakened-dynasty","name":"Nether-realm Casket","detachment_id":"awakened-dynasty","cost":20,"keyword_restrictions":["Necrons"],"ability_id":null,"is_unique":true,"game_version":{"edition":"11th","dataslate":"launch"},"points_provisional":false,"upgrade_tag":false,"max_targets":1},"id":"necrons:detachment:awakened-dynasty:enhancement:nether-realm-casket","detachmentId":"necrons:detachment:awakened-dynasty","description":"NECRONS model only. While the bearer is leading a unit, models in that unit have the Stealth ability.","keywordRestrictions":["Necrons"],"keywordRestrictionGroups":[],"exclusionKeywords":[],"allowedHosts":[],"attachmentBodyguardIds":[],"grantKeywords":[],"upgrade":false,"kind":"enhancement","countsTowardLimit":true,"mandatory":false,"maxTargets":1,"abilityId":null,"gameModes":[],"gameVersion":{"edition":"11th","dataslate":"launch"}},{"name":"Phasal Subjugator","points":35,"id":"necrons:detachment:awakened-dynasty:enhancement:phasal-subjugator","detachmentId":"necrons:detachment:awakened-dynasty","description":"","keywordRestrictions":[],"keywordRestrictionGroups":[],"exclusionKeywords":[],"allowedHosts":[],"attachmentBodyguardIds":[],"grantKeywords":[],"upgrade":false,"kind":"enhancement","countsTowardLimit":true,"mandatory":false,"maxTargets":1,"abilityId":null,"gameModes":[]},{"name":"Veil of Darkness","points":20,"community11e":{"id":"veil-of-darkness-awakened-dynasty","name":"Veil of Darkness","detachment_id":"awakened-dynasty","cost":20,"keyword_restrictions":["Necrons"],"ability_id":null,"is_unique":true,"game_version":{"edition":"11th","dataslate":"launch"},"points_provisional":false,"upgrade_tag":false,"max_targets":1},"id":"necrons:detachment:awakened-dynasty:enhancement:veil-of-darkness","detachmentId":"necrons:detachment:awakened-dynasty","description":"NECRONS model only. (Once per battle, per army) At the end of your opponent’s turn, if this unit is unengaged, you can use this ability. If you do: \n- Place this unit in strategic reserves. \n- This unit has Deep Strike until the start of your next Shooting phase. \n- This unit must make an ingress move in your next Movement phase (including in your first turn).","keywordRestrictions":["Necrons"],"keywordRestrictionGroups":[],"exclusionKeywords":[],"allowedHosts":[],"attachmentBodyguardIds":[],"grantKeywords":[],"upgrade":false,"kind":"enhancement","countsTowardLimit":true,"mandatory":false,"maxTargets":1,"abilityId":null,"gameModes":[],"gameVersion":{"edition":"11th","dataslate":"launch"}},{"name":"Autodivinator","points":15,"community11e":{"id":"autodivinator-canoptek-court","name":"Autodivinator","detachment_id":"canoptek-court","cost":15,"keyword_restrictions":["Cryptek"],"ability_id":null,"is_unique":true,"game_version":{"edition":"11th","dataslate":"launch"},"points_provisional":false,"upgrade_tag":false,"max_targets":1},"id":"necrons:detachment:canoptek-court:enhancement:autodivinator","detachmentId":"necrons:detachment:canoptek-court","description":"CRYPTEK model only. Each time your opponent gains a CP as a result of an ability, roll one D6: on a 2+, you also gain 1CP.","keywordRestrictions":["Cryptek"],"keywordRestrictionGroups":[],"exclusionKeywords":[],"allowedHosts":[],"attachmentBodyguardIds":[],"grantKeywords":[],"upgrade":false,"kind":"enhancement","countsTowardLimit":true,"mandatory":false,"maxTargets":1,"abilityId":null,"gameModes":[],"gameVersion":{"edition":"11th","dataslate":"launch"}},{"name":"Dimensional Sanctum","points":20,"community11e":{"id":"dimensional-sanctum-canoptek-court","name":"Dimensional Sanctum","detachment_id":"canoptek-court","cost":20,"keyword_restrictions":["Cryptek"],"ability_id":null,"is_unique":true,"game_version":{"edition":"11th","dataslate":"launch"},"points_provisional":false,"upgrade_tag":false,"max_targets":1},"id":"necrons:detachment:canoptek-court:enhancement:dimensional-sanctum","detachmentId":"necrons:detachment:canoptek-court","description":"CRYPTEK model only. Models in the bearer's unit have the Infiltrators ability.","keywordRestrictions":["Cryptek"],"keywordRestrictionGroups":[],"exclusionKeywords":[],"allowedHosts":[],"attachmentBodyguardIds":[],"grantKeywords":[],"upgrade":false,"kind":"enhancement","countsTowardLimit":true,"mandatory":false,"maxTargets":1,"abilityId":null,"gameModes":[],"gameVersion":{"edition":"11th","dataslate":"launch"}},{"name":"Hyperphasic Fulcrum","points":15,"community11e":{"id":"hyperphasic-fulcrum-canoptek-court","name":"Hyperphasic Fulcrum","detachment_id":"canoptek-court","cost":15,"keyword_restrictions":["Cryptek"],"ability_id":null,"is_unique":true,"game_version":{"edition":"11th","dataslate":"launch"},"points_provisional":false,"upgrade_tag":false,"max_targets":1},"id":"necrons:detachment:canoptek-court:enhancement:hyperphasic-fulcrum","detachmentId":"necrons:detachment:canoptek-court","description":"CRYPTEK model only. While the bearer is leading a unit, if that unit is wholly within your army's Power Matrix, each time a model in that unit makes an attack, re-roll a Wound roll of 1.","keywordRestrictions":["Cryptek"],"keywordRestrictionGroups":[],"exclusionKeywords":[],"allowedHosts":[],"attachmentBodyguardIds":[],"grantKeywords":[],"upgrade":false,"kind":"enhancement","countsTowardLimit":true,"mandatory":false,"maxTargets":1,"abilityId":null,"gameModes":[],"gameVersion":{"edition":"11th","dataslate":"launch"}},{"name":"Metalodermal Tesla Weave","points":10,"community11e":{"id":"metalodermal-tesla-weave-canoptek-court","name":"Metalodermal Tesla Weave","detachment_id":"canoptek-court","cost":10,"keyword_restrictions":["Cryptek"],"ability_id":null,"is_unique":true,"game_version":{"edition":"11th","dataslate":"launch"},"points_provisional":false,"upgrade_tag":false,"max_targets":1},"id":"necrons:detachment:canoptek-court:enhancement:metalodermal-tesla-weave","detachmentId":"necrons:detachment:canoptek-court","description":"CRYPTEK model only. Once per phase, when an enemy unit selects the bearer's unit as a target of a charge, roll one D6: on a 2-5, that enemy unit suffers D3 mortal wounds, on a 6, that enemy unit suffers 3 mortal wounds.","keywordRestrictions":["Cryptek"],"keywordRestrictionGroups":[],"exclusionKeywords":[],"allowedHosts":[],"attachmentBodyguardIds":[],"grantKeywords":[],"upgrade":false,"kind":"enhancement","countsTowardLimit":true,"mandatory":false,"maxTargets":1,"abilityId":null,"gameModes":[],"gameVersion":{"edition":"11th","dataslate":"launch"}},{"name":"Atomic Disintegrators","points":10,"community11e":{"id":"atomic-disintegrators-cryptek-conclave","name":"Atomic Disintegrators","detachment_id":"cryptek-conclave","cost":10,"keyword_restrictions":["Cryptek"],"ability_id":null,"is_unique":true,"game_version":{"edition":"11th","dataslate":"launch"},"points_provisional":false,"upgrade_tag":false,"max_targets":1},"id":"necrons:detachment:cryptek-conclave:enhancement:atomic-disintegrators","detachmentId":"necrons:detachment:cryptek-conclave","description":"In your Shooting phase, each time the bearer’s unit is selected to shoot, when selecting an ability for the Technosorcerous Augmentations Detachment rule, you can also select from the following abilities: [ANTI‑MONSTER 5+], [ANTI‑VEHICLE 5+].","keywordRestrictions":["CRYPTEK"],"keywordRestrictionGroups":[],"exclusionKeywords":[],"allowedHosts":[],"attachmentBodyguardIds":[],"grantKeywords":[],"upgrade":false,"kind":"enhancement","countsTowardLimit":true,"mandatory":false,"maxTargets":1,"abilityId":null,"gameModes":[],"gameVersion":{"edition":"11th","dataslate":"launch"}},{"name":"Gauntlet of Compression","points":20,"community11e":{"id":"gauntlet-of-compression-cryptek-conclave","name":"Gauntlet of Compression","detachment_id":"cryptek-conclave","cost":20,"keyword_restrictions":["Necrons"],"ability_id":null,"is_unique":true,"game_version":{"edition":"11th","dataslate":"launch"},"points_provisional":false,"upgrade_tag":false,"max_targets":1},"id":"necrons:detachment:cryptek-conclave:enhancement:gauntlet-of-compression","detachmentId":"necrons:detachment:cryptek-conclave","description":"Add 6\" to the Range characteristic of ranged weapons equipped by models in the bearer’s unit.","keywordRestrictions":["NECRONS"],"keywordRestrictionGroups":[],"exclusionKeywords":[],"allowedHosts":[],"attachmentBodyguardIds":[],"grantKeywords":[],"upgrade":false,"kind":"enhancement","countsTowardLimit":true,"mandatory":false,"maxTargets":1,"abilityId":null,"gameModes":[],"gameVersion":{"edition":"11th","dataslate":"launch"}},{"name":"Gravitic Bolas","points":15,"community11e":{"id":"gravitic-bolas-cryptek-conclave","name":"Gravitic Bolas","detachment_id":"cryptek-conclave","cost":15,"keyword_restrictions":["Cryptek"],"ability_id":null,"is_unique":true,"game_version":{"edition":"11th","dataslate":"launch"},"points_provisional":false,"upgrade_tag":false,"max_targets":1},"id":"necrons:detachment:cryptek-conclave:enhancement:gravitic-bolas","detachmentId":"necrons:detachment:cryptek-conclave","description":"In your Shooting phase, after the bearer has shot, select one enemy unit hit by one or more of those attacks (excluding ^^**Titanic^^** units); until the start of your next turn, that enemy unit is pinned. While a unit is pinned, subtract 2 from that unit’s Move characteristic and subtract 2 from Charge rolls made for that unit.","keywordRestrictions":["CRYPTEK"],"keywordRestrictionGroups":[],"exclusionKeywords":[],"allowedHosts":[],"attachmentBodyguardIds":[],"grantKeywords":[],"upgrade":false,"kind":"enhancement","countsTowardLimit":true,"mandatory":false,"maxTargets":1,"abilityId":null,"gameModes":[],"gameVersion":{"edition":"11th","dataslate":"launch"}},{"name":"Quantum Abacus","points":15,"community11e":{"id":"quantum-abacus-cryptek-conclave","name":"Quantum Abacus","detachment_id":"cryptek-conclave","cost":15,"keyword_restrictions":["Necrons"],"ability_id":null,"is_unique":true,"game_version":{"edition":"11th","dataslate":"launch"},"points_provisional":false,"upgrade_tag":false,"max_targets":1},"id":"necrons:detachment:cryptek-conclave:enhancement:quantum-abacus","detachmentId":"necrons:detachment:cryptek-conclave","description":"Each time you select the bearer’s unit as the target of a Stratagem, roll one D6, adding 1 if it is within range of one or more objectives: on a 4+, you gain 1CP.","keywordRestrictions":["NECRONS"],"keywordRestrictionGroups":[],"exclusionKeywords":[],"allowedHosts":[],"attachmentBodyguardIds":[],"grantKeywords":[],"upgrade":false,"kind":"enhancement","countsTowardLimit":true,"mandatory":false,"maxTargets":1,"abilityId":null,"gameModes":[],"gameVersion":{"edition":"11th","dataslate":"launch"}},{"name":"Cursed Circlet","points":25,"community11e":{"id":"cursed-circlet-cursed-legion","name":"Cursed Circlet","detachment_id":"cursed-legion","cost":25,"keyword_restrictions":["Destroyer Cult"],"ability_id":null,"is_unique":true,"game_version":{"edition":"11th","dataslate":"launch"},"points_provisional":false,"upgrade_tag":false,"max_targets":1},"id":"necrons:detachment:cursed-legion:enhancement:cursed-circlet","detachmentId":"necrons:detachment:cursed-legion","description":"Each time an enemy unit is selected to shoot, after that unit has shot, if any models from the bearer’s unit were destroyed as a result of those attacks, the bearer’s unit can make a Surge move. To do so, roll one D6: the bearer’s unit can be moved a number of inches up to the result, but the bearer’s unit must finish that move as close as possible to the closest enemy unit (excluding ^^**Aircraft^^**). \nWhen doing so, those models can be moved within Engagement Range of that enemy unit. A unit cannot make a Surge move while it is Battle‑shocked.","keywordRestrictions":["DESTROYER CULT"],"keywordRestrictionGroups":[],"exclusionKeywords":[],"allowedHosts":[],"attachmentBodyguardIds":[],"grantKeywords":[],"upgrade":false,"kind":"enhancement","countsTowardLimit":true,"mandatory":false,"maxTargets":1,"abilityId":null,"gameModes":[],"gameVersion":{"edition":"11th","dataslate":"launch"}},{"name":"Destroyer Ankh","points":20,"community11e":{"id":"destroyer-ankh-cursed-legion","name":"Destroyer Ankh","detachment_id":"cursed-legion","cost":20,"ability_id":null,"is_unique":true,"game_version":{"edition":"11th","dataslate":"launch"},"points_provisional":false,"upgrade_tag":false,"max_targets":1,"keyword_restriction_groups":[["Catacomb Command Barge"],["Overlord"]]},"id":"necrons:detachment:cursed-legion:enhancement:destroyer-ankh","detachmentId":"necrons:detachment:cursed-legion","description":"The bearer has the ^^**Destroyer Cult^^** keyword. Add 2\" to the Move characteristic of models in the bearer’s unit and add 2 to the Attacks characteristic of melee weapons equipped by the bearer.","keywordRestrictions":[],"keywordRestrictionGroups":[["Catacomb Command Barge"],["Overlord"]],"exclusionKeywords":[],"allowedHosts":["CATACOMB COMMAND BARGE","OVERLORD"],"attachmentBodyguardIds":[],"grantKeywords":["Destroyer Cult"],"upgrade":false,"kind":"enhancement","countsTowardLimit":true,"mandatory":false,"maxTargets":1,"abilityId":null,"gameModes":[],"gameVersion":{"edition":"11th","dataslate":"launch"}},{"name":"Mark of the Nekrosor","points":20,"community11e":{"id":"mark-of-the-nekrosor-cursed-legion","name":"Mark of the Nekrosor","detachment_id":"cursed-legion","cost":20,"ability_id":null,"is_unique":true,"game_version":{"edition":"11th","dataslate":"launch"},"points_provisional":false,"upgrade_tag":false,"max_targets":1,"keyword_restrictions":["Destroyer Cult"]},"id":"necrons:detachment:cursed-legion:enhancement:mark-of-the-nekrosor","detachmentId":"necrons:detachment:cursed-legion","description":"Each time a model in the bearer’s unit makes an attack, add 1 to the Hit roll.","keywordRestrictions":["DESTROYER CULT"],"keywordRestrictionGroups":[],"exclusionKeywords":[],"allowedHosts":[],"attachmentBodyguardIds":[],"grantKeywords":[],"upgrade":false,"kind":"enhancement","countsTowardLimit":true,"mandatory":false,"maxTargets":1,"abilityId":null,"gameModes":[],"gameVersion":{"edition":"11th","dataslate":"launch"}},{"name":"Murdermind","points":15,"supportTo":["Skorpekh Destroyers","Lokhust Destroyers","Ophydian Destroyers","Lokhust Heavy Destroyers"],"community11e":{"id":"murdermind-cursed-legion","name":"Murdermind","detachment_id":"cursed-legion","cost":15,"keyword_restrictions":["Cryptek"],"ability_id":null,"is_unique":true,"game_version":{"edition":"11th","dataslate":"launch"},"points_provisional":false,"upgrade_tag":false,"max_targets":1,"attachment_bodyguard_ids":["lokhust-destroyers","lokhust-heavy-destroyers","ophydian-destroyers","skorpekh-destroyers"]},"id":"necrons:detachment:cursed-legion:enhancement:murdermind","detachmentId":"necrons:detachment:cursed-legion","description":"The bearer has the **DESTROYER CULT** keyword. Add 3\" to the Move characteristic of the bearer.","keywordRestrictions":["CRYPTEK"],"keywordRestrictionGroups":[],"exclusionKeywords":[],"allowedHosts":[],"attachmentBodyguardIds":["lokhust-destroyers","lokhust-heavy-destroyers","ophydian-destroyers","skorpekh-destroyers"],"grantKeywords":["Destroyer Cult"],"upgrade":false,"kind":"enhancement","countsTowardLimit":true,"mandatory":false,"maxTargets":1,"abilityId":null,"gameModes":[],"gameVersion":{"edition":"11th","dataslate":"launch"}},{"name":"Enlivened Sentinels (Upgrade)","points":20,"community11e":{"id":"enlivened-sentinels-upgrade-hand-of-the-dynasty","name":"Enlivened Sentinels (Upgrade)","detachment_id":"hand-of-the-dynasty","cost":20,"keyword_restrictions":["Necron Warriors","Necrons"],"ability_id":"enlivened-sentinels-hand-of-the-dynasty","is_unique":true,"game_version":{"edition":"11th","dataslate":"launch"},"points_provisional":false,"upgrade_tag":true,"max_targets":3},"id":"necrons:detachment:hand-of-the-dynasty:enhancement:enlivened-sentinels-upgrade","detachmentId":"necrons:detachment:hand-of-the-dynasty","description":"","keywordRestrictions":["Necron Warriors","Necrons"],"keywordRestrictionGroups":[],"exclusionKeywords":[],"allowedHosts":[],"attachmentBodyguardIds":[],"grantKeywords":[],"upgrade":true,"kind":"upgrade","countsTowardLimit":true,"mandatory":false,"maxTargets":3,"abilityId":"enlivened-sentinels-hand-of-the-dynasty","gameModes":[],"gameVersion":{"edition":"11th","dataslate":"launch"}},{"name":"Tools of Dominion (Upgrade)","points":15,"community11e":{"id":"tools-of-dominion-upgrade-hand-of-the-dynasty","name":"Tools of Dominion (Upgrade)","detachment_id":"hand-of-the-dynasty","cost":15,"keyword_restrictions":["Immortals","Necrons"],"ability_id":"tools-of-dominion-hand-of-the-dynasty","is_unique":true,"game_version":{"edition":"11th","dataslate":"launch"},"points_provisional":false,"upgrade_tag":true,"max_targets":3},"id":"necrons:detachment:hand-of-the-dynasty:enhancement:tools-of-dominion-upgrade","detachmentId":"necrons:detachment:hand-of-the-dynasty","description":"","keywordRestrictions":["Immortals","Necrons"],"keywordRestrictionGroups":[],"exclusionKeywords":[],"allowedHosts":[],"attachmentBodyguardIds":[],"grantKeywords":[],"upgrade":true,"kind":"upgrade","countsTowardLimit":true,"mandatory":false,"maxTargets":3,"abilityId":"tools-of-dominion-hand-of-the-dynasty","gameModes":[],"gameVersion":{"edition":"11th","dataslate":"launch"}},{"name":"Arisen Tyrant","points":25,"community11e":{"id":"arisen-tyrant-hypercrypt-legion","name":"Arisen Tyrant","detachment_id":"hypercrypt-legion","cost":25,"keyword_restrictions":["Necrons"],"ability_id":null,"is_unique":true,"game_version":{"edition":"11th","dataslate":"launch"},"points_provisional":false,"upgrade_tag":false,"max_targets":1},"id":"necrons:detachment:hypercrypt-legion:enhancement:arisen-tyrant","detachmentId":"necrons:detachment:hypercrypt-legion","description":"NECRONS model only. Each time a model in the bearer's unit makes an attack, re-roll a Hit roll of 1. If the bearer's unit was set up on the battlefield this turn, you can re-roll the Hit roll instead.","keywordRestrictions":["Necrons"],"keywordRestrictionGroups":[],"exclusionKeywords":[],"allowedHosts":[],"attachmentBodyguardIds":[],"grantKeywords":[],"upgrade":false,"kind":"enhancement","countsTowardLimit":true,"mandatory":false,"maxTargets":1,"abilityId":null,"gameModes":[],"gameVersion":{"edition":"11th","dataslate":"launch"}},{"name":"Dimensional Overseer","points":25,"community11e":{"id":"dimensional-overseer-hypercrypt-legion","name":"Dimensional Overseer","detachment_id":"hypercrypt-legion","cost":25,"keyword_restrictions":["Necrons"],"ability_id":null,"is_unique":true,"game_version":{"edition":"11th","dataslate":"launch"},"points_provisional":false,"upgrade_tag":false,"max_targets":1},"id":"necrons:detachment:hypercrypt-legion:enhancement:dimensional-overseer","detachmentId":"necrons:detachment:hypercrypt-legion","description":"NECRONS model only. While the bearer is on the battlefield or in Strategic Reserves, add 1 to the number of units from your army that you can select for the Hyperphasing rule.","keywordRestrictions":["Necrons"],"keywordRestrictionGroups":[],"exclusionKeywords":[],"allowedHosts":[],"attachmentBodyguardIds":[],"grantKeywords":[],"upgrade":false,"kind":"enhancement","countsTowardLimit":true,"mandatory":false,"maxTargets":1,"abilityId":null,"gameModes":[],"gameVersion":{"edition":"11th","dataslate":"launch"}},{"name":"Hyperspatial Transfer Node","points":15,"community11e":{"id":"hyperspatial-transfer-node-hypercrypt-legion","name":"Hyperspatial Transfer Node","detachment_id":"hypercrypt-legion","cost":15,"keyword_restrictions":["Necrons"],"ability_id":null,"is_unique":true,"game_version":{"edition":"11th","dataslate":"launch"},"points_provisional":false,"upgrade_tag":false,"max_targets":1},"id":"necrons:detachment:hypercrypt-legion:enhancement:hyperspatial-transfer-node","detachmentId":"necrons:detachment:hypercrypt-legion","description":"NECRONS model only. Each time the bearer's unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6\" to the Move characteristic of models in the bearer's unit.","keywordRestrictions":["Necrons"],"keywordRestrictionGroups":[],"exclusionKeywords":[],"allowedHosts":[],"attachmentBodyguardIds":[],"grantKeywords":[],"upgrade":false,"kind":"enhancement","countsTowardLimit":true,"mandatory":false,"maxTargets":1,"abilityId":null,"gameModes":[],"gameVersion":{"edition":"11th","dataslate":"launch"}},{"name":"Osteoclave Fulcrum","points":20,"community11e":{"id":"osteoclave-fulcrum-hypercrypt-legion","name":"Osteoclave Fulcrum","detachment_id":"hypercrypt-legion","cost":20,"keyword_restrictions":["Necrons"],"ability_id":null,"is_unique":true,"game_version":{"edition":"11th","dataslate":"launch"},"points_provisional":false,"upgrade_tag":false,"max_targets":1},"id":"necrons:detachment:hypercrypt-legion:enhancement:osteoclave-fulcrum","detachmentId":"necrons:detachment:hypercrypt-legion","description":"NECRONS model only. Models in the bearer's unit have the Deep Strike ability.","keywordRestrictions":["Necrons"],"keywordRestrictionGroups":[],"exclusionKeywords":[],"allowedHosts":[],"attachmentBodyguardIds":[],"grantKeywords":[],"upgrade":false,"kind":"enhancement","countsTowardLimit":true,"mandatory":false,"maxTargets":1,"abilityId":null,"gameModes":[],"gameVersion":{"edition":"11th","dataslate":"launch"}},{"name":"Eternal Conqueror","points":25,"community11e":{"id":"eternal-conqueror-obeisance-phalanx","name":"Eternal Conqueror","detachment_id":"obeisance-phalanx","cost":25,"keyword_restrictions":["Overlord"],"ability_id":null,"is_unique":true,"game_version":{"edition":"11th","dataslate":"launch"},"points_provisional":false,"upgrade_tag":false,"max_targets":1},"id":"necrons:detachment:obeisance-phalanx:enhancement:eternal-conqueror","detachmentId":"necrons:detachment:obeisance-phalanx","description":"OVERLORD model only. Each time a model in the bearer's unit makes an attack that targets an enemy unit within range of an objective marker, you can re-roll the Hit roll.","keywordRestrictions":["Overlord"],"keywordRestrictionGroups":[],"exclusionKeywords":[],"allowedHosts":[],"attachmentBodyguardIds":[],"grantKeywords":[],"upgrade":false,"kind":"enhancement","countsTowardLimit":true,"mandatory":false,"maxTargets":1,"abilityId":null,"gameModes":[],"gameVersion":{"edition":"11th","dataslate":"launch"}},{"name":"Honourable Combatant","points":10,"community11e":{"id":"honourable-combatant-obeisance-phalanx","name":"Honourable Combatant","detachment_id":"obeisance-phalanx","cost":10,"keyword_restrictions":["Overlord"],"ability_id":null,"is_unique":true,"game_version":{"edition":"11th","dataslate":"launch"},"points_provisional":false,"upgrade_tag":false,"max_targets":1},"id":"necrons:detachment:obeisance-phalanx:enhancement:honourable-combatant","detachmentId":"necrons:detachment:obeisance-phalanx","description":"OVERLORD model only. Each time the bearer's unit destroys an enemy CHARACTER unit, your opponent loses 1CP if they have any.","keywordRestrictions":["Overlord"],"keywordRestrictionGroups":[],"exclusionKeywords":[],"allowedHosts":[],"attachmentBodyguardIds":[],"grantKeywords":[],"upgrade":false,"kind":"enhancement","countsTowardLimit":true,"mandatory":false,"maxTargets":1,"abilityId":null,"gameModes":[],"gameVersion":{"edition":"11th","dataslate":"launch"}},{"name":"Unflinching Will","points":20,"community11e":{"id":"unflinching-will-obeisance-phalanx","name":"Unflinching Will","detachment_id":"obeisance-phalanx","cost":20,"keyword_restrictions":["Overlord"],"ability_id":null,"is_unique":true,"game_version":{"edition":"11th","dataslate":"launch"},"points_provisional":false,"upgrade_tag":false,"max_targets":1},"id":"necrons:detachment:obeisance-phalanx:enhancement:unflinching-will","detachmentId":"necrons:detachment:obeisance-phalanx","description":"OVERLORD model only. The bearer's melee weapons have the [PRECISION] and [ANTI-INFANTRY 5+] abilities.","keywordRestrictions":["Overlord"],"keywordRestrictionGroups":[],"exclusionKeywords":[],"allowedHosts":[],"attachmentBodyguardIds":[],"grantKeywords":[],"upgrade":false,"kind":"enhancement","countsTowardLimit":true,"mandatory":false,"maxTargets":1,"abilityId":null,"gameModes":[],"gameVersion":{"edition":"11th","dataslate":"launch"}},{"name":"Warrior Noble","points":15,"community11e":{"id":"warrior-noble-obeisance-phalanx","name":"Warrior Noble","detachment_id":"obeisance-phalanx","cost":15,"keyword_restrictions":["Overlord"],"ability_id":null,"is_unique":true,"game_version":{"edition":"11th","dataslate":"launch"},"points_provisional":false,"upgrade_tag":false,"max_targets":1},"id":"necrons:detachment:obeisance-phalanx:enhancement:warrior-noble","detachmentId":"necrons:detachment:obeisance-phalanx","description":"OVERLORD model only. Each time a melee attack targets the bearer's unit, subtract 1 from the Hit roll.","keywordRestrictions":["Overlord"],"keywordRestrictionGroups":[],"exclusionKeywords":[],"allowedHosts":[],"attachmentBodyguardIds":[],"grantKeywords":[],"upgrade":false,"kind":"enhancement","countsTowardLimit":true,"mandatory":false,"maxTargets":1,"abilityId":null,"gameModes":[],"gameVersion":{"edition":"11th","dataslate":"launch"}},{"name":"Animus Damper","points":35,"community11e":{"id":"animus-damper-pantheon-of-woe","name":"Animus Damper","detachment_id":"pantheon-of-woe","cost":35,"ability_id":null,"is_unique":true,"game_version":{"edition":"11th","dataslate":"launch"},"points_provisional":false,"upgrade_tag":false,"max_targets":1,"keyword_restrictions":["DNU","Necrons"]},"id":"necrons:detachment:pantheon-of-woe:enhancement:animus-damper","detachmentId":"necrons:detachment:pantheon-of-woe","description":"Once per turn, at the start of your opponent’s Shooting phase, select one enemy ^^**Vehicle^^** unit visible to the bearer. That unit must take a Leadership test. Until the end of the phase, each time a model in that unit makes an attack, subtract 1 from the Hit roll and, if that Leadership test was failed, subtract 1 from the Wound roll as well.","keywordRestrictions":["DNU","Necrons"],"keywordRestrictionGroups":[],"exclusionKeywords":[],"allowedHosts":["C’tan Shard of the Void Dragon"],"attachmentBodyguardIds":[],"grantKeywords":[],"upgrade":false,"kind":"binding","countsTowardLimit":false,"mandatory":true,"maxTargets":1,"abilityId":null,"gameModes":[],"gameVersion":{"edition":"11th","dataslate":"launch"}},{"name":"Quantum Goad","points":45,"community11e":{"id":"quantum-goad-pantheon-of-woe","name":"Quantum Goad","detachment_id":"pantheon-of-woe","cost":45,"ability_id":null,"is_unique":true,"game_version":{"edition":"11th","dataslate":"launch"},"points_provisional":false,"upgrade_tag":false,"max_targets":1,"keyword_restrictions":["DNU","Necrons"]},"id":"necrons:detachment:pantheon-of-woe:enhancement:quantum-goad","detachmentId":"necrons:detachment:pantheon-of-woe","description":"This model is eligible to declare a charge in a turn in which it Advanced.","keywordRestrictions":["DNU","Necrons"],"keywordRestrictionGroups":[],"exclusionKeywords":[],"allowedHosts":["C’tan Shard of the Nightbringer"],"attachmentBodyguardIds":[],"grantKeywords":[],"upgrade":false,"kind":"binding","countsTowardLimit":false,"mandatory":true,"maxTargets":1,"abilityId":null,"gameModes":[],"gameVersion":{"edition":"11th","dataslate":"launch"}},{"name":"Reletavistic Tether","points":40,"community11e":{"id":"reletavistic-tether-pantheon-of-woe","name":"Reletavistic Tether","detachment_id":"pantheon-of-woe","cost":40,"ability_id":null,"is_unique":true,"game_version":{"edition":"11th","dataslate":"launch"},"points_provisional":false,"upgrade_tag":false,"max_targets":1,"keyword_restrictions":["DNU","Necrons"]},"id":"necrons:detachment:pantheon-of-woe:enhancement:reletavistic-tether","detachmentId":"necrons:detachment:pantheon-of-woe","description":"In your turn, when this unit makes an ingress/advance move using its Transdimensional Displacement ability, this unit can end that move more than 6\" horizontally from all enemy units (instead of more than 8\"). When this unit ends that move within 8\" of an enemy unit, this unit is not eligible to declare a charge until the end of the turn.","keywordRestrictions":["TRANSCENDENT C’TAN"],"keywordRestrictionGroups":[],"exclusionKeywords":[],"allowedHosts":["Transcendent C’tan"],"attachmentBodyguardIds":[],"grantKeywords":[],"upgrade":false,"kind":"binding","countsTowardLimit":false,"mandatory":true,"maxTargets":1,"abilityId":null,"gameModes":[],"gameVersion":{"edition":"11th","dataslate":"launch"}},{"name":"Singularity Matrix","points":45,"community11e":{"id":"singularity-matrix-pantheon-of-woe","name":"Singularity Matrix","detachment_id":"pantheon-of-woe","cost":45,"ability_id":null,"is_unique":true,"game_version":{"edition":"11th","dataslate":"launch"},"points_provisional":false,"upgrade_tag":false,"max_targets":1,"keyword_restrictions":["DNU","Necrons"]},"id":"necrons:detachment:pantheon-of-woe:enhancement:singularity-matrix","detachmentId":"necrons:detachment:pantheon-of-woe","description":"","keywordRestrictions":["DNU","Necrons"],"keywordRestrictionGroups":[],"exclusionKeywords":[],"allowedHosts":["C’tan Shard of the Deceiver"],"attachmentBodyguardIds":[],"grantKeywords":[],"upgrade":false,"kind":"binding","countsTowardLimit":false,"mandatory":true,"maxTargets":1,"abilityId":null,"gameModes":[],"gameVersion":{"edition":"11th","dataslate":"launch"}},{"name":"Deepening Madness (Upgrade)","points":20,"community11e":{"id":"deepening-madness-upgrade-skyshroud-spearhead","name":"Deepening Madness (Upgrade)","detachment_id":"skyshroud-spearhead","cost":20,"keyword_restrictions":["Destroyer Cult","Mounted"],"ability_id":"deepening-madness-skyshroud-spearhead","is_unique":true,"game_version":{"edition":"11th","dataslate":"launch"},"points_provisional":false,"upgrade_tag":true,"max_targets":3},"id":"necrons:detachment:skyshroud-spearhead:enhancement:deepening-madness-upgrade","detachmentId":"necrons:detachment:skyshroud-spearhead","description":"","keywordRestrictions":["Destroyer Cult","Mounted"],"keywordRestrictionGroups":[],"exclusionKeywords":[],"allowedHosts":[],"attachmentBodyguardIds":[],"grantKeywords":[],"upgrade":true,"kind":"upgrade","countsTowardLimit":true,"mandatory":false,"maxTargets":3,"abilityId":"deepening-madness-skyshroud-spearhead","gameModes":[],"gameVersion":{"edition":"11th","dataslate":"launch"}},{"name":"Recursive Reanimation (Upgrade)","points":5,"community11e":{"id":"recursive-reanimation-upgrade-skyshroud-spearhead","name":"Recursive Reanimation (Upgrade)","detachment_id":"skyshroud-spearhead","cost":5,"keyword_restrictions":["Necrons","Tomb Blades"],"ability_id":"recursive-reanimation-skyshroud-spearhead","is_unique":true,"game_version":{"edition":"11th","dataslate":"launch"},"points_provisional":false,"upgrade_tag":true,"max_targets":3},"id":"necrons:detachment:skyshroud-spearhead:enhancement:recursive-reanimation-upgrade","detachmentId":"necrons:detachment:skyshroud-spearhead","description":"","keywordRestrictions":["Necrons","Tomb Blades"],"keywordRestrictionGroups":[],"exclusionKeywords":[],"allowedHosts":[],"attachmentBodyguardIds":[],"grantKeywords":[],"upgrade":true,"kind":"upgrade","countsTowardLimit":true,"mandatory":false,"maxTargets":3,"abilityId":"recursive-reanimation-skyshroud-spearhead","gameModes":[],"gameVersion":{"edition":"11th","dataslate":"launch"}},{"name":"Chrono-impedance Fields","points":25,"community11e":{"id":"chrono-impedance-fields-starshatter-arsenal","name":"Chrono-impedance Fields","detachment_id":"starshatter-arsenal","cost":25,"keyword_restrictions":["Necrons"],"ability_id":null,"is_unique":true,"game_version":{"edition":"11th","dataslate":"launch"},"points_provisional":false,"upgrade_tag":false,"max_targets":1},"id":"necrons:detachment:starshatter-arsenal:enhancement:chrono-impedance-fields","detachmentId":"necrons:detachment:starshatter-arsenal","description":"In your Command phase, select one friendly **^^Necrons Vehicle^^** or **^^Necrons Mounted^^** unit (excluding Titanic units) within 6\" of the bearer. Until the start of your next Command phase, each time an attack is allocated to a model in that unit, subtract 1 from the Damage characteristic of that attack.","keywordRestrictions":["NECRONS"],"keywordRestrictionGroups":[],"exclusionKeywords":[],"allowedHosts":[],"attachmentBodyguardIds":[],"grantKeywords":[],"upgrade":false,"kind":"enhancement","countsTowardLimit":true,"mandatory":false,"maxTargets":1,"abilityId":null,"gameModes":[],"gameVersion":{"edition":"11th","dataslate":"launch"}},{"name":"Demanding Leader","points":10,"community11e":{"id":"demanding-leader-starshatter-arsenal","name":"Demanding Leader","detachment_id":"starshatter-arsenal","cost":10,"keyword_restrictions":["Necrons"],"ability_id":null,"is_unique":true,"game_version":{"edition":"11th","dataslate":"launch"},"points_provisional":false,"upgrade_tag":false,"max_targets":1},"id":"necrons:detachment:starshatter-arsenal:enhancement:demanding-leader","detachmentId":"necrons:detachment:starshatter-arsenal","description":"In your Command phase, select one friendly NECRONS VEHICLE or NECRONS MOUNTED unit (excluding TITANIC units) within 6\" of the bearer. Until the start of your next Command phase, that unit is eligible to shoot in a turn in which it Fell Back.","keywordRestrictions":["NECRONS"],"keywordRestrictionGroups":[],"exclusionKeywords":[],"allowedHosts":[],"attachmentBodyguardIds":[],"grantKeywords":[],"upgrade":false,"kind":"enhancement","countsTowardLimit":true,"mandatory":false,"maxTargets":1,"abilityId":null,"gameModes":[],"gameVersion":{"edition":"11th","dataslate":"launch"}},{"name":"Dread Majesty","points":30,"id":"necrons:detachment:starshatter-arsenal:enhancement:dread-majesty","detachmentId":"necrons:detachment:starshatter-arsenal","description":"","keywordRestrictions":[],"keywordRestrictionGroups":[],"exclusionKeywords":[],"allowedHosts":["OVERLORD","CATACOMB COMMAND BARGE"],"attachmentBodyguardIds":[],"grantKeywords":[],"upgrade":false,"kind":"enhancement","countsTowardLimit":true,"mandatory":false,"maxTargets":1,"abilityId":null,"gameModes":[]},{"name":"Miniaturised Nebuloscope","points":15,"community11e":{"id":"miniaturised-nebuloscope-starshatter-arsenal","name":"Miniaturised Nebuloscope","detachment_id":"starshatter-arsenal","cost":15,"keyword_restrictions":["Necrons"],"ability_id":null,"is_unique":true,"game_version":{"edition":"11th","dataslate":"launch"},"points_provisional":false,"upgrade_tag":false,"max_targets":1},"id":"necrons:detachment:starshatter-arsenal:enhancement:miniaturised-nebuloscope","detachmentId":"necrons:detachment:starshatter-arsenal","description":"Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability.","keywordRestrictions":["NECRONS"],"keywordRestrictionGroups":[],"exclusionKeywords":[],"allowedHosts":[],"attachmentBodyguardIds":[],"grantKeywords":[],"upgrade":false,"kind":"enhancement","countsTowardLimit":true,"mandatory":false,"maxTargets":1,"abilityId":null,"gameModes":[],"gameVersion":{"edition":"11th","dataslate":"launch"}},{"name":"Mortality Shroud (Aura) (Upgrade)","points":10,"community11e":{"id":"mortality-shroud-aura-upgrade-the-phaerons-armoury","name":"Mortality Shroud (Aura) (Upgrade)","detachment_id":"the-phaerons-armoury","cost":10,"ability_id":null,"is_unique":true,"game_version":{"edition":"11th","dataslate":"launch"},"points_provisional":false,"upgrade_tag":true,"max_targets":3,"keyword_restrictions":["Necrons","Obelisk"]},"id":"necrons:detachment:the-phaeron-s-armoury:enhancement:mortality-shroud-aura-upgrade","detachmentId":"necrons:detachment:the-phaeron-s-armoury","description":"","keywordRestrictions":["Necrons","Obelisk"],"keywordRestrictionGroups":[],"exclusionKeywords":[],"allowedHosts":[],"attachmentBodyguardIds":[],"grantKeywords":[],"upgrade":true,"kind":"upgrade","countsTowardLimit":true,"mandatory":false,"maxTargets":3,"abilityId":null,"gameModes":[],"gameVersion":{"edition":"11th","dataslate":"launch"}},{"name":"Prelocational Optimiser","points":25,"community11e":{"id":"prelocational-optimiser-the-phaerons-armoury","name":"Prelocational Optimiser","detachment_id":"the-phaerons-armoury","cost":25,"keyword_restrictions":["Necrons"],"ability_id":"prelocational-optimiser-the-phaerons-armoury","is_unique":true,"game_version":{"edition":"11th","dataslate":"launch"},"points_provisional":false,"upgrade_tag":false,"max_targets":1},"id":"necrons:detachment:the-phaeron-s-armoury:enhancement:prelocational-optimiser","detachmentId":"necrons:detachment:the-phaeron-s-armoury","description":"When this unit is selected to shoot, if this unit was set up using a Monolith’s Eternity Gate ability this turn, this unit’s ranged attacks have: \n- [LETHAL HITS]. \n- Or: [SUSTAINED HITS 1].","keywordRestrictions":["NECRONS"],"keywordRestrictionGroups":[],"exclusionKeywords":[],"allowedHosts":[],"attachmentBodyguardIds":[],"grantKeywords":[],"upgrade":false,"kind":"enhancement","countsTowardLimit":true,"mandatory":false,"maxTargets":1,"abilityId":"prelocational-optimiser-the-phaerons-armoury","gameModes":[],"gameVersion":{"edition":"11th","dataslate":"launch"}}]}
+{
+  "edition": "11th",
+  "faction": "necrons",
+  "package": "enhancements",
+  "records": [
+    {
+      "id": "necrons:detachment:annihilation-legion:enhancement:eldritch-nightmare",
+      "kind": "enhancement",
+      "name": "Eldritch Nightmare",
+      "points": 10,
+      "upgrade": false,
+      "abilityId": null,
+      "gameModes": [],
+      "mandatory": false,
+      "maxTargets": 1,
+      "description": "DESTROYER CULT model only. At the start of the Fight phase, each enemy unit within Engagement Range of the bearer must take a Battle-shock test.",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "launch"
+      },
+      "allowedHosts": [],
+      "community11e": {
+        "id": "eldritch-nightmare-annihilation-legion",
+        "cost": 10,
+        "name": "Eldritch Nightmare",
+        "is_unique": true,
+        "ability_id": null,
+        "max_targets": 1,
+        "upgrade_tag": false,
+        "game_version": {
+          "edition": "11th",
+          "dataslate": "launch"
+        },
+        "detachment_id": "annihilation-legion",
+        "points_provisional": false,
+        "keyword_restrictions": [
+          "Destroyer Cult"
+        ]
+      },
+      "detachmentId": "necrons:detachment:annihilation-legion",
+      "grantKeywords": [],
+      "countsTowardLimit": true,
+      "exclusionKeywords": [],
+      "keywordRestrictions": [
+        "Destroyer Cult"
+      ],
+      "attachmentBodyguardIds": [],
+      "keywordRestrictionGroups": []
+    },
+    {
+      "id": "necrons:detachment:annihilation-legion:enhancement:eternal-madness",
+      "kind": "enhancement",
+      "name": "Eternal Madness",
+      "points": 20,
+      "upgrade": false,
+      "abilityId": null,
+      "gameModes": [],
+      "mandatory": false,
+      "maxTargets": 1,
+      "description": "NECRONS model only. In the Fight phase, each time a model in the bearer's unit is destroyed, if that model had not fought this phase, roll one D6. On a 4+, do not remove the destroyed model from play; it can fight after the attacking model's unit has finished making its attacks, and is then removed from play.",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "launch"
+      },
+      "allowedHosts": [],
+      "community11e": {
+        "id": "eternal-madness-annihilation-legion",
+        "cost": 20,
+        "name": "Eternal Madness",
+        "is_unique": true,
+        "ability_id": null,
+        "max_targets": 1,
+        "upgrade_tag": false,
+        "game_version": {
+          "edition": "11th",
+          "dataslate": "launch"
+        },
+        "detachment_id": "annihilation-legion",
+        "points_provisional": false,
+        "keyword_restrictions": [
+          "Necrons"
+        ]
+      },
+      "detachmentId": "necrons:detachment:annihilation-legion",
+      "grantKeywords": [],
+      "countsTowardLimit": true,
+      "exclusionKeywords": [],
+      "keywordRestrictions": [
+        "Necrons"
+      ],
+      "attachmentBodyguardIds": [],
+      "keywordRestrictionGroups": []
+    },
+    {
+      "id": "necrons:detachment:annihilation-legion:enhancement:ingrained-superiority",
+      "kind": "enhancement",
+      "name": "Ingrained Superiority",
+      "points": 5,
+      "upgrade": false,
+      "abilityId": null,
+      "gameModes": [],
+      "mandatory": false,
+      "maxTargets": 1,
+      "description": "NECRONS model only. Each time a model in the bearer's unit makes an attack, on a Critical Wound, improve the Armour Penetration characteristic of that attack by 1.",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "launch"
+      },
+      "allowedHosts": [],
+      "community11e": {
+        "id": "ingrained-superiority-annihilation-legion",
+        "cost": 5,
+        "name": "Ingrained Superiority",
+        "is_unique": true,
+        "ability_id": null,
+        "max_targets": 1,
+        "upgrade_tag": false,
+        "game_version": {
+          "edition": "11th",
+          "dataslate": "launch"
+        },
+        "detachment_id": "annihilation-legion",
+        "points_provisional": false,
+        "keyword_restrictions": [
+          "Necrons"
+        ]
+      },
+      "detachmentId": "necrons:detachment:annihilation-legion",
+      "grantKeywords": [],
+      "countsTowardLimit": true,
+      "exclusionKeywords": [],
+      "keywordRestrictions": [
+        "Necrons"
+      ],
+      "attachmentBodyguardIds": [],
+      "keywordRestrictionGroups": []
+    },
+    {
+      "id": "necrons:detachment:annihilation-legion:enhancement:soulless-reaper",
+      "kind": "enhancement",
+      "name": "Soulless Reaper",
+      "points": 15,
+      "upgrade": false,
+      "abilityId": null,
+      "gameModes": [],
+      "mandatory": false,
+      "maxTargets": 1,
+      "description": "DESTROYER CULT model only. Each time an enemy unit within Engagement Range of the bearer's unit is selected to Fall Back, roll one D6. On a 3+, that unit cannot Fall Back and must Remain Stationary.",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "launch"
+      },
+      "allowedHosts": [],
+      "community11e": {
+        "id": "soulless-reaper-annihilation-legion",
+        "cost": 15,
+        "name": "Soulless Reaper",
+        "is_unique": true,
+        "ability_id": null,
+        "max_targets": 1,
+        "upgrade_tag": false,
+        "game_version": {
+          "edition": "11th",
+          "dataslate": "launch"
+        },
+        "detachment_id": "annihilation-legion",
+        "points_provisional": false,
+        "keyword_restrictions": [
+          "Destroyer Cult"
+        ]
+      },
+      "detachmentId": "necrons:detachment:annihilation-legion",
+      "grantKeywords": [],
+      "countsTowardLimit": true,
+      "exclusionKeywords": [],
+      "keywordRestrictions": [
+        "Destroyer Cult"
+      ],
+      "attachmentBodyguardIds": [],
+      "keywordRestrictionGroups": []
+    },
+    {
+      "id": "necrons:detachment:awakened-dynasty:enhancement:enaegic-dermal-bond",
+      "kind": "enhancement",
+      "name": "Enaegic Dermal Bond",
+      "points": 30,
+      "upgrade": false,
+      "abilityId": null,
+      "gameModes": [],
+      "mandatory": false,
+      "maxTargets": 1,
+      "description": "NECRONS model only. The bearer has the Feel No Pain 4+ ability.",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "launch"
+      },
+      "allowedHosts": [],
+      "community11e": {
+        "id": "enaegic-dermal-bond-awakened-dynasty",
+        "cost": 30,
+        "name": "Enaegic Dermal Bond",
+        "is_unique": true,
+        "ability_id": null,
+        "max_targets": 1,
+        "upgrade_tag": false,
+        "game_version": {
+          "edition": "11th",
+          "dataslate": "launch"
+        },
+        "detachment_id": "awakened-dynasty",
+        "points_provisional": false,
+        "keyword_restrictions": [
+          "Necrons"
+        ]
+      },
+      "detachmentId": "necrons:detachment:awakened-dynasty",
+      "grantKeywords": [],
+      "countsTowardLimit": true,
+      "exclusionKeywords": [],
+      "keywordRestrictions": [
+        "Necrons"
+      ],
+      "attachmentBodyguardIds": [],
+      "keywordRestrictionGroups": []
+    },
+    {
+      "id": "necrons:detachment:awakened-dynasty:enhancement:nether-realm-casket",
+      "kind": "enhancement",
+      "name": "Nether-realm Casket",
+      "points": 20,
+      "upgrade": false,
+      "abilityId": null,
+      "gameModes": [],
+      "mandatory": false,
+      "maxTargets": 1,
+      "description": "NECRONS model only. While the bearer is leading a unit, models in that unit have the Stealth ability.",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "launch"
+      },
+      "allowedHosts": [],
+      "community11e": {
+        "id": "nether-realm-casket-awakened-dynasty",
+        "cost": 20,
+        "name": "Nether-realm Casket",
+        "is_unique": true,
+        "ability_id": null,
+        "max_targets": 1,
+        "upgrade_tag": false,
+        "game_version": {
+          "edition": "11th",
+          "dataslate": "launch"
+        },
+        "detachment_id": "awakened-dynasty",
+        "points_provisional": false,
+        "keyword_restrictions": [
+          "Necrons"
+        ]
+      },
+      "detachmentId": "necrons:detachment:awakened-dynasty",
+      "grantKeywords": [],
+      "countsTowardLimit": true,
+      "exclusionKeywords": [],
+      "keywordRestrictions": [
+        "Necrons"
+      ],
+      "attachmentBodyguardIds": [],
+      "keywordRestrictionGroups": []
+    },
+    {
+      "id": "necrons:detachment:awakened-dynasty:enhancement:phasal-subjugator",
+      "kind": "enhancement",
+      "name": "Phasal Subjugator",
+      "points": 35,
+      "upgrade": false,
+      "abilityId": null,
+      "gameModes": [],
+      "mandatory": false,
+      "maxTargets": 1,
+      "description": "",
+      "allowedHosts": [],
+      "detachmentId": "necrons:detachment:awakened-dynasty",
+      "grantKeywords": [],
+      "countsTowardLimit": true,
+      "exclusionKeywords": [],
+      "keywordRestrictions": [],
+      "attachmentBodyguardIds": [],
+      "keywordRestrictionGroups": []
+    },
+    {
+      "id": "necrons:detachment:awakened-dynasty:enhancement:veil-of-darkness",
+      "kind": "enhancement",
+      "name": "Veil of Darkness",
+      "points": 20,
+      "upgrade": false,
+      "abilityId": null,
+      "gameModes": [],
+      "mandatory": false,
+      "maxTargets": 1,
+      "description": "NECRONS model only. (Once per battle, per army) At the end of your opponent’s turn, if this unit is unengaged, you can use this ability. If you do: \n- Place this unit in strategic reserves. \n- This unit has Deep Strike until the start of your next Shooting phase. \n- This unit must make an ingress move in your next Movement phase (including in your first turn).",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "launch"
+      },
+      "allowedHosts": [],
+      "community11e": {
+        "id": "veil-of-darkness-awakened-dynasty",
+        "cost": 20,
+        "name": "Veil of Darkness",
+        "is_unique": true,
+        "ability_id": null,
+        "max_targets": 1,
+        "upgrade_tag": false,
+        "game_version": {
+          "edition": "11th",
+          "dataslate": "launch"
+        },
+        "detachment_id": "awakened-dynasty",
+        "points_provisional": false,
+        "keyword_restrictions": [
+          "Necrons"
+        ]
+      },
+      "detachmentId": "necrons:detachment:awakened-dynasty",
+      "grantKeywords": [],
+      "countsTowardLimit": true,
+      "exclusionKeywords": [],
+      "keywordRestrictions": [
+        "Necrons"
+      ],
+      "attachmentBodyguardIds": [],
+      "keywordRestrictionGroups": []
+    },
+    {
+      "id": "necrons:detachment:canoptek-court:enhancement:autodivinator",
+      "kind": "enhancement",
+      "name": "Autodivinator",
+      "points": 15,
+      "upgrade": false,
+      "abilityId": null,
+      "gameModes": [],
+      "mandatory": false,
+      "maxTargets": 1,
+      "description": "CRYPTEK model only. Each time your opponent gains a CP as a result of an ability, roll one D6: on a 2+, you also gain 1CP.",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "launch"
+      },
+      "allowedHosts": [],
+      "community11e": {
+        "id": "autodivinator-canoptek-court",
+        "cost": 15,
+        "name": "Autodivinator",
+        "is_unique": true,
+        "ability_id": null,
+        "max_targets": 1,
+        "upgrade_tag": false,
+        "game_version": {
+          "edition": "11th",
+          "dataslate": "launch"
+        },
+        "detachment_id": "canoptek-court",
+        "points_provisional": false,
+        "keyword_restrictions": [
+          "Cryptek"
+        ]
+      },
+      "detachmentId": "necrons:detachment:canoptek-court",
+      "grantKeywords": [],
+      "countsTowardLimit": true,
+      "exclusionKeywords": [],
+      "keywordRestrictions": [
+        "Cryptek"
+      ],
+      "attachmentBodyguardIds": [],
+      "keywordRestrictionGroups": []
+    },
+    {
+      "id": "necrons:detachment:canoptek-court:enhancement:dimensional-sanctum",
+      "kind": "enhancement",
+      "name": "Dimensional Sanctum",
+      "points": 20,
+      "upgrade": false,
+      "abilityId": null,
+      "gameModes": [],
+      "mandatory": false,
+      "maxTargets": 1,
+      "description": "CRYPTEK model only. Models in the bearer's unit have the Infiltrators ability.",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "launch"
+      },
+      "allowedHosts": [],
+      "community11e": {
+        "id": "dimensional-sanctum-canoptek-court",
+        "cost": 20,
+        "name": "Dimensional Sanctum",
+        "is_unique": true,
+        "ability_id": null,
+        "max_targets": 1,
+        "upgrade_tag": false,
+        "game_version": {
+          "edition": "11th",
+          "dataslate": "launch"
+        },
+        "detachment_id": "canoptek-court",
+        "points_provisional": false,
+        "keyword_restrictions": [
+          "Cryptek"
+        ]
+      },
+      "detachmentId": "necrons:detachment:canoptek-court",
+      "grantKeywords": [],
+      "countsTowardLimit": true,
+      "exclusionKeywords": [],
+      "keywordRestrictions": [
+        "Cryptek"
+      ],
+      "attachmentBodyguardIds": [],
+      "keywordRestrictionGroups": []
+    },
+    {
+      "id": "necrons:detachment:canoptek-court:enhancement:hyperphasic-fulcrum",
+      "kind": "enhancement",
+      "name": "Hyperphasic Fulcrum",
+      "points": 15,
+      "upgrade": false,
+      "abilityId": null,
+      "gameModes": [],
+      "mandatory": false,
+      "maxTargets": 1,
+      "description": "CRYPTEK model only. While the bearer is leading a unit, if that unit is wholly within your army's Power Matrix, each time a model in that unit makes an attack, re-roll a Wound roll of 1.",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "launch"
+      },
+      "allowedHosts": [],
+      "community11e": {
+        "id": "hyperphasic-fulcrum-canoptek-court",
+        "cost": 15,
+        "name": "Hyperphasic Fulcrum",
+        "is_unique": true,
+        "ability_id": null,
+        "max_targets": 1,
+        "upgrade_tag": false,
+        "game_version": {
+          "edition": "11th",
+          "dataslate": "launch"
+        },
+        "detachment_id": "canoptek-court",
+        "points_provisional": false,
+        "keyword_restrictions": [
+          "Cryptek"
+        ]
+      },
+      "detachmentId": "necrons:detachment:canoptek-court",
+      "grantKeywords": [],
+      "countsTowardLimit": true,
+      "exclusionKeywords": [],
+      "keywordRestrictions": [
+        "Cryptek"
+      ],
+      "attachmentBodyguardIds": [],
+      "keywordRestrictionGroups": []
+    },
+    {
+      "id": "necrons:detachment:canoptek-court:enhancement:metalodermal-tesla-weave",
+      "kind": "enhancement",
+      "name": "Metalodermal Tesla Weave",
+      "points": 10,
+      "upgrade": false,
+      "abilityId": null,
+      "gameModes": [],
+      "mandatory": false,
+      "maxTargets": 1,
+      "description": "CRYPTEK model only. Once per phase, when an enemy unit selects the bearer's unit as a target of a charge, roll one D6: on a 2-5, that enemy unit suffers D3 mortal wounds, on a 6, that enemy unit suffers 3 mortal wounds.",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "launch"
+      },
+      "allowedHosts": [],
+      "community11e": {
+        "id": "metalodermal-tesla-weave-canoptek-court",
+        "cost": 10,
+        "name": "Metalodermal Tesla Weave",
+        "is_unique": true,
+        "ability_id": null,
+        "max_targets": 1,
+        "upgrade_tag": false,
+        "game_version": {
+          "edition": "11th",
+          "dataslate": "launch"
+        },
+        "detachment_id": "canoptek-court",
+        "points_provisional": false,
+        "keyword_restrictions": [
+          "Cryptek"
+        ]
+      },
+      "detachmentId": "necrons:detachment:canoptek-court",
+      "grantKeywords": [],
+      "countsTowardLimit": true,
+      "exclusionKeywords": [],
+      "keywordRestrictions": [
+        "Cryptek"
+      ],
+      "attachmentBodyguardIds": [],
+      "keywordRestrictionGroups": []
+    },
+    {
+      "id": "necrons:detachment:cryptek-conclave:enhancement:atomic-disintegrators",
+      "kind": "enhancement",
+      "name": "Atomic Disintegrators",
+      "points": 10,
+      "upgrade": false,
+      "abilityId": null,
+      "gameModes": [],
+      "mandatory": false,
+      "maxTargets": 1,
+      "description": "In your Shooting phase, each time the bearer’s unit is selected to shoot, when selecting an ability for the Technosorcerous Augmentations Detachment rule, you can also select from the following abilities: [ANTI‑MONSTER 5+], [ANTI‑VEHICLE 5+].",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "launch"
+      },
+      "allowedHosts": [],
+      "community11e": {
+        "id": "atomic-disintegrators-cryptek-conclave",
+        "cost": 10,
+        "name": "Atomic Disintegrators",
+        "is_unique": true,
+        "ability_id": null,
+        "max_targets": 1,
+        "upgrade_tag": false,
+        "game_version": {
+          "edition": "11th",
+          "dataslate": "launch"
+        },
+        "detachment_id": "cryptek-conclave",
+        "points_provisional": false,
+        "keyword_restrictions": [
+          "Cryptek"
+        ]
+      },
+      "detachmentId": "necrons:detachment:cryptek-conclave",
+      "grantKeywords": [],
+      "countsTowardLimit": true,
+      "exclusionKeywords": [],
+      "keywordRestrictions": [
+        "CRYPTEK"
+      ],
+      "attachmentBodyguardIds": [],
+      "keywordRestrictionGroups": []
+    },
+    {
+      "id": "necrons:detachment:cryptek-conclave:enhancement:gauntlet-of-compression",
+      "kind": "enhancement",
+      "name": "Gauntlet of Compression",
+      "points": 20,
+      "upgrade": false,
+      "abilityId": null,
+      "gameModes": [],
+      "mandatory": false,
+      "maxTargets": 1,
+      "description": "Add 6\" to the Range characteristic of ranged weapons equipped by models in the bearer’s unit.",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "launch"
+      },
+      "allowedHosts": [],
+      "community11e": {
+        "id": "gauntlet-of-compression-cryptek-conclave",
+        "cost": 20,
+        "name": "Gauntlet of Compression",
+        "is_unique": true,
+        "ability_id": null,
+        "max_targets": 1,
+        "upgrade_tag": false,
+        "game_version": {
+          "edition": "11th",
+          "dataslate": "launch"
+        },
+        "detachment_id": "cryptek-conclave",
+        "points_provisional": false,
+        "keyword_restrictions": [
+          "Necrons"
+        ]
+      },
+      "detachmentId": "necrons:detachment:cryptek-conclave",
+      "grantKeywords": [],
+      "countsTowardLimit": true,
+      "exclusionKeywords": [],
+      "keywordRestrictions": [
+        "NECRONS"
+      ],
+      "attachmentBodyguardIds": [],
+      "keywordRestrictionGroups": []
+    },
+    {
+      "id": "necrons:detachment:cryptek-conclave:enhancement:gravitic-bolas",
+      "kind": "enhancement",
+      "name": "Gravitic Bolas",
+      "points": 15,
+      "upgrade": false,
+      "abilityId": null,
+      "gameModes": [],
+      "mandatory": false,
+      "maxTargets": 1,
+      "description": "In your Shooting phase, after the bearer has shot, select one enemy unit hit by one or more of those attacks (excluding ^^**Titanic^^** units); until the start of your next turn, that enemy unit is pinned. While a unit is pinned, subtract 2 from that unit’s Move characteristic and subtract 2 from Charge rolls made for that unit.",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "launch"
+      },
+      "allowedHosts": [],
+      "community11e": {
+        "id": "gravitic-bolas-cryptek-conclave",
+        "cost": 15,
+        "name": "Gravitic Bolas",
+        "is_unique": true,
+        "ability_id": null,
+        "max_targets": 1,
+        "upgrade_tag": false,
+        "game_version": {
+          "edition": "11th",
+          "dataslate": "launch"
+        },
+        "detachment_id": "cryptek-conclave",
+        "points_provisional": false,
+        "keyword_restrictions": [
+          "Cryptek"
+        ]
+      },
+      "detachmentId": "necrons:detachment:cryptek-conclave",
+      "grantKeywords": [],
+      "countsTowardLimit": true,
+      "exclusionKeywords": [],
+      "keywordRestrictions": [
+        "CRYPTEK"
+      ],
+      "attachmentBodyguardIds": [],
+      "keywordRestrictionGroups": []
+    },
+    {
+      "id": "necrons:detachment:cryptek-conclave:enhancement:quantum-abacus",
+      "kind": "enhancement",
+      "name": "Quantum Abacus",
+      "points": 15,
+      "upgrade": false,
+      "abilityId": null,
+      "gameModes": [],
+      "mandatory": false,
+      "maxTargets": 1,
+      "description": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6, adding 1 if it is within range of one or more objectives: on a 4+, you gain 1CP.",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "launch"
+      },
+      "allowedHosts": [],
+      "community11e": {
+        "id": "quantum-abacus-cryptek-conclave",
+        "cost": 15,
+        "name": "Quantum Abacus",
+        "is_unique": true,
+        "ability_id": null,
+        "max_targets": 1,
+        "upgrade_tag": false,
+        "game_version": {
+          "edition": "11th",
+          "dataslate": "launch"
+        },
+        "detachment_id": "cryptek-conclave",
+        "points_provisional": false,
+        "keyword_restrictions": [
+          "Necrons"
+        ]
+      },
+      "detachmentId": "necrons:detachment:cryptek-conclave",
+      "grantKeywords": [],
+      "countsTowardLimit": true,
+      "exclusionKeywords": [],
+      "keywordRestrictions": [
+        "NECRONS"
+      ],
+      "attachmentBodyguardIds": [],
+      "keywordRestrictionGroups": []
+    },
+    {
+      "id": "necrons:detachment:cursed-legion:enhancement:cursed-circlet",
+      "kind": "enhancement",
+      "name": "Cursed Circlet",
+      "points": 25,
+      "upgrade": false,
+      "abilityId": null,
+      "gameModes": [],
+      "mandatory": false,
+      "maxTargets": 1,
+      "description": "Each time an enemy unit is selected to shoot, after that unit has shot, if any models from the bearer’s unit were destroyed as a result of those attacks, the bearer’s unit can make a Surge move. To do so, roll one D6: the bearer’s unit can be moved a number of inches up to the result, but the bearer’s unit must finish that move as close as possible to the closest enemy unit (excluding ^^**Aircraft^^**). \nWhen doing so, those models can be moved within Engagement Range of that enemy unit. A unit cannot make a Surge move while it is Battle‑shocked.",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "launch"
+      },
+      "allowedHosts": [],
+      "community11e": {
+        "id": "cursed-circlet-cursed-legion",
+        "cost": 25,
+        "name": "Cursed Circlet",
+        "is_unique": true,
+        "ability_id": null,
+        "max_targets": 1,
+        "upgrade_tag": false,
+        "game_version": {
+          "edition": "11th",
+          "dataslate": "launch"
+        },
+        "detachment_id": "cursed-legion",
+        "points_provisional": false,
+        "keyword_restrictions": [
+          "Destroyer Cult"
+        ]
+      },
+      "detachmentId": "necrons:detachment:cursed-legion",
+      "grantKeywords": [],
+      "countsTowardLimit": true,
+      "exclusionKeywords": [],
+      "keywordRestrictions": [
+        "DESTROYER CULT"
+      ],
+      "attachmentBodyguardIds": [],
+      "keywordRestrictionGroups": []
+    },
+    {
+      "id": "necrons:detachment:cursed-legion:enhancement:destroyer-ankh",
+      "kind": "enhancement",
+      "name": "Destroyer Ankh",
+      "points": 20,
+      "upgrade": false,
+      "abilityId": null,
+      "gameModes": [],
+      "mandatory": false,
+      "maxTargets": 1,
+      "description": "The bearer has the ^^**Destroyer Cult^^** keyword. Add 2\" to the Move characteristic of models in the bearer’s unit and add 2 to the Attacks characteristic of melee weapons equipped by the bearer.",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "launch"
+      },
+      "allowedHosts": [
+        "CATACOMB COMMAND BARGE",
+        "OVERLORD"
+      ],
+      "community11e": {
+        "id": "destroyer-ankh-cursed-legion",
+        "cost": 20,
+        "name": "Destroyer Ankh",
+        "is_unique": true,
+        "ability_id": null,
+        "max_targets": 1,
+        "upgrade_tag": false,
+        "game_version": {
+          "edition": "11th",
+          "dataslate": "launch"
+        },
+        "detachment_id": "cursed-legion",
+        "points_provisional": false,
+        "keyword_restriction_groups": [
+          [
+            "Catacomb Command Barge"
+          ],
+          [
+            "Overlord"
+          ]
+        ]
+      },
+      "detachmentId": "necrons:detachment:cursed-legion",
+      "grantKeywords": [
+        "Destroyer Cult"
+      ],
+      "countsTowardLimit": true,
+      "exclusionKeywords": [],
+      "keywordRestrictions": [],
+      "attachmentBodyguardIds": [],
+      "keywordRestrictionGroups": [
+        [
+          "Catacomb Command Barge"
+        ],
+        [
+          "Overlord"
+        ]
+      ]
+    },
+    {
+      "id": "necrons:detachment:cursed-legion:enhancement:mark-of-the-nekrosor",
+      "kind": "enhancement",
+      "name": "Mark of the Nekrosor",
+      "points": 20,
+      "upgrade": false,
+      "abilityId": null,
+      "gameModes": [],
+      "mandatory": false,
+      "maxTargets": 1,
+      "description": "Each time a model in the bearer’s unit makes an attack, add 1 to the Hit roll.",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "launch"
+      },
+      "allowedHosts": [],
+      "community11e": {
+        "id": "mark-of-the-nekrosor-cursed-legion",
+        "cost": 20,
+        "name": "Mark of the Nekrosor",
+        "is_unique": true,
+        "ability_id": null,
+        "max_targets": 1,
+        "upgrade_tag": false,
+        "game_version": {
+          "edition": "11th",
+          "dataslate": "launch"
+        },
+        "detachment_id": "cursed-legion",
+        "points_provisional": false,
+        "keyword_restrictions": [
+          "Destroyer Cult"
+        ]
+      },
+      "detachmentId": "necrons:detachment:cursed-legion",
+      "grantKeywords": [],
+      "countsTowardLimit": true,
+      "exclusionKeywords": [],
+      "keywordRestrictions": [
+        "DESTROYER CULT"
+      ],
+      "attachmentBodyguardIds": [],
+      "keywordRestrictionGroups": []
+    },
+    {
+      "id": "necrons:detachment:cursed-legion:enhancement:murdermind",
+      "kind": "enhancement",
+      "name": "Murdermind",
+      "points": 15,
+      "upgrade": false,
+      "abilityId": null,
+      "gameModes": [],
+      "mandatory": false,
+      "supportTo": [
+        "Skorpekh Destroyers",
+        "Lokhust Destroyers",
+        "Ophydian Destroyers",
+        "Lokhust Heavy Destroyers"
+      ],
+      "maxTargets": 1,
+      "description": "The bearer has the **DESTROYER CULT** keyword. Add 3\" to the Move characteristic of the bearer.",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "launch"
+      },
+      "allowedHosts": [],
+      "community11e": {
+        "id": "murdermind-cursed-legion",
+        "cost": 15,
+        "name": "Murdermind",
+        "is_unique": true,
+        "ability_id": null,
+        "max_targets": 1,
+        "upgrade_tag": false,
+        "game_version": {
+          "edition": "11th",
+          "dataslate": "launch"
+        },
+        "detachment_id": "cursed-legion",
+        "points_provisional": false,
+        "keyword_restrictions": [
+          "Cryptek"
+        ],
+        "attachment_bodyguard_ids": [
+          "lokhust-destroyers",
+          "lokhust-heavy-destroyers",
+          "ophydian-destroyers",
+          "skorpekh-destroyers"
+        ]
+      },
+      "detachmentId": "necrons:detachment:cursed-legion",
+      "grantKeywords": [
+        "Destroyer Cult"
+      ],
+      "countsTowardLimit": true,
+      "exclusionKeywords": [],
+      "keywordRestrictions": [
+        "CRYPTEK"
+      ],
+      "attachmentBodyguardIds": [
+        "lokhust-destroyers",
+        "lokhust-heavy-destroyers",
+        "ophydian-destroyers",
+        "skorpekh-destroyers"
+      ],
+      "keywordRestrictionGroups": []
+    },
+    {
+      "id": "necrons:detachment:hand-of-the-dynasty:enhancement:enlivened-sentinels-upgrade",
+      "kind": "upgrade",
+      "name": "Enlivened Sentinels (Upgrade)",
+      "points": 20,
+      "upgrade": true,
+      "abilityId": "enlivened-sentinels-hand-of-the-dynasty",
+      "gameModes": [],
+      "mandatory": false,
+      "maxTargets": 3,
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "launch"
+      },
+      "allowedHosts": [],
+      "community11e": {
+        "id": "enlivened-sentinels-upgrade-hand-of-the-dynasty",
+        "cost": 20,
+        "name": "Enlivened Sentinels (Upgrade)",
+        "is_unique": true,
+        "ability_id": "enlivened-sentinels-hand-of-the-dynasty",
+        "max_targets": 3,
+        "upgrade_tag": true,
+        "game_version": {
+          "edition": "11th",
+          "dataslate": "launch"
+        },
+        "detachment_id": "hand-of-the-dynasty",
+        "points_provisional": false,
+        "keyword_restrictions": [
+          "Necron Warriors",
+          "Necrons"
+        ]
+      },
+      "detachmentId": "necrons:detachment:hand-of-the-dynasty",
+      "grantKeywords": [],
+      "countsTowardLimit": true,
+      "exclusionKeywords": [],
+      "keywordRestrictions": [
+        "Necron Warriors",
+        "Necrons"
+      ],
+      "attachmentBodyguardIds": [],
+      "keywordRestrictionGroups": []
+    },
+    {
+      "id": "necrons:detachment:hand-of-the-dynasty:enhancement:tools-of-dominion-upgrade",
+      "kind": "upgrade",
+      "name": "Tools of Dominion (Upgrade)",
+      "points": 15,
+      "upgrade": true,
+      "abilityId": "tools-of-dominion-hand-of-the-dynasty",
+      "gameModes": [],
+      "mandatory": false,
+      "maxTargets": 3,
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "launch"
+      },
+      "allowedHosts": [],
+      "community11e": {
+        "id": "tools-of-dominion-upgrade-hand-of-the-dynasty",
+        "cost": 15,
+        "name": "Tools of Dominion (Upgrade)",
+        "is_unique": true,
+        "ability_id": "tools-of-dominion-hand-of-the-dynasty",
+        "max_targets": 3,
+        "upgrade_tag": true,
+        "game_version": {
+          "edition": "11th",
+          "dataslate": "launch"
+        },
+        "detachment_id": "hand-of-the-dynasty",
+        "points_provisional": false,
+        "keyword_restrictions": [
+          "Immortals",
+          "Necrons"
+        ]
+      },
+      "detachmentId": "necrons:detachment:hand-of-the-dynasty",
+      "grantKeywords": [],
+      "countsTowardLimit": true,
+      "exclusionKeywords": [],
+      "keywordRestrictions": [
+        "Immortals",
+        "Necrons"
+      ],
+      "attachmentBodyguardIds": [],
+      "keywordRestrictionGroups": []
+    },
+    {
+      "id": "necrons:detachment:hypercrypt-legion:enhancement:arisen-tyrant",
+      "kind": "enhancement",
+      "name": "Arisen Tyrant",
+      "points": 25,
+      "upgrade": false,
+      "abilityId": null,
+      "gameModes": [],
+      "mandatory": false,
+      "maxTargets": 1,
+      "description": "NECRONS model only. Each time a model in the bearer's unit makes an attack, re-roll a Hit roll of 1. If the bearer's unit was set up on the battlefield this turn, you can re-roll the Hit roll instead.",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "launch"
+      },
+      "allowedHosts": [],
+      "community11e": {
+        "id": "arisen-tyrant-hypercrypt-legion",
+        "cost": 25,
+        "name": "Arisen Tyrant",
+        "is_unique": true,
+        "ability_id": null,
+        "max_targets": 1,
+        "upgrade_tag": false,
+        "game_version": {
+          "edition": "11th",
+          "dataslate": "launch"
+        },
+        "detachment_id": "hypercrypt-legion",
+        "points_provisional": false,
+        "keyword_restrictions": [
+          "Necrons"
+        ]
+      },
+      "detachmentId": "necrons:detachment:hypercrypt-legion",
+      "grantKeywords": [],
+      "countsTowardLimit": true,
+      "exclusionKeywords": [],
+      "keywordRestrictions": [
+        "Necrons"
+      ],
+      "attachmentBodyguardIds": [],
+      "keywordRestrictionGroups": []
+    },
+    {
+      "id": "necrons:detachment:hypercrypt-legion:enhancement:dimensional-overseer",
+      "kind": "enhancement",
+      "name": "Dimensional Overseer",
+      "points": 25,
+      "upgrade": false,
+      "abilityId": null,
+      "gameModes": [],
+      "mandatory": false,
+      "maxTargets": 1,
+      "description": "NECRONS model only. While the bearer is on the battlefield or in Strategic Reserves, add 1 to the number of units from your army that you can select for the Hyperphasing rule.",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "launch"
+      },
+      "allowedHosts": [],
+      "community11e": {
+        "id": "dimensional-overseer-hypercrypt-legion",
+        "cost": 25,
+        "name": "Dimensional Overseer",
+        "is_unique": true,
+        "ability_id": null,
+        "max_targets": 1,
+        "upgrade_tag": false,
+        "game_version": {
+          "edition": "11th",
+          "dataslate": "launch"
+        },
+        "detachment_id": "hypercrypt-legion",
+        "points_provisional": false,
+        "keyword_restrictions": [
+          "Necrons"
+        ]
+      },
+      "detachmentId": "necrons:detachment:hypercrypt-legion",
+      "grantKeywords": [],
+      "countsTowardLimit": true,
+      "exclusionKeywords": [],
+      "keywordRestrictions": [
+        "Necrons"
+      ],
+      "attachmentBodyguardIds": [],
+      "keywordRestrictionGroups": []
+    },
+    {
+      "id": "necrons:detachment:hypercrypt-legion:enhancement:hyperspatial-transfer-node",
+      "kind": "enhancement",
+      "name": "Hyperspatial Transfer Node",
+      "points": 15,
+      "upgrade": false,
+      "abilityId": null,
+      "gameModes": [],
+      "mandatory": false,
+      "maxTargets": 1,
+      "description": "NECRONS model only. Each time the bearer's unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6\" to the Move characteristic of models in the bearer's unit.",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "launch"
+      },
+      "allowedHosts": [],
+      "community11e": {
+        "id": "hyperspatial-transfer-node-hypercrypt-legion",
+        "cost": 15,
+        "name": "Hyperspatial Transfer Node",
+        "is_unique": true,
+        "ability_id": null,
+        "max_targets": 1,
+        "upgrade_tag": false,
+        "game_version": {
+          "edition": "11th",
+          "dataslate": "launch"
+        },
+        "detachment_id": "hypercrypt-legion",
+        "points_provisional": false,
+        "keyword_restrictions": [
+          "Necrons"
+        ]
+      },
+      "detachmentId": "necrons:detachment:hypercrypt-legion",
+      "grantKeywords": [],
+      "countsTowardLimit": true,
+      "exclusionKeywords": [],
+      "keywordRestrictions": [
+        "Necrons"
+      ],
+      "attachmentBodyguardIds": [],
+      "keywordRestrictionGroups": []
+    },
+    {
+      "id": "necrons:detachment:hypercrypt-legion:enhancement:osteoclave-fulcrum",
+      "kind": "enhancement",
+      "name": "Osteoclave Fulcrum",
+      "points": 20,
+      "upgrade": false,
+      "abilityId": null,
+      "gameModes": [],
+      "mandatory": false,
+      "maxTargets": 1,
+      "description": "NECRONS model only. Models in the bearer's unit have the Deep Strike ability.",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "launch"
+      },
+      "allowedHosts": [],
+      "community11e": {
+        "id": "osteoclave-fulcrum-hypercrypt-legion",
+        "cost": 20,
+        "name": "Osteoclave Fulcrum",
+        "is_unique": true,
+        "ability_id": null,
+        "max_targets": 1,
+        "upgrade_tag": false,
+        "game_version": {
+          "edition": "11th",
+          "dataslate": "launch"
+        },
+        "detachment_id": "hypercrypt-legion",
+        "points_provisional": false,
+        "keyword_restrictions": [
+          "Necrons"
+        ]
+      },
+      "detachmentId": "necrons:detachment:hypercrypt-legion",
+      "grantKeywords": [],
+      "countsTowardLimit": true,
+      "exclusionKeywords": [],
+      "keywordRestrictions": [
+        "Necrons"
+      ],
+      "attachmentBodyguardIds": [],
+      "keywordRestrictionGroups": []
+    },
+    {
+      "id": "necrons:detachment:obeisance-phalanx:enhancement:eternal-conqueror",
+      "kind": "enhancement",
+      "name": "Eternal Conqueror",
+      "points": 25,
+      "upgrade": false,
+      "abilityId": null,
+      "gameModes": [],
+      "mandatory": false,
+      "maxTargets": 1,
+      "description": "OVERLORD model only. Each time a model in the bearer's unit makes an attack that targets an enemy unit within range of an objective marker, you can re-roll the Hit roll.",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "launch"
+      },
+      "allowedHosts": [],
+      "community11e": {
+        "id": "eternal-conqueror-obeisance-phalanx",
+        "cost": 25,
+        "name": "Eternal Conqueror",
+        "is_unique": true,
+        "ability_id": null,
+        "max_targets": 1,
+        "upgrade_tag": false,
+        "game_version": {
+          "edition": "11th",
+          "dataslate": "launch"
+        },
+        "detachment_id": "obeisance-phalanx",
+        "points_provisional": false,
+        "keyword_restrictions": [
+          "Overlord"
+        ]
+      },
+      "detachmentId": "necrons:detachment:obeisance-phalanx",
+      "grantKeywords": [],
+      "countsTowardLimit": true,
+      "exclusionKeywords": [],
+      "keywordRestrictions": [
+        "Overlord"
+      ],
+      "attachmentBodyguardIds": [],
+      "keywordRestrictionGroups": []
+    },
+    {
+      "id": "necrons:detachment:obeisance-phalanx:enhancement:honourable-combatant",
+      "kind": "enhancement",
+      "name": "Honourable Combatant",
+      "points": 10,
+      "upgrade": false,
+      "abilityId": null,
+      "gameModes": [],
+      "mandatory": false,
+      "maxTargets": 1,
+      "description": "OVERLORD model only. Each time the bearer's unit destroys an enemy CHARACTER unit, your opponent loses 1CP if they have any.",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "launch"
+      },
+      "allowedHosts": [],
+      "community11e": {
+        "id": "honourable-combatant-obeisance-phalanx",
+        "cost": 10,
+        "name": "Honourable Combatant",
+        "is_unique": true,
+        "ability_id": null,
+        "max_targets": 1,
+        "upgrade_tag": false,
+        "game_version": {
+          "edition": "11th",
+          "dataslate": "launch"
+        },
+        "detachment_id": "obeisance-phalanx",
+        "points_provisional": false,
+        "keyword_restrictions": [
+          "Overlord"
+        ]
+      },
+      "detachmentId": "necrons:detachment:obeisance-phalanx",
+      "grantKeywords": [],
+      "countsTowardLimit": true,
+      "exclusionKeywords": [],
+      "keywordRestrictions": [
+        "Overlord"
+      ],
+      "attachmentBodyguardIds": [],
+      "keywordRestrictionGroups": []
+    },
+    {
+      "id": "necrons:detachment:obeisance-phalanx:enhancement:unflinching-will",
+      "kind": "enhancement",
+      "name": "Unflinching Will",
+      "points": 20,
+      "upgrade": false,
+      "abilityId": null,
+      "gameModes": [],
+      "mandatory": false,
+      "maxTargets": 1,
+      "description": "OVERLORD model only. The bearer's melee weapons have the [PRECISION] and [ANTI-INFANTRY 5+] abilities.",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "launch"
+      },
+      "allowedHosts": [],
+      "community11e": {
+        "id": "unflinching-will-obeisance-phalanx",
+        "cost": 20,
+        "name": "Unflinching Will",
+        "is_unique": true,
+        "ability_id": null,
+        "max_targets": 1,
+        "upgrade_tag": false,
+        "game_version": {
+          "edition": "11th",
+          "dataslate": "launch"
+        },
+        "detachment_id": "obeisance-phalanx",
+        "points_provisional": false,
+        "keyword_restrictions": [
+          "Overlord"
+        ]
+      },
+      "detachmentId": "necrons:detachment:obeisance-phalanx",
+      "grantKeywords": [],
+      "countsTowardLimit": true,
+      "exclusionKeywords": [],
+      "keywordRestrictions": [
+        "Overlord"
+      ],
+      "attachmentBodyguardIds": [],
+      "keywordRestrictionGroups": []
+    },
+    {
+      "id": "necrons:detachment:obeisance-phalanx:enhancement:warrior-noble",
+      "kind": "enhancement",
+      "name": "Warrior Noble",
+      "points": 15,
+      "upgrade": false,
+      "abilityId": null,
+      "gameModes": [],
+      "mandatory": false,
+      "maxTargets": 1,
+      "description": "OVERLORD model only. Each time a melee attack targets the bearer's unit, subtract 1 from the Hit roll.",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "launch"
+      },
+      "allowedHosts": [],
+      "community11e": {
+        "id": "warrior-noble-obeisance-phalanx",
+        "cost": 15,
+        "name": "Warrior Noble",
+        "is_unique": true,
+        "ability_id": null,
+        "max_targets": 1,
+        "upgrade_tag": false,
+        "game_version": {
+          "edition": "11th",
+          "dataslate": "launch"
+        },
+        "detachment_id": "obeisance-phalanx",
+        "points_provisional": false,
+        "keyword_restrictions": [
+          "Overlord"
+        ]
+      },
+      "detachmentId": "necrons:detachment:obeisance-phalanx",
+      "grantKeywords": [],
+      "countsTowardLimit": true,
+      "exclusionKeywords": [],
+      "keywordRestrictions": [
+        "Overlord"
+      ],
+      "attachmentBodyguardIds": [],
+      "keywordRestrictionGroups": []
+    },
+    {
+      "id": "necrons:detachment:pantheon-of-woe:enhancement:animus-damper",
+      "kind": "binding",
+      "name": "Animus Damper",
+      "points": 35,
+      "upgrade": false,
+      "abilityId": null,
+      "gameModes": [],
+      "mandatory": true,
+      "maxTargets": 1,
+      "description": "Once per turn, at the start of your opponent’s Shooting phase, select one enemy ^^**Vehicle^^** unit visible to the bearer. That unit must take a Leadership test. Until the end of the phase, each time a model in that unit makes an attack, subtract 1 from the Hit roll and, if that Leadership test was failed, subtract 1 from the Wound roll as well.",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "launch"
+      },
+      "allowedHosts": [
+        "C’tan Shard of the Void Dragon"
+      ],
+      "community11e": {
+        "id": "animus-damper-pantheon-of-woe",
+        "cost": 35,
+        "name": "Animus Damper",
+        "is_unique": true,
+        "ability_id": null,
+        "max_targets": 1,
+        "upgrade_tag": false,
+        "game_version": {
+          "edition": "11th",
+          "dataslate": "launch"
+        },
+        "detachment_id": "pantheon-of-woe",
+        "points_provisional": false,
+        "keyword_restrictions": [
+          "DNU",
+          "Necrons"
+        ]
+      },
+      "detachmentId": "necrons:detachment:pantheon-of-woe",
+      "grantKeywords": [],
+      "countsTowardLimit": false,
+      "exclusionKeywords": [],
+      "keywordRestrictions": [
+        "DNU",
+        "Necrons"
+      ],
+      "attachmentBodyguardIds": [],
+      "keywordRestrictionGroups": []
+    },
+    {
+      "id": "necrons:detachment:pantheon-of-woe:enhancement:quantum-goad",
+      "kind": "binding",
+      "name": "Quantum Goad",
+      "points": 45,
+      "upgrade": false,
+      "abilityId": null,
+      "gameModes": [],
+      "mandatory": true,
+      "maxTargets": 1,
+      "description": "This model is eligible to declare a charge in a turn in which it Advanced.",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "launch"
+      },
+      "allowedHosts": [
+        "C’tan Shard of the Nightbringer"
+      ],
+      "community11e": {
+        "id": "quantum-goad-pantheon-of-woe",
+        "cost": 45,
+        "name": "Quantum Goad",
+        "is_unique": true,
+        "ability_id": null,
+        "max_targets": 1,
+        "upgrade_tag": false,
+        "game_version": {
+          "edition": "11th",
+          "dataslate": "launch"
+        },
+        "detachment_id": "pantheon-of-woe",
+        "points_provisional": false,
+        "keyword_restrictions": [
+          "DNU",
+          "Necrons"
+        ]
+      },
+      "detachmentId": "necrons:detachment:pantheon-of-woe",
+      "grantKeywords": [],
+      "countsTowardLimit": false,
+      "exclusionKeywords": [],
+      "keywordRestrictions": [
+        "DNU",
+        "Necrons"
+      ],
+      "attachmentBodyguardIds": [],
+      "keywordRestrictionGroups": []
+    },
+    {
+      "id": "necrons:detachment:pantheon-of-woe:enhancement:reletavistic-tether",
+      "kind": "binding",
+      "name": "Reletavistic Tether",
+      "points": 40,
+      "upgrade": false,
+      "abilityId": null,
+      "gameModes": [],
+      "mandatory": true,
+      "maxTargets": 1,
+      "description": "In your turn, when this unit makes an ingress/advance move using its Transdimensional Displacement ability, this unit can end that move more than 6\" horizontally from all enemy units (instead of more than 8\"). When this unit ends that move within 8\" of an enemy unit, this unit is not eligible to declare a charge until the end of the turn.",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "launch"
+      },
+      "allowedHosts": [
+        "Transcendent C’tan"
+      ],
+      "community11e": {
+        "id": "reletavistic-tether-pantheon-of-woe",
+        "cost": 40,
+        "name": "Reletavistic Tether",
+        "is_unique": true,
+        "ability_id": null,
+        "max_targets": 1,
+        "upgrade_tag": false,
+        "game_version": {
+          "edition": "11th",
+          "dataslate": "launch"
+        },
+        "detachment_id": "pantheon-of-woe",
+        "points_provisional": false,
+        "keyword_restrictions": [
+          "DNU",
+          "Necrons"
+        ]
+      },
+      "detachmentId": "necrons:detachment:pantheon-of-woe",
+      "grantKeywords": [],
+      "countsTowardLimit": false,
+      "exclusionKeywords": [],
+      "keywordRestrictions": [
+        "TRANSCENDENT C’TAN"
+      ],
+      "attachmentBodyguardIds": [],
+      "keywordRestrictionGroups": []
+    },
+    {
+      "id": "necrons:detachment:pantheon-of-woe:enhancement:singularity-matrix",
+      "kind": "binding",
+      "name": "Singularity Matrix",
+      "points": 45,
+      "upgrade": false,
+      "abilityId": null,
+      "gameModes": [],
+      "mandatory": true,
+      "maxTargets": 1,
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "launch"
+      },
+      "allowedHosts": [
+        "C’tan Shard of the Deceiver"
+      ],
+      "community11e": {
+        "id": "singularity-matrix-pantheon-of-woe",
+        "cost": 45,
+        "name": "Singularity Matrix",
+        "is_unique": true,
+        "ability_id": null,
+        "max_targets": 1,
+        "upgrade_tag": false,
+        "game_version": {
+          "edition": "11th",
+          "dataslate": "launch"
+        },
+        "detachment_id": "pantheon-of-woe",
+        "points_provisional": false,
+        "keyword_restrictions": [
+          "DNU",
+          "Necrons"
+        ]
+      },
+      "detachmentId": "necrons:detachment:pantheon-of-woe",
+      "grantKeywords": [],
+      "countsTowardLimit": false,
+      "exclusionKeywords": [],
+      "keywordRestrictions": [
+        "DNU",
+        "Necrons"
+      ],
+      "attachmentBodyguardIds": [],
+      "keywordRestrictionGroups": []
+    },
+    {
+      "id": "necrons:detachment:skyshroud-spearhead:enhancement:deepening-madness-upgrade",
+      "kind": "upgrade",
+      "name": "Deepening Madness (Upgrade)",
+      "points": 20,
+      "upgrade": true,
+      "abilityId": "deepening-madness-skyshroud-spearhead",
+      "gameModes": [],
+      "mandatory": false,
+      "maxTargets": 3,
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "launch"
+      },
+      "allowedHosts": [],
+      "community11e": {
+        "id": "deepening-madness-upgrade-skyshroud-spearhead",
+        "cost": 20,
+        "name": "Deepening Madness (Upgrade)",
+        "is_unique": true,
+        "ability_id": "deepening-madness-skyshroud-spearhead",
+        "max_targets": 3,
+        "upgrade_tag": true,
+        "game_version": {
+          "edition": "11th",
+          "dataslate": "launch"
+        },
+        "detachment_id": "skyshroud-spearhead",
+        "points_provisional": false,
+        "keyword_restrictions": [
+          "Destroyer Cult",
+          "Mounted"
+        ]
+      },
+      "detachmentId": "necrons:detachment:skyshroud-spearhead",
+      "grantKeywords": [],
+      "countsTowardLimit": true,
+      "exclusionKeywords": [],
+      "keywordRestrictions": [
+        "Destroyer Cult",
+        "Mounted"
+      ],
+      "attachmentBodyguardIds": [],
+      "keywordRestrictionGroups": []
+    },
+    {
+      "id": "necrons:detachment:skyshroud-spearhead:enhancement:recursive-reanimation-upgrade",
+      "kind": "upgrade",
+      "name": "Recursive Reanimation (Upgrade)",
+      "points": 5,
+      "upgrade": true,
+      "abilityId": "recursive-reanimation-skyshroud-spearhead",
+      "gameModes": [],
+      "mandatory": false,
+      "maxTargets": 3,
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "launch"
+      },
+      "allowedHosts": [],
+      "community11e": {
+        "id": "recursive-reanimation-upgrade-skyshroud-spearhead",
+        "cost": 5,
+        "name": "Recursive Reanimation (Upgrade)",
+        "is_unique": true,
+        "ability_id": "recursive-reanimation-skyshroud-spearhead",
+        "max_targets": 3,
+        "upgrade_tag": true,
+        "game_version": {
+          "edition": "11th",
+          "dataslate": "launch"
+        },
+        "detachment_id": "skyshroud-spearhead",
+        "points_provisional": false,
+        "keyword_restrictions": [
+          "Necrons",
+          "Tomb Blades"
+        ]
+      },
+      "detachmentId": "necrons:detachment:skyshroud-spearhead",
+      "grantKeywords": [],
+      "countsTowardLimit": true,
+      "exclusionKeywords": [],
+      "keywordRestrictions": [
+        "Necrons",
+        "Tomb Blades"
+      ],
+      "attachmentBodyguardIds": [],
+      "keywordRestrictionGroups": []
+    },
+    {
+      "id": "necrons:detachment:starshatter-arsenal:enhancement:chrono-impedance-fields",
+      "kind": "enhancement",
+      "name": "Chrono-impedance Fields",
+      "points": 25,
+      "upgrade": false,
+      "abilityId": null,
+      "gameModes": [],
+      "mandatory": false,
+      "maxTargets": 1,
+      "description": "In your Command phase, select one friendly **^^Necrons Vehicle^^** or **^^Necrons Mounted^^** unit (excluding Titanic units) within 6\" of the bearer. Until the start of your next Command phase, each time an attack is allocated to a model in that unit, subtract 1 from the Damage characteristic of that attack.",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "launch"
+      },
+      "allowedHosts": [],
+      "community11e": {
+        "id": "chrono-impedance-fields-starshatter-arsenal",
+        "cost": 25,
+        "name": "Chrono-impedance Fields",
+        "is_unique": true,
+        "ability_id": null,
+        "max_targets": 1,
+        "upgrade_tag": false,
+        "game_version": {
+          "edition": "11th",
+          "dataslate": "launch"
+        },
+        "detachment_id": "starshatter-arsenal",
+        "points_provisional": false,
+        "keyword_restrictions": [
+          "Necrons"
+        ]
+      },
+      "detachmentId": "necrons:detachment:starshatter-arsenal",
+      "grantKeywords": [],
+      "countsTowardLimit": true,
+      "exclusionKeywords": [],
+      "keywordRestrictions": [
+        "NECRONS"
+      ],
+      "attachmentBodyguardIds": [],
+      "keywordRestrictionGroups": []
+    },
+    {
+      "id": "necrons:detachment:starshatter-arsenal:enhancement:demanding-leader",
+      "kind": "enhancement",
+      "name": "Demanding Leader",
+      "points": 10,
+      "upgrade": false,
+      "abilityId": null,
+      "gameModes": [],
+      "mandatory": false,
+      "maxTargets": 1,
+      "description": "In your Command phase, select one friendly NECRONS VEHICLE or NECRONS MOUNTED unit (excluding TITANIC units) within 6\" of the bearer. Until the start of your next Command phase, that unit is eligible to shoot in a turn in which it Fell Back.",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "launch"
+      },
+      "allowedHosts": [],
+      "community11e": {
+        "id": "demanding-leader-starshatter-arsenal",
+        "cost": 10,
+        "name": "Demanding Leader",
+        "is_unique": true,
+        "ability_id": null,
+        "max_targets": 1,
+        "upgrade_tag": false,
+        "game_version": {
+          "edition": "11th",
+          "dataslate": "launch"
+        },
+        "detachment_id": "starshatter-arsenal",
+        "points_provisional": false,
+        "keyword_restrictions": [
+          "Necrons"
+        ]
+      },
+      "detachmentId": "necrons:detachment:starshatter-arsenal",
+      "grantKeywords": [],
+      "countsTowardLimit": true,
+      "exclusionKeywords": [],
+      "keywordRestrictions": [
+        "NECRONS"
+      ],
+      "attachmentBodyguardIds": [],
+      "keywordRestrictionGroups": []
+    },
+    {
+      "id": "necrons:detachment:starshatter-arsenal:enhancement:dread-majesty",
+      "kind": "enhancement",
+      "name": "Dread Majesty",
+      "points": 30,
+      "upgrade": false,
+      "abilityId": null,
+      "gameModes": [],
+      "mandatory": false,
+      "maxTargets": 1,
+      "description": "",
+      "allowedHosts": [
+        "OVERLORD",
+        "CATACOMB COMMAND BARGE"
+      ],
+      "detachmentId": "necrons:detachment:starshatter-arsenal",
+      "grantKeywords": [],
+      "countsTowardLimit": true,
+      "exclusionKeywords": [],
+      "keywordRestrictions": [],
+      "attachmentBodyguardIds": [],
+      "keywordRestrictionGroups": []
+    },
+    {
+      "id": "necrons:detachment:starshatter-arsenal:enhancement:miniaturised-nebuloscope",
+      "kind": "enhancement",
+      "name": "Miniaturised Nebuloscope",
+      "points": 15,
+      "upgrade": false,
+      "abilityId": null,
+      "gameModes": [],
+      "mandatory": false,
+      "maxTargets": 1,
+      "description": "Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability.",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "launch"
+      },
+      "allowedHosts": [],
+      "community11e": {
+        "id": "miniaturised-nebuloscope-starshatter-arsenal",
+        "cost": 15,
+        "name": "Miniaturised Nebuloscope",
+        "is_unique": true,
+        "ability_id": null,
+        "max_targets": 1,
+        "upgrade_tag": false,
+        "game_version": {
+          "edition": "11th",
+          "dataslate": "launch"
+        },
+        "detachment_id": "starshatter-arsenal",
+        "points_provisional": false,
+        "keyword_restrictions": [
+          "Necrons"
+        ]
+      },
+      "detachmentId": "necrons:detachment:starshatter-arsenal",
+      "grantKeywords": [],
+      "countsTowardLimit": true,
+      "exclusionKeywords": [],
+      "keywordRestrictions": [
+        "NECRONS"
+      ],
+      "attachmentBodyguardIds": [],
+      "keywordRestrictionGroups": []
+    },
+    {
+      "id": "necrons:detachment:the-phaeron-s-armoury:enhancement:mortality-shroud-aura-upgrade",
+      "kind": "upgrade",
+      "name": "Mortality Shroud (Aura) (Upgrade)",
+      "points": 10,
+      "upgrade": true,
+      "abilityId": null,
+      "gameModes": [],
+      "mandatory": false,
+      "maxTargets": 3,
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "launch"
+      },
+      "allowedHosts": [],
+      "community11e": {
+        "id": "mortality-shroud-aura-upgrade-the-phaerons-armoury",
+        "cost": 10,
+        "name": "Mortality Shroud (Aura) (Upgrade)",
+        "is_unique": true,
+        "ability_id": null,
+        "max_targets": 3,
+        "upgrade_tag": true,
+        "game_version": {
+          "edition": "11th",
+          "dataslate": "launch"
+        },
+        "detachment_id": "the-phaerons-armoury",
+        "points_provisional": false,
+        "keyword_restrictions": [
+          "Necrons",
+          "Obelisk"
+        ]
+      },
+      "detachmentId": "necrons:detachment:the-phaeron-s-armoury",
+      "grantKeywords": [],
+      "countsTowardLimit": true,
+      "exclusionKeywords": [],
+      "keywordRestrictions": [
+        "Necrons",
+        "Obelisk"
+      ],
+      "attachmentBodyguardIds": [],
+      "keywordRestrictionGroups": []
+    },
+    {
+      "id": "necrons:detachment:the-phaeron-s-armoury:enhancement:prelocational-optimiser",
+      "kind": "enhancement",
+      "name": "Prelocational Optimiser",
+      "points": 25,
+      "upgrade": false,
+      "abilityId": "prelocational-optimiser-the-phaerons-armoury",
+      "gameModes": [],
+      "mandatory": false,
+      "maxTargets": 1,
+      "description": "When this unit is selected to shoot, if this unit was set up using a Monolith’s Eternity Gate ability this turn, this unit’s ranged attacks have: \n- [LETHAL HITS]. \n- Or: [SUSTAINED HITS 1].",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "launch"
+      },
+      "allowedHosts": [],
+      "community11e": {
+        "id": "prelocational-optimiser-the-phaerons-armoury",
+        "cost": 25,
+        "name": "Prelocational Optimiser",
+        "is_unique": true,
+        "ability_id": "prelocational-optimiser-the-phaerons-armoury",
+        "max_targets": 1,
+        "upgrade_tag": false,
+        "game_version": {
+          "edition": "11th",
+          "dataslate": "launch"
+        },
+        "detachment_id": "the-phaerons-armoury",
+        "points_provisional": false,
+        "keyword_restrictions": [
+          "Necrons"
+        ]
+      },
+      "detachmentId": "necrons:detachment:the-phaeron-s-armoury",
+      "grantKeywords": [],
+      "countsTowardLimit": true,
+      "exclusionKeywords": [],
+      "keywordRestrictions": [
+        "NECRONS"
+      ],
+      "attachmentBodyguardIds": [],
+      "keywordRestrictionGroups": []
+    }
+  ],
+  "schemaVersion": 2
+}

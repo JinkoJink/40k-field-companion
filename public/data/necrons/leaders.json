@@ -1,1 +1,243 @@
-{"schemaVersion":2,"package":"leaders","edition":"11th","faction":"necrons","records":[{"id":"necrons:leader:orikan-the-diviner","leaderUnitId":"necrons:unit:orikan-the-diviner","targetNames":["Immortals","Necron Warriors"],"targetUnitIds":["necrons:unit:immortals","necrons:unit:necron-warriors"],"attachmentRole":"support"},{"id":"necrons:leader:imotekh-the-stormlord","leaderUnitId":"necrons:unit:imotekh-the-stormlord","targetNames":["Immortals","Lychguard","Necron Warriors"],"targetUnitIds":["necrons:unit:immortals","necrons:unit:lychguard","necrons:unit:necron-warriors"],"attachmentRole":"leader"},{"id":"necrons:leader:anrakyr-the-traveller","leaderUnitId":"necrons:unit:anrakyr-the-traveller","targetNames":["Immortals"],"targetUnitIds":["necrons:unit:immortals"],"attachmentRole":"leader"},{"id":"necrons:leader:vargard-obyron","leaderUnitId":"necrons:unit:vargard-obyron","targetNames":["Immortals","Lychguard","Necron Warriors"],"targetUnitIds":["necrons:unit:immortals","necrons:unit:lychguard","necrons:unit:necron-warriors"],"attachmentRole":"leader"},{"id":"necrons:leader:nemesor-zahndrekh","leaderUnitId":"necrons:unit:nemesor-zahndrekh","targetNames":["Immortals","Lychguard","Necron Warriors"],"targetUnitIds":["necrons:unit:immortals","necrons:unit:lychguard","necrons:unit:necron-warriors"],"attachmentRole":"leader"},{"id":"necrons:leader:trazyn-the-infinite","leaderUnitId":"necrons:unit:trazyn-the-infinite","targetNames":["Immortals","Lychguard","Necron Warriors"],"targetUnitIds":["necrons:unit:immortals","necrons:unit:lychguard","necrons:unit:necron-warriors"],"attachmentRole":"leader"},{"id":"necrons:leader:royal-warden","leaderUnitId":"necrons:unit:royal-warden","targetNames":["Immortals","Necron Warriors"],"targetUnitIds":["necrons:unit:immortals","necrons:unit:necron-warriors"],"attachmentRole":"leader"},{"id":"necrons:leader:skorpekh-lord","leaderUnitId":"necrons:unit:skorpekh-lord","targetNames":["Skorpekh Destroyers"],"targetUnitIds":["necrons:unit:skorpekh-destroyers"],"attachmentRole":"leader"},{"id":"necrons:leader:lokhust-lord","leaderUnitId":"necrons:unit:lokhust-lord","targetNames":["Lokhust Destroyers","Lokhust Heavy Destroyers"],"targetUnitIds":["necrons:unit:lokhust-destroyers","necrons:unit:lokhust-heavy-destroyers"],"attachmentRole":"leader"},{"id":"necrons:leader:lord","leaderUnitId":"necrons:unit:lord","targetNames":["Immortals","Lychguard","Necron Warriors"],"targetUnitIds":["necrons:unit:immortals","necrons:unit:lychguard","necrons:unit:necron-warriors"],"attachmentRole":"leader"},{"id":"necrons:leader:overlord","leaderUnitId":"necrons:unit:overlord","targetNames":["Immortals","Lychguard","Necron Warriors"],"targetUnitIds":["necrons:unit:immortals","necrons:unit:lychguard","necrons:unit:necron-warriors"],"attachmentRole":"leader"},{"id":"necrons:leader:technomancer","leaderUnitId":"necrons:unit:technomancer","targetNames":["Canoptek Wraiths","Immortals","Necron Warriors"],"targetUnitIds":["necrons:unit:canoptek-wraiths","necrons:unit:immortals","necrons:unit:necron-warriors"],"attachmentRole":"support"},{"id":"necrons:leader:psychomancer","leaderUnitId":"necrons:unit:psychomancer","targetNames":["Immortals","Necron Warriors"],"targetUnitIds":["necrons:unit:immortals","necrons:unit:necron-warriors"],"attachmentRole":"support"},{"id":"necrons:leader:chronomancer","leaderUnitId":"necrons:unit:chronomancer","targetNames":["Immortals","Necron Warriors"],"targetUnitIds":["necrons:unit:immortals","necrons:unit:necron-warriors"],"attachmentRole":"support"},{"id":"necrons:leader:plasmancer","leaderUnitId":"necrons:unit:plasmancer","targetNames":["Immortals","Necron Warriors"],"targetUnitIds":["necrons:unit:immortals","necrons:unit:necron-warriors"],"attachmentRole":"support"},{"id":"necrons:leader:overlord-with-translocation-shroud","leaderUnitId":"necrons:unit:overlord-with-translocation-shroud","targetNames":["Immortals","Lychguard","Necron Warriors"],"targetUnitIds":["necrons:unit:immortals","necrons:unit:lychguard","necrons:unit:necron-warriors"],"attachmentRole":"leader"},{"id":"necrons:leader:geomancer","leaderUnitId":"necrons:unit:geomancer","targetNames":["Canoptek Macrocytes","Immortals","Necron Warriors"],"targetUnitIds":["necrons:unit:canoptek-macrocytes","necrons:unit:immortals","necrons:unit:necron-warriors"],"attachmentRole":"support"}]}
+{
+  "edition": "11th",
+  "faction": "necrons",
+  "package": "leaders",
+  "records": [
+    {
+      "id": "necrons:leader:orikan-the-diviner",
+      "targetNames": [
+        "Immortals",
+        "Necron Warriors"
+      ],
+      "leaderUnitId": "necrons:unit:orikan-the-diviner",
+      "targetUnitIds": [
+        "necrons:unit:immortals",
+        "necrons:unit:necron-warriors"
+      ],
+      "attachmentRole": "support"
+    },
+    {
+      "id": "necrons:leader:imotekh-the-stormlord",
+      "targetNames": [
+        "Immortals",
+        "Lychguard",
+        "Necron Warriors"
+      ],
+      "leaderUnitId": "necrons:unit:imotekh-the-stormlord",
+      "targetUnitIds": [
+        "necrons:unit:immortals",
+        "necrons:unit:lychguard",
+        "necrons:unit:necron-warriors"
+      ],
+      "attachmentRole": "leader"
+    },
+    {
+      "id": "necrons:leader:anrakyr-the-traveller",
+      "targetNames": [
+        "Immortals"
+      ],
+      "leaderUnitId": "necrons:unit:anrakyr-the-traveller",
+      "targetUnitIds": [
+        "necrons:unit:immortals"
+      ],
+      "attachmentRole": "leader"
+    },
+    {
+      "id": "necrons:leader:vargard-obyron",
+      "targetNames": [
+        "Immortals",
+        "Lychguard",
+        "Necron Warriors"
+      ],
+      "leaderUnitId": "necrons:unit:vargard-obyron",
+      "targetUnitIds": [
+        "necrons:unit:immortals",
+        "necrons:unit:lychguard",
+        "necrons:unit:necron-warriors"
+      ],
+      "attachmentRole": "leader"
+    },
+    {
+      "id": "necrons:leader:nemesor-zahndrekh",
+      "targetNames": [
+        "Immortals",
+        "Lychguard",
+        "Necron Warriors"
+      ],
+      "leaderUnitId": "necrons:unit:nemesor-zahndrekh",
+      "targetUnitIds": [
+        "necrons:unit:immortals",
+        "necrons:unit:lychguard",
+        "necrons:unit:necron-warriors"
+      ],
+      "attachmentRole": "leader"
+    },
+    {
+      "id": "necrons:leader:trazyn-the-infinite",
+      "targetNames": [
+        "Immortals",
+        "Lychguard",
+        "Necron Warriors"
+      ],
+      "leaderUnitId": "necrons:unit:trazyn-the-infinite",
+      "targetUnitIds": [
+        "necrons:unit:immortals",
+        "necrons:unit:lychguard",
+        "necrons:unit:necron-warriors"
+      ],
+      "attachmentRole": "leader"
+    },
+    {
+      "id": "necrons:leader:royal-warden",
+      "targetNames": [
+        "Immortals",
+        "Necron Warriors"
+      ],
+      "leaderUnitId": "necrons:unit:royal-warden",
+      "targetUnitIds": [
+        "necrons:unit:immortals",
+        "necrons:unit:necron-warriors"
+      ],
+      "attachmentRole": "leader"
+    },
+    {
+      "id": "necrons:leader:skorpekh-lord",
+      "targetNames": [
+        "Skorpekh Destroyers"
+      ],
+      "leaderUnitId": "necrons:unit:skorpekh-lord",
+      "targetUnitIds": [
+        "necrons:unit:skorpekh-destroyers"
+      ],
+      "attachmentRole": "leader"
+    },
+    {
+      "id": "necrons:leader:lokhust-lord",
+      "targetNames": [
+        "Lokhust Destroyers",
+        "Lokhust Heavy Destroyers"
+      ],
+      "leaderUnitId": "necrons:unit:lokhust-lord",
+      "targetUnitIds": [
+        "necrons:unit:lokhust-destroyers",
+        "necrons:unit:lokhust-heavy-destroyers"
+      ],
+      "attachmentRole": "leader"
+    },
+    {
+      "id": "necrons:leader:lord",
+      "targetNames": [
+        "Immortals",
+        "Lychguard",
+        "Necron Warriors"
+      ],
+      "leaderUnitId": "necrons:unit:lord",
+      "targetUnitIds": [
+        "necrons:unit:immortals",
+        "necrons:unit:lychguard",
+        "necrons:unit:necron-warriors"
+      ],
+      "attachmentRole": "leader"
+    },
+    {
+      "id": "necrons:leader:overlord",
+      "targetNames": [
+        "Immortals",
+        "Lychguard",
+        "Necron Warriors"
+      ],
+      "leaderUnitId": "necrons:unit:overlord",
+      "targetUnitIds": [
+        "necrons:unit:immortals",
+        "necrons:unit:lychguard",
+        "necrons:unit:necron-warriors"
+      ],
+      "attachmentRole": "leader"
+    },
+    {
+      "id": "necrons:leader:technomancer",
+      "targetNames": [
+        "Canoptek Wraiths",
+        "Immortals",
+        "Necron Warriors"
+      ],
+      "leaderUnitId": "necrons:unit:technomancer",
+      "targetUnitIds": [
+        "necrons:unit:canoptek-wraiths",
+        "necrons:unit:immortals",
+        "necrons:unit:necron-warriors"
+      ],
+      "attachmentRole": "support"
+    },
+    {
+      "id": "necrons:leader:psychomancer",
+      "targetNames": [
+        "Immortals",
+        "Necron Warriors"
+      ],
+      "leaderUnitId": "necrons:unit:psychomancer",
+      "targetUnitIds": [
+        "necrons:unit:immortals",
+        "necrons:unit:necron-warriors"
+      ],
+      "attachmentRole": "support"
+    },
+    {
+      "id": "necrons:leader:chronomancer",
+      "targetNames": [
+        "Immortals",
+        "Necron Warriors"
+      ],
+      "leaderUnitId": "necrons:unit:chronomancer",
+      "targetUnitIds": [
+        "necrons:unit:immortals",
+        "necrons:unit:necron-warriors"
+      ],
+      "attachmentRole": "support"
+    },
+    {
+      "id": "necrons:leader:plasmancer",
+      "targetNames": [
+        "Immortals",
+        "Necron Warriors"
+      ],
+      "leaderUnitId": "necrons:unit:plasmancer",
+      "targetUnitIds": [
+        "necrons:unit:immortals",
+        "necrons:unit:necron-warriors"
+      ],
+      "attachmentRole": "support"
+    },
+    {
+      "id": "necrons:leader:overlord-with-translocation-shroud",
+      "targetNames": [
+        "Immortals",
+        "Lychguard",
+        "Necron Warriors"
+      ],
+      "leaderUnitId": "necrons:unit:overlord-with-translocation-shroud",
+      "targetUnitIds": [
+        "necrons:unit:immortals",
+        "necrons:unit:lychguard",
+        "necrons:unit:necron-warriors"
+      ],
+      "attachmentRole": "leader"
+    },
+    {
+      "id": "necrons:leader:geomancer",
+      "targetNames": [
+        "Canoptek Macrocytes",
+        "Immortals",
+        "Necron Warriors"
+      ],
+      "leaderUnitId": "necrons:unit:geomancer",
+      "targetUnitIds": [
+        "necrons:unit:canoptek-macrocytes",
+        "necrons:unit:immortals",
+        "necrons:unit:necron-warriors"
+      ],
+      "attachmentRole": "support"
+    }
+  ],
+  "schemaVersion": 2
+}

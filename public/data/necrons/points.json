@@ -1,1 +1,1423 @@
-{"schemaVersion":2,"package":"points","edition":"11th","faction":"necrons","records":[{"id":"necrons:points:orikan-the-diviner","unitId":"necrons:unit:orikan-the-diviner","pricing":[{"range":"[1,)","label":"Your Unit Costs","costs":[{"models":1,"points":90}]}],"role":"support"},{"id":"necrons:points:imotekh-the-stormlord","unitId":"necrons:unit:imotekh-the-stormlord","pricing":[{"range":"[1,)","label":"Your Unit Costs","costs":[{"models":1,"points":100}]}],"role":"leader"},{"id":"necrons:points:anrakyr-the-traveller","unitId":"necrons:unit:anrakyr-the-traveller","pricing":[{"range":"[1,)","label":"Your Unit Costs","costs":[{"models":1,"points":95}]}],"role":"leader"},{"id":"necrons:points:vargard-obyron","unitId":"necrons:unit:vargard-obyron","pricing":[{"range":"[1,)","label":"Your Unit Costs","costs":[{"models":1,"points":85}]}],"role":"leader"},{"id":"necrons:points:illuminor-szeras","unitId":"necrons:unit:illuminor-szeras","pricing":[{"range":"[1,)","label":"Your Unit Costs","costs":[{"models":1,"points":175}]}],"role":"epic-hero"},{"id":"necrons:points:nemesor-zahndrekh","unitId":"necrons:unit:nemesor-zahndrekh","pricing":[{"range":"[1,)","label":"Your Unit Costs","costs":[{"models":1,"points":85}]}],"role":"leader"},{"id":"necrons:points:trazyn-the-infinite","unitId":"necrons:unit:trazyn-the-infinite","pricing":[{"range":"[1,)","label":"Your Unit Costs","costs":[{"models":1,"points":65}]}],"role":"leader"},{"id":"necrons:points:royal-warden","unitId":"necrons:unit:royal-warden","pricing":[{"range":"[1,)","label":"Your Unit Costs","costs":[{"models":1,"points":50}]}],"role":"leader"},{"id":"necrons:points:skorpekh-lord","unitId":"necrons:unit:skorpekh-lord","pricing":[{"range":"[1,2]","label":"Your 1st To 2nd Units Cost","costs":[{"models":1,"points":90}]},{"range":"[3,)","label":"Your 3rd + Unit Costs","costs":[{"models":1,"points":100}]}],"role":"leader"},{"id":"necrons:points:lokhust-lord","unitId":"necrons:unit:lokhust-lord","pricing":[{"range":"[1,)","label":"Your Unit Costs","costs":[{"models":1,"points":70}]}],"role":"leader"},{"id":"necrons:points:lord","unitId":"necrons:unit:lord","pricing":[{"range":"[1,)","label":"Your Unit Costs","costs":[{"models":1,"points":65}]}],"role":"leader"},{"id":"necrons:points:catacomb-command-barge","unitId":"necrons:unit:catacomb-command-barge","pricing":[{"range":"[1,)","label":"Your Unit Costs","costs":[{"models":1,"points":120}]}],"role":"character"},{"id":"necrons:points:overlord","unitId":"necrons:unit:overlord","pricing":[{"range":"[1,)","label":"Your Unit Costs","costs":[{"models":1,"points":90}]}],"role":"leader"},{"id":"necrons:points:technomancer","unitId":"necrons:unit:technomancer","pricing":[{"range":"[1,1]","label":"Your 1st Unit Costs","costs":[{"models":1,"points":80}]},{"range":"[2,)","label":"Your 2nd + Unit Costs","costs":[{"models":1,"points":90}]}],"role":"support"},{"id":"necrons:points:psychomancer","unitId":"necrons:unit:psychomancer","pricing":[{"range":"[1,)","label":"Your Unit Costs","costs":[{"models":1,"points":55}]}],"role":"support"},{"id":"necrons:points:chronomancer","unitId":"necrons:unit:chronomancer","pricing":[{"range":"[1,1]","label":"Your 1st Unit Costs","costs":[{"models":1,"points":70}]},{"range":"[2,)","label":"Your 2nd + Unit Costs","costs":[{"models":1,"points":80}]}],"role":"support"},{"id":"necrons:points:plasmancer","unitId":"necrons:unit:plasmancer","pricing":[{"range":"[1,)","label":"Your Unit Costs","costs":[{"models":1,"points":55}]}],"role":"support"},{"id":"necrons:points:necron-warriors","unitId":"necrons:unit:necron-warriors","pricing":[{"range":"[1,)","label":"Your Unit Costs","costs":[{"models":10,"points":80},{"models":20,"points":190}]}],"role":"battleline"},{"id":"necrons:points:immortals","unitId":"necrons:unit:immortals","pricing":[{"range":"[1,)","label":"Your Unit Costs","costs":[{"models":5,"points":70},{"models":10,"points":140}]}],"role":"battleline"},{"id":"necrons:points:canoptek-reanimator","unitId":"necrons:unit:canoptek-reanimator","pricing":[{"range":"[1,)","label":"Your Unit Costs","costs":[{"models":1,"points":75}]}],"role":null},{"id":"necrons:points:hexmark-destroyer","unitId":"necrons:unit:hexmark-destroyer","pricing":[{"range":"[1,)","label":"Your Unit Costs","costs":[{"models":1,"points":75}]}],"role":"character"},{"id":"necrons:points:lychguard","unitId":"necrons:unit:lychguard","pricing":[{"range":"[1,)","label":"Your Unit Costs","costs":[{"models":5,"points":80},{"models":10,"points":160}]}],"role":null},{"id":"necrons:points:deathmarks","unitId":"necrons:unit:deathmarks","pricing":[{"range":"[1,2]","label":"Your 1st To 2nd Units Cost","costs":[{"models":5,"points":60},{"models":10,"points":120}]},{"range":"[3,)","label":"Your 3rd + Unit Costs","costs":[{"models":5,"points":70},{"models":10,"points":130}]}],"role":null},{"id":"necrons:points:flayed-ones","unitId":"necrons:unit:flayed-ones","pricing":[{"range":"[1,)","label":"Your Unit Costs","costs":[{"models":5,"points":55},{"models":10,"points":100}]}],"role":null},{"id":"necrons:points:cryptothralls","unitId":"necrons:unit:cryptothralls","pricing":[{"range":"[1,)","label":"Your Unit Costs","costs":[{"models":2,"points":60}]}],"role":null},{"id":"necrons:points:skorpekh-destroyers","unitId":"necrons:unit:skorpekh-destroyers","pricing":[{"range":"[1,2]","label":"Your 1st To 2nd Units Cost","costs":[{"models":3,"points":85},{"models":6,"points":170}]},{"range":"[3,)","label":"Your 3rd + Unit Costs","costs":[{"models":3,"points":95},{"models":6,"points":180}]}],"role":null},{"id":"necrons:points:triarch-stalker","unitId":"necrons:unit:triarch-stalker","pricing":[{"range":"[1,2]","label":"Your 1st To 2nd Units Cost","costs":[{"models":1,"points":110}]},{"range":"[3,)","label":"Your 3rd + Unit Costs","costs":[{"models":1,"points":120}]}],"role":null},{"id":"necrons:points:c-tan-shard-of-the-deceiver","unitId":"necrons:unit:c-tan-shard-of-the-deceiver","pricing":[{"range":"[1,)","label":"Your Unit Costs","costs":[{"models":1,"points":330}]}],"role":"epic-hero"},{"id":"necrons:points:c-tan-shard-of-the-nightbringer","unitId":"necrons:unit:c-tan-shard-of-the-nightbringer","pricing":[{"range":"[1,)","label":"Your Unit Costs","costs":[{"models":1,"points":360}]}],"role":"epic-hero"},{"id":"necrons:points:c-tan-shard-of-the-void-dragon","unitId":"necrons:unit:c-tan-shard-of-the-void-dragon","pricing":[{"range":"[1,)","label":"Your Unit Costs","costs":[{"models":1,"points":345}]}],"role":"epic-hero"},{"id":"necrons:points:transcendent-c-tan","unitId":"necrons:unit:transcendent-c-tan","pricing":[{"range":"[1,1]","label":"Your 1st Unit Costs","costs":[{"models":1,"points":340}]},{"range":"[2,)","label":"Your 2nd + Unit Costs","costs":[{"models":1,"points":360}]}],"role":"character"},{"id":"necrons:points:canoptek-spyders","unitId":"necrons:unit:canoptek-spyders","pricing":[{"range":"[1,)","label":"Your Unit Costs","costs":[{"models":1,"points":65},{"models":2,"points":110}]}],"role":null},{"id":"necrons:points:canoptek-scarab-swarms","unitId":"necrons:unit:canoptek-scarab-swarms","pricing":[{"range":"[1,)","label":"Your Unit Costs","costs":[{"models":3,"points":40},{"models":6,"points":80}]}],"role":null},{"id":"necrons:points:ophydian-destroyers","unitId":"necrons:unit:ophydian-destroyers","pricing":[{"range":"[1,2]","label":"Your 1st To 2nd Units Cost","costs":[{"models":3,"points":80},{"models":6,"points":145}]},{"range":"[3,)","label":"Your 3rd + Unit Costs","costs":[{"models":3,"points":90},{"models":6,"points":155}]}],"role":null},{"id":"necrons:points:tomb-blades","unitId":"necrons:unit:tomb-blades","pricing":[{"range":"[1,2]","label":"Your 1st To 2nd Units Cost","costs":[{"models":3,"points":70},{"models":6,"points":140}]},{"range":"[3,)","label":"Your 3rd + Unit Costs","costs":[{"models":3,"points":80},{"models":6,"points":150}]}],"role":null},{"id":"necrons:points:triarch-praetorians","unitId":"necrons:unit:triarch-praetorians","pricing":[{"range":"[1,)","label":"Your Unit Costs","costs":[{"models":5,"points":80},{"models":10,"points":160}]}],"role":null},{"id":"necrons:points:canoptek-wraiths","unitId":"necrons:unit:canoptek-wraiths","pricing":[{"range":"[1,1]","label":"Your 1st Unit Costs","costs":[{"models":3,"points":95},{"models":6,"points":220}]},{"range":"[2,)","label":"Your 2nd + Unit Costs","costs":[{"models":3,"points":115},{"models":6,"points":240}]}],"role":null},{"id":"necrons:points:annihilation-barge","unitId":"necrons:unit:annihilation-barge","pricing":[{"range":"[1,)","label":"Your Unit Costs","costs":[{"models":1,"points":95}]}],"role":null},{"id":"necrons:points:doomsday-ark","unitId":"necrons:unit:doomsday-ark","pricing":[{"range":"[1,2]","label":"Your 1st To 2nd Units Cost","costs":[{"models":1,"points":210}]},{"range":"[3,)","label":"Your 3rd + Unit Costs","costs":[{"models":1,"points":230}]}],"role":null},{"id":"necrons:points:lokhust-destroyers","unitId":"necrons:unit:lokhust-destroyers","pricing":[{"range":"[1,2]","label":"Your 1st To 2nd Units Cost","costs":[{"models":1,"points":40},{"models":2,"points":55},{"models":3,"points":80},{"models":6,"points":170}]},{"range":"[3,)","label":"Your 3rd + Unit Costs","costs":[{"models":1,"points":50},{"models":2,"points":65},{"models":3,"points":90},{"models":6,"points":180}]}],"role":null},{"id":"necrons:points:lokhust-heavy-destroyers","unitId":"necrons:unit:lokhust-heavy-destroyers","pricing":[{"range":"[1,2]","label":"Your 1st To 2nd Units Cost","costs":[{"models":1,"points":50},{"models":2,"points":100},{"models":3,"points":160}]},{"range":"[3,)","label":"Your 3rd + Unit Costs","costs":[{"models":1,"points":60},{"models":2,"points":110},{"models":3,"points":170}]}],"role":null},{"id":"necrons:points:canoptek-doomstalker","unitId":"necrons:unit:canoptek-doomstalker","pricing":[{"range":"[1,)","label":"Your Unit Costs","costs":[{"models":1,"points":140}]}],"role":null},{"id":"necrons:points:ghost-ark","unitId":"necrons:unit:ghost-ark","pricing":[{"range":"[1,)","label":"Your Unit Costs","costs":[{"models":1,"points":100}]}],"role":"dedicated-transport"},{"id":"necrons:points:night-scythe","unitId":"necrons:unit:night-scythe","pricing":[{"range":"[1,)","label":"Your Unit Costs","costs":[{"models":1,"points":125}]}],"role":null},{"id":"necrons:points:doom-scythe","unitId":"necrons:unit:doom-scythe","pricing":[{"range":"[1,)","label":"Your Unit Costs","costs":[{"models":1,"points":200}]}],"role":null},{"id":"necrons:points:obelisk","unitId":"necrons:unit:obelisk","pricing":[{"range":"[1,1]","label":"Your 1st Unit Costs","costs":[{"models":1,"points":280}]},{"range":"[2,)","label":"Your 2nd + Unit Costs","costs":[{"models":1,"points":310}]}],"role":null},{"id":"necrons:points:tesseract-vault","unitId":"necrons:unit:tesseract-vault","pricing":[{"range":"[1,1]","label":"Your 1st Unit Costs","costs":[{"models":1,"points":465}]},{"range":"[2,)","label":"Your 2nd + Unit Costs","costs":[{"models":1,"points":485}]}],"role":null},{"id":"necrons:points:monolith","unitId":"necrons:unit:monolith","pricing":[{"range":"[1,1]","label":"Your 1st Unit Costs","costs":[{"models":1,"points":420}]},{"range":"[2,)","label":"Your 2nd + Unit Costs","costs":[{"models":1,"points":440}]}],"role":null},{"id":"necrons:points:the-silent-king","unitId":"necrons:unit:the-silent-king","pricing":[{"range":"[1,)","label":"Your Unit Costs","costs":[{"models":3,"points":420}]}],"role":"epic-hero"},{"id":"necrons:points:convergence-of-dominion","unitId":"necrons:unit:convergence-of-dominion","pricing":[{"range":"[1,)","label":"Your Unit Costs","costs":[{"models":1,"points":60},{"models":2,"points":120},{"models":3,"points":180}]}],"role":null},{"id":"necrons:points:canoptek-tomb-stalker","unitId":"necrons:unit:canoptek-tomb-stalker","pricing":[{"range":"[1,)","label":"Your Unit Costs","costs":[{"models":1,"points":130}]}],"role":null},{"id":"necrons:points:canoptek-tomb-sentinel","unitId":"necrons:unit:canoptek-tomb-sentinel","pricing":[{"range":"[1,)","label":"Your Unit Costs","costs":[{"models":1,"points":115}]}],"role":null},{"id":"necrons:points:canoptek-acanthrites","unitId":"necrons:unit:canoptek-acanthrites","pricing":[{"range":"[1,)","label":"Your Unit Costs","costs":[{"models":3,"points":85},{"models":6,"points":170}]}],"role":null},{"id":"necrons:points:tesseract-ark","unitId":"necrons:unit:tesseract-ark","pricing":[{"range":"[1,)","label":"Your Unit Costs","costs":[{"models":1,"points":130}]}],"role":null},{"id":"necrons:points:seraptek-heavy-construct","unitId":"necrons:unit:seraptek-heavy-construct","pricing":[{"range":"[1,1]","label":"Your 1st Unit Costs","costs":[{"models":1,"points":540}]},{"range":"[2,)","label":"Your 2nd + Unit Costs","costs":[{"models":1,"points":570}]}],"role":null},{"id":"necrons:points:gauss-pylon","unitId":"necrons:unit:gauss-pylon","pricing":[{"range":"[1,)","label":"Your Unit Costs","costs":[{"models":1,"points":210}]}],"role":null},{"id":"necrons:points:sentry-pylon","unitId":"necrons:unit:sentry-pylon","pricing":null,"role":null},{"id":"necrons:points:night-shroud","unitId":"necrons:unit:night-shroud","pricing":[{"range":"[1,)","label":"Your Unit Costs","costs":[{"models":1,"points":140}]}],"role":null},{"id":"necrons:points:overlord-with-translocation-shroud","unitId":"necrons:unit:overlord-with-translocation-shroud","pricing":[{"range":"[1,)","label":"Your Unit Costs","costs":[{"models":1,"points":90}]}],"role":"leader"},{"id":"necrons:points:canoptek-macrocytes","unitId":"necrons:unit:canoptek-macrocytes","pricing":[{"range":"[1,)","label":"Your Unit Costs","costs":[{"models":5,"points":70}]}],"role":null},{"id":"necrons:points:canoptek-tomb-crawlers","unitId":"necrons:unit:canoptek-tomb-crawlers","pricing":[{"range":"[1,)","label":"Your Unit Costs","costs":[{"models":2,"points":50}]}],"role":null},{"id":"necrons:points:geomancer","unitId":"necrons:unit:geomancer","pricing":[{"range":"[1,)","label":"Your Unit Costs","costs":[{"models":1,"points":75}]}],"role":"support"},{"id":"necrons:points:nekrosor-ammentar","unitId":"necrons:unit:nekrosor-ammentar","pricing":[{"range":"[1,)","label":"Your Unit Costs","costs":[{"models":1,"points":185}]}],"role":"epic-hero"},{"id":"necrons:points:dynastic-conqueror-crucible","unitId":"necrons:unit:dynastic-conqueror-crucible","pricing":null,"role":null},{"id":"necrons:points:hyperscientist-crucible","unitId":"necrons:unit:hyperscientist-crucible","pricing":null,"role":null},{"id":"necrons:points:triarchal-overseer-crucible","unitId":"necrons:unit:triarchal-overseer-crucible","pricing":null,"role":null},{"id":"necrons:points:tomb-citadel-walls","unitId":"necrons:unit:tomb-citadel-walls","pricing":[{"range":"[1,)","label":"Your Unit Costs","costs":[{"models":1,"points":180}]}],"role":null},{"id":"necrons:points:amonhotekh-s-guard-canoptek-doomstalker","unitId":"necrons:unit:amonhotekh-s-guard-canoptek-doomstalker","pricing":null,"role":null},{"id":"necrons:points:amonhotekh-s-guard-canoptek-scarab-swarms","unitId":"necrons:unit:amonhotekh-s-guard-canoptek-scarab-swarms","pricing":null,"role":null},{"id":"necrons:points:amonhotekh-s-guard-necron-warriors","unitId":"necrons:unit:amonhotekh-s-guard-necron-warriors","pricing":null,"role":"battleline"},{"id":"necrons:points:amonhotekh-s-guard-skorpekh-destroyers","unitId":"necrons:unit:amonhotekh-s-guard-skorpekh-destroyers","pricing":null,"role":null},{"id":"necrons:points:overlord-amonhotekh","unitId":"necrons:unit:overlord-amonhotekh","pricing":null,"role":"character"}]}
+{
+  "edition": "11th",
+  "faction": "necrons",
+  "package": "points",
+  "records": [
+    {
+      "id": "necrons:points:orikan-the-diviner",
+      "role": "support",
+      "unitId": "necrons:unit:orikan-the-diviner",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 90
+            }
+          ],
+          "label": "Your Unit Costs",
+          "range": "[1,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:imotekh-the-stormlord",
+      "role": "leader",
+      "unitId": "necrons:unit:imotekh-the-stormlord",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 100
+            }
+          ],
+          "label": "Your Unit Costs",
+          "range": "[1,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:anrakyr-the-traveller",
+      "role": "leader",
+      "unitId": "necrons:unit:anrakyr-the-traveller",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 95
+            }
+          ],
+          "label": "Your Unit Costs",
+          "range": "[1,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:vargard-obyron",
+      "role": "leader",
+      "unitId": "necrons:unit:vargard-obyron",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 85
+            }
+          ],
+          "label": "Your Unit Costs",
+          "range": "[1,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:illuminor-szeras",
+      "role": "epic-hero",
+      "unitId": "necrons:unit:illuminor-szeras",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 175
+            }
+          ],
+          "label": "Your Unit Costs",
+          "range": "[1,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:nemesor-zahndrekh",
+      "role": "leader",
+      "unitId": "necrons:unit:nemesor-zahndrekh",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 85
+            }
+          ],
+          "label": "Your Unit Costs",
+          "range": "[1,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:trazyn-the-infinite",
+      "role": "leader",
+      "unitId": "necrons:unit:trazyn-the-infinite",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 65
+            }
+          ],
+          "label": "Your Unit Costs",
+          "range": "[1,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:royal-warden",
+      "role": "leader",
+      "unitId": "necrons:unit:royal-warden",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 50
+            }
+          ],
+          "label": "Your Unit Costs",
+          "range": "[1,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:skorpekh-lord",
+      "role": "leader",
+      "unitId": "necrons:unit:skorpekh-lord",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 90
+            }
+          ],
+          "label": "Your 1st To 2nd Units Cost",
+          "range": "[1,2]"
+        },
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 100
+            }
+          ],
+          "label": "Your 3rd + Unit Costs",
+          "range": "[3,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:lokhust-lord",
+      "role": "leader",
+      "unitId": "necrons:unit:lokhust-lord",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 70
+            }
+          ],
+          "label": "Your Unit Costs",
+          "range": "[1,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:lord",
+      "role": "leader",
+      "unitId": "necrons:unit:lord",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 65
+            }
+          ],
+          "label": "Your Unit Costs",
+          "range": "[1,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:catacomb-command-barge",
+      "role": "character",
+      "unitId": "necrons:unit:catacomb-command-barge",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 120
+            }
+          ],
+          "label": "Your Unit Costs",
+          "range": "[1,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:overlord",
+      "role": "leader",
+      "unitId": "necrons:unit:overlord",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 90
+            }
+          ],
+          "label": "Your Unit Costs",
+          "range": "[1,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:technomancer",
+      "role": "support",
+      "unitId": "necrons:unit:technomancer",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 80
+            }
+          ],
+          "label": "Your 1st Unit Costs",
+          "range": "[1,1]"
+        },
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 90
+            }
+          ],
+          "label": "Your 2nd + Unit Costs",
+          "range": "[2,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:psychomancer",
+      "role": "support",
+      "unitId": "necrons:unit:psychomancer",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 55
+            }
+          ],
+          "label": "Your Unit Costs",
+          "range": "[1,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:chronomancer",
+      "role": "support",
+      "unitId": "necrons:unit:chronomancer",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 70
+            }
+          ],
+          "label": "Your 1st Unit Costs",
+          "range": "[1,1]"
+        },
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 80
+            }
+          ],
+          "label": "Your 2nd + Unit Costs",
+          "range": "[2,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:plasmancer",
+      "role": "support",
+      "unitId": "necrons:unit:plasmancer",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 55
+            }
+          ],
+          "label": "Your Unit Costs",
+          "range": "[1,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:necron-warriors",
+      "role": "battleline",
+      "unitId": "necrons:unit:necron-warriors",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 10,
+              "points": 80
+            },
+            {
+              "models": 20,
+              "points": 190
+            }
+          ],
+          "label": "Your Unit Costs",
+          "range": "[1,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:immortals",
+      "role": "battleline",
+      "unitId": "necrons:unit:immortals",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 5,
+              "points": 70
+            },
+            {
+              "models": 10,
+              "points": 140
+            }
+          ],
+          "label": "Your Unit Costs",
+          "range": "[1,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:canoptek-reanimator",
+      "role": null,
+      "unitId": "necrons:unit:canoptek-reanimator",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 75
+            }
+          ],
+          "label": "Your Unit Costs",
+          "range": "[1,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:hexmark-destroyer",
+      "role": "character",
+      "unitId": "necrons:unit:hexmark-destroyer",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 75
+            }
+          ],
+          "label": "Your Unit Costs",
+          "range": "[1,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:lychguard",
+      "role": null,
+      "unitId": "necrons:unit:lychguard",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 5,
+              "points": 80
+            },
+            {
+              "models": 10,
+              "points": 160
+            }
+          ],
+          "label": "Your Unit Costs",
+          "range": "[1,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:deathmarks",
+      "role": null,
+      "unitId": "necrons:unit:deathmarks",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 5,
+              "points": 60
+            },
+            {
+              "models": 10,
+              "points": 120
+            }
+          ],
+          "label": "Your 1st To 2nd Units Cost",
+          "range": "[1,2]"
+        },
+        {
+          "costs": [
+            {
+              "models": 5,
+              "points": 70
+            },
+            {
+              "models": 10,
+              "points": 130
+            }
+          ],
+          "label": "Your 3rd + Unit Costs",
+          "range": "[3,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:flayed-ones",
+      "role": null,
+      "unitId": "necrons:unit:flayed-ones",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 5,
+              "points": 55
+            },
+            {
+              "models": 10,
+              "points": 100
+            }
+          ],
+          "label": "Your Unit Costs",
+          "range": "[1,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:cryptothralls",
+      "role": null,
+      "unitId": "necrons:unit:cryptothralls",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 2,
+              "points": 60
+            }
+          ],
+          "label": "Your Unit Costs",
+          "range": "[1,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:skorpekh-destroyers",
+      "role": null,
+      "unitId": "necrons:unit:skorpekh-destroyers",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 3,
+              "points": 85
+            },
+            {
+              "models": 6,
+              "points": 170
+            }
+          ],
+          "label": "Your 1st To 2nd Units Cost",
+          "range": "[1,2]"
+        },
+        {
+          "costs": [
+            {
+              "models": 3,
+              "points": 95
+            },
+            {
+              "models": 6,
+              "points": 180
+            }
+          ],
+          "label": "Your 3rd + Unit Costs",
+          "range": "[3,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:triarch-stalker",
+      "role": null,
+      "unitId": "necrons:unit:triarch-stalker",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 110
+            }
+          ],
+          "label": "Your 1st To 2nd Units Cost",
+          "range": "[1,2]"
+        },
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 120
+            }
+          ],
+          "label": "Your 3rd + Unit Costs",
+          "range": "[3,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:c-tan-shard-of-the-deceiver",
+      "role": "epic-hero",
+      "unitId": "necrons:unit:c-tan-shard-of-the-deceiver",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 330
+            }
+          ],
+          "label": "Your Unit Costs",
+          "range": "[1,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:c-tan-shard-of-the-nightbringer",
+      "role": "epic-hero",
+      "unitId": "necrons:unit:c-tan-shard-of-the-nightbringer",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 360
+            }
+          ],
+          "label": "Your Unit Costs",
+          "range": "[1,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:c-tan-shard-of-the-void-dragon",
+      "role": "epic-hero",
+      "unitId": "necrons:unit:c-tan-shard-of-the-void-dragon",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 345
+            }
+          ],
+          "label": "Your Unit Costs",
+          "range": "[1,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:transcendent-c-tan",
+      "role": "character",
+      "unitId": "necrons:unit:transcendent-c-tan",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 340
+            }
+          ],
+          "label": "Your 1st Unit Costs",
+          "range": "[1,1]"
+        },
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 360
+            }
+          ],
+          "label": "Your 2nd + Unit Costs",
+          "range": "[2,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:canoptek-spyders",
+      "role": null,
+      "unitId": "necrons:unit:canoptek-spyders",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 65
+            },
+            {
+              "models": 2,
+              "points": 110
+            }
+          ],
+          "label": "Your Unit Costs",
+          "range": "[1,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:canoptek-scarab-swarms",
+      "role": null,
+      "unitId": "necrons:unit:canoptek-scarab-swarms",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 3,
+              "points": 40
+            },
+            {
+              "models": 6,
+              "points": 80
+            }
+          ],
+          "label": "Your Unit Costs",
+          "range": "[1,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:ophydian-destroyers",
+      "role": null,
+      "unitId": "necrons:unit:ophydian-destroyers",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 3,
+              "points": 80
+            },
+            {
+              "models": 6,
+              "points": 145
+            }
+          ],
+          "label": "Your 1st To 2nd Units Cost",
+          "range": "[1,2]"
+        },
+        {
+          "costs": [
+            {
+              "models": 3,
+              "points": 90
+            },
+            {
+              "models": 6,
+              "points": 155
+            }
+          ],
+          "label": "Your 3rd + Unit Costs",
+          "range": "[3,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:tomb-blades",
+      "role": null,
+      "unitId": "necrons:unit:tomb-blades",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 3,
+              "points": 70
+            },
+            {
+              "models": 6,
+              "points": 140
+            }
+          ],
+          "label": "Your 1st To 2nd Units Cost",
+          "range": "[1,2]"
+        },
+        {
+          "costs": [
+            {
+              "models": 3,
+              "points": 80
+            },
+            {
+              "models": 6,
+              "points": 150
+            }
+          ],
+          "label": "Your 3rd + Unit Costs",
+          "range": "[3,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:triarch-praetorians",
+      "role": null,
+      "unitId": "necrons:unit:triarch-praetorians",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 5,
+              "points": 80
+            },
+            {
+              "models": 10,
+              "points": 160
+            }
+          ],
+          "label": "Your Unit Costs",
+          "range": "[1,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:canoptek-wraiths",
+      "role": null,
+      "unitId": "necrons:unit:canoptek-wraiths",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 3,
+              "points": 95
+            },
+            {
+              "models": 6,
+              "points": 220
+            }
+          ],
+          "label": "Your 1st Unit Costs",
+          "range": "[1,1]"
+        },
+        {
+          "costs": [
+            {
+              "models": 3,
+              "points": 115
+            },
+            {
+              "models": 6,
+              "points": 240
+            }
+          ],
+          "label": "Your 2nd + Unit Costs",
+          "range": "[2,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:annihilation-barge",
+      "role": null,
+      "unitId": "necrons:unit:annihilation-barge",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 95
+            }
+          ],
+          "label": "Your Unit Costs",
+          "range": "[1,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:doomsday-ark",
+      "role": null,
+      "unitId": "necrons:unit:doomsday-ark",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 210
+            }
+          ],
+          "label": "Your 1st To 2nd Units Cost",
+          "range": "[1,2]"
+        },
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 230
+            }
+          ],
+          "label": "Your 3rd + Unit Costs",
+          "range": "[3,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:lokhust-destroyers",
+      "role": null,
+      "unitId": "necrons:unit:lokhust-destroyers",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 40
+            },
+            {
+              "models": 2,
+              "points": 55
+            },
+            {
+              "models": 3,
+              "points": 80
+            },
+            {
+              "models": 6,
+              "points": 170
+            }
+          ],
+          "label": "Your 1st To 2nd Units Cost",
+          "range": "[1,2]"
+        },
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 50
+            },
+            {
+              "models": 2,
+              "points": 65
+            },
+            {
+              "models": 3,
+              "points": 90
+            },
+            {
+              "models": 6,
+              "points": 180
+            }
+          ],
+          "label": "Your 3rd + Unit Costs",
+          "range": "[3,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:lokhust-heavy-destroyers",
+      "role": null,
+      "unitId": "necrons:unit:lokhust-heavy-destroyers",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 50
+            },
+            {
+              "models": 2,
+              "points": 100
+            },
+            {
+              "models": 3,
+              "points": 160
+            }
+          ],
+          "label": "Your 1st To 2nd Units Cost",
+          "range": "[1,2]"
+        },
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 60
+            },
+            {
+              "models": 2,
+              "points": 110
+            },
+            {
+              "models": 3,
+              "points": 170
+            }
+          ],
+          "label": "Your 3rd + Unit Costs",
+          "range": "[3,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:canoptek-doomstalker",
+      "role": null,
+      "unitId": "necrons:unit:canoptek-doomstalker",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 140
+            }
+          ],
+          "label": "Your Unit Costs",
+          "range": "[1,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:ghost-ark",
+      "role": "dedicated-transport",
+      "unitId": "necrons:unit:ghost-ark",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 100
+            }
+          ],
+          "label": "Your Unit Costs",
+          "range": "[1,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:night-scythe",
+      "role": null,
+      "unitId": "necrons:unit:night-scythe",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 125
+            }
+          ],
+          "label": "Your Unit Costs",
+          "range": "[1,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:doom-scythe",
+      "role": null,
+      "unitId": "necrons:unit:doom-scythe",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 200
+            }
+          ],
+          "label": "Your Unit Costs",
+          "range": "[1,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:obelisk",
+      "role": null,
+      "unitId": "necrons:unit:obelisk",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 280
+            }
+          ],
+          "label": "Your 1st Unit Costs",
+          "range": "[1,1]"
+        },
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 310
+            }
+          ],
+          "label": "Your 2nd + Unit Costs",
+          "range": "[2,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:tesseract-vault",
+      "role": null,
+      "unitId": "necrons:unit:tesseract-vault",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 465
+            }
+          ],
+          "label": "Your 1st Unit Costs",
+          "range": "[1,1]"
+        },
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 485
+            }
+          ],
+          "label": "Your 2nd + Unit Costs",
+          "range": "[2,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:monolith",
+      "role": null,
+      "unitId": "necrons:unit:monolith",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 420
+            }
+          ],
+          "label": "Your 1st Unit Costs",
+          "range": "[1,1]"
+        },
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 440
+            }
+          ],
+          "label": "Your 2nd + Unit Costs",
+          "range": "[2,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:the-silent-king",
+      "role": "epic-hero",
+      "unitId": "necrons:unit:the-silent-king",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 3,
+              "points": 420
+            }
+          ],
+          "label": "Your Unit Costs",
+          "range": "[1,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:convergence-of-dominion",
+      "role": null,
+      "unitId": "necrons:unit:convergence-of-dominion",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 60
+            },
+            {
+              "models": 2,
+              "points": 120
+            },
+            {
+              "models": 3,
+              "points": 180
+            }
+          ],
+          "label": "Your Unit Costs",
+          "range": "[1,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:canoptek-tomb-stalker",
+      "role": null,
+      "unitId": "necrons:unit:canoptek-tomb-stalker",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 130
+            }
+          ],
+          "label": "Your Unit Costs",
+          "range": "[1,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:canoptek-tomb-sentinel",
+      "role": null,
+      "unitId": "necrons:unit:canoptek-tomb-sentinel",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 115
+            }
+          ],
+          "label": "Your Unit Costs",
+          "range": "[1,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:canoptek-acanthrites",
+      "role": null,
+      "unitId": "necrons:unit:canoptek-acanthrites",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 3,
+              "points": 85
+            },
+            {
+              "models": 6,
+              "points": 170
+            }
+          ],
+          "label": "Your Unit Costs",
+          "range": "[1,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:tesseract-ark",
+      "role": null,
+      "unitId": "necrons:unit:tesseract-ark",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 130
+            }
+          ],
+          "label": "Your Unit Costs",
+          "range": "[1,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:seraptek-heavy-construct",
+      "role": null,
+      "unitId": "necrons:unit:seraptek-heavy-construct",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 540
+            }
+          ],
+          "label": "Your 1st Unit Costs",
+          "range": "[1,1]"
+        },
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 570
+            }
+          ],
+          "label": "Your 2nd + Unit Costs",
+          "range": "[2,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:gauss-pylon",
+      "role": null,
+      "unitId": "necrons:unit:gauss-pylon",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 210
+            }
+          ],
+          "label": "Your Unit Costs",
+          "range": "[1,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:sentry-pylon",
+      "role": null,
+      "unitId": "necrons:unit:sentry-pylon",
+      "pricing": null
+    },
+    {
+      "id": "necrons:points:night-shroud",
+      "role": null,
+      "unitId": "necrons:unit:night-shroud",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 140
+            }
+          ],
+          "label": "Your Unit Costs",
+          "range": "[1,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:overlord-with-translocation-shroud",
+      "role": "leader",
+      "unitId": "necrons:unit:overlord-with-translocation-shroud",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 90
+            }
+          ],
+          "label": "Your Unit Costs",
+          "range": "[1,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:canoptek-macrocytes",
+      "role": null,
+      "unitId": "necrons:unit:canoptek-macrocytes",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 5,
+              "points": 70
+            }
+          ],
+          "label": "Your Unit Costs",
+          "range": "[1,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:canoptek-tomb-crawlers",
+      "role": null,
+      "unitId": "necrons:unit:canoptek-tomb-crawlers",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 2,
+              "points": 50
+            }
+          ],
+          "label": "Your Unit Costs",
+          "range": "[1,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:geomancer",
+      "role": "support",
+      "unitId": "necrons:unit:geomancer",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 75
+            }
+          ],
+          "label": "Your Unit Costs",
+          "range": "[1,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:nekrosor-ammentar",
+      "role": "epic-hero",
+      "unitId": "necrons:unit:nekrosor-ammentar",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 185
+            }
+          ],
+          "label": "Your Unit Costs",
+          "range": "[1,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:dynastic-conqueror-crucible",
+      "role": null,
+      "unitId": "necrons:unit:dynastic-conqueror-crucible",
+      "pricing": null
+    },
+    {
+      "id": "necrons:points:hyperscientist-crucible",
+      "role": null,
+      "unitId": "necrons:unit:hyperscientist-crucible",
+      "pricing": null
+    },
+    {
+      "id": "necrons:points:triarchal-overseer-crucible",
+      "role": null,
+      "unitId": "necrons:unit:triarchal-overseer-crucible",
+      "pricing": null
+    },
+    {
+      "id": "necrons:points:tomb-citadel-walls",
+      "role": null,
+      "unitId": "necrons:unit:tomb-citadel-walls",
+      "pricing": [
+        {
+          "costs": [
+            {
+              "models": 1,
+              "points": 180
+            }
+          ],
+          "label": "Your Unit Costs",
+          "range": "[1,)"
+        }
+      ]
+    },
+    {
+      "id": "necrons:points:amonhotekh-s-guard-canoptek-doomstalker",
+      "role": null,
+      "unitId": "necrons:unit:amonhotekh-s-guard-canoptek-doomstalker",
+      "pricing": null
+    },
+    {
+      "id": "necrons:points:amonhotekh-s-guard-canoptek-scarab-swarms",
+      "role": null,
+      "unitId": "necrons:unit:amonhotekh-s-guard-canoptek-scarab-swarms",
+      "pricing": null
+    },
+    {
+      "id": "necrons:points:amonhotekh-s-guard-necron-warriors",
+      "role": "battleline",
+      "unitId": "necrons:unit:amonhotekh-s-guard-necron-warriors",
+      "pricing": null
+    },
+    {
+      "id": "necrons:points:amonhotekh-s-guard-skorpekh-destroyers",
+      "role": null,
+      "unitId": "necrons:unit:amonhotekh-s-guard-skorpekh-destroyers",
+      "pricing": null
+    },
+    {
+      "id": "necrons:points:overlord-amonhotekh",
+      "role": "character",
+      "unitId": "necrons:unit:overlord-amonhotekh",
+      "pricing": null
+    }
+  ],
+  "schemaVersion": 2
+}

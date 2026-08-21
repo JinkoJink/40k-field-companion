@@ -1,1 +1,760 @@
-{"schemaVersion":2,"package":"detachments","edition":"11th","faction":"necrons","records":[{"name":"Annihilation Legion","dp":2,"objective":"PURGE THE FOE","enhancements":[{"name":"Eldritch Nightmare","points":10},{"name":"Eternal Madness","points":20},{"name":"Ingrained Superiority","points":5},{"name":"Soulless Reaper","points":15}],"community11e":{"id":"annihilation-legion","name":"Annihilation Legion","faction_id":"necrons","detachment_rule_id":"annihilation-protocol","enhancement_ids":["eternal-madness-annihilation-legion","ingrained-superiority-annihilation-legion","soulless-reaper-annihilation-legion","eldritch-nightmare-annihilation-legion"],"stratagem_ids":["pitiless-hunters-annihilation-legion","blood-fuelled-cruelty-annihilation-legion","the-spoor-of-frailty-annihilation-legion","murderous-reanimation-annihilation-legion","insanitys-ire-annihilation-legion","masks-of-death-annihilation-legion"],"game_version":{"edition":"11th","dataslate":"pre-launch-provisional"},"detachment_points":2,"force_dispositions":["purge-the-foe"]},"id":"necrons:detachment:annihilation-legion","ruleName":"Annihilation Protocol","ruleText":"","summary":"","tags":[],"stratagemIds":["pitiless-hunters-annihilation-legion","blood-fuelled-cruelty-annihilation-legion","the-spoor-of-frailty-annihilation-legion","murderous-reanimation-annihilation-legion","insanitys-ire-annihilation-legion","masks-of-death-annihilation-legion"]},{"name":"Awakened Dynasty","dp":3,"objective":"TAKE AND HOLD","unique":"Dynasty","enhancements":[{"name":"Enaegic Dermal Bond","points":30},{"name":"Nether-realm Casket","points":20},{"name":"Phasal Subjugator","points":35},{"name":"Veil of Darkness","points":20}],"community11e":{"id":"awakened-dynasty","name":"Awakened Dynasty","faction_id":"necrons","detachment_rule_id":"command-protocols","enhancement_ids":["veil-of-darkness-awakened-dynasty","nether-realm-casket-awakened-dynasty","phasal-subjugator-aura-awakened-dynasty","enaegic-dermal-bond-awakened-dynasty"],"stratagem_ids":["protocol-of-the-hungry-void-awakened-dynasty","protocol-of-the-conquering-tyrant-awakened-dynasty","protocol-of-the-eternal-revenant-awakened-dynasty","protocol-of-the-undying-legions-awakened-dynasty","protocol-of-the-sudden-storm-awakened-dynasty","protocol-of-the-vengeful-stars-awakened-dynasty"],"game_version":{"edition":"11th","dataslate":"pre-launch-provisional"},"detachment_points":3,"force_dispositions":["take-and-hold"],"tags":["dynasty"]},"id":"necrons:detachment:awakened-dynasty","ruleName":"Command Protocols","ruleText":"","summary":"","tags":["dynasty"],"stratagemIds":["protocol-of-the-hungry-void-awakened-dynasty","protocol-of-the-conquering-tyrant-awakened-dynasty","protocol-of-the-eternal-revenant-awakened-dynasty","protocol-of-the-undying-legions-awakened-dynasty","protocol-of-the-sudden-storm-awakened-dynasty","protocol-of-the-vengeful-stars-awakened-dynasty"]},{"name":"Canoptek Court","dp":3,"objective":"TAKE AND HOLD","enhancements":[{"name":"Autodivinator","points":15},{"name":"Dimensional Sanctum","points":20},{"name":"Hyperphasic Fulcrum","points":15},{"name":"Metalodermal Tesla Weave","points":10}],"community11e":{"id":"canoptek-court","name":"Canoptek Court","faction_id":"necrons","detachment_rule_id":"power-matrix","enhancement_ids":["dimensional-sanctum-canoptek-court","hyperphasic-fulcrum-canoptek-court","autodivinator-canoptek-court","metalodermal-tesla-weave-canoptek-court"],"stratagem_ids":["curse-of-the-cryptek-canoptek-court","cynosure-of-eradication-canoptek-court","solar-pulse-canoptek-court","reactive-subroutines-canoptek-court","countertemporal-shift-canoptek-court","suboptimal-facade-canoptek-court"],"game_version":{"edition":"11th","dataslate":"pre-launch-provisional"},"detachment_points":3,"force_dispositions":["take-and-hold"]},"id":"necrons:detachment:canoptek-court","ruleName":"Power Matrix","ruleText":"","summary":"","tags":[],"stratagemIds":["curse-of-the-cryptek-canoptek-court","cynosure-of-eradication-canoptek-court","solar-pulse-canoptek-court","reactive-subroutines-canoptek-court","countertemporal-shift-canoptek-court","suboptimal-facade-canoptek-court"]},{"name":"Cryptek Conclave","dp":2,"objective":"PRIORITY ASSETS","enhancements":[{"name":"Atomic Disintegrators","points":10},{"name":"Gauntlet of Compression","points":20},{"name":"Gravitic Bolas","points":15},{"name":"Quantum Abacus","points":15}],"community11e":{"id":"cryptek-conclave","name":"Cryptek Conclave","faction_id":"necrons","detachment_rule_id":"technosorcerous-augmentations","enhancement_ids":["quantum-abacus-cryptek-conclave","atomic-disintegrators-cryptek-conclave","gauntlet-of-compression-cryptek-conclave","gravitic-bolas-cryptek-conclave"],"stratagem_ids":["molecular-targeting-cryptek-conclave","untapped-power-cryptek-conclave","synergistic-empowerment-cryptek-conclave","potentiality-syphon-cryptek-conclave","microscarab-swarm-cryptek-conclave","animus-curse-cryptek-conclave"],"game_version":{"edition":"11th","dataslate":"pre-launch-provisional"},"detachment_points":2,"force_dispositions":["priority-assets"]},"id":"necrons:detachment:cryptek-conclave","ruleName":"Technosorcerous Augmentations","ruleText":"","summary":"","tags":[],"stratagemIds":["molecular-targeting-cryptek-conclave","untapped-power-cryptek-conclave","synergistic-empowerment-cryptek-conclave","potentiality-syphon-cryptek-conclave","microscarab-swarm-cryptek-conclave","animus-curse-cryptek-conclave"]},{"name":"Cursed Legion","dp":2,"objective":"PURGE THE FOE","enhancements":[{"name":"Cursed Circlet","points":25},{"name":"Destroyer Ankh","points":20},{"name":"Mark of the Nekrosor","points":20},{"name":"Murdermind","points":15,"supportTo":["Skorpekh Destroyers","Lokhust Destroyers","Ophydian Destroyers","Lokhust Heavy Destroyers"]}],"community11e":{"id":"cursed-legion","name":"Cursed Legion","faction_id":"necrons","detachment_rule_id":"cold-fervour","enhancement_ids":["destroyer-ankh-cursed-legion","murdermind-cursed-legion","mask-of-the-nekrosor-cursed-legion","cursed-circlet-cursed-legion","mark-of-the-nekrosor-cursed-legion"],"stratagem_ids":["methodical-murder-cursed-legion","image-of-death-cursed-legion","spreading-madness-cursed-legion","mortis-protocols-cursed-legion","driven-to-butchery-cursed-legion","unnatural-aggression-cursed-legion"],"game_version":{"edition":"11th","dataslate":"pre-launch-provisional"},"detachment_points":2,"force_dispositions":["purge-the-foe"]},"id":"necrons:detachment:cursed-legion","ruleName":"Cold Fervour","ruleText":"","summary":"","tags":[],"stratagemIds":["methodical-murder-cursed-legion","image-of-death-cursed-legion","spreading-madness-cursed-legion","mortis-protocols-cursed-legion","driven-to-butchery-cursed-legion","unnatural-aggression-cursed-legion"]},{"name":"Hand Of The Dynasty","dp":1,"objective":"TAKE AND HOLD","unique":"Dynasty","enhancements":[{"name":"Enlivened Sentinels (Upgrade)","points":20},{"name":"Tools of Dominion (Upgrade)","points":15}],"community11e":{"id":"hand-of-the-dynasty","name":"Hand of the Dynasty","faction_id":"necrons","detachment_rule_id":"hypermotility-protocols","enhancement_ids":["enlivened-sentinels-upgrade-hand-of-the-dynasty","tools-of-dominion-upgrade-hand-of-the-dynasty"],"stratagem_ids":["dominance-protocols-hand-of-the-dynasty","will-of-the-conqueror-hand-of-the-dynasty","nanosaturation-hand-of-the-dynasty"],"game_version":{"edition":"11th","dataslate":"pre-launch-provisional"},"detachment_points":1,"force_dispositions":["take-and-hold"],"tags":["dynasty"]},"id":"necrons:detachment:hand-of-the-dynasty","ruleName":"Hypermotility Protocols","ruleText":"","summary":"","tags":["dynasty"],"stratagemIds":["dominance-protocols-hand-of-the-dynasty","will-of-the-conqueror-hand-of-the-dynasty","nanosaturation-hand-of-the-dynasty"]},{"name":"Hypercrypt Legion","dp":2,"objective":"RECONNAISSANCE","unique":"Hypercrypt","enhancements":[{"name":"Arisen Tyrant","points":25},{"name":"Dimensional Overseer","points":25},{"name":"Hyperspatial Transfer Node","points":15},{"name":"Osteoclave Fulcrum","points":20}],"community11e":{"id":"hypercrypt-legion","name":"Hypercrypt Legion","faction_id":"necrons","detachment_rule_id":"hyperphasing","enhancement_ids":["dimensional-overseer-hypercrypt-legion","arisen-tyrant-hypercrypt-legion","hyperspatial-transfer-node-hypercrypt-legion","osteoclave-fulcrum-hypercrypt-legion"],"stratagem_ids":["reanimation-crypts-hypercrypt-legion","cosmic-precision-hypercrypt-legion","hyperphasic-recall-hypercrypt-legion","dimensional-corridor-hypercrypt-legion","quantum-deflection-hypercrypt-legion","entropic-damping-hypercrypt-legion"],"game_version":{"edition":"11th","dataslate":"pre-launch-provisional"},"detachment_points":2,"force_dispositions":["reconnaissance"],"tags":["hypercrypt"]},"id":"necrons:detachment:hypercrypt-legion","ruleName":"Hyperphasing","ruleText":"","summary":"","tags":["hypercrypt"],"stratagemIds":["reanimation-crypts-hypercrypt-legion","cosmic-precision-hypercrypt-legion","hyperphasic-recall-hypercrypt-legion","dimensional-corridor-hypercrypt-legion","quantum-deflection-hypercrypt-legion","entropic-damping-hypercrypt-legion"]},{"name":"Obeisance Phalanx","dp":2,"objective":"DISRUPTION","enhancements":[{"name":"Eternal Conqueror","points":25},{"name":"Honourable Combatant","points":10},{"name":"Unflinching Will","points":20},{"name":"Warrior Noble","points":15}],"community11e":{"id":"obeisance-phalanx","name":"Obeisance Phalanx","faction_id":"necrons","detachment_rule_id":"worthy-foes","enhancement_ids":["honourable-combatant-obeisance-phalanx","unflinching-will-obeisance-phalanx","warrior-noble-obeisance-phalanx","eternal-conqueror-obeisance-phalanx"],"stratagem_ids":["enslaved-artifice-obeisance-phalanx","nanoassembly-protocols-obeisance-phalanx","suffer-no-rival-obeisance-phalanx","your-time-is-nigh-obeisance-phalanx","sentinels-of-eternity-obeisance-phalanx","territorial-obsession-obeisance-phalanx"],"game_version":{"edition":"11th","dataslate":"pre-launch-provisional"},"detachment_points":2,"force_dispositions":["disruption"]},"id":"necrons:detachment:obeisance-phalanx","ruleName":"Worthy Foes","ruleText":"","summary":"","tags":[],"stratagemIds":["enslaved-artifice-obeisance-phalanx","nanoassembly-protocols-obeisance-phalanx","suffer-no-rival-obeisance-phalanx","your-time-is-nigh-obeisance-phalanx","sentinels-of-eternity-obeisance-phalanx","territorial-obsession-obeisance-phalanx"]},{"name":"Pantheon Of Woe","dp":2,"objective":"DISRUPTION","enhancements":[{"name":"Animus Damper","points":35},{"name":"Quantum Goad","points":45},{"name":"Reletavistic Tether","points":40},{"name":"Singularity Matrix","points":45}],"community11e":{"id":"pantheon-of-woe","name":"Pantheon of Woe","faction_id":"necrons","detachment_rule_id":"cosmic-distortion","enhancement_ids":["singularity-matrix-pantheon-of-woe","quantum-goad-pantheon-of-woe","animus-damper-pantheon-of-woe","reletavistic-tether-pantheon-of-woe"],"stratagem_ids":["entrophasic-aura-targeting-pantheon-of-woe","chronodistortion-pantheon-of-woe","disharmonisation-cascade-pantheon-of-woe","mass-transmogrification-pantheon-of-woe","molecular-erosion-pantheon-of-woe","phase-melding-pantheon-of-woe"],"game_version":{"edition":"11th","dataslate":"pre-launch-provisional"},"detachment_points":2,"force_dispositions":["disruption"]},"id":"necrons:detachment:pantheon-of-woe","ruleName":"Cosmic Distortion","ruleText":"","summary":"","tags":[],"stratagemIds":["entrophasic-aura-targeting-pantheon-of-woe","chronodistortion-pantheon-of-woe","disharmonisation-cascade-pantheon-of-woe","mass-transmogrification-pantheon-of-woe","molecular-erosion-pantheon-of-woe","phase-melding-pantheon-of-woe"]},{"name":"Skyshroud Spearhead","dp":1,"objective":"RECONNAISSANCE","enhancements":[{"name":"Deepening Madness (Upgrade)","points":20},{"name":"Recursive Reanimation (Upgrade)","points":5}],"community11e":{"id":"skyshroud-spearhead","name":"Skyshroud Spearhead","faction_id":"necrons","detachment_rule_id":"transdimensional-deployment","enhancement_ids":["recursive-reanimation-upgrade-skyshroud-spearhead","deepening-madness-upgrade-skyshroud-spearhead"],"stratagem_ids":["omnilocked-strafing-skyshroud-spearhead","swift-as-death-skyshroud-spearhead","evasive-protocols-skyshroud-spearhead"],"game_version":{"edition":"11th","dataslate":"pre-launch-provisional"},"detachment_points":1,"force_dispositions":["reconnaissance"]},"id":"necrons:detachment:skyshroud-spearhead","ruleName":"Transdimensional Deployment","ruleText":"","summary":"","tags":[],"stratagemIds":["omnilocked-strafing-skyshroud-spearhead","swift-as-death-skyshroud-spearhead","evasive-protocols-skyshroud-spearhead"]},{"name":"Starshatter Arsenal","dp":3,"objective":"PRIORITY ASSETS","enhancements":[{"name":"Chrono-impedance Fields","points":25},{"name":"Demanding Leader","points":10},{"name":"Dread Majesty","points":30},{"name":"Miniaturised Nebuloscope","points":15}],"community11e":{"id":"starshatter-arsenal","name":"Starshatter Arsenal","faction_id":"necrons","detachment_rule_id":"relentless-onslaught","enhancement_ids":["dread-majesty-aura-starshatter-arsenal","miniaturised-nebuloscope-starshatter-arsenal","demanding-leader-starshatter-arsenal","chrono-impedance-fields-starshatter-arsenal"],"stratagem_ids":["merciless-reclamation-starshatter-arsenal","unyielding-forms-starshatter-arsenal","chronoshift-starshatter-arsenal","dimensional-tunnel-starshatter-arsenal","endless-servitude-starshatter-arsenal","reactive-reposition-starshatter-arsenal"],"game_version":{"edition":"11th","dataslate":"pre-launch-provisional"},"detachment_points":3,"force_dispositions":["priority-assets"]},"id":"necrons:detachment:starshatter-arsenal","ruleName":"Relentless Onslaught","ruleText":"","summary":"","tags":[],"stratagemIds":["merciless-reclamation-starshatter-arsenal","unyielding-forms-starshatter-arsenal","chronoshift-starshatter-arsenal","dimensional-tunnel-starshatter-arsenal","endless-servitude-starshatter-arsenal","reactive-reposition-starshatter-arsenal"]},{"name":"The Phaeron'S Armoury","dp":1,"objective":"PRIORITY ASSETS","unique":"Hypercrypt","enhancements":[{"name":"Mortality Shroud (Aura) (Upgrade)","points":10},{"name":"Prelocational Optimiser","points":25}],"community11e":{"id":"the-phaerons-armoury","name":"The Phaeron’s Armoury","faction_id":"necrons","detachment_rule_id":"empowered-engines","enhancement_ids":["prelocational-optimiser-the-phaerons-armoury","mortality-shroud-aura-the-phaerons-armoury","mortality-shroud-aura-upgrade-the-phaerons-armoury"],"stratagem_ids":["subsurface-quantumweave-the-phaerons-armoury","particle-pulse-the-phaerons-armoury","cosmic-storm-the-phaerons-armoury"],"game_version":{"edition":"11th","dataslate":"pre-launch-provisional"},"detachment_points":1,"force_dispositions":["priority-assets"],"tags":["hypercrypt"]},"id":"necrons:detachment:the-phaeron-s-armoury","ruleName":"Empowered Engines","ruleText":"","summary":"","tags":["hypercrypt"],"stratagemIds":["subsurface-quantumweave-the-phaerons-armoury","particle-pulse-the-phaerons-armoury","cosmic-storm-the-phaerons-armoury"]}]}
+{
+  "edition": "11th",
+  "faction": "necrons",
+  "package": "detachments",
+  "records": [
+    {
+      "dp": 2,
+      "id": "necrons:detachment:annihilation-legion",
+      "name": "Annihilation Legion",
+      "tags": [],
+      "summary": "",
+      "ruleName": "Annihilation Protocol",
+      "ruleText": "",
+      "objective": "PURGE THE FOE",
+      "community11e": {
+        "id": "annihilation-legion",
+        "name": "Annihilation Legion",
+        "faction_id": "necrons",
+        "game_version": {
+          "edition": "11th",
+          "dataslate": "pre-launch-provisional"
+        },
+        "stratagem_ids": [
+          "pitiless-hunters-annihilation-legion",
+          "blood-fuelled-cruelty-annihilation-legion",
+          "the-spoor-of-frailty-annihilation-legion",
+          "murderous-reanimation-annihilation-legion",
+          "insanitys-ire-annihilation-legion",
+          "masks-of-death-annihilation-legion"
+        ],
+        "enhancement_ids": [
+          "eternal-madness-annihilation-legion",
+          "ingrained-superiority-annihilation-legion",
+          "soulless-reaper-annihilation-legion",
+          "eldritch-nightmare-annihilation-legion"
+        ],
+        "detachment_points": 2,
+        "detachment_rule_id": "annihilation-protocol",
+        "force_dispositions": [
+          "purge-the-foe"
+        ]
+      },
+      "enhancements": [
+        {
+          "name": "Eldritch Nightmare",
+          "points": 10
+        },
+        {
+          "name": "Eternal Madness",
+          "points": 20
+        },
+        {
+          "name": "Ingrained Superiority",
+          "points": 5
+        },
+        {
+          "name": "Soulless Reaper",
+          "points": 15
+        }
+      ],
+      "stratagemIds": [
+        "pitiless-hunters-annihilation-legion",
+        "blood-fuelled-cruelty-annihilation-legion",
+        "the-spoor-of-frailty-annihilation-legion",
+        "murderous-reanimation-annihilation-legion",
+        "insanitys-ire-annihilation-legion",
+        "masks-of-death-annihilation-legion"
+      ]
+    },
+    {
+      "dp": 3,
+      "id": "necrons:detachment:awakened-dynasty",
+      "name": "Awakened Dynasty",
+      "tags": [
+        "dynasty"
+      ],
+      "unique": "Dynasty",
+      "summary": "",
+      "ruleName": "Command Protocols",
+      "ruleText": "",
+      "objective": "TAKE AND HOLD",
+      "community11e": {
+        "id": "awakened-dynasty",
+        "name": "Awakened Dynasty",
+        "tags": [
+          "dynasty"
+        ],
+        "faction_id": "necrons",
+        "game_version": {
+          "edition": "11th",
+          "dataslate": "pre-launch-provisional"
+        },
+        "stratagem_ids": [
+          "protocol-of-the-hungry-void-awakened-dynasty",
+          "protocol-of-the-conquering-tyrant-awakened-dynasty",
+          "protocol-of-the-eternal-revenant-awakened-dynasty",
+          "protocol-of-the-undying-legions-awakened-dynasty",
+          "protocol-of-the-sudden-storm-awakened-dynasty",
+          "protocol-of-the-vengeful-stars-awakened-dynasty"
+        ],
+        "enhancement_ids": [
+          "veil-of-darkness-awakened-dynasty",
+          "nether-realm-casket-awakened-dynasty",
+          "phasal-subjugator-aura-awakened-dynasty",
+          "enaegic-dermal-bond-awakened-dynasty"
+        ],
+        "detachment_points": 3,
+        "detachment_rule_id": "command-protocols",
+        "force_dispositions": [
+          "take-and-hold"
+        ]
+      },
+      "enhancements": [
+        {
+          "name": "Enaegic Dermal Bond",
+          "points": 30
+        },
+        {
+          "name": "Nether-realm Casket",
+          "points": 20
+        },
+        {
+          "name": "Phasal Subjugator",
+          "points": 35
+        },
+        {
+          "name": "Veil of Darkness",
+          "points": 20
+        }
+      ],
+      "stratagemIds": [
+        "protocol-of-the-hungry-void-awakened-dynasty",
+        "protocol-of-the-conquering-tyrant-awakened-dynasty",
+        "protocol-of-the-eternal-revenant-awakened-dynasty",
+        "protocol-of-the-undying-legions-awakened-dynasty",
+        "protocol-of-the-sudden-storm-awakened-dynasty",
+        "protocol-of-the-vengeful-stars-awakened-dynasty"
+      ]
+    },
+    {
+      "dp": 3,
+      "id": "necrons:detachment:canoptek-court",
+      "name": "Canoptek Court",
+      "tags": [],
+      "summary": "",
+      "ruleName": "Power Matrix",
+      "ruleText": "",
+      "objective": "TAKE AND HOLD",
+      "community11e": {
+        "id": "canoptek-court",
+        "name": "Canoptek Court",
+        "faction_id": "necrons",
+        "game_version": {
+          "edition": "11th",
+          "dataslate": "pre-launch-provisional"
+        },
+        "stratagem_ids": [
+          "curse-of-the-cryptek-canoptek-court",
+          "cynosure-of-eradication-canoptek-court",
+          "solar-pulse-canoptek-court",
+          "reactive-subroutines-canoptek-court",
+          "countertemporal-shift-canoptek-court",
+          "suboptimal-facade-canoptek-court"
+        ],
+        "enhancement_ids": [
+          "dimensional-sanctum-canoptek-court",
+          "hyperphasic-fulcrum-canoptek-court",
+          "autodivinator-canoptek-court",
+          "metalodermal-tesla-weave-canoptek-court"
+        ],
+        "detachment_points": 3,
+        "detachment_rule_id": "power-matrix",
+        "force_dispositions": [
+          "take-and-hold"
+        ]
+      },
+      "enhancements": [
+        {
+          "name": "Autodivinator",
+          "points": 15
+        },
+        {
+          "name": "Dimensional Sanctum",
+          "points": 20
+        },
+        {
+          "name": "Hyperphasic Fulcrum",
+          "points": 15
+        },
+        {
+          "name": "Metalodermal Tesla Weave",
+          "points": 10
+        }
+      ],
+      "stratagemIds": [
+        "curse-of-the-cryptek-canoptek-court",
+        "cynosure-of-eradication-canoptek-court",
+        "solar-pulse-canoptek-court",
+        "reactive-subroutines-canoptek-court",
+        "countertemporal-shift-canoptek-court",
+        "suboptimal-facade-canoptek-court"
+      ]
+    },
+    {
+      "dp": 2,
+      "id": "necrons:detachment:cryptek-conclave",
+      "name": "Cryptek Conclave",
+      "tags": [],
+      "summary": "",
+      "ruleName": "Technosorcerous Augmentations",
+      "ruleText": "",
+      "objective": "PRIORITY ASSETS",
+      "community11e": {
+        "id": "cryptek-conclave",
+        "name": "Cryptek Conclave",
+        "faction_id": "necrons",
+        "game_version": {
+          "edition": "11th",
+          "dataslate": "pre-launch-provisional"
+        },
+        "stratagem_ids": [
+          "molecular-targeting-cryptek-conclave",
+          "untapped-power-cryptek-conclave",
+          "synergistic-empowerment-cryptek-conclave",
+          "potentiality-syphon-cryptek-conclave",
+          "microscarab-swarm-cryptek-conclave",
+          "animus-curse-cryptek-conclave"
+        ],
+        "enhancement_ids": [
+          "quantum-abacus-cryptek-conclave",
+          "atomic-disintegrators-cryptek-conclave",
+          "gauntlet-of-compression-cryptek-conclave",
+          "gravitic-bolas-cryptek-conclave"
+        ],
+        "detachment_points": 2,
+        "detachment_rule_id": "technosorcerous-augmentations",
+        "force_dispositions": [
+          "priority-assets"
+        ]
+      },
+      "enhancements": [
+        {
+          "name": "Atomic Disintegrators",
+          "points": 10
+        },
+        {
+          "name": "Gauntlet of Compression",
+          "points": 20
+        },
+        {
+          "name": "Gravitic Bolas",
+          "points": 15
+        },
+        {
+          "name": "Quantum Abacus",
+          "points": 15
+        }
+      ],
+      "stratagemIds": [
+        "molecular-targeting-cryptek-conclave",
+        "untapped-power-cryptek-conclave",
+        "synergistic-empowerment-cryptek-conclave",
+        "potentiality-syphon-cryptek-conclave",
+        "microscarab-swarm-cryptek-conclave",
+        "animus-curse-cryptek-conclave"
+      ]
+    },
+    {
+      "dp": 2,
+      "id": "necrons:detachment:cursed-legion",
+      "name": "Cursed Legion",
+      "tags": [],
+      "summary": "",
+      "ruleName": "Cold Fervour",
+      "ruleText": "",
+      "objective": "PURGE THE FOE",
+      "community11e": {
+        "id": "cursed-legion",
+        "name": "Cursed Legion",
+        "faction_id": "necrons",
+        "game_version": {
+          "edition": "11th",
+          "dataslate": "pre-launch-provisional"
+        },
+        "stratagem_ids": [
+          "methodical-murder-cursed-legion",
+          "image-of-death-cursed-legion",
+          "spreading-madness-cursed-legion",
+          "mortis-protocols-cursed-legion",
+          "driven-to-butchery-cursed-legion",
+          "unnatural-aggression-cursed-legion"
+        ],
+        "enhancement_ids": [
+          "destroyer-ankh-cursed-legion",
+          "murdermind-cursed-legion",
+          "mask-of-the-nekrosor-cursed-legion",
+          "cursed-circlet-cursed-legion",
+          "mark-of-the-nekrosor-cursed-legion"
+        ],
+        "detachment_points": 2,
+        "detachment_rule_id": "cold-fervour",
+        "force_dispositions": [
+          "purge-the-foe"
+        ]
+      },
+      "enhancements": [
+        {
+          "name": "Cursed Circlet",
+          "points": 25
+        },
+        {
+          "name": "Destroyer Ankh",
+          "points": 20
+        },
+        {
+          "name": "Mark of the Nekrosor",
+          "points": 20
+        },
+        {
+          "name": "Murdermind",
+          "points": 15,
+          "supportTo": [
+            "Skorpekh Destroyers",
+            "Lokhust Destroyers",
+            "Ophydian Destroyers",
+            "Lokhust Heavy Destroyers"
+          ]
+        }
+      ],
+      "stratagemIds": [
+        "methodical-murder-cursed-legion",
+        "image-of-death-cursed-legion",
+        "spreading-madness-cursed-legion",
+        "mortis-protocols-cursed-legion",
+        "driven-to-butchery-cursed-legion",
+        "unnatural-aggression-cursed-legion"
+      ]
+    },
+    {
+      "dp": 1,
+      "id": "necrons:detachment:hand-of-the-dynasty",
+      "name": "Hand Of The Dynasty",
+      "tags": [
+        "dynasty"
+      ],
+      "unique": "Dynasty",
+      "summary": "",
+      "ruleName": "Hypermotility Protocols",
+      "ruleText": "",
+      "objective": "TAKE AND HOLD",
+      "community11e": {
+        "id": "hand-of-the-dynasty",
+        "name": "Hand of the Dynasty",
+        "tags": [
+          "dynasty"
+        ],
+        "faction_id": "necrons",
+        "game_version": {
+          "edition": "11th",
+          "dataslate": "pre-launch-provisional"
+        },
+        "stratagem_ids": [
+          "dominance-protocols-hand-of-the-dynasty",
+          "will-of-the-conqueror-hand-of-the-dynasty",
+          "nanosaturation-hand-of-the-dynasty"
+        ],
+        "enhancement_ids": [
+          "enlivened-sentinels-upgrade-hand-of-the-dynasty",
+          "tools-of-dominion-upgrade-hand-of-the-dynasty"
+        ],
+        "detachment_points": 1,
+        "detachment_rule_id": "hypermotility-protocols",
+        "force_dispositions": [
+          "take-and-hold"
+        ]
+      },
+      "enhancements": [
+        {
+          "name": "Enlivened Sentinels (Upgrade)",
+          "points": 20
+        },
+        {
+          "name": "Tools of Dominion (Upgrade)",
+          "points": 15
+        }
+      ],
+      "stratagemIds": [
+        "dominance-protocols-hand-of-the-dynasty",
+        "will-of-the-conqueror-hand-of-the-dynasty",
+        "nanosaturation-hand-of-the-dynasty"
+      ]
+    },
+    {
+      "dp": 2,
+      "id": "necrons:detachment:hypercrypt-legion",
+      "name": "Hypercrypt Legion",
+      "tags": [
+        "hypercrypt"
+      ],
+      "unique": "Hypercrypt",
+      "summary": "",
+      "ruleName": "Hyperphasing",
+      "ruleText": "",
+      "objective": "RECONNAISSANCE",
+      "community11e": {
+        "id": "hypercrypt-legion",
+        "name": "Hypercrypt Legion",
+        "tags": [
+          "hypercrypt"
+        ],
+        "faction_id": "necrons",
+        "game_version": {
+          "edition": "11th",
+          "dataslate": "pre-launch-provisional"
+        },
+        "stratagem_ids": [
+          "reanimation-crypts-hypercrypt-legion",
+          "cosmic-precision-hypercrypt-legion",
+          "hyperphasic-recall-hypercrypt-legion",
+          "dimensional-corridor-hypercrypt-legion",
+          "quantum-deflection-hypercrypt-legion",
+          "entropic-damping-hypercrypt-legion"
+        ],
+        "enhancement_ids": [
+          "dimensional-overseer-hypercrypt-legion",
+          "arisen-tyrant-hypercrypt-legion",
+          "hyperspatial-transfer-node-hypercrypt-legion",
+          "osteoclave-fulcrum-hypercrypt-legion"
+        ],
+        "detachment_points": 2,
+        "detachment_rule_id": "hyperphasing",
+        "force_dispositions": [
+          "reconnaissance"
+        ]
+      },
+      "enhancements": [
+        {
+          "name": "Arisen Tyrant",
+          "points": 25
+        },
+        {
+          "name": "Dimensional Overseer",
+          "points": 25
+        },
+        {
+          "name": "Hyperspatial Transfer Node",
+          "points": 15
+        },
+        {
+          "name": "Osteoclave Fulcrum",
+          "points": 20
+        }
+      ],
+      "stratagemIds": [
+        "reanimation-crypts-hypercrypt-legion",
+        "cosmic-precision-hypercrypt-legion",
+        "hyperphasic-recall-hypercrypt-legion",
+        "dimensional-corridor-hypercrypt-legion",
+        "quantum-deflection-hypercrypt-legion",
+        "entropic-damping-hypercrypt-legion"
+      ]
+    },
+    {
+      "dp": 2,
+      "id": "necrons:detachment:obeisance-phalanx",
+      "name": "Obeisance Phalanx",
+      "tags": [],
+      "summary": "",
+      "ruleName": "Worthy Foes",
+      "ruleText": "",
+      "objective": "DISRUPTION",
+      "community11e": {
+        "id": "obeisance-phalanx",
+        "name": "Obeisance Phalanx",
+        "faction_id": "necrons",
+        "game_version": {
+          "edition": "11th",
+          "dataslate": "pre-launch-provisional"
+        },
+        "stratagem_ids": [
+          "enslaved-artifice-obeisance-phalanx",
+          "nanoassembly-protocols-obeisance-phalanx",
+          "suffer-no-rival-obeisance-phalanx",
+          "your-time-is-nigh-obeisance-phalanx",
+          "sentinels-of-eternity-obeisance-phalanx",
+          "territorial-obsession-obeisance-phalanx"
+        ],
+        "enhancement_ids": [
+          "honourable-combatant-obeisance-phalanx",
+          "unflinching-will-obeisance-phalanx",
+          "warrior-noble-obeisance-phalanx",
+          "eternal-conqueror-obeisance-phalanx"
+        ],
+        "detachment_points": 2,
+        "detachment_rule_id": "worthy-foes",
+        "force_dispositions": [
+          "disruption"
+        ]
+      },
+      "enhancements": [
+        {
+          "name": "Eternal Conqueror",
+          "points": 25
+        },
+        {
+          "name": "Honourable Combatant",
+          "points": 10
+        },
+        {
+          "name": "Unflinching Will",
+          "points": 20
+        },
+        {
+          "name": "Warrior Noble",
+          "points": 15
+        }
+      ],
+      "stratagemIds": [
+        "enslaved-artifice-obeisance-phalanx",
+        "nanoassembly-protocols-obeisance-phalanx",
+        "suffer-no-rival-obeisance-phalanx",
+        "your-time-is-nigh-obeisance-phalanx",
+        "sentinels-of-eternity-obeisance-phalanx",
+        "territorial-obsession-obeisance-phalanx"
+      ]
+    },
+    {
+      "dp": 2,
+      "id": "necrons:detachment:pantheon-of-woe",
+      "name": "Pantheon Of Woe",
+      "tags": [],
+      "summary": "",
+      "ruleName": "Cosmic Distortion",
+      "ruleText": "",
+      "objective": "DISRUPTION",
+      "community11e": {
+        "id": "pantheon-of-woe",
+        "name": "Pantheon of Woe",
+        "faction_id": "necrons",
+        "game_version": {
+          "edition": "11th",
+          "dataslate": "pre-launch-provisional"
+        },
+        "stratagem_ids": [
+          "entrophasic-aura-targeting-pantheon-of-woe",
+          "chronodistortion-pantheon-of-woe",
+          "disharmonisation-cascade-pantheon-of-woe",
+          "mass-transmogrification-pantheon-of-woe",
+          "molecular-erosion-pantheon-of-woe",
+          "phase-melding-pantheon-of-woe"
+        ],
+        "enhancement_ids": [
+          "singularity-matrix-pantheon-of-woe",
+          "quantum-goad-pantheon-of-woe",
+          "animus-damper-pantheon-of-woe",
+          "reletavistic-tether-pantheon-of-woe"
+        ],
+        "detachment_points": 2,
+        "detachment_rule_id": "cosmic-distortion",
+        "force_dispositions": [
+          "disruption"
+        ]
+      },
+      "enhancements": [
+        {
+          "name": "Animus Damper",
+          "points": 35
+        },
+        {
+          "name": "Quantum Goad",
+          "points": 45
+        },
+        {
+          "name": "Reletavistic Tether",
+          "points": 40
+        },
+        {
+          "name": "Singularity Matrix",
+          "points": 45
+        }
+      ],
+      "stratagemIds": [
+        "entrophasic-aura-targeting-pantheon-of-woe",
+        "chronodistortion-pantheon-of-woe",
+        "disharmonisation-cascade-pantheon-of-woe",
+        "mass-transmogrification-pantheon-of-woe",
+        "molecular-erosion-pantheon-of-woe",
+        "phase-melding-pantheon-of-woe"
+      ]
+    },
+    {
+      "dp": 1,
+      "id": "necrons:detachment:skyshroud-spearhead",
+      "name": "Skyshroud Spearhead",
+      "tags": [],
+      "summary": "",
+      "ruleName": "Transdimensional Deployment",
+      "ruleText": "",
+      "objective": "RECONNAISSANCE",
+      "community11e": {
+        "id": "skyshroud-spearhead",
+        "name": "Skyshroud Spearhead",
+        "faction_id": "necrons",
+        "game_version": {
+          "edition": "11th",
+          "dataslate": "pre-launch-provisional"
+        },
+        "stratagem_ids": [
+          "omnilocked-strafing-skyshroud-spearhead",
+          "swift-as-death-skyshroud-spearhead",
+          "evasive-protocols-skyshroud-spearhead"
+        ],
+        "enhancement_ids": [
+          "recursive-reanimation-upgrade-skyshroud-spearhead",
+          "deepening-madness-upgrade-skyshroud-spearhead"
+        ],
+        "detachment_points": 1,
+        "detachment_rule_id": "transdimensional-deployment",
+        "force_dispositions": [
+          "reconnaissance"
+        ]
+      },
+      "enhancements": [
+        {
+          "name": "Deepening Madness (Upgrade)",
+          "points": 20
+        },
+        {
+          "name": "Recursive Reanimation (Upgrade)",
+          "points": 5
+        }
+      ],
+      "stratagemIds": [
+        "omnilocked-strafing-skyshroud-spearhead",
+        "swift-as-death-skyshroud-spearhead",
+        "evasive-protocols-skyshroud-spearhead"
+      ]
+    },
+    {
+      "dp": 3,
+      "id": "necrons:detachment:starshatter-arsenal",
+      "name": "Starshatter Arsenal",
+      "tags": [],
+      "summary": "",
+      "ruleName": "Relentless Onslaught",
+      "ruleText": "",
+      "objective": "PRIORITY ASSETS",
+      "community11e": {
+        "id": "starshatter-arsenal",
+        "name": "Starshatter Arsenal",
+        "faction_id": "necrons",
+        "game_version": {
+          "edition": "11th",
+          "dataslate": "pre-launch-provisional"
+        },
+        "stratagem_ids": [
+          "merciless-reclamation-starshatter-arsenal",
+          "unyielding-forms-starshatter-arsenal",
+          "chronoshift-starshatter-arsenal",
+          "dimensional-tunnel-starshatter-arsenal",
+          "endless-servitude-starshatter-arsenal",
+          "reactive-reposition-starshatter-arsenal"
+        ],
+        "enhancement_ids": [
+          "dread-majesty-aura-starshatter-arsenal",
+          "miniaturised-nebuloscope-starshatter-arsenal",
+          "demanding-leader-starshatter-arsenal",
+          "chrono-impedance-fields-starshatter-arsenal"
+        ],
+        "detachment_points": 3,
+        "detachment_rule_id": "relentless-onslaught",
+        "force_dispositions": [
+          "priority-assets"
+        ]
+      },
+      "enhancements": [
+        {
+          "name": "Chrono-impedance Fields",
+          "points": 25
+        },
+        {
+          "name": "Demanding Leader",
+          "points": 10
+        },
+        {
+          "name": "Dread Majesty",
+          "points": 30
+        },
+        {
+          "name": "Miniaturised Nebuloscope",
+          "points": 15
+        }
+      ],
+      "stratagemIds": [
+        "merciless-reclamation-starshatter-arsenal",
+        "unyielding-forms-starshatter-arsenal",
+        "chronoshift-starshatter-arsenal",
+        "dimensional-tunnel-starshatter-arsenal",
+        "endless-servitude-starshatter-arsenal",
+        "reactive-reposition-starshatter-arsenal"
+      ]
+    },
+    {
+      "dp": 1,
+      "id": "necrons:detachment:the-phaeron-s-armoury",
+      "name": "The Phaeron'S Armoury",
+      "tags": [
+        "hypercrypt"
+      ],
+      "unique": "Hypercrypt",
+      "summary": "",
+      "ruleName": "Empowered Engines",
+      "ruleText": "",
+      "objective": "PRIORITY ASSETS",
+      "community11e": {
+        "id": "the-phaerons-armoury",
+        "name": "The Phaeron’s Armoury",
+        "tags": [
+          "hypercrypt"
+        ],
+        "faction_id": "necrons",
+        "game_version": {
+          "edition": "11th",
+          "dataslate": "pre-launch-provisional"
+        },
+        "stratagem_ids": [
+          "subsurface-quantumweave-the-phaerons-armoury",
+          "particle-pulse-the-phaerons-armoury",
+          "cosmic-storm-the-phaerons-armoury"
+        ],
+        "enhancement_ids": [
+          "prelocational-optimiser-the-phaerons-armoury",
+          "mortality-shroud-aura-the-phaerons-armoury",
+          "mortality-shroud-aura-upgrade-the-phaerons-armoury"
+        ],
+        "detachment_points": 1,
+        "detachment_rule_id": "empowered-engines",
+        "force_dispositions": [
+          "priority-assets"
+        ]
+      },
+      "enhancements": [
+        {
+          "name": "Mortality Shroud (Aura) (Upgrade)",
+          "points": 10
+        },
+        {
+          "name": "Prelocational Optimiser",
+          "points": 25
+        }
+      ],
+      "stratagemIds": [
+        "subsurface-quantumweave-the-phaerons-armoury",
+        "particle-pulse-the-phaerons-armoury",
+        "cosmic-storm-the-phaerons-armoury"
+      ]
+    }
+  ],
+  "schemaVersion": 2
+}

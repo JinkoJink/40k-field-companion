@@ -1,1 +1,24 @@
-{"schemaVersion":2,"package":"source","edition":"11th","faction":"necrons","records":[{"id":"necrons:source:current","edition":"11th","faction":"necrons","bsdata":"https://raw.githubusercontent.com/BSData/wh40k-11e/main/Necrons.json","coreRules":"https://raw.githubusercontent.com/BSData/wh40k-11e/main/Warhammer%2040,000.json","mfm":"https://raw.githubusercontent.com/BSData/wh40k-11e-mfm/main/data/necrons.yaml","community40kdc":"https://raw.githubusercontent.com/wn-mitch/40kdc-data/main/data","enhancementRestrictions":"https://raw.githubusercontent.com/furka/40k-11th-list-builder/main/src/data/configs/enhancement-restrictions.auto.json","precedence":["BSData/wh40k-11e datasheets + raw rules text","BSData/wh40k-11e-mfm points, detachment costs and roster data","wn-mitch/40kdc-data structured 11e unit/ability/stratagem/attachment metadata","furka/40k-11th-list-builder official-app/faction-pack restriction reconciliation"]}]}
+{
+  "edition": "11th",
+  "faction": "necrons",
+  "package": "source",
+  "records": [
+    {
+      "id": "necrons:source:current",
+      "mfm": "https://raw.githubusercontent.com/BSData/wh40k-11e-mfm/main/data/necrons.yaml",
+      "bsdata": "https://raw.githubusercontent.com/BSData/wh40k-11e/main/Necrons.json",
+      "edition": "11th",
+      "faction": "necrons",
+      "coreRules": "https://raw.githubusercontent.com/BSData/wh40k-11e/main/Warhammer%2040,000.json",
+      "precedence": [
+        "BSData/wh40k-11e datasheets + raw rules text",
+        "BSData/wh40k-11e-mfm points, detachment costs and roster data",
+        "wn-mitch/40kdc-data structured 11e unit/ability/stratagem/attachment metadata",
+        "furka/40k-11th-list-builder official-app/faction-pack restriction reconciliation"
+      ],
+      "community40kdc": "https://raw.githubusercontent.com/wn-mitch/40kdc-data/main/data",
+      "enhancementRestrictions": "https://raw.githubusercontent.com/furka/40k-11th-list-builder/main/src/data/configs/enhancement-restrictions.auto.json"
+    }
+  ],
+  "schemaVersion": 2
+}

@@ -1,1 +1,2815 @@
-{"schemaVersion":2,"package":"profiles","edition":"11th","faction":"necrons","records":[{"id":"ca62-cc3a-b9a2-9c50","unitId":"necrons:unit:orikan-the-diviner","characteristics":[{"name":"M","typeId":"e703-ecb6-5ce7-aec1","$text":"5\""},{"name":"T","typeId":"d29d-cf75-fc2d-34a4","$text":"4"},{"name":"Sv","typeId":"450-a17e-9d5e-29da","$text":"4+"},{"name":"W","typeId":"750a-a2ec-90d3-21fe","$text":"4"},{"name":"LD","typeId":"58d2-b879-49c7-43bc","$text":"6+"},{"name":"OC","typeId":"bef7-942a-1a23-59f8","$text":"1"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":"4+"}]},{"id":"2421-336c-d2d0-fef5","unitId":"necrons:unit:imotekh-the-stormlord","characteristics":[{"name":"M","typeId":"e703-ecb6-5ce7-aec1","$text":"5\""},{"name":"T","typeId":"d29d-cf75-fc2d-34a4","$text":"5"},{"name":"Sv","typeId":"450-a17e-9d5e-29da","$text":"2+"},{"name":"W","typeId":"750a-a2ec-90d3-21fe","$text":"6"},{"name":"LD","typeId":"58d2-b879-49c7-43bc","$text":"6+"},{"name":"OC","typeId":"bef7-942a-1a23-59f8","$text":"1"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":"4+"}]},{"id":"2b79-e1-d7d7-6a8","unitId":"necrons:unit:anrakyr-the-traveller","characteristics":[{"name":"M","typeId":"e703-ecb6-5ce7-aec1","$text":"5\""},{"name":"T","typeId":"d29d-cf75-fc2d-34a4","$text":"5"},{"name":"Sv","typeId":"450-a17e-9d5e-29da","$text":"2+"},{"name":"W","typeId":"750a-a2ec-90d3-21fe","$text":"6"},{"name":"LD","typeId":"58d2-b879-49c7-43bc","$text":"6+"},{"name":"OC","typeId":"bef7-942a-1a23-59f8","$text":"1"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":"4+"}]},{"id":"e7a3-2c53-d4bd-7828","unitId":"necrons:unit:vargard-obyron","characteristics":[{"$text":"5\"","name":"M","typeId":"e703-ecb6-5ce7-aec1"},{"$text":"5","name":"T","typeId":"d29d-cf75-fc2d-34a4"},{"$text":"2+","name":"Sv","typeId":"450-a17e-9d5e-29da"},{"$text":"5","name":"W","typeId":"750a-a2ec-90d3-21fe"},{"$text":"6+","name":"LD","typeId":"58d2-b879-49c7-43bc"},{"$text":"1","name":"OC","typeId":"bef7-942a-1a23-59f8"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":""}]},{"id":"b58-b800-d98e-9e43","unitId":"necrons:unit:illuminor-szeras","characteristics":[{"name":"M","typeId":"e703-ecb6-5ce7-aec1","$text":"8\""},{"name":"T","typeId":"d29d-cf75-fc2d-34a4","$text":"8"},{"name":"Sv","typeId":"450-a17e-9d5e-29da","$text":"2+"},{"name":"W","typeId":"750a-a2ec-90d3-21fe","$text":"9"},{"name":"LD","typeId":"58d2-b879-49c7-43bc","$text":"6+"},{"name":"OC","typeId":"bef7-942a-1a23-59f8","$text":"3"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":"4+"}]},{"id":"9f8e-932d-d5a2-bb8c","unitId":"necrons:unit:nemesor-zahndrekh","characteristics":[{"name":"M","typeId":"e703-ecb6-5ce7-aec1","$text":"5\""},{"name":"T","typeId":"d29d-cf75-fc2d-34a4","$text":"5"},{"name":"Sv","typeId":"450-a17e-9d5e-29da","$text":"2+"},{"name":"W","typeId":"750a-a2ec-90d3-21fe","$text":"6"},{"name":"LD","typeId":"58d2-b879-49c7-43bc","$text":"7+"},{"name":"OC","typeId":"bef7-942a-1a23-59f8","$text":"1"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":"4+"}]},{"id":"27ca-42d0-dc26-8695","unitId":"necrons:unit:trazyn-the-infinite","characteristics":[{"name":"M","typeId":"e703-ecb6-5ce7-aec1","$text":"5\""},{"name":"T","typeId":"d29d-cf75-fc2d-34a4","$text":"5"},{"name":"Sv","typeId":"450-a17e-9d5e-29da","$text":"2+"},{"name":"W","typeId":"750a-a2ec-90d3-21fe","$text":"6"},{"name":"LD","typeId":"58d2-b879-49c7-43bc","$text":"6+"},{"name":"OC","typeId":"bef7-942a-1a23-59f8","$text":"1"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":"4+"}]},{"id":"47c8-8c7-55bc-4279","unitId":"necrons:unit:royal-warden","characteristics":[{"$text":"5\"","name":"M","typeId":"e703-ecb6-5ce7-aec1"},{"$text":"5","name":"T","typeId":"d29d-cf75-fc2d-34a4"},{"$text":"3+","name":"Sv","typeId":"450-a17e-9d5e-29da"},{"$text":"4","name":"W","typeId":"750a-a2ec-90d3-21fe"},{"$text":"6+","name":"LD","typeId":"58d2-b879-49c7-43bc"},{"$text":"1","name":"OC","typeId":"bef7-942a-1a23-59f8"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":""}]},{"id":"d565-ca18-99bd-b5c0","unitId":"necrons:unit:skorpekh-lord","characteristics":[{"name":"M","typeId":"e703-ecb6-5ce7-aec1","$text":"8\""},{"name":"T","typeId":"d29d-cf75-fc2d-34a4","$text":"7"},{"name":"Sv","typeId":"450-a17e-9d5e-29da","$text":"3+"},{"name":"W","typeId":"750a-a2ec-90d3-21fe","$text":"7"},{"name":"LD","typeId":"58d2-b879-49c7-43bc","$text":"6+"},{"name":"OC","typeId":"bef7-942a-1a23-59f8","$text":"2"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":"4+"}]},{"id":"5a1c-b997-3cb3-5506","unitId":"necrons:unit:lokhust-lord","characteristics":[{"name":"M","typeId":"e703-ecb6-5ce7-aec1","$text":"8\""},{"name":"T","typeId":"d29d-cf75-fc2d-34a4","$text":"6"},{"name":"Sv","typeId":"450-a17e-9d5e-29da","$text":"3+"},{"name":"W","typeId":"750a-a2ec-90d3-21fe","$text":"6"},{"name":"LD","typeId":"58d2-b879-49c7-43bc","$text":"6+"},{"name":"OC","typeId":"bef7-942a-1a23-59f8","$text":"2"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":"4+"}]},{"id":"162-cd23-6153-278d","unitId":"necrons:unit:lord","characteristics":[{"$text":"5\"","name":"M","typeId":"e703-ecb6-5ce7-aec1"},{"$text":"5","name":"T","typeId":"d29d-cf75-fc2d-34a4"},{"$text":"3+","name":"Sv","typeId":"450-a17e-9d5e-29da"},{"$text":"4","name":"W","typeId":"750a-a2ec-90d3-21fe"},{"$text":"6+","name":"LD","typeId":"58d2-b879-49c7-43bc"},{"$text":"1","name":"OC","typeId":"bef7-942a-1a23-59f8"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":""}]},{"id":"27c2-cff5-9ce5-176d","unitId":"necrons:unit:catacomb-command-barge","characteristics":[{"name":"M","typeId":"e703-ecb6-5ce7-aec1","$text":"10\""},{"name":"T","typeId":"d29d-cf75-fc2d-34a4","$text":"8"},{"name":"Sv","typeId":"450-a17e-9d5e-29da","$text":"3+"},{"name":"W","typeId":"750a-a2ec-90d3-21fe","$text":"9"},{"name":"LD","typeId":"58d2-b879-49c7-43bc","$text":"6+"},{"name":"OC","typeId":"bef7-942a-1a23-59f8","$text":"3"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":"4+"}]},{"id":"255f-c2da-feed-5c8b","unitId":"necrons:unit:overlord","characteristics":[{"name":"M","typeId":"e703-ecb6-5ce7-aec1","$text":"5\""},{"name":"T","typeId":"d29d-cf75-fc2d-34a4","$text":"5"},{"name":"Sv","typeId":"450-a17e-9d5e-29da","$text":"2+"},{"name":"W","typeId":"750a-a2ec-90d3-21fe","$text":"6"},{"name":"LD","typeId":"58d2-b879-49c7-43bc","$text":"6+"},{"name":"OC","typeId":"bef7-942a-1a23-59f8","$text":"1"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":"4+"}]},{"id":"8de-5db6-b19e-104c","unitId":"necrons:unit:technomancer","characteristics":[{"$text":"10\"","name":"M","typeId":"e703-ecb6-5ce7-aec1"},{"$text":"4","name":"T","typeId":"d29d-cf75-fc2d-34a4"},{"$text":"4+","name":"Sv","typeId":"450-a17e-9d5e-29da"},{"$text":"4","name":"W","typeId":"750a-a2ec-90d3-21fe"},{"$text":"6+","name":"LD","typeId":"58d2-b879-49c7-43bc"},{"$text":"1","name":"OC","typeId":"bef7-942a-1a23-59f8"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":""}]},{"id":"b4b-f591-8741-ffd5","unitId":"necrons:unit:psychomancer","characteristics":[{"$text":"5\"","name":"M","typeId":"e703-ecb6-5ce7-aec1"},{"$text":"4","name":"T","typeId":"d29d-cf75-fc2d-34a4"},{"$text":"4+","name":"Sv","typeId":"450-a17e-9d5e-29da"},{"$text":"4","name":"W","typeId":"750a-a2ec-90d3-21fe"},{"$text":"6+","name":"LD","typeId":"58d2-b879-49c7-43bc"},{"$text":"1","name":"OC","typeId":"bef7-942a-1a23-59f8"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":""}]},{"id":"e241-7e15-5a1d-54fb","unitId":"necrons:unit:chronomancer","characteristics":[{"name":"M","typeId":"e703-ecb6-5ce7-aec1","$text":"5\""},{"name":"T","typeId":"d29d-cf75-fc2d-34a4","$text":"4"},{"name":"Sv","typeId":"450-a17e-9d5e-29da","$text":"4+"},{"name":"W","typeId":"750a-a2ec-90d3-21fe","$text":"4"},{"name":"LD","typeId":"58d2-b879-49c7-43bc","$text":"6+"},{"name":"OC","typeId":"bef7-942a-1a23-59f8","$text":"1"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":"4+"}]},{"id":"2d47-39ce-ad3a-b47d","unitId":"necrons:unit:plasmancer","characteristics":[{"$text":"5\"","name":"M","typeId":"e703-ecb6-5ce7-aec1"},{"$text":"4","name":"T","typeId":"d29d-cf75-fc2d-34a4"},{"$text":"4+","name":"Sv","typeId":"450-a17e-9d5e-29da"},{"$text":"4","name":"W","typeId":"750a-a2ec-90d3-21fe"},{"$text":"6+","name":"LD","typeId":"58d2-b879-49c7-43bc"},{"$text":"1","name":"OC","typeId":"bef7-942a-1a23-59f8"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":""}]},{"id":"b82c-b711-6d65-30b5","unitId":"necrons:unit:necron-warriors","characteristics":[{"$text":"5\"","name":"M","typeId":"e703-ecb6-5ce7-aec1"},{"$text":"4","name":"T","typeId":"d29d-cf75-fc2d-34a4"},{"$text":"4+","name":"Sv","typeId":"450-a17e-9d5e-29da"},{"$text":"1","name":"W","typeId":"750a-a2ec-90d3-21fe"},{"$text":"7+","name":"LD","typeId":"58d2-b879-49c7-43bc"},{"$text":"2","name":"OC","typeId":"bef7-942a-1a23-59f8"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":""}]},{"id":"6335-f9f1-2f48-4b16","unitId":"necrons:unit:immortals","characteristics":[{"$text":"5\"","name":"M","typeId":"e703-ecb6-5ce7-aec1"},{"$text":"5","name":"T","typeId":"d29d-cf75-fc2d-34a4"},{"$text":"3+","name":"Sv","typeId":"450-a17e-9d5e-29da"},{"$text":"1","name":"W","typeId":"750a-a2ec-90d3-21fe"},{"$text":"7+","name":"LD","typeId":"58d2-b879-49c7-43bc"},{"$text":"2","name":"OC","typeId":"bef7-942a-1a23-59f8"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":""}]},{"id":"9215-6472-fced-5024","unitId":"necrons:unit:canoptek-reanimator","characteristics":[{"$text":"8\"","name":"M","typeId":"e703-ecb6-5ce7-aec1"},{"$text":"6","name":"T","typeId":"d29d-cf75-fc2d-34a4"},{"$text":"3+","name":"Sv","typeId":"450-a17e-9d5e-29da"},{"$text":"6","name":"W","typeId":"750a-a2ec-90d3-21fe"},{"$text":"8+","name":"LD","typeId":"58d2-b879-49c7-43bc"},{"$text":"3","name":"OC","typeId":"bef7-942a-1a23-59f8"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":""}]},{"id":"1953-376f-1d09-dde4","unitId":"necrons:unit:hexmark-destroyer","characteristics":[{"$text":"8\"","name":"M","typeId":"e703-ecb6-5ce7-aec1"},{"$text":"5","name":"T","typeId":"d29d-cf75-fc2d-34a4"},{"$text":"3+","name":"Sv","typeId":"450-a17e-9d5e-29da"},{"$text":"5","name":"W","typeId":"750a-a2ec-90d3-21fe"},{"$text":"6+","name":"LD","typeId":"58d2-b879-49c7-43bc"},{"$text":"1","name":"OC","typeId":"bef7-942a-1a23-59f8"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":""}]},{"id":"494a-883-74b5-7dd4","unitId":"necrons:unit:lychguard","characteristics":[{"$text":"5\"","name":"M","typeId":"e703-ecb6-5ce7-aec1"},{"$text":"5","name":"T","typeId":"d29d-cf75-fc2d-34a4"},{"$text":"3+","name":"Sv","typeId":"450-a17e-9d5e-29da"},{"$text":"2","name":"W","typeId":"750a-a2ec-90d3-21fe"},{"$text":"7+","name":"LD","typeId":"58d2-b879-49c7-43bc"},{"$text":"1","name":"OC","typeId":"bef7-942a-1a23-59f8"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":""}]},{"id":"c8a6-d361-66fc-c3af","unitId":"necrons:unit:deathmarks","characteristics":[{"$text":"5\"","name":"M","typeId":"e703-ecb6-5ce7-aec1"},{"$text":"5","name":"T","typeId":"d29d-cf75-fc2d-34a4"},{"$text":"3+","name":"Sv","typeId":"450-a17e-9d5e-29da"},{"$text":"1","name":"W","typeId":"750a-a2ec-90d3-21fe"},{"$text":"7+","name":"LD","typeId":"58d2-b879-49c7-43bc"},{"$text":"1","name":"OC","typeId":"bef7-942a-1a23-59f8"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":""}]},{"id":"d871-93d1-8152-c52a","unitId":"necrons:unit:flayed-ones","characteristics":[{"$text":"5\"","name":"M","typeId":"e703-ecb6-5ce7-aec1"},{"$text":"4","name":"T","typeId":"d29d-cf75-fc2d-34a4"},{"$text":"4+","name":"Sv","typeId":"450-a17e-9d5e-29da"},{"$text":"1","name":"W","typeId":"750a-a2ec-90d3-21fe"},{"$text":"7+","name":"LD","typeId":"58d2-b879-49c7-43bc"},{"$text":"1","name":"OC","typeId":"bef7-942a-1a23-59f8"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":""}]},{"id":"ada9-f613-e1d8-dfb","unitId":"necrons:unit:cryptothralls","characteristics":[{"$text":"5\"","name":"M","typeId":"e703-ecb6-5ce7-aec1"},{"$text":"4","name":"T","typeId":"d29d-cf75-fc2d-34a4"},{"$text":"3+","name":"Sv","typeId":"450-a17e-9d5e-29da"},{"$text":"3","name":"W","typeId":"750a-a2ec-90d3-21fe"},{"$text":"8+","name":"LD","typeId":"58d2-b879-49c7-43bc"},{"$text":"1","name":"OC","typeId":"bef7-942a-1a23-59f8"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":""}]},{"id":"14d-53e1-498-7525","unitId":"necrons:unit:skorpekh-destroyers","characteristics":[{"$text":"8\"","name":"M","typeId":"e703-ecb6-5ce7-aec1"},{"$text":"6","name":"T","typeId":"d29d-cf75-fc2d-34a4"},{"$text":"3+","name":"Sv","typeId":"450-a17e-9d5e-29da"},{"$text":"3","name":"W","typeId":"750a-a2ec-90d3-21fe"},{"$text":"7+","name":"LD","typeId":"58d2-b879-49c7-43bc"},{"$text":"2","name":"OC","typeId":"bef7-942a-1a23-59f8"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":""}]},{"id":"2320-fe01-4368-be15","unitId":"necrons:unit:triarch-stalker","characteristics":[{"name":"M","typeId":"e703-ecb6-5ce7-aec1","$text":"8\""},{"name":"T","typeId":"d29d-cf75-fc2d-34a4","$text":"8"},{"name":"Sv","typeId":"450-a17e-9d5e-29da","$text":"3+"},{"name":"W","typeId":"750a-a2ec-90d3-21fe","$text":"12"},{"name":"LD","typeId":"58d2-b879-49c7-43bc","$text":"7+"},{"name":"OC","typeId":"bef7-942a-1a23-59f8","$text":"4"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":"4+"}]},{"id":"3b43-46a-877b-1c65","unitId":"necrons:unit:c-tan-shard-of-the-deceiver","characteristics":[{"name":"M","typeId":"e703-ecb6-5ce7-aec1","$text":"8\""},{"name":"T","typeId":"d29d-cf75-fc2d-34a4","$text":"11"},{"name":"Sv","typeId":"450-a17e-9d5e-29da","$text":"3+"},{"name":"W","typeId":"750a-a2ec-90d3-21fe","$text":"16"},{"name":"LD","typeId":"58d2-b879-49c7-43bc","$text":"6+"},{"name":"OC","typeId":"bef7-942a-1a23-59f8","$text":"4"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":"4+"}]},{"id":"3e4c-e6ce-4c39-19e3","unitId":"necrons:unit:c-tan-shard-of-the-nightbringer","characteristics":[{"name":"M","typeId":"e703-ecb6-5ce7-aec1","$text":"10\""},{"name":"T","typeId":"d29d-cf75-fc2d-34a4","$text":"11"},{"name":"Sv","typeId":"450-a17e-9d5e-29da","$text":"3+"},{"name":"W","typeId":"750a-a2ec-90d3-21fe","$text":"16"},{"name":"LD","typeId":"58d2-b879-49c7-43bc","$text":"6+"},{"name":"OC","typeId":"bef7-942a-1a23-59f8","$text":"4"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":"4+"}]},{"id":"9947-bca5-ee0f-16e4","unitId":"necrons:unit:c-tan-shard-of-the-void-dragon","characteristics":[{"name":"M","typeId":"e703-ecb6-5ce7-aec1","$text":"10\""},{"name":"T","typeId":"d29d-cf75-fc2d-34a4","$text":"11"},{"name":"Sv","typeId":"450-a17e-9d5e-29da","$text":"3+"},{"name":"W","typeId":"750a-a2ec-90d3-21fe","$text":"16"},{"name":"LD","typeId":"58d2-b879-49c7-43bc","$text":"6+"},{"name":"OC","typeId":"bef7-942a-1a23-59f8","$text":"4"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":"4+"}]},{"id":"4702-9574-e392-eea1","unitId":"necrons:unit:transcendent-c-tan","characteristics":[{"name":"M","typeId":"e703-ecb6-5ce7-aec1","$text":"8\""},{"name":"T","typeId":"d29d-cf75-fc2d-34a4","$text":"11"},{"name":"Sv","typeId":"450-a17e-9d5e-29da","$text":"3+"},{"name":"W","typeId":"750a-a2ec-90d3-21fe","$text":"16"},{"name":"LD","typeId":"58d2-b879-49c7-43bc","$text":"6+"},{"name":"OC","typeId":"bef7-942a-1a23-59f8","$text":"4"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":"4+"}]},{"id":"9341-1de5-e911-84d2","unitId":"necrons:unit:canoptek-spyders","characteristics":[{"$text":"5\"","name":"M","typeId":"e703-ecb6-5ce7-aec1"},{"$text":"7","name":"T","typeId":"d29d-cf75-fc2d-34a4"},{"$text":"3+","name":"Sv","typeId":"450-a17e-9d5e-29da"},{"$text":"6","name":"W","typeId":"750a-a2ec-90d3-21fe"},{"$text":"8+","name":"LD","typeId":"58d2-b879-49c7-43bc"},{"$text":"2","name":"OC","typeId":"bef7-942a-1a23-59f8"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":""}]},{"id":"971b-8c49-4470-694a","unitId":"necrons:unit:canoptek-scarab-swarms","characteristics":[{"$text":"10\"","name":"M","typeId":"e703-ecb6-5ce7-aec1"},{"$text":"2","name":"T","typeId":"d29d-cf75-fc2d-34a4"},{"$text":"6+","name":"Sv","typeId":"450-a17e-9d5e-29da"},{"$text":"4","name":"W","typeId":"750a-a2ec-90d3-21fe"},{"$text":"8+","name":"LD","typeId":"58d2-b879-49c7-43bc"},{"$text":"0","name":"OC","typeId":"bef7-942a-1a23-59f8"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":""}]},{"id":"689c-1c75-aeac-10fa","unitId":"necrons:unit:ophydian-destroyers","characteristics":[{"$text":"10\"","name":"M","typeId":"e703-ecb6-5ce7-aec1"},{"$text":"5","name":"T","typeId":"d29d-cf75-fc2d-34a4"},{"$text":"4+","name":"Sv","typeId":"450-a17e-9d5e-29da"},{"$text":"3","name":"W","typeId":"750a-a2ec-90d3-21fe"},{"$text":"7+","name":"LD","typeId":"58d2-b879-49c7-43bc"},{"$text":"2","name":"OC","typeId":"bef7-942a-1a23-59f8"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":""}]},{"id":"1bd4-7120-de85-41fa","unitId":"necrons:unit:tomb-blades","characteristics":[{"$text":"12\"","name":"M","typeId":"e703-ecb6-5ce7-aec1"},{"$text":"5","name":"T","typeId":"d29d-cf75-fc2d-34a4"},{"$text":"4+","name":"Sv","typeId":"450-a17e-9d5e-29da"},{"$text":"2","name":"W","typeId":"750a-a2ec-90d3-21fe"},{"$text":"7+","name":"LD","typeId":"58d2-b879-49c7-43bc"},{"$text":"2","name":"OC","typeId":"bef7-942a-1a23-59f8"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":""}]},{"id":"4587-c358-f38c-592c","unitId":"necrons:unit:triarch-praetorians","characteristics":[{"$text":"10\"","name":"M","typeId":"e703-ecb6-5ce7-aec1"},{"$text":"5","name":"T","typeId":"d29d-cf75-fc2d-34a4"},{"$text":"3+","name":"Sv","typeId":"450-a17e-9d5e-29da"},{"$text":"2","name":"W","typeId":"750a-a2ec-90d3-21fe"},{"$text":"7+","name":"LD","typeId":"58d2-b879-49c7-43bc"},{"$text":"1","name":"OC","typeId":"bef7-942a-1a23-59f8"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":""}]},{"id":"619a-b8da-477b-3995","unitId":"necrons:unit:canoptek-wraiths","characteristics":[{"name":"M","typeId":"e703-ecb6-5ce7-aec1","$text":"10\""},{"name":"T","typeId":"d29d-cf75-fc2d-34a4","$text":"6"},{"name":"Sv","typeId":"450-a17e-9d5e-29da","$text":"3+"},{"name":"W","typeId":"750a-a2ec-90d3-21fe","$text":"4"},{"name":"LD","typeId":"58d2-b879-49c7-43bc","$text":"8+"},{"name":"OC","typeId":"bef7-942a-1a23-59f8","$text":"2"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":"4+"}]},{"id":"9b54-de16-5f4a-154c","unitId":"necrons:unit:annihilation-barge","characteristics":[{"name":"M","typeId":"e703-ecb6-5ce7-aec1","$text":"10\""},{"name":"T","typeId":"d29d-cf75-fc2d-34a4","$text":"8"},{"name":"Sv","typeId":"450-a17e-9d5e-29da","$text":"3+"},{"name":"W","typeId":"750a-a2ec-90d3-21fe","$text":"9"},{"name":"LD","typeId":"58d2-b879-49c7-43bc","$text":"7+"},{"name":"OC","typeId":"bef7-942a-1a23-59f8","$text":"3"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":"4+"}]},{"id":"7c71-cfc9-f2c9-ad9a","unitId":"necrons:unit:doomsday-ark","characteristics":[{"name":"M","typeId":"e703-ecb6-5ce7-aec1","$text":"10\""},{"name":"T","typeId":"d29d-cf75-fc2d-34a4","$text":"9"},{"name":"Sv","typeId":"450-a17e-9d5e-29da","$text":"3+"},{"name":"W","typeId":"750a-a2ec-90d3-21fe","$text":"14"},{"name":"LD","typeId":"58d2-b879-49c7-43bc","$text":"7+"},{"name":"OC","typeId":"bef7-942a-1a23-59f8","$text":"5"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":"4+"}]},{"id":"44f8-fcc5-33db-5aec","unitId":"necrons:unit:lokhust-destroyers","characteristics":[{"$text":"8\"","name":"M","typeId":"e703-ecb6-5ce7-aec1"},{"$text":"6","name":"T","typeId":"d29d-cf75-fc2d-34a4"},{"$text":"3+","name":"Sv","typeId":"450-a17e-9d5e-29da"},{"$text":"3","name":"W","typeId":"750a-a2ec-90d3-21fe"},{"$text":"7+","name":"LD","typeId":"58d2-b879-49c7-43bc"},{"$text":"2","name":"OC","typeId":"bef7-942a-1a23-59f8"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":""}]},{"id":"49b-3fbc-163-dbb2","unitId":"necrons:unit:lokhust-heavy-destroyers","characteristics":[{"$text":"8\"","name":"M","typeId":"e703-ecb6-5ce7-aec1"},{"$text":"6","name":"T","typeId":"d29d-cf75-fc2d-34a4"},{"$text":"3+","name":"Sv","typeId":"450-a17e-9d5e-29da"},{"$text":"4","name":"W","typeId":"750a-a2ec-90d3-21fe"},{"$text":"7+","name":"LD","typeId":"58d2-b879-49c7-43bc"},{"$text":"2","name":"OC","typeId":"bef7-942a-1a23-59f8"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":""}]},{"id":"7519-6b4a-c8d5-72b0","unitId":"necrons:unit:canoptek-doomstalker","characteristics":[{"name":"M","typeId":"e703-ecb6-5ce7-aec1","$text":"8\""},{"name":"T","typeId":"d29d-cf75-fc2d-34a4","$text":"8"},{"name":"Sv","typeId":"450-a17e-9d5e-29da","$text":"3+"},{"name":"W","typeId":"750a-a2ec-90d3-21fe","$text":"12"},{"name":"LD","typeId":"58d2-b879-49c7-43bc","$text":"8+"},{"name":"OC","typeId":"bef7-942a-1a23-59f8","$text":"4"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":"4+"}]},{"id":"112f-249b-2b31-18b7","unitId":"necrons:unit:ghost-ark","characteristics":[{"name":"M","typeId":"e703-ecb6-5ce7-aec1","$text":"10\""},{"name":"T","typeId":"d29d-cf75-fc2d-34a4","$text":"9"},{"name":"Sv","typeId":"450-a17e-9d5e-29da","$text":"3+"},{"name":"W","typeId":"750a-a2ec-90d3-21fe","$text":"14"},{"name":"LD","typeId":"58d2-b879-49c7-43bc","$text":"7+"},{"name":"OC","typeId":"bef7-942a-1a23-59f8","$text":"3"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":"4+"}]},{"id":"c74f-ad90-fa44-9205","unitId":"necrons:unit:night-scythe","characteristics":[{"name":"M","typeId":"e703-ecb6-5ce7-aec1","$text":"14\""},{"name":"T","typeId":"d29d-cf75-fc2d-34a4","$text":"9"},{"name":"Sv","typeId":"450-a17e-9d5e-29da","$text":"3+"},{"name":"W","typeId":"750a-a2ec-90d3-21fe","$text":"12"},{"name":"LD","typeId":"58d2-b879-49c7-43bc","$text":"7+"},{"name":"OC","typeId":"bef7-942a-1a23-59f8","$text":"0"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":""}]},{"id":"5906-d95a-ab3e-19d4","unitId":"necrons:unit:doom-scythe","characteristics":[{"name":"M","typeId":"e703-ecb6-5ce7-aec1","$text":"-"},{"name":"T","typeId":"d29d-cf75-fc2d-34a4","$text":"9"},{"name":"Sv","typeId":"450-a17e-9d5e-29da","$text":"3+"},{"name":"W","typeId":"750a-a2ec-90d3-21fe","$text":"12"},{"name":"LD","typeId":"58d2-b879-49c7-43bc","$text":"7+"},{"name":"OC","typeId":"bef7-942a-1a23-59f8","$text":"-"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":""}]},{"id":"95e0-73ef-66fa-be35","unitId":"necrons:unit:obelisk","characteristics":[{"$text":"8\"","name":"M","typeId":"e703-ecb6-5ce7-aec1"},{"$text":"13","name":"T","typeId":"d29d-cf75-fc2d-34a4"},{"$text":"2+","name":"Sv","typeId":"450-a17e-9d5e-29da"},{"$text":"24","name":"W","typeId":"750a-a2ec-90d3-21fe"},{"$text":"7+","name":"LD","typeId":"58d2-b879-49c7-43bc"},{"$text":"8","name":"OC","typeId":"bef7-942a-1a23-59f8"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":""}]},{"id":"dd52-5616-8d3a-4041","unitId":"necrons:unit:tesseract-vault","characteristics":[{"name":"M","typeId":"e703-ecb6-5ce7-aec1","$text":"8\""},{"name":"T","typeId":"d29d-cf75-fc2d-34a4","$text":"12"},{"name":"Sv","typeId":"450-a17e-9d5e-29da","$text":"2+"},{"name":"W","typeId":"750a-a2ec-90d3-21fe","$text":"24"},{"name":"LD","typeId":"58d2-b879-49c7-43bc","$text":"7+"},{"name":"OC","typeId":"bef7-942a-1a23-59f8","$text":"8"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":"4+"}]},{"id":"d5b9-ce3b-1ca1-5b71","unitId":"necrons:unit:monolith","characteristics":[{"$text":"8\"","name":"M","typeId":"e703-ecb6-5ce7-aec1"},{"$text":"13","name":"T","typeId":"d29d-cf75-fc2d-34a4"},{"$text":"2+","name":"Sv","typeId":"450-a17e-9d5e-29da"},{"$text":"22","name":"W","typeId":"750a-a2ec-90d3-21fe"},{"$text":"7+","name":"LD","typeId":"58d2-b879-49c7-43bc"},{"$text":"8","name":"OC","typeId":"bef7-942a-1a23-59f8"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":""}]},{"id":"d6a0-ee6-dc2a-c253","unitId":"necrons:unit:the-silent-king","characteristics":[{"name":"M","typeId":"e703-ecb6-5ce7-aec1","$text":"8\""},{"name":"T","typeId":"d29d-cf75-fc2d-34a4","$text":"10"},{"name":"Sv","typeId":"450-a17e-9d5e-29da","$text":"2+"},{"name":"W","typeId":"750a-a2ec-90d3-21fe","$text":"16"},{"name":"LD","typeId":"58d2-b879-49c7-43bc","$text":"6+"},{"name":"OC","typeId":"bef7-942a-1a23-59f8","$text":"6"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":"4+"}]},{"id":"3836-dd6-8f9d-d5af","unitId":"necrons:unit:convergence-of-dominion","characteristics":[{"$text":"-","name":"M","typeId":"e703-ecb6-5ce7-aec1"},{"$text":"9","name":"T","typeId":"d29d-cf75-fc2d-34a4"},{"$text":"3+","name":"Sv","typeId":"450-a17e-9d5e-29da"},{"$text":"7","name":"W","typeId":"750a-a2ec-90d3-21fe"},{"$text":"8+","name":"LD","typeId":"58d2-b879-49c7-43bc"},{"$text":"0","name":"OC","typeId":"bef7-942a-1a23-59f8"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":""}]},{"id":"6d84-febb-18d8-c730","unitId":"necrons:unit:canoptek-tomb-stalker","characteristics":[{"name":"M","typeId":"e703-ecb6-5ce7-aec1","$text":"10\""},{"name":"T","typeId":"d29d-cf75-fc2d-34a4","$text":"9"},{"name":"Sv","typeId":"450-a17e-9d5e-29da","$text":"3+"},{"name":"W","typeId":"750a-a2ec-90d3-21fe","$text":"9"},{"name":"LD","typeId":"58d2-b879-49c7-43bc","$text":"8+"},{"name":"OC","typeId":"bef7-942a-1a23-59f8","$text":"3"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":"4+"}]},{"id":"7729-9493-d495-4f11","unitId":"necrons:unit:canoptek-tomb-sentinel","characteristics":[{"name":"M","typeId":"e703-ecb6-5ce7-aec1","$text":"10\""},{"name":"T","typeId":"d29d-cf75-fc2d-34a4","$text":"9"},{"name":"Sv","typeId":"450-a17e-9d5e-29da","$text":"3+"},{"name":"W","typeId":"750a-a2ec-90d3-21fe","$text":"9"},{"name":"LD","typeId":"58d2-b879-49c7-43bc","$text":"8+"},{"name":"OC","typeId":"bef7-942a-1a23-59f8","$text":"3"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":"4+"}]},{"id":"30c7-9a2d-d01-cc52","unitId":"necrons:unit:canoptek-acanthrites","characteristics":[{"$text":"12\"","name":"M","typeId":"e703-ecb6-5ce7-aec1"},{"$text":"5","name":"T","typeId":"d29d-cf75-fc2d-34a4"},{"$text":"3+","name":"Sv","typeId":"450-a17e-9d5e-29da"},{"$text":"2","name":"W","typeId":"750a-a2ec-90d3-21fe"},{"$text":"8+","name":"LD","typeId":"58d2-b879-49c7-43bc"},{"$text":"2","name":"OC","typeId":"bef7-942a-1a23-59f8"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":""}]},{"id":"9063-f961-100c-be6c","unitId":"necrons:unit:tesseract-ark","characteristics":[{"name":"M","typeId":"e703-ecb6-5ce7-aec1","$text":"9\""},{"name":"T","typeId":"d29d-cf75-fc2d-34a4","$text":"9"},{"name":"Sv","typeId":"450-a17e-9d5e-29da","$text":"3+"},{"name":"W","typeId":"750a-a2ec-90d3-21fe","$text":"10"},{"name":"LD","typeId":"58d2-b879-49c7-43bc","$text":"6+"},{"name":"OC","typeId":"bef7-942a-1a23-59f8","$text":"3"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":"4+"}]},{"id":"af7e-af40-2ff1-330a","unitId":"necrons:unit:seraptek-heavy-construct","characteristics":[{"name":"M","typeId":"e703-ecb6-5ce7-aec1","$text":"10\""},{"name":"T","typeId":"d29d-cf75-fc2d-34a4","$text":"12"},{"name":"Sv","typeId":"450-a17e-9d5e-29da","$text":"3+"},{"name":"W","typeId":"750a-a2ec-90d3-21fe","$text":"24"},{"name":"LD","typeId":"58d2-b879-49c7-43bc","$text":"7+"},{"name":"OC","typeId":"bef7-942a-1a23-59f8","$text":"10"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":"5+"}]},{"id":"794d-7cb2-f194-2d1e","unitId":"necrons:unit:gauss-pylon","characteristics":[{"name":"M","typeId":"e703-ecb6-5ce7-aec1","$text":"-"},{"name":"T","typeId":"d29d-cf75-fc2d-34a4","$text":"12"},{"name":"Sv","typeId":"450-a17e-9d5e-29da","$text":"3+"},{"name":"W","typeId":"750a-a2ec-90d3-21fe","$text":"22"},{"name":"LD","typeId":"58d2-b879-49c7-43bc","$text":"7+"},{"name":"OC","typeId":"bef7-942a-1a23-59f8","$text":"0"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":"5+"}]},{"id":"615e-edec-d46e-a2d1","unitId":"necrons:unit:sentry-pylon","characteristics":[{"$text":"-","name":"M","typeId":"e703-ecb6-5ce7-aec1"},{"$text":"8","name":"T","typeId":"d29d-cf75-fc2d-34a4"},{"$text":"3+","name":"Sv","typeId":"450-a17e-9d5e-29da"},{"$text":"10","name":"W","typeId":"750a-a2ec-90d3-21fe"},{"$text":"7+","name":"LD","typeId":"58d2-b879-49c7-43bc"},{"$text":"0","name":"OC","typeId":"bef7-942a-1a23-59f8"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":""}]},{"id":"8472-c77e-69e8-fe04","unitId":"necrons:unit:night-shroud","characteristics":[{"$text":"20+\"","name":"M","typeId":"e703-ecb6-5ce7-aec1"},{"$text":"9","name":"T","typeId":"d29d-cf75-fc2d-34a4"},{"$text":"3+","name":"Sv","typeId":"450-a17e-9d5e-29da"},{"$text":"14","name":"W","typeId":"750a-a2ec-90d3-21fe"},{"$text":"7+","name":"LD","typeId":"58d2-b879-49c7-43bc"},{"$text":"0","name":"OC","typeId":"bef7-942a-1a23-59f8"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":""}]},{"id":"b45b-bcca-6563-9f8f","unitId":"necrons:unit:overlord-with-translocation-shroud","characteristics":[{"name":"M","typeId":"e703-ecb6-5ce7-aec1","$text":"5\""},{"name":"T","typeId":"d29d-cf75-fc2d-34a4","$text":"5"},{"name":"Sv","typeId":"450-a17e-9d5e-29da","$text":"2+"},{"name":"W","typeId":"750a-a2ec-90d3-21fe","$text":"6"},{"name":"LD","typeId":"58d2-b879-49c7-43bc","$text":"6+"},{"name":"OC","typeId":"bef7-942a-1a23-59f8","$text":"1"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":"4+"}]},{"id":"9839-6ab6-d3ab-a7a9","unitId":"necrons:unit:canoptek-macrocytes","characteristics":[{"$text":"8\"","name":"M","typeId":"e703-ecb6-5ce7-aec1"},{"$text":"3","name":"T","typeId":"d29d-cf75-fc2d-34a4"},{"$text":"4+","name":"Sv","typeId":"450-a17e-9d5e-29da"},{"$text":"1","name":"W","typeId":"750a-a2ec-90d3-21fe"},{"$text":"8+","name":"LD","typeId":"58d2-b879-49c7-43bc"},{"$text":"1","name":"OC","typeId":"bef7-942a-1a23-59f8"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":""}]},{"id":"dfd0-f0c6-969c-d56f","unitId":"necrons:unit:canoptek-tomb-crawlers","characteristics":[{"$text":"5\"","name":"M","typeId":"e703-ecb6-5ce7-aec1"},{"$text":"4","name":"T","typeId":"d29d-cf75-fc2d-34a4"},{"$text":"3+","name":"Sv","typeId":"450-a17e-9d5e-29da"},{"$text":"3","name":"W","typeId":"750a-a2ec-90d3-21fe"},{"$text":"8+","name":"LD","typeId":"58d2-b879-49c7-43bc"},{"$text":"1","name":"OC","typeId":"bef7-942a-1a23-59f8"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":""}]},{"id":"3e8f-4444-2913-dbee","unitId":"necrons:unit:geomancer","characteristics":[{"$text":"8\"","name":"M","typeId":"e703-ecb6-5ce7-aec1"},{"$text":"4","name":"T","typeId":"d29d-cf75-fc2d-34a4"},{"$text":"4+","name":"Sv","typeId":"450-a17e-9d5e-29da"},{"$text":"4","name":"W","typeId":"750a-a2ec-90d3-21fe"},{"$text":"6+","name":"LD","typeId":"58d2-b879-49c7-43bc"},{"$text":"1","name":"OC","typeId":"bef7-942a-1a23-59f8"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":""}]},{"id":"6be9-3a06-a7ef-6039","unitId":"necrons:unit:nekrosor-ammentar","characteristics":[{"name":"M","typeId":"e703-ecb6-5ce7-aec1","$text":"10\""},{"name":"T","typeId":"d29d-cf75-fc2d-34a4","$text":"8"},{"name":"Sv","typeId":"450-a17e-9d5e-29da","$text":"3+"},{"name":"W","typeId":"750a-a2ec-90d3-21fe","$text":"9"},{"name":"LD","typeId":"58d2-b879-49c7-43bc","$text":"6+"},{"name":"OC","typeId":"bef7-942a-1a23-59f8","$text":"3"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":"4+"}]},{"id":"5f3a-cd11-37a4-240b","unitId":"necrons:unit:dynastic-conqueror-crucible","characteristics":[{"name":"M","typeId":"e703-ecb6-5ce7-aec1","$text":"5\""},{"name":"T","typeId":"d29d-cf75-fc2d-34a4","$text":"5"},{"name":"Sv","typeId":"450-a17e-9d5e-29da","$text":"3+"},{"name":"W","typeId":"750a-a2ec-90d3-21fe","$text":"6"},{"name":"LD","typeId":"58d2-b879-49c7-43bc","$text":"6+"},{"name":"OC","typeId":"bef7-942a-1a23-59f8","$text":"1"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":"4+"}]},{"id":"263e-7072-782e-4e31","unitId":"necrons:unit:hyperscientist-crucible","characteristics":[{"$text":"5\"","name":"M","typeId":"e703-ecb6-5ce7-aec1"},{"$text":"4","name":"T","typeId":"d29d-cf75-fc2d-34a4"},{"$text":"4+","name":"Sv","typeId":"450-a17e-9d5e-29da"},{"$text":"4","name":"W","typeId":"750a-a2ec-90d3-21fe"},{"$text":"6+","name":"LD","typeId":"58d2-b879-49c7-43bc"},{"$text":"1","name":"OC","typeId":"bef7-942a-1a23-59f8"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":""}]},{"id":"fd78-e992-998b-1178","unitId":"necrons:unit:triarchal-overseer-crucible","characteristics":[{"name":"M","typeId":"e703-ecb6-5ce7-aec1","$text":"8\""},{"name":"T","typeId":"d29d-cf75-fc2d-34a4","$text":"8"},{"name":"Sv","typeId":"450-a17e-9d5e-29da","$text":"3+"},{"name":"W","typeId":"750a-a2ec-90d3-21fe","$text":"12"},{"name":"LD","typeId":"58d2-b879-49c7-43bc","$text":"7+"},{"name":"OC","typeId":"bef7-942a-1a23-59f8","$text":"4"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":"4+"}]},{"id":"3c9e-fa34-648c-0f76","unitId":"necrons:unit:tomb-citadel-walls","characteristics":[{"name":"M","typeId":"e703-ecb6-5ce7-aec1","$text":"-"},{"name":"T","typeId":"d29d-cf75-fc2d-34a4","$text":"13"},{"name":"Sv","typeId":"450-a17e-9d5e-29da","$text":"2+"},{"name":"W","typeId":"750a-a2ec-90d3-21fe","$text":"50"},{"name":"LD","typeId":"58d2-b879-49c7-43bc","$text":"7+"},{"name":"OC","typeId":"bef7-942a-1a23-59f8","$text":"0"},{"name":"InSv","typeId":"55a7-5b54-c60d-11dc","$text":"5+"}]},{"id":"necrons:unit:amonhotekh-s-guard-canoptek-doomstalker:profile","unitId":"necrons:unit:amonhotekh-s-guard-canoptek-doomstalker","characteristics":{"M":"8","T":"8","W":"12","Sv":"3","Ld":"8","OC":"4"}},{"id":"necrons:unit:amonhotekh-s-guard-canoptek-scarab-swarms:profile","unitId":"necrons:unit:amonhotekh-s-guard-canoptek-scarab-swarms","characteristics":{"M":"10","T":"2","W":"4","Sv":"6","Ld":"8","OC":"0"}},{"id":"necrons:unit:amonhotekh-s-guard-necron-warriors:profile","unitId":"necrons:unit:amonhotekh-s-guard-necron-warriors","characteristics":{"M":"5","T":"4","W":"1","Sv":"4","Ld":"7","OC":"2"}},{"id":"necrons:unit:amonhotekh-s-guard-skorpekh-destroyers:profile","unitId":"necrons:unit:amonhotekh-s-guard-skorpekh-destroyers","characteristics":{"M":"8","T":"6","W":"3","Sv":"3","Ld":"7","OC":"2"}},{"id":"necrons:unit:overlord-amonhotekh:profile","unitId":"necrons:unit:overlord-amonhotekh","characteristics":{"M":"5","T":"5","W":"6","Sv":"2","Ld":"6","OC":"1"}}]}
+{
+  "edition": "11th",
+  "faction": "necrons",
+  "package": "profiles",
+  "records": [
+    {
+      "id": "ca62-cc3a-b9a2-9c50",
+      "unitId": "necrons:unit:orikan-the-diviner",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "5\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "4",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "4+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "4",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "6+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "1",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "4+",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "2421-336c-d2d0-fef5",
+      "unitId": "necrons:unit:imotekh-the-stormlord",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "5\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "5",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "2+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "6",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "6+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "1",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "4+",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "2b79-e1-d7d7-6a8",
+      "unitId": "necrons:unit:anrakyr-the-traveller",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "5\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "5",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "2+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "6",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "6+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "1",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "4+",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "e7a3-2c53-d4bd-7828",
+      "unitId": "necrons:unit:vargard-obyron",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "5\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "5",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "2+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "5",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "6+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "1",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "b58-b800-d98e-9e43",
+      "unitId": "necrons:unit:illuminor-szeras",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "8\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "8",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "2+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "9",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "6+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "3",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "4+",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "9f8e-932d-d5a2-bb8c",
+      "unitId": "necrons:unit:nemesor-zahndrekh",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "5\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "5",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "2+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "6",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "7+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "1",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "4+",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "27ca-42d0-dc26-8695",
+      "unitId": "necrons:unit:trazyn-the-infinite",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "5\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "5",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "2+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "6",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "6+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "1",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "4+",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "47c8-8c7-55bc-4279",
+      "unitId": "necrons:unit:royal-warden",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "5\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "5",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "3+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "4",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "6+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "1",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "d565-ca18-99bd-b5c0",
+      "unitId": "necrons:unit:skorpekh-lord",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "8\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "7",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "3+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "7",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "6+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "2",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "4+",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "5a1c-b997-3cb3-5506",
+      "unitId": "necrons:unit:lokhust-lord",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "8\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "6",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "3+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "6",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "6+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "2",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "4+",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "162-cd23-6153-278d",
+      "unitId": "necrons:unit:lord",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "5\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "5",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "3+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "4",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "6+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "1",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "27c2-cff5-9ce5-176d",
+      "unitId": "necrons:unit:catacomb-command-barge",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "10\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "8",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "3+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "9",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "6+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "3",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "4+",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "255f-c2da-feed-5c8b",
+      "unitId": "necrons:unit:overlord",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "5\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "5",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "2+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "6",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "6+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "1",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "4+",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "8de-5db6-b19e-104c",
+      "unitId": "necrons:unit:technomancer",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "10\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "4",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "4+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "4",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "6+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "1",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "b4b-f591-8741-ffd5",
+      "unitId": "necrons:unit:psychomancer",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "5\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "4",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "4+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "4",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "6+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "1",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "e241-7e15-5a1d-54fb",
+      "unitId": "necrons:unit:chronomancer",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "5\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "4",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "4+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "4",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "6+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "1",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "4+",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "2d47-39ce-ad3a-b47d",
+      "unitId": "necrons:unit:plasmancer",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "5\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "4",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "4+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "4",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "6+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "1",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "b82c-b711-6d65-30b5",
+      "unitId": "necrons:unit:necron-warriors",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "5\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "4",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "4+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "1",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "7+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "2",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "6335-f9f1-2f48-4b16",
+      "unitId": "necrons:unit:immortals",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "5\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "5",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "3+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "1",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "7+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "2",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "9215-6472-fced-5024",
+      "unitId": "necrons:unit:canoptek-reanimator",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "8\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "6",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "3+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "6",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "8+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "3",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "1953-376f-1d09-dde4",
+      "unitId": "necrons:unit:hexmark-destroyer",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "8\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "5",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "3+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "5",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "6+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "1",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "494a-883-74b5-7dd4",
+      "unitId": "necrons:unit:lychguard",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "5\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "5",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "3+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "2",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "7+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "1",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "c8a6-d361-66fc-c3af",
+      "unitId": "necrons:unit:deathmarks",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "5\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "5",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "3+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "1",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "7+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "1",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "d871-93d1-8152-c52a",
+      "unitId": "necrons:unit:flayed-ones",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "5\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "4",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "4+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "1",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "7+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "1",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "ada9-f613-e1d8-dfb",
+      "unitId": "necrons:unit:cryptothralls",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "5\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "4",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "3+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "3",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "8+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "1",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "14d-53e1-498-7525",
+      "unitId": "necrons:unit:skorpekh-destroyers",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "8\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "6",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "3+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "3",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "7+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "2",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "2320-fe01-4368-be15",
+      "unitId": "necrons:unit:triarch-stalker",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "8\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "8",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "3+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "12",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "7+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "4",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "4+",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "3b43-46a-877b-1c65",
+      "unitId": "necrons:unit:c-tan-shard-of-the-deceiver",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "8\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "11",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "3+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "16",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "6+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "4",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "4+",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "3e4c-e6ce-4c39-19e3",
+      "unitId": "necrons:unit:c-tan-shard-of-the-nightbringer",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "10\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "11",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "3+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "16",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "6+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "4",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "4+",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "9947-bca5-ee0f-16e4",
+      "unitId": "necrons:unit:c-tan-shard-of-the-void-dragon",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "10\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "11",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "3+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "16",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "6+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "4",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "4+",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "4702-9574-e392-eea1",
+      "unitId": "necrons:unit:transcendent-c-tan",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "8\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "11",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "3+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "16",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "6+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "4",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "4+",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "9341-1de5-e911-84d2",
+      "unitId": "necrons:unit:canoptek-spyders",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "5\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "7",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "3+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "6",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "8+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "2",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "971b-8c49-4470-694a",
+      "unitId": "necrons:unit:canoptek-scarab-swarms",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "10\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "2",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "6+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "4",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "8+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "0",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "689c-1c75-aeac-10fa",
+      "unitId": "necrons:unit:ophydian-destroyers",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "10\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "5",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "4+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "3",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "7+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "2",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "1bd4-7120-de85-41fa",
+      "unitId": "necrons:unit:tomb-blades",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "12\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "5",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "4+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "2",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "7+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "2",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "4587-c358-f38c-592c",
+      "unitId": "necrons:unit:triarch-praetorians",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "10\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "5",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "3+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "2",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "7+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "1",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "619a-b8da-477b-3995",
+      "unitId": "necrons:unit:canoptek-wraiths",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "10\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "6",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "3+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "4",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "8+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "2",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "4+",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "9b54-de16-5f4a-154c",
+      "unitId": "necrons:unit:annihilation-barge",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "10\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "8",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "3+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "9",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "7+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "3",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "4+",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "7c71-cfc9-f2c9-ad9a",
+      "unitId": "necrons:unit:doomsday-ark",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "10\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "9",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "3+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "14",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "7+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "5",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "4+",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "44f8-fcc5-33db-5aec",
+      "unitId": "necrons:unit:lokhust-destroyers",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "8\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "6",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "3+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "3",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "7+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "2",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "49b-3fbc-163-dbb2",
+      "unitId": "necrons:unit:lokhust-heavy-destroyers",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "8\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "6",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "3+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "4",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "7+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "2",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "7519-6b4a-c8d5-72b0",
+      "unitId": "necrons:unit:canoptek-doomstalker",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "8\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "8",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "3+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "12",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "8+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "4",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "4+",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "112f-249b-2b31-18b7",
+      "unitId": "necrons:unit:ghost-ark",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "10\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "9",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "3+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "14",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "7+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "3",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "4+",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "c74f-ad90-fa44-9205",
+      "unitId": "necrons:unit:night-scythe",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "14\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "9",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "3+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "12",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "7+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "0",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "5906-d95a-ab3e-19d4",
+      "unitId": "necrons:unit:doom-scythe",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "-",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "9",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "3+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "12",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "7+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "-",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "95e0-73ef-66fa-be35",
+      "unitId": "necrons:unit:obelisk",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "8\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "13",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "2+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "24",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "7+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "8",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "dd52-5616-8d3a-4041",
+      "unitId": "necrons:unit:tesseract-vault",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "8\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "12",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "2+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "24",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "7+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "8",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "4+",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "d5b9-ce3b-1ca1-5b71",
+      "unitId": "necrons:unit:monolith",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "8\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "13",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "2+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "22",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "7+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "8",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "d6a0-ee6-dc2a-c253",
+      "unitId": "necrons:unit:the-silent-king",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "8\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "10",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "2+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "16",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "6+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "6",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "4+",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "3836-dd6-8f9d-d5af",
+      "unitId": "necrons:unit:convergence-of-dominion",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "-",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "9",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "3+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "7",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "8+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "0",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "6d84-febb-18d8-c730",
+      "unitId": "necrons:unit:canoptek-tomb-stalker",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "10\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "9",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "3+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "9",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "8+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "3",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "4+",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "7729-9493-d495-4f11",
+      "unitId": "necrons:unit:canoptek-tomb-sentinel",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "10\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "9",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "3+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "9",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "8+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "3",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "4+",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "30c7-9a2d-d01-cc52",
+      "unitId": "necrons:unit:canoptek-acanthrites",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "12\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "5",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "3+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "2",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "8+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "2",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "9063-f961-100c-be6c",
+      "unitId": "necrons:unit:tesseract-ark",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "9\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "9",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "3+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "10",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "6+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "3",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "4+",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "af7e-af40-2ff1-330a",
+      "unitId": "necrons:unit:seraptek-heavy-construct",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "10\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "12",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "3+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "24",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "7+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "10",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "5+",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "794d-7cb2-f194-2d1e",
+      "unitId": "necrons:unit:gauss-pylon",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "-",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "12",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "3+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "22",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "7+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "0",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "5+",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "615e-edec-d46e-a2d1",
+      "unitId": "necrons:unit:sentry-pylon",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "-",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "8",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "3+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "10",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "7+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "0",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "8472-c77e-69e8-fe04",
+      "unitId": "necrons:unit:night-shroud",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "20+\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "9",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "3+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "14",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "7+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "0",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "b45b-bcca-6563-9f8f",
+      "unitId": "necrons:unit:overlord-with-translocation-shroud",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "5\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "5",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "2+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "6",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "6+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "1",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "4+",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "9839-6ab6-d3ab-a7a9",
+      "unitId": "necrons:unit:canoptek-macrocytes",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "8\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "3",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "4+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "1",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "8+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "1",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "dfd0-f0c6-969c-d56f",
+      "unitId": "necrons:unit:canoptek-tomb-crawlers",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "5\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "4",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "3+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "3",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "8+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "1",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "3e8f-4444-2913-dbee",
+      "unitId": "necrons:unit:geomancer",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "8\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "4",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "4+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "4",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "6+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "1",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "6be9-3a06-a7ef-6039",
+      "unitId": "necrons:unit:nekrosor-ammentar",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "10\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "8",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "3+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "9",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "6+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "3",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "4+",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "5f3a-cd11-37a4-240b",
+      "unitId": "necrons:unit:dynastic-conqueror-crucible",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "5\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "5",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "3+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "6",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "6+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "1",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "4+",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "263e-7072-782e-4e31",
+      "unitId": "necrons:unit:hyperscientist-crucible",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "5\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "4",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "4+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "4",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "6+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "1",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "fd78-e992-998b-1178",
+      "unitId": "necrons:unit:triarchal-overseer-crucible",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "8\"",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "8",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "3+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "12",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "7+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "4",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "4+",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "3c9e-fa34-648c-0f76",
+      "unitId": "necrons:unit:tomb-citadel-walls",
+      "characteristics": [
+        {
+          "name": "M",
+          "$text": "-",
+          "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+          "name": "T",
+          "$text": "13",
+          "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+          "name": "Sv",
+          "$text": "2+",
+          "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+          "name": "W",
+          "$text": "50",
+          "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+          "name": "LD",
+          "$text": "7+",
+          "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+          "name": "OC",
+          "$text": "0",
+          "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+          "name": "InSv",
+          "$text": "5+",
+          "typeId": "55a7-5b54-c60d-11dc"
+        }
+      ]
+    },
+    {
+      "id": "necrons:unit:amonhotekh-s-guard-canoptek-doomstalker:profile",
+      "unitId": "necrons:unit:amonhotekh-s-guard-canoptek-doomstalker",
+      "characteristics": {
+        "M": "8",
+        "T": "8",
+        "W": "12",
+        "Ld": "8",
+        "OC": "4",
+        "Sv": "3"
+      }
+    },
+    {
+      "id": "necrons:unit:amonhotekh-s-guard-canoptek-scarab-swarms:profile",
+      "unitId": "necrons:unit:amonhotekh-s-guard-canoptek-scarab-swarms",
+      "characteristics": {
+        "M": "10",
+        "T": "2",
+        "W": "4",
+        "Ld": "8",
+        "OC": "0",
+        "Sv": "6"
+      }
+    },
+    {
+      "id": "necrons:unit:amonhotekh-s-guard-necron-warriors:profile",
+      "unitId": "necrons:unit:amonhotekh-s-guard-necron-warriors",
+      "characteristics": {
+        "M": "5",
+        "T": "4",
+        "W": "1",
+        "Ld": "7",
+        "OC": "2",
+        "Sv": "4"
+      }
+    },
+    {
+      "id": "necrons:unit:amonhotekh-s-guard-skorpekh-destroyers:profile",
+      "unitId": "necrons:unit:amonhotekh-s-guard-skorpekh-destroyers",
+      "characteristics": {
+        "M": "8",
+        "T": "6",
+        "W": "3",
+        "Ld": "7",
+        "OC": "2",
+        "Sv": "3"
+      }
+    },
+    {
+      "id": "necrons:unit:overlord-amonhotekh:profile",
+      "unitId": "necrons:unit:overlord-amonhotekh",
+      "characteristics": {
+        "M": "5",
+        "T": "5",
+        "W": "6",
+        "Ld": "6",
+        "OC": "1",
+        "Sv": "2"
+      }
+    }
+  ],
+  "schemaVersion": 2
+}

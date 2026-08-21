@@ -8,60 +8,65 @@
     ],
     "includesSharedCoreRules": true
   },
+  "resolved": {
+    "units": "data/resolved/units.json",
+    "detachments": "data/resolved/detachments.json",
+    "relationships": "data/resolved/relationships.json"
+  },
   "factions": {
     "necrons": {
       "packages": {
-        "units": {
-          "file": "data/necrons/units.json",
-          "hash": "77f1f297533776f09ab5265985bf1de059313f76c3f238a17e76481dcdddc22a"
-        },
-        "profiles": {
-          "file": "data/necrons/profiles.json",
-          "hash": "3c69c95893862ab7155e6ca53e10e32e94006d9a6d5c78e194b1382702846244"
-        },
-        "weapons": {
-          "file": "data/necrons/weapons.json",
-          "hash": "1eb19ed960d9459fb1593351053f49475e75ba33022b4a8382f5a7109eec63fd"
-        },
         "abilities": {
           "file": "data/necrons/abilities.json",
-          "hash": "7155d0ba4135adac69335e8a389da6101675f7a355de850c791e30c7f8a77582"
-        },
-        "keywords": {
-          "file": "data/necrons/keywords.json",
-          "hash": "db8773edb2b0dcd062369b24ee69dbbd1a7f69fca8dd353b5b77a0c862d96364"
-        },
-        "detachments": {
-          "file": "data/necrons/detachments.json",
-          "hash": "0516976e2c2ddcc7c51a034ef223b71c8494c0908fd69dcaeeeda90c09cce9fd"
-        },
-        "enhancements": {
-          "file": "data/necrons/enhancements.json",
-          "hash": "af349b185ae30e8622e6aad14c3c5d2cfc71ade35e0aa4894b1003e36245efbc"
-        },
-        "stratagems": {
-          "file": "data/necrons/stratagems.json",
-          "hash": "d08d89f33362badc6a38fb7f5ab7f317ad1bd886805c9461109909ffef097b0a"
-        },
-        "points": {
-          "file": "data/necrons/points.json",
-          "hash": "b3f6e2f7c5e800e7a1eb536c44123f5c8221df6e4c2db8f35cc3a4cc8484429a"
-        },
-        "leaders": {
-          "file": "data/necrons/leaders.json",
-          "hash": "44195589a423190d7c6375b80021926d81fb7b788c14c3935b3e26e9db15c0a7"
-        },
-        "core-rules": {
-          "file": "data/necrons/core-rules.json",
-          "hash": "1c2f0ac141c7696f5c3ddda0a9a0001b3624eb62385dcab0719df3dea3efe31c"
+          "hash": "5acb8e2d6d0c7db3216bbe04967f68366545b43eb0c99ba8b8ddf11e89afd70a"
         },
         "community-40kdc": {
           "file": "data/necrons/community-40kdc.json",
-          "hash": "ad5d963f98651beb58c9ad4a0562c736abf38f636d964bc155d817ecaff692b9"
+          "hash": "b093b36b07b448528e159b9b8b51d9702b54bf5d9498a2422aa8f5b5d5de9960"
+        },
+        "core-rules": {
+          "file": "data/necrons/core-rules.json",
+          "hash": "5976132d19ed5dd7d35ac4f5985bcf679f10299bee1f9b7dc90514a422d606a7"
+        },
+        "detachments": {
+          "file": "data/necrons/detachments.json",
+          "hash": "90f7e2eec9fdd4d964848045b154e0057c8e4f06a68e3afc0e27495bc8bb97ed"
+        },
+        "enhancements": {
+          "file": "data/necrons/enhancements.json",
+          "hash": "703eebc334f6d9f0d009a5568375dc052cdf3a9957f105d4da05b4c841c07156"
+        },
+        "keywords": {
+          "file": "data/necrons/keywords.json",
+          "hash": "dcbf46fa2620d3f89019ad5f5d67959f59401b9c5af04c647a25870785e69ed2"
+        },
+        "leaders": {
+          "file": "data/necrons/leaders.json",
+          "hash": "4e3af1a55c60cbf44ecc597e5d849f300231cd18b44392337870c89fb75f8b81"
+        },
+        "points": {
+          "file": "data/necrons/points.json",
+          "hash": "f7ad77c5ec1c4512a600bfc71d39556cd58c4b2e5f0eaf4fb1e514b37b9ae1bf"
+        },
+        "profiles": {
+          "file": "data/necrons/profiles.json",
+          "hash": "1a94a9ff1cd8196daf74f517ee3d6a9a65df5e919e4a67881c60cab36f1d1202"
         },
         "source": {
           "file": "data/necrons/source.json",
-          "hash": "5ab5a23bb38d5706f5432638b7c37452c2bbd62cae9b722a9f7cd8149a87a067"
+          "hash": "d28520cb6f5e9122e106074a1d722ce8ee67e101791dbabfff0a96eadac174d4"
+        },
+        "stratagems": {
+          "file": "data/necrons/stratagems.json",
+          "hash": "a68be4b5790362d9a4d28cc8511844aba096f18ca92e2ac9a539901d63c375bf"
+        },
+        "units": {
+          "file": "data/necrons/units.json",
+          "hash": "164a734981953761b9a0c1a8048ae4e36c78707da88cd023bca1af77b177e46d"
+        },
+        "weapons": {
+          "file": "data/necrons/weapons.json",
+          "hash": "c134f13b9c2bda69d8db9edfa44d99bbd19bb3429928a42bbd5a393e0b13eb05"
         }
       }
     }

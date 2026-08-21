@@ -1,1 +1,1547 @@
-{"schemaVersion":2,"package":"stratagems","edition":"11th","faction":"necrons","records":[{"id":"aggression-protocols-amonhotekhs-guard","name":"Aggression Protocols","category":"detachment","detachmentId":"necrons:detachment:amonhotekhs-guard","cp":1,"phases":["movement"],"playerTurn":"your-turn","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"animus-curse-cryptek-conclave","name":"ANIMUS CURSE","category":"detachment","type":"wargear","detachmentId":"necrons:detachment:cryptek-conclave","cp":1,"phases":["fight","shooting"],"playerTurn":"either","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"blood-fuelled-cruelty-annihilation-legion","name":"BLOOD-FUELLED CRUELTY","category":"detachment","type":"battle-tactic","detachmentId":"necrons:detachment:annihilation-legion","cp":1,"phases":["movement"],"playerTurn":"opponent-turn","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"chronodistortion-pantheon-of-woe","name":"CHRONODISTORTION","category":"detachment","type":"battle-tactic","detachmentId":"necrons:detachment:pantheon-of-woe","cp":1,"phases":["fight"],"playerTurn":"either","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"chronoshift-starshatter-arsenal","name":"CHRONOSHIFT","category":"detachment","type":"strategic-ploy","detachmentId":"necrons:detachment:starshatter-arsenal","cp":1,"phases":["movement"],"playerTurn":"your-turn","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"cosmic-precision-hypercrypt-legion","name":"COSMIC PRECISION","category":"detachment","type":"strategic-ploy","detachmentId":"necrons:detachment:hypercrypt-legion","cp":1,"phases":["movement"],"playerTurn":"your-turn","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"cosmic-storm-the-phaerons-armoury","name":"Cosmic Storm","category":"detachment","detachmentId":"necrons:detachment:the-phaeron-s-armoury","cp":1,"phases":["shooting"],"playerTurn":"your-turn","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"countertemporal-shift-canoptek-court","name":"COUNTERTEMPORAL SHIFT","category":"detachment","type":"strategic-ploy","detachmentId":"necrons:detachment:canoptek-court","cp":1,"phases":["shooting"],"playerTurn":"opponent-turn","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"curse-of-the-cryptek-canoptek-court","name":"CURSE OF THE CRYPTEK","category":"detachment","type":"battle-tactic","detachmentId":"necrons:detachment:canoptek-court","cp":1,"phases":["fight","shooting"],"playerTurn":"either","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"cynosure-of-eradication-canoptek-court","name":"CYNOSURE OF ERADICATION","category":"detachment","type":"battle-tactic","detachmentId":"necrons:detachment:canoptek-court","cp":2,"phases":["fight","shooting"],"playerTurn":"either","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"dimensional-corridor-hypercrypt-legion","name":"DIMENSIONAL CORRIDOR","category":"detachment","type":"strategic-ploy","detachmentId":"necrons:detachment:hypercrypt-legion","cp":2,"phases":["charge"],"playerTurn":"your-turn","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"dimensional-tunnel-starshatter-arsenal","name":"DIMENSIONAL TUNNEL","category":"detachment","type":"strategic-ploy","detachmentId":"necrons:detachment:starshatter-arsenal","cp":1,"phases":["movement"],"playerTurn":"your-turn","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"disharmonisation-cascade-pantheon-of-woe","name":"DISHARMONISATION CASCADE","category":"detachment","type":"epic-deed","detachmentId":"necrons:detachment:pantheon-of-woe","cp":1,"phases":["command","movement","shooting","charge","fight"],"playerTurn":"either","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"dominance-protocols-hand-of-the-dynasty","name":"Dominance Protocols","category":"detachment","detachmentId":"necrons:detachment:hand-of-the-dynasty","cp":1,"phases":["command"],"playerTurn":"your-turn","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"driven-to-butchery-cursed-legion","name":"DRIVEN TO BUTCHERY","category":"detachment","type":"strategic-ploy","detachmentId":"necrons:detachment:cursed-legion","cp":1,"phases":["charge","shooting"],"playerTurn":"your-turn","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"endless-servitude-starshatter-arsenal","name":"ENDLESS SERVITUDE","category":"detachment","type":"strategic-ploy","detachmentId":"necrons:detachment:starshatter-arsenal","cp":1,"phases":["fight"],"playerTurn":"your-turn","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"enslaved-artifice-obeisance-phalanx","name":"ENSLAVED ARTIFICE","category":"detachment","type":"battle-tactic","detachmentId":"necrons:detachment:obeisance-phalanx","cp":1,"phases":["fight","shooting"],"playerTurn":"either","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"entrophasic-aura-targeting-pantheon-of-woe","name":"ENTROPHASIC AURA TARGETING","category":"detachment","type":"battle-tactic","detachmentId":"necrons:detachment:pantheon-of-woe","cp":1,"phases":["fight","shooting"],"playerTurn":"either","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"entropic-damping-hypercrypt-legion","name":"ENTROPIC DAMPING","category":"detachment","type":"wargear","detachmentId":"necrons:detachment:hypercrypt-legion","cp":1,"phases":["shooting"],"playerTurn":"opponent-turn","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"evasive-protocols-skyshroud-spearhead","name":"Evasive Protocols","category":"detachment","detachmentId":"necrons:detachment:skyshroud-spearhead","cp":1,"phases":["shooting"],"playerTurn":"opponent-turn","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"gauss-storm-amonhotekhs-guard","name":"Gauss Storm","category":"detachment","detachmentId":"necrons:detachment:amonhotekhs-guard","cp":1,"phases":["shooting"],"playerTurn":"your-turn","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"hyperphasic-recall-hypercrypt-legion","name":"HYPERPHASIC RECALL","category":"detachment","type":"strategic-ploy","detachmentId":"necrons:detachment:hypercrypt-legion","cp":2,"phases":["fight","shooting"],"playerTurn":"either","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"image-of-death-cursed-legion","name":"IMAGE OF DEATH","category":"detachment","type":"battle-tactic","detachmentId":"necrons:detachment:cursed-legion","cp":1,"phases":["fight","shooting"],"playerTurn":"either","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"insanitys-ire-annihilation-legion","name":"INSANITY’S IRE","category":"detachment","type":"strategic-ploy","detachmentId":"necrons:detachment:annihilation-legion","cp":1,"phases":["shooting"],"playerTurn":"opponent-turn","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"masks-of-death-annihilation-legion","name":"MASKS OF DEATH","category":"detachment","type":"strategic-ploy","detachmentId":"necrons:detachment:annihilation-legion","cp":1,"phases":["fight","shooting"],"playerTurn":"either","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"mass-transmogrification-pantheon-of-woe","name":"MASS TRANSMOGRIFICATION","category":"detachment","type":"epic-deed","detachmentId":"necrons:detachment:pantheon-of-woe","cp":1,"phases":["fight","shooting"],"playerTurn":"either","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"merciless-reclamation-starshatter-arsenal","name":"MERCILESS RECLAMATION","category":"detachment","type":"battle-tactic","detachmentId":"necrons:detachment:starshatter-arsenal","cp":2,"phases":["fight","shooting"],"playerTurn":"either","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"methodical-murder-cursed-legion","name":"METHODICAL MURDER","category":"detachment","type":"battle-tactic","detachmentId":"necrons:detachment:cursed-legion","cp":1,"phases":["fight","shooting"],"playerTurn":"either","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"microscarab-swarm-cryptek-conclave","name":"MICROSCARAB SWARM","category":"detachment","type":"wargear","detachmentId":"necrons:detachment:cryptek-conclave","cp":1,"phases":["fight","shooting"],"playerTurn":"either","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"molecular-erosion-pantheon-of-woe","name":"MOLECULAR EROSION","category":"detachment","type":"strategic-ploy","detachmentId":"necrons:detachment:pantheon-of-woe","cp":1,"phases":["command"],"playerTurn":"either","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"molecular-targeting-cryptek-conclave","name":"MOLECULAR TARGETING","category":"detachment","type":"battle-tactic","detachmentId":"necrons:detachment:cryptek-conclave","cp":1,"phases":["fight","shooting"],"playerTurn":"either","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"mortis-protocols-cursed-legion","name":"MORTIS PROTOCOLS","category":"detachment","type":"strategic-ploy","detachmentId":"necrons:detachment:cursed-legion","cp":1,"phases":["fight","shooting"],"playerTurn":"either","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"murderous-reanimation-annihilation-legion","name":"MURDEROUS REANIMATION","category":"detachment","type":"battle-tactic","detachmentId":"necrons:detachment:annihilation-legion","cp":1,"phases":["fight"],"playerTurn":"either","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"nanoassembly-protocols-obeisance-phalanx","name":"NANOASSEMBLY PROTOCOLS","category":"detachment","type":"battle-tactic","detachmentId":"necrons:detachment:obeisance-phalanx","cp":1,"phases":["fight","shooting"],"playerTurn":"either","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"nanosaturation-hand-of-the-dynasty","name":"Nanosaturation","category":"detachment","detachmentId":"necrons:detachment:hand-of-the-dynasty","cp":1,"phases":["shooting"],"playerTurn":"opponent-turn","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"omnilocked-strafing-skyshroud-spearhead","name":"Omnilocked Strafing","category":"detachment","detachmentId":"necrons:detachment:skyshroud-spearhead","cp":1,"phases":["movement"],"playerTurn":"your-turn","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"particle-pulse-the-phaerons-armoury","name":"Particle Pulse","category":"detachment","detachmentId":"necrons:detachment:the-phaeron-s-armoury","cp":1,"phases":["shooting"],"playerTurn":"your-turn","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"phase-melding-pantheon-of-woe","name":"PHASE MELDING","category":"detachment","type":"strategic-ploy","detachmentId":"necrons:detachment:pantheon-of-woe","cp":1,"phases":["movement"],"playerTurn":"opponent-turn","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"pitiless-hunters-annihilation-legion","name":"PITILESS HUNTERS","category":"detachment","type":"battle-tactic","detachmentId":"necrons:detachment:annihilation-legion","cp":1,"phases":["fight"],"playerTurn":"either","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"potentiality-syphon-cryptek-conclave","name":"POTENTIALITY SYPHON","category":"detachment","type":"strategic-ploy","detachmentId":"necrons:detachment:cryptek-conclave","cp":1,"phases":["command"],"playerTurn":"opponent-turn","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"protocol-of-the-conquering-tyrant-awakened-dynasty","name":"PROTOCOL OF THE CONQUERING TYRANT","category":"detachment","type":"battle-tactic","detachmentId":"necrons:detachment:awakened-dynasty","cp":1,"phases":["shooting"],"playerTurn":"your-turn","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"protocol-of-the-eternal-revenant-awakened-dynasty","name":"PROTOCOL OF THE ETERNAL REVENANT","category":"detachment","type":"epic-deed","detachmentId":"necrons:detachment:awakened-dynasty","cp":1,"phases":["command","movement","shooting","charge","fight"],"playerTurn":"either","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"protocol-of-the-hungry-void-awakened-dynasty","name":"PROTOCOL OF THE HUNGRY VOID","category":"detachment","type":"battle-tactic","detachmentId":"necrons:detachment:awakened-dynasty","cp":1,"phases":["fight"],"playerTurn":"either","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"protocol-of-the-sudden-storm-awakened-dynasty","name":"PROTOCOL OF THE SUDDEN STORM","category":"detachment","type":"strategic-ploy","detachmentId":"necrons:detachment:awakened-dynasty","cp":1,"phases":["movement"],"playerTurn":"your-turn","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"protocol-of-the-undying-legions-awakened-dynasty","name":"PROTOCOL OF THE UNDYING LEGIONS","category":"detachment","type":"strategic-ploy","detachmentId":"necrons:detachment:awakened-dynasty","cp":1,"phases":["fight","shooting"],"playerTurn":"either","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"protocol-of-the-vengeful-stars-awakened-dynasty","name":"PROTOCOL OF THE VENGEFUL STARS","category":"detachment","type":"strategic-ploy","detachmentId":"necrons:detachment:awakened-dynasty","cp":2,"phases":["shooting"],"playerTurn":"opponent-turn","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"quantum-deflection-hypercrypt-legion","name":"QUANTUM DEFLECTION","category":"detachment","type":"wargear","detachmentId":"necrons:detachment:hypercrypt-legion","cp":1,"phases":["fight","shooting"],"playerTurn":"either","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"reactive-reposition-starshatter-arsenal","name":"REACTIVE REPOSITION","category":"detachment","type":"strategic-ploy","detachmentId":"necrons:detachment:starshatter-arsenal","cp":1,"phases":["shooting"],"playerTurn":"opponent-turn","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"reactive-subroutines-canoptek-court","name":"REACTIVE SUBROUTINES","category":"detachment","type":"strategic-ploy","detachmentId":"necrons:detachment:canoptek-court","cp":1,"phases":["movement"],"playerTurn":"opponent-turn","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"reanimation-crypts-hypercrypt-legion","name":"REANIMATION CRYPTS","category":"detachment","type":"strategic-ploy","detachmentId":"necrons:detachment:hypercrypt-legion","cp":1,"phases":["command"],"playerTurn":"your-turn","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"reinforced-resilience-amonhotekhs-guard","name":"Reinforced Resilience","category":"detachment","detachmentId":"necrons:detachment:amonhotekhs-guard","cp":1,"phases":["shooting"],"playerTurn":"opponent-turn","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"sentinels-of-eternity-obeisance-phalanx","name":"SENTINELS OF ETERNITY","category":"detachment","type":"epic-deed","detachmentId":"necrons:detachment:obeisance-phalanx","cp":1,"phases":["fight"],"playerTurn":"either","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"solar-pulse-canoptek-court","name":"SOLAR PULSE","category":"detachment","type":"strategic-ploy","detachmentId":"necrons:detachment:canoptek-court","cp":1,"phases":["shooting"],"playerTurn":"your-turn","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"spreading-madness-cursed-legion","name":"SPREADING MADNESS","category":"detachment","type":"battle-tactic","detachmentId":"necrons:detachment:cursed-legion","cp":1,"phases":["charge"],"playerTurn":"your-turn","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"suboptimal-facade-canoptek-court","name":"SUBOPTIMAL FACADE","category":"detachment","type":"strategic-ploy","detachmentId":"necrons:detachment:canoptek-court","cp":1,"phases":["charge"],"playerTurn":"opponent-turn","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"subsurface-quantumweave-the-phaerons-armoury","name":"Subsurface Quantumweave","category":"detachment","detachmentId":"necrons:detachment:the-phaeron-s-armoury","cp":1,"phases":["shooting","fight"],"playerTurn":"either","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"suffer-no-rival-obeisance-phalanx","name":"SUFFER NO RIVAL","category":"detachment","type":"battle-tactic","detachmentId":"necrons:detachment:obeisance-phalanx","cp":1,"phases":["fight"],"playerTurn":"either","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"swift-as-death-skyshroud-spearhead","name":"Swift As Death","category":"detachment","detachmentId":"necrons:detachment:skyshroud-spearhead","cp":1,"phases":["movement"],"playerTurn":"opponent-turn","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"synergistic-empowerment-cryptek-conclave","name":"SYNERGISTIC EMPOWERMENT","category":"detachment","type":"strategic-ploy","detachmentId":"necrons:detachment:cryptek-conclave","cp":1,"phases":["shooting"],"playerTurn":"your-turn","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"territorial-obsession-obeisance-phalanx","name":"TERRITORIAL OBSESSION","category":"detachment","type":"strategic-ploy","detachmentId":"necrons:detachment:obeisance-phalanx","cp":1,"phases":["command"],"playerTurn":"your-turn","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"the-spoor-of-frailty-annihilation-legion","name":"THE SPOOR OF FRAILTY","category":"detachment","type":"battle-tactic","detachmentId":"necrons:detachment:annihilation-legion","cp":1,"phases":["fight","shooting"],"playerTurn":"either","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"unnatural-aggression-cursed-legion","name":"UNNATURAL AGGRESSION","category":"detachment","type":"strategic-ploy","detachmentId":"necrons:detachment:cursed-legion","cp":2,"phases":["charge"],"playerTurn":"opponent-turn","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"untapped-power-cryptek-conclave","name":"UNTAPPED POWER","category":"detachment","type":"battle-tactic","detachmentId":"necrons:detachment:cryptek-conclave","cp":1,"phases":["shooting"],"playerTurn":"your-turn","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"unyielding-forms-starshatter-arsenal","name":"UNYIELDING FORMS","category":"detachment","type":"battle-tactic","detachmentId":"necrons:detachment:starshatter-arsenal","cp":2,"phases":["fight","shooting"],"playerTurn":"either","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"will-of-the-conqueror-hand-of-the-dynasty","name":"Will of the Conqueror","category":"detachment","detachmentId":"necrons:detachment:hand-of-the-dynasty","cp":1,"phases":["movement"],"playerTurn":"either","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}},{"id":"your-time-is-nigh-obeisance-phalanx","name":"YOUR TIME IS NIGH","category":"detachment","type":"epic-deed","detachmentId":"necrons:detachment:obeisance-phalanx","cp":1,"phases":["command","movement","shooting","charge","fight"],"playerTurn":"either","timing":"once-per-phase","when":"","target":"","effect":"","description":"","targetRestrictions":null,"restrictionConfidence":"unknown","gameVersion":{"edition":"11th","dataslate":"pre-launch-provisional"}}]}
+{
+  "edition": "11th",
+  "faction": "necrons",
+  "package": "stratagems",
+  "records": [
+    {
+      "cp": 1,
+      "id": "aggression-protocols-amonhotekhs-guard",
+      "name": "Aggression Protocols",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "movement"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "your-turn",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:amonhotekhs-guard",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "animus-curse-cryptek-conclave",
+      "name": "ANIMUS CURSE",
+      "type": "wargear",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "fight",
+        "shooting"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "either",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:cryptek-conclave",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "blood-fuelled-cruelty-annihilation-legion",
+      "name": "BLOOD-FUELLED CRUELTY",
+      "type": "battle-tactic",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "movement"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "opponent-turn",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:annihilation-legion",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "chronodistortion-pantheon-of-woe",
+      "name": "CHRONODISTORTION",
+      "type": "battle-tactic",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "fight"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "either",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:pantheon-of-woe",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "chronoshift-starshatter-arsenal",
+      "name": "CHRONOSHIFT",
+      "type": "strategic-ploy",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "movement"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "your-turn",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:starshatter-arsenal",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "cosmic-precision-hypercrypt-legion",
+      "name": "COSMIC PRECISION",
+      "type": "strategic-ploy",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "movement"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "your-turn",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:hypercrypt-legion",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "cosmic-storm-the-phaerons-armoury",
+      "name": "Cosmic Storm",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "shooting"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "your-turn",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:the-phaeron-s-armoury",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "countertemporal-shift-canoptek-court",
+      "name": "COUNTERTEMPORAL SHIFT",
+      "type": "strategic-ploy",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "shooting"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "opponent-turn",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:canoptek-court",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "curse-of-the-cryptek-canoptek-court",
+      "name": "CURSE OF THE CRYPTEK",
+      "type": "battle-tactic",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "fight",
+        "shooting"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "either",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:canoptek-court",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 2,
+      "id": "cynosure-of-eradication-canoptek-court",
+      "name": "CYNOSURE OF ERADICATION",
+      "type": "battle-tactic",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "fight",
+        "shooting"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "either",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:canoptek-court",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 2,
+      "id": "dimensional-corridor-hypercrypt-legion",
+      "name": "DIMENSIONAL CORRIDOR",
+      "type": "strategic-ploy",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "charge"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "your-turn",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:hypercrypt-legion",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "dimensional-tunnel-starshatter-arsenal",
+      "name": "DIMENSIONAL TUNNEL",
+      "type": "strategic-ploy",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "movement"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "your-turn",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:starshatter-arsenal",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "disharmonisation-cascade-pantheon-of-woe",
+      "name": "DISHARMONISATION CASCADE",
+      "type": "epic-deed",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "command",
+        "movement",
+        "shooting",
+        "charge",
+        "fight"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "either",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:pantheon-of-woe",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "dominance-protocols-hand-of-the-dynasty",
+      "name": "Dominance Protocols",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "command"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "your-turn",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:hand-of-the-dynasty",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "driven-to-butchery-cursed-legion",
+      "name": "DRIVEN TO BUTCHERY",
+      "type": "strategic-ploy",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "charge",
+        "shooting"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "your-turn",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:cursed-legion",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "endless-servitude-starshatter-arsenal",
+      "name": "ENDLESS SERVITUDE",
+      "type": "strategic-ploy",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "fight"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "your-turn",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:starshatter-arsenal",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "enslaved-artifice-obeisance-phalanx",
+      "name": "ENSLAVED ARTIFICE",
+      "type": "battle-tactic",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "fight",
+        "shooting"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "either",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:obeisance-phalanx",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "entrophasic-aura-targeting-pantheon-of-woe",
+      "name": "ENTROPHASIC AURA TARGETING",
+      "type": "battle-tactic",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "fight",
+        "shooting"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "either",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:pantheon-of-woe",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "entropic-damping-hypercrypt-legion",
+      "name": "ENTROPIC DAMPING",
+      "type": "wargear",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "shooting"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "opponent-turn",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:hypercrypt-legion",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "evasive-protocols-skyshroud-spearhead",
+      "name": "Evasive Protocols",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "shooting"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "opponent-turn",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:skyshroud-spearhead",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "gauss-storm-amonhotekhs-guard",
+      "name": "Gauss Storm",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "shooting"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "your-turn",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:amonhotekhs-guard",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 2,
+      "id": "hyperphasic-recall-hypercrypt-legion",
+      "name": "HYPERPHASIC RECALL",
+      "type": "strategic-ploy",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "fight",
+        "shooting"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "either",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:hypercrypt-legion",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "image-of-death-cursed-legion",
+      "name": "IMAGE OF DEATH",
+      "type": "battle-tactic",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "fight",
+        "shooting"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "either",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:cursed-legion",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "insanitys-ire-annihilation-legion",
+      "name": "INSANITY’S IRE",
+      "type": "strategic-ploy",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "shooting"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "opponent-turn",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:annihilation-legion",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "masks-of-death-annihilation-legion",
+      "name": "MASKS OF DEATH",
+      "type": "strategic-ploy",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "fight",
+        "shooting"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "either",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:annihilation-legion",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "mass-transmogrification-pantheon-of-woe",
+      "name": "MASS TRANSMOGRIFICATION",
+      "type": "epic-deed",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "fight",
+        "shooting"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "either",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:pantheon-of-woe",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 2,
+      "id": "merciless-reclamation-starshatter-arsenal",
+      "name": "MERCILESS RECLAMATION",
+      "type": "battle-tactic",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "fight",
+        "shooting"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "either",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:starshatter-arsenal",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "methodical-murder-cursed-legion",
+      "name": "METHODICAL MURDER",
+      "type": "battle-tactic",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "fight",
+        "shooting"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "either",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:cursed-legion",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "microscarab-swarm-cryptek-conclave",
+      "name": "MICROSCARAB SWARM",
+      "type": "wargear",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "fight",
+        "shooting"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "either",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:cryptek-conclave",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "molecular-erosion-pantheon-of-woe",
+      "name": "MOLECULAR EROSION",
+      "type": "strategic-ploy",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "command"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "either",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:pantheon-of-woe",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "molecular-targeting-cryptek-conclave",
+      "name": "MOLECULAR TARGETING",
+      "type": "battle-tactic",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "fight",
+        "shooting"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "either",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:cryptek-conclave",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "mortis-protocols-cursed-legion",
+      "name": "MORTIS PROTOCOLS",
+      "type": "strategic-ploy",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "fight",
+        "shooting"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "either",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:cursed-legion",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "murderous-reanimation-annihilation-legion",
+      "name": "MURDEROUS REANIMATION",
+      "type": "battle-tactic",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "fight"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "either",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:annihilation-legion",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "nanoassembly-protocols-obeisance-phalanx",
+      "name": "NANOASSEMBLY PROTOCOLS",
+      "type": "battle-tactic",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "fight",
+        "shooting"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "either",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:obeisance-phalanx",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "nanosaturation-hand-of-the-dynasty",
+      "name": "Nanosaturation",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "shooting"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "opponent-turn",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:hand-of-the-dynasty",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "omnilocked-strafing-skyshroud-spearhead",
+      "name": "Omnilocked Strafing",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "movement"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "your-turn",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:skyshroud-spearhead",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "particle-pulse-the-phaerons-armoury",
+      "name": "Particle Pulse",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "shooting"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "your-turn",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:the-phaeron-s-armoury",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "phase-melding-pantheon-of-woe",
+      "name": "PHASE MELDING",
+      "type": "strategic-ploy",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "movement"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "opponent-turn",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:pantheon-of-woe",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "pitiless-hunters-annihilation-legion",
+      "name": "PITILESS HUNTERS",
+      "type": "battle-tactic",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "fight"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "either",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:annihilation-legion",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "potentiality-syphon-cryptek-conclave",
+      "name": "POTENTIALITY SYPHON",
+      "type": "strategic-ploy",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "command"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "opponent-turn",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:cryptek-conclave",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "protocol-of-the-conquering-tyrant-awakened-dynasty",
+      "name": "PROTOCOL OF THE CONQUERING TYRANT",
+      "type": "battle-tactic",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "shooting"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "your-turn",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:awakened-dynasty",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "protocol-of-the-eternal-revenant-awakened-dynasty",
+      "name": "PROTOCOL OF THE ETERNAL REVENANT",
+      "type": "epic-deed",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "command",
+        "movement",
+        "shooting",
+        "charge",
+        "fight"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "either",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:awakened-dynasty",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "protocol-of-the-hungry-void-awakened-dynasty",
+      "name": "PROTOCOL OF THE HUNGRY VOID",
+      "type": "battle-tactic",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "fight"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "either",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:awakened-dynasty",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "protocol-of-the-sudden-storm-awakened-dynasty",
+      "name": "PROTOCOL OF THE SUDDEN STORM",
+      "type": "strategic-ploy",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "movement"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "your-turn",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:awakened-dynasty",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "protocol-of-the-undying-legions-awakened-dynasty",
+      "name": "PROTOCOL OF THE UNDYING LEGIONS",
+      "type": "strategic-ploy",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "fight",
+        "shooting"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "either",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:awakened-dynasty",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 2,
+      "id": "protocol-of-the-vengeful-stars-awakened-dynasty",
+      "name": "PROTOCOL OF THE VENGEFUL STARS",
+      "type": "strategic-ploy",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "shooting"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "opponent-turn",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:awakened-dynasty",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "quantum-deflection-hypercrypt-legion",
+      "name": "QUANTUM DEFLECTION",
+      "type": "wargear",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "fight",
+        "shooting"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "either",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:hypercrypt-legion",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "reactive-reposition-starshatter-arsenal",
+      "name": "REACTIVE REPOSITION",
+      "type": "strategic-ploy",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "shooting"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "opponent-turn",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:starshatter-arsenal",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "reactive-subroutines-canoptek-court",
+      "name": "REACTIVE SUBROUTINES",
+      "type": "strategic-ploy",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "movement"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "opponent-turn",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:canoptek-court",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "reanimation-crypts-hypercrypt-legion",
+      "name": "REANIMATION CRYPTS",
+      "type": "strategic-ploy",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "command"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "your-turn",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:hypercrypt-legion",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "reinforced-resilience-amonhotekhs-guard",
+      "name": "Reinforced Resilience",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "shooting"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "opponent-turn",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:amonhotekhs-guard",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "sentinels-of-eternity-obeisance-phalanx",
+      "name": "SENTINELS OF ETERNITY",
+      "type": "epic-deed",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "fight"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "either",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:obeisance-phalanx",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "solar-pulse-canoptek-court",
+      "name": "SOLAR PULSE",
+      "type": "strategic-ploy",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "shooting"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "your-turn",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:canoptek-court",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "spreading-madness-cursed-legion",
+      "name": "SPREADING MADNESS",
+      "type": "battle-tactic",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "charge"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "your-turn",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:cursed-legion",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "suboptimal-facade-canoptek-court",
+      "name": "SUBOPTIMAL FACADE",
+      "type": "strategic-ploy",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "charge"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "opponent-turn",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:canoptek-court",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "subsurface-quantumweave-the-phaerons-armoury",
+      "name": "Subsurface Quantumweave",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "shooting",
+        "fight"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "either",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:the-phaeron-s-armoury",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "suffer-no-rival-obeisance-phalanx",
+      "name": "SUFFER NO RIVAL",
+      "type": "battle-tactic",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "fight"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "either",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:obeisance-phalanx",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "swift-as-death-skyshroud-spearhead",
+      "name": "Swift As Death",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "movement"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "opponent-turn",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:skyshroud-spearhead",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "synergistic-empowerment-cryptek-conclave",
+      "name": "SYNERGISTIC EMPOWERMENT",
+      "type": "strategic-ploy",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "shooting"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "your-turn",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:cryptek-conclave",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "territorial-obsession-obeisance-phalanx",
+      "name": "TERRITORIAL OBSESSION",
+      "type": "strategic-ploy",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "command"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "your-turn",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:obeisance-phalanx",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "the-spoor-of-frailty-annihilation-legion",
+      "name": "THE SPOOR OF FRAILTY",
+      "type": "battle-tactic",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "fight",
+        "shooting"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "either",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:annihilation-legion",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 2,
+      "id": "unnatural-aggression-cursed-legion",
+      "name": "UNNATURAL AGGRESSION",
+      "type": "strategic-ploy",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "charge"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "opponent-turn",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:cursed-legion",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "untapped-power-cryptek-conclave",
+      "name": "UNTAPPED POWER",
+      "type": "battle-tactic",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "shooting"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "your-turn",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:cryptek-conclave",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 2,
+      "id": "unyielding-forms-starshatter-arsenal",
+      "name": "UNYIELDING FORMS",
+      "type": "battle-tactic",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "fight",
+        "shooting"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "either",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:starshatter-arsenal",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "will-of-the-conqueror-hand-of-the-dynasty",
+      "name": "Will of the Conqueror",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "movement"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "either",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:hand-of-the-dynasty",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "your-time-is-nigh-obeisance-phalanx",
+      "name": "YOUR TIME IS NIGH",
+      "type": "epic-deed",
+      "when": "",
+      "effect": "",
+      "phases": [
+        "command",
+        "movement",
+        "shooting",
+        "charge",
+        "fight"
+      ],
+      "target": "",
+      "timing": "once-per-phase",
+      "category": "detachment",
+      "playerTurn": "either",
+      "description": "",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "pre-launch-provisional"
+      },
+      "detachmentId": "necrons:detachment:obeisance-phalanx",
+      "targetRestrictions": null,
+      "restrictionConfidence": "unknown"
+    }
+  ],
+  "schemaVersion": 2
+}
