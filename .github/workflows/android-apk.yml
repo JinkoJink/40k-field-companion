@@ -1,39 +1,45 @@
-name: Build Android installer
+name: Build and publish Android installer
 
 on:
   push:
     branches: [main]
-    paths:
-      - 'android/**'
-      - 'src/**'
-      - 'public/**'
-      - 'scripts/**'
-      - 'package.json'
-      - 'package-lock.json'
-      - 'capacitor.config.ts'
-      - '.github/workflows/android-apk.yml'
   workflow_dispatch:
+
+concurrency:
+  group: android-release-${{ github.ref }}
+  cancel-in-progress: true
 
 permissions:
   contents: write
 
+env:
+  NODE_VERSION: '24'
+  JAVA_VERSION: '21'
+
 jobs:
-  apk:
+  android-release:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Check out exact commit
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
 
-      - uses: actions/setup-java@v4
+      - name: Set up Java
+        uses: actions/setup-java@v4
         with:
           distribution: temurin
-          java-version: 21
+          java-version: ${{ env.JAVA_VERSION }}
 
-      - uses: actions/setup-node@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
         with:
-          node-version: 24
+          node-version: ${{ env.NODE_VERSION }}
           cache: npm
 
-      - run: npm ci
+      - name: Install dependencies
+        run: npm ci
 
       - name: Typecheck
         run: npm run typecheck
@@ -41,18 +47,16 @@ jobs:
       - name: Unit tests
         run: npm test
 
+      - name: Validate frozen Necron dataset
+        run: npm run validate:data
+
       - name: Check service worker syntax
         run: node --check public/sw.js
 
-      - name: Build bundled Necron 11e data
-        run: |
-          npm run build:data
-          npm run validate:data
-
-      - name: Build web app
+      - name: Build web app from checked-in source and frozen data
         run: npm run build
 
-      - name: Verify Vite output contains rules data
+      - name: Verify Vite output contains frozen rules data
         run: |
           test -f dist/data/version.json
           test -f dist/data/necrons/units.json
@@ -60,18 +64,16 @@ jobs:
           test -f dist/data/necrons/community-40kdc.json
           node -e "const fs=require('fs'); const m=JSON.parse(fs.readFileSync('dist/data/version.json','utf8')); if(m.schemaVersion!==2||m.scope?.factions?.join(',')!=='necrons') process.exit(1); console.log('dist contains Necron schema v2 data');"
 
-      - name: Sync web bundle into Android assets
+      - name: Sync exact web bundle into Android assets
         run: npx cap sync android
 
-      - name: Verify Android assets contain rules data
+      - name: Verify Android assets contain exact web build
         run: |
           test -f android/app/src/main/assets/public/data/version.json
           test -f android/app/src/main/assets/public/data/necrons/units.json
           test -f android/app/src/main/assets/public/data/necrons/core-rules.json
           test -f android/app/src/main/assets/public/data/necrons/community-40kdc.json
-          echo "Android asset tree contains bundled Necron data"
-
-      - run: chmod +x android/gradlew
+          printf '%s\n' "${GITHUB_SHA}" > android/app/src/main/assets/public/build-commit.txt
 
       - name: Install stable debug signing key
         env:
@@ -86,22 +88,46 @@ jobs:
           COMMAND_PROTOCOLS_VERSION_CODE: ${{ github.run_number }}
         run: cd android && ./gradlew assembleDebug --no-daemon
 
-      - name: Verify APK physically contains rules data
+      - name: Verify APK contains this exact commit and bundled data
         run: |
           APK=android/app/build/outputs/apk/debug/app-debug.apk
+          test -f "$APK"
           unzip -l "$APK" | grep -q 'assets/public/data/version.json'
           unzip -l "$APK" | grep -q 'assets/public/data/necrons/units.json'
-          unzip -l "$APK" | grep -q 'assets/public/data/necrons/core-rules.json'
-          unzip -l "$APK" | grep -q 'assets/public/data/necrons/community-40kdc.json'
-          echo "APK contains bundled Necron 11e rules data"
+          unzip -l "$APK" | grep -q 'assets/public/build-commit.txt'
+          unzip -p "$APK" assets/public/build-commit.txt | grep -Fxq "$GITHUB_SHA"
+          echo "Verified APK is built from ${GITHUB_SHA}"
 
-      - name: Publish fresh installer release
+      - name: Prepare release metadata
+        id: release
+        shell: bash
+        run: |
+          SHORT_SHA="${GITHUB_SHA::7}"
+          TAG="android-${GITHUB_RUN_NUMBER}-${SHORT_SHA}"
+          NAME="Command Protocols Android ${GITHUB_RUN_NUMBER} (${SHORT_SHA})"
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+          echo "name=$NAME" >> "$GITHUB_OUTPUT"
+          cp android/app/build/outputs/apk/debug/app-debug.apk Command-Protocols.apk
+          sha256sum Command-Protocols.apk > Command-Protocols.apk.sha256
+
+      - name: Publish immutable GitHub Release
         env:
           GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ steps.release.outputs.tag }}
+          RELEASE_NAME: ${{ steps.release.outputs.name }}
         run: |
-          cp android/app/build/outputs/apk/debug/app-debug.apk Command-Protocols.apk
-          TAG="command-protocols-${GITHUB_RUN_NUMBER}"
-          gh release create "$TAG" Command-Protocols.apk \
-            --title "Command Protocols Android ${GITHUB_RUN_NUMBER}" \
-            --notes "Fresh installer built from ${GITHUB_SHA}. Includes bundled Necron 11e rules data and works without a first-run data download." \
+          gh release create "$RELEASE_TAG" \
+            Command-Protocols.apk \
+            Command-Protocols.apk.sha256 \
+            --target "$GITHUB_SHA" \
+            --title "$RELEASE_NAME" \
+            --notes "Built and verified from commit $GITHUB_SHA. Frozen bundled Necron rules data. Automatic rules publishing remains quarantined." \
             --latest
+
+      - name: Verify published release points to this commit
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ steps.release.outputs.tag }}
+        run: |
+          gh release view "$RELEASE_TAG" --json targetCommitish,assets,url > release.json
+          node -e "const fs=require('fs'); const r=JSON.parse(fs.readFileSync('release.json')); if(r.targetCommitish!==process.env.GITHUB_SHA) throw new Error('Release target does not match build commit'); if(!r.assets.some(a=>a.name==='Command-Protocols.apk')) throw new Error('APK missing from release'); console.log(r.url);"
