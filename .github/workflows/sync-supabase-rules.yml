@@ -3,14 +3,14 @@ name: Sync Supabase rules
 on:
   workflow_dispatch:
   schedule:
-    - cron: '17 * * * *'
+    - cron: '17 */6 * * *'
 
 permissions:
   contents: write
 
 concurrency:
   group: supabase-rules-sync
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   sync:
@@ -19,14 +19,14 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 1
 
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
           node-version: '24'
 
-      - name: Mirror canonical rules from Supabase
+      - name: Mirror canonical runtime rules from Supabase
         run: node scripts/sync-supabase-rules.mjs
 
       - name: Commit changed rules snapshots
@@ -39,5 +39,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -- public/data
-          git commit -m "Mirror published rules from Supabase"
+          git commit -m "Mirror published runtime rules from Supabase"
           git push
