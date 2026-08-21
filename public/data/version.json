@@ -9,9 +9,11 @@
     "includesSharedCoreRules": true
   },
   "resolved": {
+    "runtimeGraph": "data/resolved/runtime-graph.json",
     "units": "data/resolved/units.json",
     "detachments": "data/resolved/detachments.json",
-    "relationships": "data/resolved/relationships.json"
+    "relationships": "data/resolved/relationships.json",
+    "coreRules": "data/resolved/core-rules.json"
   },
   "factions": {
     "necrons": {
