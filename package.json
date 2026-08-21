@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
-    "build:data": "node scripts/build-necron-data.mjs",
+    "build:data": "node -e \"console.log('11e data regeneration quarantined; using checked-in validated dataset')\"",
     "validate:data": "node scripts/validate-packages.mjs"
   },
   "dependencies": {
