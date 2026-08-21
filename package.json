@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "vite",
+    "prebuild": "node scripts/polish-app-ui.mjs",
     "build": "vite build",
     "preview": "vite preview",
     "test": "vitest run",
