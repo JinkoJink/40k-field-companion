@@ -4,12 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node scripts/validate-built-packages.mjs",
+    "build": "vite build && node scripts/validate-built-packages.mjs && node scripts/validate-resolved-snapshot.mjs dist/data",
     "preview": "vite preview",
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
     "build:data": "node -e \"console.log('11e data regeneration quarantined; using checked-in validated dataset')\"",
-    "validate:data": "node scripts/validate-packages.mjs",
+    "validate:data": "node scripts/validate-packages.mjs && node scripts/validate-resolved-snapshot.mjs public/data",
     "enrich:stratagems": "node scripts/enrich-necron-stratagems.mjs",
     "polish:ui": "node scripts/polish-app-ui.mjs"
   },
