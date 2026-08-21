@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "package": "universal-rules-updates",
+  "edition": "11th",
+  "version": "1.0",
+  "legalForMatchedPlayFrom": "2026-07-22",
+  "scope": "all-factions",
+  "rules": [
+    {
+      "id": "unnamed-zero-cp-reduction",
+      "name": "Modifying a Stratagem's CP Cost",
+      "effect": "If a rule lets you target a friendly unit with a Stratagem for 0CP but does not specify that Stratagem by name, reduce the CP cost of that use by 1CP instead.",
+      "engine": {
+        "unnamedZeroCpBecomesReduction": 1,
+        "minimumCp": 0
+      }
+    },
+    {
+      "id": "repeat-stratagem-name-required",
+      "name": "Stratagems That Can Be Used More Than Once Per Phase/Turn",
+      "effect": "Permission to use a Stratagem again in the same phase only works when the enabling rule specifies the Stratagem by name. The same named-Stratagem requirement applies when overriding a once-per-player-per-turn, once-per-battle-round or once-per-battle limit.",
+      "engine": {
+        "repeatPermissionRequiresNamedStratagem": true,
+        "limitedUseOverrideRequiresNamedStratagem": true
+      }
+    },
+    {
+      "id": "ranged-untargetable-distance-18",
+      "name": "Stratagems That Prevent Units From Being Targeted",
+      "effect": "A Stratagem effect that previously required an attacking model to be within 12 inches to target the unit with ranged attacks instead uses 18 inches.",
+      "engine": {
+        "replaceRangedTargetingGateInches": {
+          "from": 12,
+          "to": 18
+        }
+      }
+    },
+    {
+      "id": "replacement-unit-once-per-battle",
+      "name": "Stratagems That Add New Units To Your Army",
+      "effect": "If a Stratagem adds a new unit identical to a destroyed unit, that Stratagem gains a restriction that it can only be used once per battle.",
+      "engine": {
+        "identicalReplacementUnitOncePerBattle": true
+      }
+    }
+  ]
+}
