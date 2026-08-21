@@ -1,0 +1,26 @@
+name: Clean Android release assets
+
+on:
+  workflow_run:
+    workflows: ['Build and publish Android installer']
+    types: [completed]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: clean-android-release-assets
+  cancel-in-progress: true
+
+jobs:
+  cleanup:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Remove checksum sidecar from latest Android release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TAG="$(gh release view --repo "$GITHUB_REPOSITORY" --json tagName --jq .tagName)"
+          gh release delete-asset "$TAG" 'Command-Protocols.apk.sha256' --repo "$GITHUB_REPOSITORY" --yes || true
+          gh release view "$TAG" --repo "$GITHUB_REPOSITORY" --json assets --jq '.assets[].name'
