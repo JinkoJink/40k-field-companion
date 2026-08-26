@@ -3,7 +3,7 @@
   --responsive-tile-gap:8px;
 }
 
-/* Tile collections respond to available width; typography is intentionally untouched. */
+/* Tile collections respond to available width. */
 .stack,
 .grid,
 .detGrid,
@@ -42,7 +42,11 @@
   flex:1 1 auto;
 }
 .catalogueGroup .card h3{
-  overflow-wrap:anywhere;
+  font-size:clamp(.78rem,3.2vw,1rem);
+  line-height:1.12;
+  overflow-wrap:normal;
+  word-break:normal;
+  hyphens:none;
 }
 .catalogueGroup .card>.row>.addButton{
   flex:0 0 40px;
