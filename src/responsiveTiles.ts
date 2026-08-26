@@ -68,7 +68,14 @@ export function initializeResponsiveTiles() {
     if (!card) return;
     const header = card.firstElementChild;
     if (!(header instanceof HTMLElement) || !header.contains(target)) return;
-    if (target.closest(INTERACTIVE_SELECTOR) && target !== header) return;
+
+    // The header itself is given role="button" for accessibility. When the user
+    // taps a child inside that header, closest(INTERACTIVE_SELECTOR) therefore
+    // resolves to the header. That should still toggle the card. Only genuine
+    // nested controls such as the remove button should consume the click.
+    const interactiveTarget = target.closest<HTMLElement>(INTERACTIVE_SELECTOR);
+    if (interactiveTarget && interactiveTarget !== header) return;
+
     toggleCard(card);
   });
 
