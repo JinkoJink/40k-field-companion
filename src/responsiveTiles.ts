@@ -29,6 +29,38 @@ function prepareCard(card: HTMLElement) {
   setCardExpanded(card, false);
 }
 
+function ensureWeaponCharacteristics(card: HTMLElement) {
+  if (card.dataset.tileWeaponsReady === 'true') return;
+
+  // Most unit tiles already render UnitDetails directly in the tile body. Catalogue
+  // cards are the exception: their weapon profiles live inside a nested, collapsed
+  // "Datasheet details" element. Mirror only those nested weapon profiles into the
+  // main tile body so every expanded unit tile exposes weapon characteristics without
+  // requiring a second expansion.
+  const nestedWeapons = Array.from(card.querySelectorAll<HTMLElement>('.weapon')).filter(weapon => {
+    const enclosingDetails = weapon.closest('details');
+    return enclosingDetails instanceof HTMLDetailsElement && enclosingDetails !== card;
+  });
+  if (!nestedWeapons.length) return;
+
+  const block = document.createElement('div');
+  block.className = 'details tileWeaponProfiles';
+  block.setAttribute('aria-label', 'Weapon characteristics');
+  nestedWeapons.forEach(weapon => block.appendChild(weapon.cloneNode(true)));
+
+  const stats = Array.from(card.children).find(child => child.classList.contains('stats'));
+  if (stats) stats.insertAdjacentElement('afterend', block);
+  else card.firstElementChild?.insertAdjacentElement('afterend', block);
+  card.dataset.tileWeaponsReady = 'true';
+}
+
+function prepareWeaponsForElement(element: Element) {
+  if (element.matches(COLLAPSIBLE_CARD_SELECTOR)) ensureWeaponCharacteristics(element as HTMLElement);
+  const parentCard = element.closest<HTMLElement>(COLLAPSIBLE_CARD_SELECTOR);
+  if (parentCard) ensureWeaponCharacteristics(parentCard);
+  element.querySelectorAll<HTMLElement>(COLLAPSIBLE_CARD_SELECTOR).forEach(ensureWeaponCharacteristics);
+}
+
 function setSelectedDetachmentExpanded(panel: HTMLElement, expanded: boolean) {
   panel.classList.toggle('selectedDetachmentCollapsed', !expanded);
   panel.dataset.selectedDetachmentExpanded = String(expanded);
@@ -62,6 +94,7 @@ function prepareSelectedDetachmentRules(element: Element) {
 
 function prepareElement(element: Element) {
   prepareSelectedDetachmentRules(element);
+  prepareWeaponsForElement(element);
   if (element.matches(COLLAPSIBLE_DETAILS_SELECTOR)) {
     const details = element as HTMLDetailsElement;
     window.setTimeout(() => collapseDetails(details), 60);
