@@ -2,7 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { App } from './App';
 import { DiagnosticsButton } from './DiagnosticsButton';
+import { initializeResponsiveTiles } from './responsiveTiles';
 import './styles.css';
+import './responsiveTiles.css';
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
@@ -16,3 +18,5 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <DiagnosticsButton />
   </React.StrictMode>
 );
+
+initializeResponsiveTiles();
