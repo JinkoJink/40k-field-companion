@@ -42,7 +42,15 @@ article.card.collapsibleTile>.tileToggle:focus-visible{
   border-radius:8px;
 }
 
-/* Let dense content expand to the full tile width without shrinking its type. */
+/* Expanded dense tiles get more room instead of shrinking their typography. */
+.stack>article.card.collapsibleTile:not(.tileCollapsed),
+.grid>article.card.collapsibleTile:not(.tileCollapsed),
+.stack>details.card[open],
+.grid>details.card[open],
+.stratagemList>details.stratagem[open]{
+  grid-column:span 2;
+}
+
 .card .stats,
 .card .weaponGrid,
 .card .formGrid,
@@ -62,4 +70,11 @@ article.card.collapsibleTile>.tileToggle:focus-visible{
 
 @media (max-width:340px){
   :root{--responsive-tile-min:100%}
+  .stack>article.card.collapsibleTile:not(.tileCollapsed),
+  .grid>article.card.collapsibleTile:not(.tileCollapsed),
+  .stack>details.card[open],
+  .grid>details.card[open],
+  .stratagemList>details.stratagem[open]{
+    grid-column:span 1;
+  }
 }
