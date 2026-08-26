@@ -2,7 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { App } from './App';
 import { DiagnosticsButton } from './DiagnosticsButton';
+import { initializeResponsiveTiles } from './responsiveTiles';
 import './styles.css';
+import './responsiveTiles.css';
+
+initializeResponsiveTiles();
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
