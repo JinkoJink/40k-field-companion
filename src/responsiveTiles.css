@@ -22,6 +22,15 @@
   margin-bottom:0;
 }
 
+/* Expanded unit tiles span the full available row; collapsed tiles remain compact. */
+.stack>article.card.collapsibleTile:not(.tileCollapsed),
+.grid>article.card.collapsibleTile:not(.tileCollapsed),
+.stack>details.card[open],
+.grid>details.card[open]{
+  grid-column:1 / -1;
+  width:100%;
+}
+
 /* Keep catalogue card actions inside narrow tiles. The visible action is only the + icon;
    the existing Add text remains in the DOM as the button's accessible name. */
 .catalogueGroup .card>.row{
