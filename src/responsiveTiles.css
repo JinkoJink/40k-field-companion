@@ -1,0 +1,65 @@
+:root{
+  --responsive-tile-min:156px;
+  --responsive-tile-gap:8px;
+}
+
+/* Tile collections respond to available width; typography is intentionally untouched. */
+.stack,
+.grid,
+.detGrid,
+.stratagemList{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(min(100%,var(--responsive-tile-min)),1fr));
+  gap:var(--responsive-tile-gap);
+  align-items:start;
+}
+
+.stack>.card,
+.grid>.card,
+.detGrid>.det,
+.stratagemList>.stratagem{
+  min-width:0;
+  margin-bottom:0;
+}
+
+/* Non-details cards get a lightweight collapsed state while preserving their existing text size. */
+article.card.collapsibleTile{
+  min-width:0;
+}
+
+article.card.collapsibleTile.tileCollapsed>:not(:first-child){
+  display:none !important;
+}
+
+article.card.collapsibleTile>.tileToggle{
+  cursor:pointer;
+  min-width:0;
+}
+
+article.card.collapsibleTile>.tileToggle:focus-visible{
+  outline:2px solid #7cff9b;
+  outline-offset:4px;
+  border-radius:8px;
+}
+
+/* Let dense content expand to the full tile width without shrinking its type. */
+.card .stats,
+.card .weaponGrid,
+.card .formGrid,
+.card .trackerGrid{
+  min-width:0;
+}
+
+@media (max-width:720px){
+  :root{--responsive-tile-min:156px;--responsive-tile-gap:8px}
+  .stack,
+  .grid,
+  .detGrid,
+  .stratagemList{
+    grid-template-columns:repeat(auto-fit,minmax(min(100%,var(--responsive-tile-min)),1fr));
+  }
+}
+
+@media (max-width:340px){
+  :root{--responsive-tile-min:100%}
+}
