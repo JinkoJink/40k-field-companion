@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Neon-green dynastic coffin, centered inside the adaptive-icon safe zone. -->
+    <path
+        android:fillColor="#B7FF35"
+        android:pathData="M38,16 L70,16 L78,27 L74,58 L67,91 L41,91 L34,58 L30,27 Z" />
+
+    <!-- Upper crescent. -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M44,25 L48,25 C48,31 50.5,34 54,34 C57.5,34 60,31 60,25 L64,25 C64,34 60,39 54,39 C48,39 44,34 44,25 Z" />
+
+    <!-- Neck from crescent to central ring. -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M51.5,36 L56.5,36 L56.5,45 L51.5,45 Z" />
+
+    <!-- Central ring. -->
+    <path
+        android:fillColor="#000000"
+        android:fillType="evenOdd"
+        android:pathData="M54,43 C44.6,43 37,50.6 37,60 C37,69.4 44.6,77 54,77 C63.4,77 71,69.4 71,60 C71,50.6 63.4,43 54,43 Z M54,49 C60.1,49 65,53.9 65,60 C65,66.1 60.1,71 54,71 C47.9,71 43,66.1 43,60 C43,53.9 47.9,49 54,49 Z" />
+
+    <!-- Horizontal arms. -->
+    <path android:fillColor="#000000" android:pathData="M30,57 L39,57 L39,63 L30,63 Z" />
+    <path android:fillColor="#000000" android:pathData="M69,57 L78,57 L78,63 L69,63 Z" />
+
+    <!-- Lower diagonal rays. -->
+    <path android:fillColor="#000000" android:pathData="M42,70 L47,73 L40,82 L35,79 Z" />
+    <path android:fillColor="#000000" android:pathData="M61,73 L66,70 L73,79 L68,82 Z" />
+
+    <!-- Long lower stem. -->
+    <path android:fillColor="#000000" android:pathData="M51.5,74 L56.5,74 L56.5,88 L51.5,88 Z" />
+</vector>
