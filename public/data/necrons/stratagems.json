@@ -7,6 +7,7 @@
       "cp": 1,
       "id": "aggression-protocols-amonhotekhs-guard",
       "name": "Aggression Protocols",
+      "type": "detachment",
       "when": "",
       "effect": "",
       "phases": [
@@ -38,9 +39,9 @@
       ],
       "target": "",
       "timing": "once-per-phase",
-      "category": "detachment",
+      "category": "wargear",
       "playerTurn": "either",
-      "description": "",
+      "description": "After a CRYPTEK model is destroyed, friendly NECRONS models can re-roll Hit rolls against the attacking unit for the rest of the battle.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
@@ -61,9 +62,9 @@
       ],
       "target": "",
       "timing": "once-per-phase",
-      "category": "detachment",
+      "category": "battle-tactic",
       "playerTurn": "opponent-turn",
-      "description": "",
+      "description": "When an enemy Falls Back from a DESTROYER CULT or Flayed Ones unit, inflict possible mortal wounds and then make a Normal move that closes on that enemy.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
@@ -84,9 +85,9 @@
       ],
       "target": "",
       "timing": "once-per-phase",
-      "category": "detachment",
+      "category": "battle-tactic",
       "playerTurn": "either",
-      "description": "",
+      "description": "When a NECRONS unit is attacked in Fight, destroyed models that have not fought can fight before removal on a 4+, improved when the attacker is unravelling.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
@@ -107,9 +108,9 @@
       ],
       "target": "",
       "timing": "once-per-phase",
-      "category": "detachment",
+      "category": "strategic-ploy",
       "playerTurn": "your-turn",
-      "description": "",
+      "description": "A non-TITANIC NECRONS VEHICLE or MOUNTED unit that Advances adds a flat 6 inches to Move instead of rolling.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
@@ -117,6 +118,277 @@
       "detachmentId": "necrons:detachment:starshatter-arsenal",
       "targetRestrictions": null,
       "restrictionConfidence": "unknown"
+    },
+    {
+      "cp": 1,
+      "id": "core:command-re-roll",
+      "name": "Command Re-roll",
+      "type": "battle-tactic",
+      "when": "Any phase, just after you make an eligible roll for a friendly unit or model.",
+      "effect": "Re-roll that roll; for multi-dice rolls, re-roll one die except Charge rolls, which are re-rolled in full.",
+      "phases": [
+        "any"
+      ],
+      "target": "That friendly unit or model.",
+      "timing": "once-per-phase",
+      "category": "battle-tactic",
+      "playerTurn": null,
+      "description": "Re-roll one eligible roll for a friendly unit or model.",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "launch"
+      },
+      "detachmentId": null,
+      "targetRestrictions": null,
+      "restrictionConfidence": "exact"
+    },
+    {
+      "cp": 2,
+      "id": "core:counteroffensive",
+      "name": "Counteroffensive",
+      "type": "strategic-ploy",
+      "when": "Fight step of your opponent's Fight phase, just after an enemy unit resolves its attacks.",
+      "effect": "Until the end of the phase, that unit has Fights First and must be the next unit you select to fight.",
+      "phases": [
+        "fight"
+      ],
+      "target": "One friendly unit that is eligible to fight.",
+      "timing": "once-per-phase",
+      "category": "strategic-ploy",
+      "playerTurn": "opponent-turn",
+      "description": "After an enemy fights, make one eligible friendly unit fight next.",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "launch"
+      },
+      "detachmentId": null,
+      "targetRestrictions": null,
+      "restrictionConfidence": "exact"
+    },
+    {
+      "cp": 1,
+      "id": "core:crushing-impact",
+      "name": "Crushing Impact",
+      "type": "strategic-ploy",
+      "when": "Your Charge phase, just after a friendly MONSTER or VEHICLE unit ends a Charge move.",
+      "effect": "Choose an engaged enemy and one engaged model from your unit; roll D6 equal to that model's Toughness, risking mortal wounds to your unit on 1s and dealing mortal wounds to the enemy on 5+, up to 6.",
+      "phases": [
+        "charge"
+      ],
+      "target": "That MONSTER or VEHICLE unit.",
+      "timing": "once-per-phase",
+      "category": "strategic-ploy",
+      "playerTurn": "your-turn",
+      "description": "After a MONSTER or VEHICLE charges, use its Toughness to attempt mortal wounds against an engaged enemy, with some risk to itself.",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "launch"
+      },
+      "detachmentId": null,
+      "targetRestrictions": {
+        "anyKeywords": [
+          "Monster",
+          "Vehicle"
+        ]
+      },
+      "restrictionConfidence": "exact"
+    },
+    {
+      "cp": 1,
+      "id": "core:epic-challenge",
+      "name": "Epic Challenge",
+      "type": "epic-deed",
+      "when": "Fight phase, just after a friendly CHARACTER unit is selected to fight.",
+      "effect": "Choose one CHARACTER model in the unit; its melee weapons gain PRECISION until the end of the phase.",
+      "phases": [
+        "fight"
+      ],
+      "target": "That CHARACTER unit.",
+      "timing": "once-per-phase",
+      "category": "epic-deed",
+      "playerTurn": "your-turn",
+      "description": "Give one CHARACTER model PRECISION on its melee weapons for the Fight phase.",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "launch"
+      },
+      "detachmentId": null,
+      "targetRestrictions": {
+        "requiredKeywords": [
+          "Character"
+        ]
+      },
+      "restrictionConfidence": "exact"
+    },
+    {
+      "cp": 1,
+      "id": "core:explosives",
+      "name": "Explosives",
+      "type": "wargear",
+      "when": "Your Shooting phase.",
+      "effect": "Choose an eligible model and visible enemy within 8 inches; roll six D6 and inflict 1 mortal wound for each 4+.",
+      "phases": [
+        "shooting"
+      ],
+      "target": "One friendly unengaged EXPLOSIVES or GRENADES unit that is eligible to shoot and did not Advance this turn.",
+      "timing": "once-per-phase",
+      "category": "wargear",
+      "playerTurn": "your-turn",
+      "description": "An eligible EXPLOSIVES/GRENADES unit can inflict mortal wounds on a nearby visible enemy.",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "launch"
+      },
+      "detachmentId": null,
+      "targetRestrictions": {
+        "anyKeywords": [
+          "Explosives",
+          "Grenades"
+        ]
+      },
+      "restrictionConfidence": "exact"
+    },
+    {
+      "cp": 1,
+      "id": "core:fire-overwatch",
+      "name": "Fire Overwatch",
+      "type": "strategic-ploy",
+      "when": "End of your opponent's Movement phase.",
+      "effect": "That unit shoots using snap shooting.",
+      "phases": [
+        "movement"
+      ],
+      "target": "One friendly unengaged unit, excluding TITANIC units.",
+      "timing": "once-per-turn",
+      "category": "strategic-ploy",
+      "playerTurn": "opponent-turn",
+      "description": "At the end of the opponent's Movement phase, an eligible unit can fire using snap shooting.",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "launch"
+      },
+      "detachmentId": null,
+      "targetRestrictions": null,
+      "restrictionConfidence": "exact"
+    },
+    {
+      "cp": 1,
+      "id": "core:heroic-intervention",
+      "name": "Heroic Intervention",
+      "type": "strategic-ploy",
+      "when": "End of your opponent's Charge phase.",
+      "effect": "Resolve a charge with the unit using one of the Stratagem's permitted intervention modes.",
+      "phases": [
+        "charge"
+      ],
+      "target": "One friendly unengaged unit within 12 inches of an enemy; VEHICLE targets must be CHARACTER or WALKER units.",
+      "timing": "once-per-phase",
+      "category": "strategic-ploy",
+      "playerTurn": "opponent-turn",
+      "description": "At the end of the opponent's Charge phase, an eligible nearby unit can make a reactive charge.",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "launch"
+      },
+      "detachmentId": null,
+      "targetRestrictions": null,
+      "restrictionConfidence": "exact"
+    },
+    {
+      "cp": 1,
+      "id": "core:insane-bravery",
+      "name": "Insane Bravery",
+      "type": "epic-deed",
+      "when": "Battle-shock step of your Command phase, just before a friendly unit makes a Battle-shock roll.",
+      "effect": "The Battle-shock roll is automatically successful.",
+      "phases": [
+        "command"
+      ],
+      "target": "That friendly unit.",
+      "timing": "once-per-battle",
+      "category": "epic-deed",
+      "playerTurn": "your-turn",
+      "description": "Automatically pass one Battle-shock roll; once per battle.",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "launch"
+      },
+      "detachmentId": null,
+      "targetRestrictions": null,
+      "restrictionConfidence": "exact"
+    },
+    {
+      "cp": 1,
+      "id": "core:new-orders",
+      "name": "New Orders",
+      "type": "strategic-ploy",
+      "when": "End of your Command phase.",
+      "effect": "Discard that card and draw a new Secondary Mission card.",
+      "phases": [
+        "command"
+      ],
+      "target": "One active Secondary Mission card.",
+      "timing": "once-per-phase",
+      "category": "strategic-ploy",
+      "playerTurn": "your-turn",
+      "description": "Replace one active Secondary Mission at the end of your Command phase.",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "launch"
+      },
+      "detachmentId": null,
+      "targetRestrictions": null,
+      "restrictionConfidence": "exact"
+    },
+    {
+      "cp": 1,
+      "id": "core:rapid-ingress",
+      "name": "Rapid Ingress",
+      "type": "strategic-ploy",
+      "when": "End of your opponent's Movement phase.",
+      "effect": "That unit makes an ingress move. Cannot be used during the first battle round.",
+      "phases": [
+        "movement"
+      ],
+      "target": "One friendly unit in Strategic Reserves, excluding AIRCRAFT.",
+      "timing": "once-per-phase",
+      "category": "strategic-ploy",
+      "playerTurn": "opponent-turn",
+      "description": "Bring an eligible Strategic Reserves unit in at the end of the opponent's Movement phase; not in round 1.",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "launch"
+      },
+      "detachmentId": null,
+      "targetRestrictions": null,
+      "restrictionConfidence": "exact"
+    },
+    {
+      "cp": 1,
+      "id": "core:smokescreen",
+      "name": "Smokescreen",
+      "type": "wargear",
+      "when": "Start of your opponent's Shooting phase.",
+      "effect": "Until the end of the phase, qualifying targets obscured by that SMOKE unit receive the Benefit of Cover.",
+      "phases": [
+        "shooting"
+      ],
+      "target": "One friendly SMOKE unit.",
+      "timing": "once-per-phase",
+      "category": "wargear",
+      "playerTurn": "opponent-turn",
+      "description": "Use a SMOKE unit to grant the Benefit of Cover against qualifying ranged attacks for the phase.",
+      "gameVersion": {
+        "edition": "11th",
+        "dataslate": "launch"
+      },
+      "detachmentId": null,
+      "targetRestrictions": {
+        "requiredKeywords": [
+          "Smoke"
+        ]
+      },
+      "restrictionConfidence": "exact"
     },
     {
       "cp": 1,
@@ -130,9 +402,9 @@
       ],
       "target": "",
       "timing": "once-per-phase",
-      "category": "detachment",
+      "category": "strategic-ploy",
       "playerTurn": "your-turn",
-      "description": "",
+      "description": "A non-MONSTER NECRONS unit arriving by Deep Strike or Hyperphasing can set up more than 6 inches from enemies, but cannot charge that turn.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
@@ -145,6 +417,7 @@
       "cp": 1,
       "id": "cosmic-storm-the-phaerons-armoury",
       "name": "Cosmic Storm",
+      "type": "detachment",
       "when": "",
       "effect": "",
       "phases": [
@@ -154,7 +427,7 @@
       "timing": "once-per-phase",
       "category": "detachment",
       "playerTurn": "your-turn",
-      "description": "",
+      "description": "When an Obelisk or Tesseract Vault shoots, its Tesla Sphere weapons gain +1 AP for that shooting.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
@@ -175,9 +448,9 @@
       ],
       "target": "",
       "timing": "once-per-phase",
-      "category": "detachment",
+      "category": "strategic-ploy",
       "playerTurn": "opponent-turn",
-      "description": "",
+      "description": "A targeted CANOPTEK unit can only be selected by ranged attacks from models within 18 inches for the rest of the phase.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
@@ -199,9 +472,9 @@
       ],
       "target": "",
       "timing": "once-per-phase",
-      "category": "detachment",
+      "category": "battle-tactic",
       "playerTurn": "either",
-      "description": "",
+      "description": "After a CRYPTEK model is destroyed, friendly CANOPTEK models gain +1 to Hit and +1 to Wound against the unit that killed it for the rest of the battle.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
@@ -223,9 +496,9 @@
       ],
       "target": "",
       "timing": "once-per-phase",
-      "category": "detachment",
+      "category": "battle-tactic",
       "playerTurn": "either",
-      "description": "",
+      "description": "A CRYPTEK or CANOPTEK unit wholly inside the Power Matrix gains DEVASTATING WOUNDS for the phase.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
@@ -246,9 +519,9 @@
       ],
       "target": "",
       "timing": "once-per-phase",
-      "category": "detachment",
+      "category": "strategic-ploy",
       "playerTurn": "your-turn",
-      "description": "",
+      "description": "A NECRONS unit that arrived through a MONOLITH Eternity Gate this turn becomes eligible to charge this phase.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
@@ -269,9 +542,9 @@
       ],
       "target": "",
       "timing": "once-per-phase",
-      "category": "detachment",
+      "category": "strategic-ploy",
       "playerTurn": "your-turn",
-      "description": "",
+      "description": "A non-TITANIC NECRONS VEHICLE or MOUNTED unit can move horizontally through models and terrain for the phase.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
@@ -296,9 +569,9 @@
       ],
       "target": "",
       "timing": "once-per-phase",
-      "category": "detachment",
+      "category": "epic-deed",
       "playerTurn": "either",
-      "description": "",
+      "description": "When a NECRONS MONSTER is destroyed, its Deadly Demise triggers mortal wounds on a 3+ instead of only on a 6 for that resolution.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
@@ -311,47 +584,56 @@
       "cp": 1,
       "id": "dominance-protocols-hand-of-the-dynasty",
       "name": "Dominance Protocols",
-      "when": "",
-      "effect": "",
+      "type": "detachment",
+      "when": "Your Command phase.",
+      "effect": "That unit has +1 Objective Control until the end of the turn.",
       "phases": [
         "command"
       ],
-      "target": "",
+      "target": "One friendly Immortals unit.",
       "timing": "once-per-phase",
       "category": "detachment",
       "playerTurn": "your-turn",
-      "description": "",
+      "description": "Give one Immortals unit +1 OC until the end of the turn.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
       },
       "detachmentId": "necrons:detachment:hand-of-the-dynasty",
-      "targetRestrictions": null,
-      "restrictionConfidence": "unknown"
+      "targetRestrictions": {
+        "unitNames": [
+          "Immortals"
+        ]
+      },
+      "restrictionConfidence": "exact"
     },
     {
       "cp": 1,
       "id": "driven-to-butchery-cursed-legion",
       "name": "DRIVEN TO BUTCHERY",
       "type": "strategic-ploy",
-      "when": "",
-      "effect": "",
+      "when": "Your Shooting phase or your Charge phase.",
+      "effect": "Until the end of the turn, the unit can shoot and declare a charge even if it Advanced.",
       "phases": [
         "charge",
         "shooting"
       ],
-      "target": "",
+      "target": "One DESTROYER CULT unit from your army.",
       "timing": "once-per-phase",
-      "category": "detachment",
+      "category": "strategic-ploy",
       "playerTurn": "your-turn",
-      "description": "",
+      "description": "A DESTROYER CULT unit can shoot and charge after Advancing this turn; usable once per turn.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
       },
       "detachmentId": "necrons:detachment:cursed-legion",
-      "targetRestrictions": null,
-      "restrictionConfidence": "unknown"
+      "targetRestrictions": {
+        "requiredKeywords": [
+          "Destroyer Cult"
+        ]
+      },
+      "restrictionConfidence": "exact"
     },
     {
       "cp": 1,
@@ -365,9 +647,9 @@
       ],
       "target": "",
       "timing": "once-per-phase",
-      "category": "detachment",
+      "category": "strategic-ploy",
       "playerTurn": "your-turn",
-      "description": "",
+      "description": "At the end of your Fight phase, a qualifying NECRONS unit on an objective you control activates Reanimation Protocols.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
@@ -389,9 +671,9 @@
       ],
       "target": "",
       "timing": "once-per-phase",
-      "category": "detachment",
+      "category": "battle-tactic",
       "playerTurn": "either",
-      "description": "",
+      "description": "A non-TITANIC NECRONS unit scores Critical Hits on unmodified Hit rolls of 5+ for the phase.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
@@ -413,9 +695,9 @@
       ],
       "target": "",
       "timing": "once-per-phase",
-      "category": "detachment",
+      "category": "battle-tactic",
       "playerTurn": "either",
-      "description": "",
+      "description": "A non-MONSTER NECRONS unit re-rolls Hit rolls of 1 for the phase and also re-rolls Wound rolls of 1 against unravelling targets.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
@@ -436,9 +718,9 @@
       ],
       "target": "",
       "timing": "once-per-phase",
-      "category": "detachment",
+      "category": "wargear",
       "playerTurn": "opponent-turn",
-      "description": "",
+      "description": "When a nearby TITANIC model is targeted in Shooting, the attacking unit’s weapons gain HAZARDOUS for the phase.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
@@ -451,6 +733,7 @@
       "cp": 1,
       "id": "evasive-protocols-skyshroud-spearhead",
       "name": "Evasive Protocols",
+      "type": "detachment",
       "when": "",
       "effect": "",
       "phases": [
@@ -460,7 +743,7 @@
       "timing": "once-per-phase",
       "category": "detachment",
       "playerTurn": "opponent-turn",
-      "description": "",
+      "description": "When a NECRONS MOUNTED unit is targeted in Shooting, attacks with Strength greater than its Toughness suffer -1 to Wound.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
@@ -473,6 +756,7 @@
       "cp": 1,
       "id": "gauss-storm-amonhotekhs-guard",
       "name": "Gauss Storm",
+      "type": "detachment",
       "when": "",
       "effect": "",
       "phases": [
@@ -504,9 +788,9 @@
       ],
       "target": "",
       "timing": "once-per-phase",
-      "category": "detachment",
+      "category": "strategic-ploy",
       "playerTurn": "either",
-      "description": "",
+      "description": "After a NECRONS INFANTRY unit loses models to an attack, relocate it to within 6 inches of a friendly MONOLITH and outside Engagement Range.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
@@ -520,24 +804,28 @@
       "id": "image-of-death-cursed-legion",
       "name": "IMAGE OF DEATH",
       "type": "battle-tactic",
-      "when": "",
-      "effect": "",
+      "when": "Your opponent's Shooting phase or the Fight phase, just after an enemy unit selects targets.",
+      "effect": "Until the end of the phase, subtract 1 from Hit rolls for attacks that target your unit.",
       "phases": [
         "fight",
         "shooting"
       ],
-      "target": "",
+      "target": "One DESTROYER CULT unit selected as a target of that enemy unit.",
       "timing": "once-per-phase",
-      "category": "detachment",
+      "category": "battle-tactic",
       "playerTurn": "either",
-      "description": "",
+      "description": "After an enemy selects a DESTROYER CULT unit as a target in Shooting or Fight, attacks into that unit suffer -1 to Hit for the phase.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
       },
       "detachmentId": "necrons:detachment:cursed-legion",
-      "targetRestrictions": null,
-      "restrictionConfidence": "unknown"
+      "targetRestrictions": {
+        "requiredKeywords": [
+          "Destroyer Cult"
+        ]
+      },
+      "restrictionConfidence": "exact"
     },
     {
       "cp": 1,
@@ -551,9 +839,9 @@
       ],
       "target": "",
       "timing": "once-per-phase",
-      "category": "detachment",
+      "category": "strategic-ploy",
       "playerTurn": "opponent-turn",
-      "description": "",
+      "description": "After an enemy shoots a friendly unengaged DESTROYER CULT or Flayed Ones unit, that unit can make a D6-inch surge move.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
@@ -575,9 +863,9 @@
       ],
       "target": "",
       "timing": "once-per-phase",
-      "category": "detachment",
+      "category": "strategic-ploy",
       "playerTurn": "either",
-      "description": "",
+      "description": "Protect a targeted DESTROYER CULT or Flayed Ones unit: attacks against it suffer -1 to Hit for the phase.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
@@ -599,9 +887,9 @@
       ],
       "target": "",
       "timing": "once-per-phase",
-      "category": "detachment",
+      "category": "epic-deed",
       "playerTurn": "either",
-      "description": "",
+      "description": "After a NECRONS MONSTER destroys an unravelling enemy, a nearby friendly non-MONSTER NECRONS unit activates Reanimation Protocols.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
@@ -623,9 +911,9 @@
       ],
       "target": "",
       "timing": "once-per-phase",
-      "category": "detachment",
+      "category": "battle-tactic",
       "playerTurn": "either",
-      "description": "",
+      "description": "A non-MONSTER, non-TITANIC NECRONS unit gains +1 to Wound against targets within range of objective markers for the phase.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
@@ -639,24 +927,29 @@
       "id": "methodical-murder-cursed-legion",
       "name": "METHODICAL MURDER",
       "type": "battle-tactic",
-      "when": "",
-      "effect": "",
+      "when": "Your Shooting phase or the Fight phase.",
+      "effect": "Until the end of the phase, weapons equipped by models in that unit gain SUSTAINED HITS 1.",
       "phases": [
         "fight",
         "shooting"
       ],
-      "target": "",
+      "target": "One NECRONS unit, excluding MONSTERS and VEHICLES, that has not shot or fought this phase.",
       "timing": "once-per-phase",
-      "category": "detachment",
+      "category": "battle-tactic",
       "playerTurn": "either",
-      "description": "",
+      "description": "Use in your Shooting or Fight phase on an eligible non-Monster/non-Vehicle NECRONS unit that has not acted; its weapons gain SUSTAINED HITS 1 for the phase.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
       },
       "detachmentId": "necrons:detachment:cursed-legion",
-      "targetRestrictions": null,
-      "restrictionConfidence": "unknown"
+      "targetRestrictions": {
+        "excludedKeywords": [
+          "Monster",
+          "Vehicle"
+        ]
+      },
+      "restrictionConfidence": "exact"
     },
     {
       "cp": 1,
@@ -671,9 +964,9 @@
       ],
       "target": "",
       "timing": "once-per-phase",
-      "category": "detachment",
+      "category": "wargear",
       "playerTurn": "either",
-      "description": "",
+      "description": "Protect a CRYPTEK INFANTRY unit being attacked: NECRON WARRIORS gain a 5+ invulnerable save, while IMMORTALS gain a 4+ invulnerable save for the phase.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
@@ -694,9 +987,9 @@
       ],
       "target": "",
       "timing": "once-per-phase",
-      "category": "detachment",
+      "category": "strategic-ploy",
       "playerTurn": "either",
-      "description": "",
+      "description": "A NECRONS MONSTER forces one visible unravelling enemy unit to take a Battle-shock test at -1; if failed, it suffers D3+1 mortal wounds.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
@@ -718,9 +1011,9 @@
       ],
       "target": "",
       "timing": "once-per-phase",
-      "category": "detachment",
+      "category": "battle-tactic",
       "playerTurn": "either",
-      "description": "",
+      "description": "A NECRONS unit can ignore modifiers to Ballistic/Weapon Skill and Hit rolls for the phase; CRYPTEK units can also ignore Wound-roll modifiers.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
@@ -734,24 +1027,29 @@
       "id": "mortis-protocols-cursed-legion",
       "name": "MORTIS PROTOCOLS",
       "type": "strategic-ploy",
-      "when": "",
-      "effect": "",
+      "when": "Your Shooting phase or the Fight phase, just after the first DESTROYER CULT unit from your army destroys an enemy unit this turn.",
+      "effect": "The targeted friendly unit activates Reanimation Protocols.",
       "phases": [
         "fight",
         "shooting"
       ],
-      "target": "",
+      "target": "One friendly NECRONS unit, excluding MONSTERS and VEHICLES, within 9 inches of that DESTROYER CULT unit.",
       "timing": "once-per-phase",
-      "category": "detachment",
+      "category": "strategic-ploy",
       "playerTurn": "either",
-      "description": "",
+      "description": "After your first DESTROYER CULT kill of the turn, a nearby eligible NECRONS unit activates Reanimation Protocols.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
       },
       "detachmentId": "necrons:detachment:cursed-legion",
-      "targetRestrictions": null,
-      "restrictionConfidence": "unknown"
+      "targetRestrictions": {
+        "excludedKeywords": [
+          "Monster",
+          "Vehicle"
+        ]
+      },
+      "restrictionConfidence": "exact"
     },
     {
       "cp": 1,
@@ -765,9 +1063,9 @@
       ],
       "target": "",
       "timing": "once-per-phase",
-      "category": "detachment",
+      "category": "battle-tactic",
       "playerTurn": "either",
-      "description": "",
+      "description": "After a DESTROYER CULT or Flayed Ones unit destroys an enemy or pushes it Below Half-strength, activate that unit’s Reanimation Protocols.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
@@ -789,9 +1087,9 @@
       ],
       "target": "",
       "timing": "once-per-phase",
-      "category": "detachment",
+      "category": "battle-tactic",
       "playerTurn": "either",
-      "description": "",
+      "description": "A targeted NECRONS VEHICLE reduces the Damage characteristic of incoming attacks by 1 for the phase.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
@@ -804,28 +1102,35 @@
       "cp": 1,
       "id": "nanosaturation-hand-of-the-dynasty",
       "name": "Nanosaturation",
-      "when": "",
-      "effect": "",
+      "type": "detachment",
+      "when": "Your opponent's Shooting phase, after an enemy unit that targeted a friendly Immortals or Necron Warriors unit has shot.",
+      "effect": "The unit can shoot using snap shooting, but can only target that enemy unit.",
       "phases": [
         "shooting"
       ],
-      "target": "",
+      "target": "That Immortals or Necron Warriors unit.",
       "timing": "once-per-phase",
       "category": "detachment",
       "playerTurn": "opponent-turn",
-      "description": "",
+      "description": "After being shot, an Immortals or Necron Warriors unit can return fire using snap shooting against the attacker.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
       },
       "detachmentId": "necrons:detachment:hand-of-the-dynasty",
-      "targetRestrictions": null,
-      "restrictionConfidence": "unknown"
+      "targetRestrictions": {
+        "unitNames": [
+          "Immortals",
+          "Necron Warriors"
+        ]
+      },
+      "restrictionConfidence": "exact"
     },
     {
       "cp": 1,
       "id": "omnilocked-strafing-skyshroud-spearhead",
       "name": "Omnilocked Strafing",
+      "type": "detachment",
       "when": "",
       "effect": "",
       "phases": [
@@ -835,7 +1140,7 @@
       "timing": "once-per-phase",
       "category": "detachment",
       "playerTurn": "your-turn",
-      "description": "",
+      "description": "A NECRONS MOUNTED unit that Falls Back remains eligible to shoot.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
@@ -848,6 +1153,7 @@
       "cp": 1,
       "id": "particle-pulse-the-phaerons-armoury",
       "name": "Particle Pulse",
+      "type": "detachment",
       "when": "",
       "effect": "",
       "phases": [
@@ -857,7 +1163,7 @@
       "timing": "once-per-phase",
       "category": "detachment",
       "playerTurn": "your-turn",
-      "description": "",
+      "description": "At the start of Shooting, a NECRONS TITANIC FLY unit marks one visible enemy within 12 inches; that enemy’s detection range increases by 3 inches.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
@@ -878,9 +1184,9 @@
       ],
       "target": "",
       "timing": "once-per-phase",
-      "category": "detachment",
+      "category": "strategic-ploy",
       "playerTurn": "opponent-turn",
-      "description": "",
+      "description": "When an unravelling enemy Falls Back from a NECRONS unit, every model in that enemy unit must take a Desperate Escape test, with a penalty if Battle-shocked.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
@@ -901,9 +1207,9 @@
       ],
       "target": "",
       "timing": "once-per-phase",
-      "category": "detachment",
+      "category": "battle-tactic",
       "playerTurn": "either",
-      "description": "",
+      "description": "A DESTROYER CULT or Flayed Ones unit can make Pile-in and Consolidation moves of up to 6 inches for the phase.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
@@ -924,9 +1230,9 @@
       ],
       "target": "",
       "timing": "once-per-phase",
-      "category": "detachment",
+      "category": "strategic-ploy",
       "playerTurn": "opponent-turn",
-      "description": "",
+      "description": "During the opponent’s Command phase, a NECRONS unit on an objective activates Reanimation Protocols; CRYPTEK units reanimate one additional wound.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
@@ -947,9 +1253,9 @@
       ],
       "target": "",
       "timing": "once-per-phase",
-      "category": "detachment",
+      "category": "battle-tactic",
       "playerTurn": "your-turn",
-      "description": "",
+      "description": "A shooting NECRONS unit re-rolls Hit rolls of 1 against targets within half range; if led by a NECRONS CHARACTER, it can re-roll the Hit roll instead.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
@@ -974,9 +1280,9 @@
       ],
       "target": "",
       "timing": "once-per-phase",
-      "category": "detachment",
+      "category": "epic-deed",
       "playerTurn": "either",
-      "description": "",
+      "description": "Return a just-destroyed NECRONS INFANTRY CHARACTER at the end of the phase with half its starting wounds; each model can use this once per battle.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
@@ -997,9 +1303,9 @@
       ],
       "target": "",
       "timing": "once-per-phase",
-      "category": "detachment",
+      "category": "battle-tactic",
       "playerTurn": "either",
-      "description": "",
+      "description": "Give a NECRONS unit +1 Strength on melee weapons for the phase; if led by a NECRONS CHARACTER, also improve melee AP by 1.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
@@ -1020,9 +1326,9 @@
       ],
       "target": "",
       "timing": "once-per-phase",
-      "category": "detachment",
+      "category": "strategic-ploy",
       "playerTurn": "your-turn",
-      "description": "",
+      "description": "Give a NECRONS unit ASSAULT on ranged weapons for the turn; if led by a NECRONS CHARACTER, also re-roll its Advance roll.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
@@ -1044,9 +1350,9 @@
       ],
       "target": "",
       "timing": "once-per-phase",
-      "category": "detachment",
+      "category": "strategic-ploy",
       "playerTurn": "either",
-      "description": "",
+      "description": "After an enemy attack destroys models in a NECRONS unit, activate Reanimation Protocols for D3 wounds, or D3+1 if a NECRONS CHARACTER is leading it.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
@@ -1067,9 +1373,9 @@
       ],
       "target": "",
       "timing": "once-per-phase",
-      "category": "detachment",
+      "category": "strategic-ploy",
       "playerTurn": "opponent-turn",
-      "description": "",
+      "description": "After an enemy destroys a NECRONS unit in Shooting, a nearby NECRONS CHARACTER unit can shoot back at that attacker.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
@@ -1091,9 +1397,9 @@
       ],
       "target": "",
       "timing": "once-per-phase",
-      "category": "detachment",
+      "category": "wargear",
       "playerTurn": "either",
-      "description": "",
+      "description": "A targeted NECRONS VEHICLE unit gains a 4+ invulnerable save for the phase.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
@@ -1114,9 +1420,9 @@
       ],
       "target": "",
       "timing": "once-per-phase",
-      "category": "detachment",
+      "category": "strategic-ploy",
       "playerTurn": "opponent-turn",
-      "description": "",
+      "description": "After a non-MONSTER, non-TITANIC NECRONS unit is shot, it can make a Normal move of up to D6 inches.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
@@ -1137,9 +1443,9 @@
       ],
       "target": "",
       "timing": "once-per-phase",
-      "category": "detachment",
+      "category": "strategic-ploy",
       "playerTurn": "opponent-turn",
-      "description": "",
+      "description": "After a nearby enemy finishes a Normal, Advance or Fall Back move, a CANOPTEK unit within 8 inches can make a Normal move of up to 6 inches.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
@@ -1160,9 +1466,9 @@
       ],
       "target": "",
       "timing": "once-per-phase",
-      "category": "detachment",
+      "category": "strategic-ploy",
       "playerTurn": "your-turn",
-      "description": "",
+      "description": "In your Command phase, each of your NECRONS units in Reserves activates its Reanimation Protocols.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
@@ -1175,6 +1481,7 @@
       "cp": 1,
       "id": "reinforced-resilience-amonhotekhs-guard",
       "name": "Reinforced Resilience",
+      "type": "detachment",
       "when": "",
       "effect": "",
       "phases": [
@@ -1205,9 +1512,9 @@
       ],
       "target": "",
       "timing": "once-per-phase",
-      "category": "detachment",
+      "category": "epic-deed",
       "playerTurn": "either",
-      "description": "",
+      "description": "Destroyed LYCHGUARD or TRIARCH PRAETORIANS that have not fought can fight on a 4+ before being removed.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
@@ -1228,9 +1535,9 @@
       ],
       "target": "",
       "timing": "once-per-phase",
-      "category": "detachment",
+      "category": "strategic-ploy",
       "playerTurn": "your-turn",
-      "description": "",
+      "description": "At the start of Shooting, a CRYPTEK designates a nearby objective; friendly NECRONS attacks against units near that objective gain IGNORES COVER for the phase.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
@@ -1244,23 +1551,28 @@
       "id": "spreading-madness-cursed-legion",
       "name": "SPREADING MADNESS",
       "type": "battle-tactic",
-      "when": "",
-      "effect": "",
+      "when": "Your Charge phase.",
+      "effect": "Until the end of the phase, add 2 to its Charge roll when at least one charge target is already within Engagement Range of a friendly unit.",
       "phases": [
         "charge"
       ],
-      "target": "",
+      "target": "One NECRONS unit, excluding MONSTERS and VEHICLES, that has not declared a charge this phase.",
       "timing": "once-per-phase",
-      "category": "detachment",
+      "category": "battle-tactic",
       "playerTurn": "your-turn",
-      "description": "",
+      "description": "Give an eligible NECRONS unit +2 to qualifying Charge rolls into enemies already engaged by your army.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
       },
       "detachmentId": "necrons:detachment:cursed-legion",
-      "targetRestrictions": null,
-      "restrictionConfidence": "unknown"
+      "targetRestrictions": {
+        "excludedKeywords": [
+          "Monster",
+          "Vehicle"
+        ]
+      },
+      "restrictionConfidence": "exact"
     },
     {
       "cp": 1,
@@ -1274,9 +1586,9 @@
       ],
       "target": "",
       "timing": "once-per-phase",
-      "category": "detachment",
+      "category": "strategic-ploy",
       "playerTurn": "opponent-turn",
-      "description": "",
+      "description": "When a CANOPTEK unit wholly within the Power Matrix is declared as a charge target, activate its Reanimation Protocols.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
@@ -1289,6 +1601,7 @@
       "cp": 1,
       "id": "subsurface-quantumweave-the-phaerons-armoury",
       "name": "Subsurface Quantumweave",
+      "type": "detachment",
       "when": "",
       "effect": "",
       "phases": [
@@ -1299,7 +1612,7 @@
       "timing": "once-per-phase",
       "category": "detachment",
       "playerTurn": "either",
-      "description": "",
+      "description": "When a NECRONS TITANIC FLY unit is targeted, incoming attacks have 1 worse AP until that enemy unit finishes attacking.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
@@ -1320,9 +1633,9 @@
       ],
       "target": "",
       "timing": "once-per-phase",
-      "category": "detachment",
+      "category": "battle-tactic",
       "playerTurn": "either",
-      "description": "",
+      "description": "A LYCHGUARD or TRIARCH unit gains PRECISION on its melee weapons for the Fight phase.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
@@ -1335,6 +1648,7 @@
       "cp": 1,
       "id": "swift-as-death-skyshroud-spearhead",
       "name": "Swift As Death",
+      "type": "detachment",
       "when": "",
       "effect": "",
       "phases": [
@@ -1344,7 +1658,7 @@
       "timing": "once-per-phase",
       "category": "detachment",
       "playerTurn": "opponent-turn",
-      "description": "",
+      "description": "After an enemy ends a move within 8 inches of a friendly unengaged NECRONS MOUNTED unit, that unit can make a Normal move of D3+3 inches.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
@@ -1365,9 +1679,9 @@
       ],
       "target": "",
       "timing": "once-per-phase",
-      "category": "detachment",
+      "category": "strategic-ploy",
       "playerTurn": "your-turn",
-      "description": "",
+      "description": "At the start of Shooting, a CRYPTEK unit grants the CRYPTEK keyword for the phase to one nearby friendly NECRONS model that is not a MONSTER or VEHICLE.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
@@ -1388,9 +1702,9 @@
       ],
       "target": "",
       "timing": "once-per-phase",
-      "category": "detachment",
+      "category": "strategic-ploy",
       "playerTurn": "your-turn",
-      "description": "",
+      "description": "A LYCHGUARD or TRIARCH unit gains +1 OC until your next Command phase; VEHICLE units gain +3 OC instead.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
@@ -1412,9 +1726,9 @@
       ],
       "target": "",
       "timing": "once-per-phase",
-      "category": "detachment",
+      "category": "battle-tactic",
       "playerTurn": "either",
-      "description": "",
+      "description": "Boost a DESTROYER CULT or Flayed Ones unit against damaged enemies: +1 to Hit below Starting Strength and +1 to Wound as well when the target is Below Half-strength.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
@@ -1428,23 +1742,28 @@
       "id": "unnatural-aggression-cursed-legion",
       "name": "UNNATURAL AGGRESSION",
       "type": "strategic-ploy",
-      "when": "",
-      "effect": "",
+      "when": "End of your opponent's Charge phase.",
+      "effect": "That unit declares and resolves a charge against one or more of those enemy units; it gains no Charge bonus from doing so.",
       "phases": [
         "charge"
       ],
-      "target": "",
+      "target": "One eligible NECRONS unit, excluding MONSTERS and VEHICLES, within 6 inches of one or more enemy units.",
       "timing": "once-per-phase",
-      "category": "detachment",
+      "category": "strategic-ploy",
       "playerTurn": "opponent-turn",
-      "description": "",
+      "description": "At the end of the opponent's Charge phase, an eligible nearby NECRONS unit can make a reactive charge, without receiving a Charge bonus.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
       },
       "detachmentId": "necrons:detachment:cursed-legion",
-      "targetRestrictions": null,
-      "restrictionConfidence": "unknown"
+      "targetRestrictions": {
+        "excludedKeywords": [
+          "Monster",
+          "Vehicle"
+        ]
+      },
+      "restrictionConfidence": "exact"
     },
     {
       "cp": 1,
@@ -1458,9 +1777,9 @@
       ],
       "target": "",
       "timing": "once-per-phase",
-      "category": "detachment",
+      "category": "battle-tactic",
       "playerTurn": "your-turn",
-      "description": "",
+      "description": "A CRYPTEK unit selected to shoot can choose one additional Technosorcerous Augmentations weapon ability for the phase.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
@@ -1482,9 +1801,9 @@
       ],
       "target": "",
       "timing": "once-per-phase",
-      "category": "detachment",
+      "category": "battle-tactic",
       "playerTurn": "either",
-      "description": "",
+      "description": "A non-TITANIC NECRONS VEHICLE or MOUNTED unit gains -1 to incoming Wound rolls when attack Strength exceeds its Toughness.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
@@ -1497,23 +1816,29 @@
       "cp": 1,
       "id": "will-of-the-conqueror-hand-of-the-dynasty",
       "name": "Will of the Conqueror",
-      "when": "",
-      "effect": "",
+      "type": "detachment",
+      "when": "End of your Movement phase.",
+      "effect": "Select one objective marker that unit controls; that objective is secured.",
       "phases": [
         "movement"
       ],
-      "target": "",
+      "target": "One friendly Immortals or Necron Warriors unit.",
       "timing": "once-per-phase",
       "category": "detachment",
       "playerTurn": "either",
-      "description": "",
+      "description": "At the end of Movement, an Immortals or Necron Warriors unit can secure an objective it controls.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"
       },
       "detachmentId": "necrons:detachment:hand-of-the-dynasty",
-      "targetRestrictions": null,
-      "restrictionConfidence": "unknown"
+      "targetRestrictions": {
+        "unitNames": [
+          "Immortals",
+          "Necron Warriors"
+        ]
+      },
+      "restrictionConfidence": "exact"
     },
     {
       "cp": 1,
@@ -1531,9 +1856,9 @@
       ],
       "target": "",
       "timing": "once-per-phase",
-      "category": "detachment",
+      "category": "epic-deed",
       "playerTurn": "either",
-      "description": "",
+      "description": "After the enemy WARLORD is destroyed, your NECRONS WARLORD imposes -1 on enemy Battle-shock and Leadership tests for the rest of the battle.",
       "gameVersion": {
         "edition": "11th",
         "dataslate": "pre-launch-provisional"

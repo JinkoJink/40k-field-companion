@@ -1,5 +1,5 @@
 {
-  "datasetVersion": "2026-08-21.1",
+  "datasetVersion": "2026-08-21.4",
   "schemaVersion": 2,
   "edition": "11th",
   "scope": {
@@ -21,8 +21,12 @@
     "detachments": 13,
     "matchedPlayDetachments": 12,
     "combatPatrolOnlyDetachments": 1,
-    "relationships": 627,
-    "coreRules": 47
+    "relationships": 642,
+    "coreRules": 47,
+    "stratagems": 77,
+    "coreStratagems": 11,
+    "matchedPlayStratagems": 63,
+    "describedStratagems": 20
   },
   "factions": {
     "necrons": {
@@ -69,7 +73,7 @@
         },
         "stratagems": {
           "file": "data/necrons/stratagems.json",
-          "hash": "a68be4b5790362d9a4d28cc8511844aba096f18ca92e2ac9a539901d63c375bf"
+          "hash": "e42bb2923eecf619466c7f4922da43e93fc704f2701bff51b448833d2c7f818d"
         },
         "units": {
           "file": "data/necrons/units.json",

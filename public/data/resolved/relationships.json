@@ -1,5 +1,5 @@
 {
-  "datasetVersion": "2026-08-21.1",
+  "datasetVersion": "2026-08-21.4",
   "records": [
     {
       "rule": {
@@ -1361,6 +1361,282 @@
       "rule": {
         "cp": 1,
         "phases": [
+          "any"
+        ],
+        "playerTurn": null,
+        "targetRestrictions": null
+      },
+      "source_id": "core:command-re-roll",
+      "target_id": null,
+      "release_id": "3cc1fdc1-97a0-4be6-ac08-55c997add321",
+      "source_type": "stratagem",
+      "target_type": "detachment",
+      "relationship_type": "belongs_to"
+    },
+    {
+      "rule": {
+        "cp": 2,
+        "phases": [
+          "fight"
+        ],
+        "playerTurn": "opponent-turn",
+        "targetRestrictions": null
+      },
+      "source_id": "core:counteroffensive",
+      "target_id": null,
+      "release_id": "3cc1fdc1-97a0-4be6-ac08-55c997add321",
+      "source_type": "stratagem",
+      "target_type": "detachment",
+      "relationship_type": "belongs_to"
+    },
+    {
+      "rule": {
+        "cp": 1,
+        "phases": [
+          "charge"
+        ],
+        "playerTurn": "your-turn",
+        "targetRestrictions": {
+          "anyKeywords": [
+            "Monster",
+            "Vehicle"
+          ]
+        }
+      },
+      "source_id": "core:crushing-impact",
+      "target_id": null,
+      "release_id": "3cc1fdc1-97a0-4be6-ac08-55c997add321",
+      "source_type": "stratagem",
+      "target_type": "detachment",
+      "relationship_type": "belongs_to"
+    },
+    {
+      "rule": {
+        "cp": 1,
+        "phases": [
+          "charge"
+        ],
+        "playerTurn": "your-turn",
+        "restrictions": {
+          "anyKeywords": [
+            "Monster",
+            "Vehicle"
+          ]
+        }
+      },
+      "source_id": "core:crushing-impact",
+      "target_id": "core:crushing-impact:targets",
+      "release_id": "3cc1fdc1-97a0-4be6-ac08-55c997add321",
+      "source_type": "stratagem",
+      "target_type": "rule_filter",
+      "relationship_type": "target_filter"
+    },
+    {
+      "rule": {
+        "cp": 1,
+        "phases": [
+          "fight"
+        ],
+        "playerTurn": "your-turn",
+        "targetRestrictions": {
+          "requiredKeywords": [
+            "Character"
+          ]
+        }
+      },
+      "source_id": "core:epic-challenge",
+      "target_id": null,
+      "release_id": "3cc1fdc1-97a0-4be6-ac08-55c997add321",
+      "source_type": "stratagem",
+      "target_type": "detachment",
+      "relationship_type": "belongs_to"
+    },
+    {
+      "rule": {
+        "cp": 1,
+        "phases": [
+          "fight"
+        ],
+        "playerTurn": "your-turn",
+        "restrictions": {
+          "requiredKeywords": [
+            "Character"
+          ]
+        }
+      },
+      "source_id": "core:epic-challenge",
+      "target_id": "core:epic-challenge:targets",
+      "release_id": "3cc1fdc1-97a0-4be6-ac08-55c997add321",
+      "source_type": "stratagem",
+      "target_type": "rule_filter",
+      "relationship_type": "target_filter"
+    },
+    {
+      "rule": {
+        "cp": 1,
+        "phases": [
+          "shooting"
+        ],
+        "playerTurn": "your-turn",
+        "targetRestrictions": {
+          "anyKeywords": [
+            "Explosives",
+            "Grenades"
+          ]
+        }
+      },
+      "source_id": "core:explosives",
+      "target_id": null,
+      "release_id": "3cc1fdc1-97a0-4be6-ac08-55c997add321",
+      "source_type": "stratagem",
+      "target_type": "detachment",
+      "relationship_type": "belongs_to"
+    },
+    {
+      "rule": {
+        "cp": 1,
+        "phases": [
+          "shooting"
+        ],
+        "playerTurn": "your-turn",
+        "restrictions": {
+          "anyKeywords": [
+            "Explosives",
+            "Grenades"
+          ]
+        }
+      },
+      "source_id": "core:explosives",
+      "target_id": "core:explosives:targets",
+      "release_id": "3cc1fdc1-97a0-4be6-ac08-55c997add321",
+      "source_type": "stratagem",
+      "target_type": "rule_filter",
+      "relationship_type": "target_filter"
+    },
+    {
+      "rule": {
+        "cp": 1,
+        "phases": [
+          "movement"
+        ],
+        "playerTurn": "opponent-turn",
+        "targetRestrictions": null
+      },
+      "source_id": "core:fire-overwatch",
+      "target_id": null,
+      "release_id": "3cc1fdc1-97a0-4be6-ac08-55c997add321",
+      "source_type": "stratagem",
+      "target_type": "detachment",
+      "relationship_type": "belongs_to"
+    },
+    {
+      "rule": {
+        "cp": 1,
+        "phases": [
+          "charge"
+        ],
+        "playerTurn": "opponent-turn",
+        "targetRestrictions": null
+      },
+      "source_id": "core:heroic-intervention",
+      "target_id": null,
+      "release_id": "3cc1fdc1-97a0-4be6-ac08-55c997add321",
+      "source_type": "stratagem",
+      "target_type": "detachment",
+      "relationship_type": "belongs_to"
+    },
+    {
+      "rule": {
+        "cp": 1,
+        "phases": [
+          "command"
+        ],
+        "playerTurn": "your-turn",
+        "targetRestrictions": null
+      },
+      "source_id": "core:insane-bravery",
+      "target_id": null,
+      "release_id": "3cc1fdc1-97a0-4be6-ac08-55c997add321",
+      "source_type": "stratagem",
+      "target_type": "detachment",
+      "relationship_type": "belongs_to"
+    },
+    {
+      "rule": {
+        "cp": 1,
+        "phases": [
+          "command"
+        ],
+        "playerTurn": "your-turn",
+        "targetRestrictions": null
+      },
+      "source_id": "core:new-orders",
+      "target_id": null,
+      "release_id": "3cc1fdc1-97a0-4be6-ac08-55c997add321",
+      "source_type": "stratagem",
+      "target_type": "detachment",
+      "relationship_type": "belongs_to"
+    },
+    {
+      "rule": {
+        "cp": 1,
+        "phases": [
+          "movement"
+        ],
+        "playerTurn": "opponent-turn",
+        "targetRestrictions": null
+      },
+      "source_id": "core:rapid-ingress",
+      "target_id": null,
+      "release_id": "3cc1fdc1-97a0-4be6-ac08-55c997add321",
+      "source_type": "stratagem",
+      "target_type": "detachment",
+      "relationship_type": "belongs_to"
+    },
+    {
+      "rule": {
+        "cp": 1,
+        "phases": [
+          "shooting"
+        ],
+        "playerTurn": "opponent-turn",
+        "targetRestrictions": {
+          "requiredKeywords": [
+            "Smoke"
+          ]
+        }
+      },
+      "source_id": "core:smokescreen",
+      "target_id": null,
+      "release_id": "3cc1fdc1-97a0-4be6-ac08-55c997add321",
+      "source_type": "stratagem",
+      "target_type": "detachment",
+      "relationship_type": "belongs_to"
+    },
+    {
+      "rule": {
+        "cp": 1,
+        "phases": [
+          "shooting"
+        ],
+        "playerTurn": "opponent-turn",
+        "restrictions": {
+          "requiredKeywords": [
+            "Smoke"
+          ]
+        }
+      },
+      "source_id": "core:smokescreen",
+      "target_id": "core:smokescreen:targets",
+      "release_id": "3cc1fdc1-97a0-4be6-ac08-55c997add321",
+      "source_type": "stratagem",
+      "target_type": "rule_filter",
+      "relationship_type": "target_filter"
+    },
+    {
+      "rule": {
+        "cp": 1,
+        "phases": [
           "movement"
         ],
         "playerTurn": "your-turn",
@@ -1632,7 +1908,11 @@
           "command"
         ],
         "playerTurn": "your-turn",
-        "targetRestrictions": null
+        "targetRestrictions": {
+          "unitNames": [
+            "Immortals"
+          ]
+        }
       },
       "source_id": "dominance-protocols-hand-of-the-dynasty",
       "target_id": "necrons:detachment:hand-of-the-dynasty",
@@ -1648,7 +1928,11 @@
           "command"
         ],
         "playerTurn": "your-turn",
-        "restrictions": null
+        "restrictions": {
+          "unitNames": [
+            "Immortals"
+          ]
+        }
       },
       "source_id": "dominance-protocols-hand-of-the-dynasty",
       "target_id": "dominance-protocols-hand-of-the-dynasty:targets",
@@ -1665,7 +1949,11 @@
           "shooting"
         ],
         "playerTurn": "your-turn",
-        "targetRestrictions": null
+        "targetRestrictions": {
+          "requiredKeywords": [
+            "Destroyer Cult"
+          ]
+        }
       },
       "source_id": "driven-to-butchery-cursed-legion",
       "target_id": "necrons:detachment:cursed-legion",
@@ -1682,7 +1970,11 @@
           "shooting"
         ],
         "playerTurn": "your-turn",
-        "restrictions": null
+        "restrictions": {
+          "requiredKeywords": [
+            "Destroyer Cult"
+          ]
+        }
       },
       "source_id": "driven-to-butchery-cursed-legion",
       "target_id": "driven-to-butchery-cursed-legion:targets",
@@ -1929,7 +2221,11 @@
           "shooting"
         ],
         "playerTurn": "either",
-        "targetRestrictions": null
+        "targetRestrictions": {
+          "requiredKeywords": [
+            "Destroyer Cult"
+          ]
+        }
       },
       "source_id": "image-of-death-cursed-legion",
       "target_id": "necrons:detachment:cursed-legion",
@@ -1946,7 +2242,11 @@
           "shooting"
         ],
         "playerTurn": "either",
-        "restrictions": null
+        "restrictions": {
+          "requiredKeywords": [
+            "Destroyer Cult"
+          ]
+        }
       },
       "source_id": "image-of-death-cursed-legion",
       "target_id": "image-of-death-cursed-legion:targets",
@@ -2097,7 +2397,12 @@
           "shooting"
         ],
         "playerTurn": "either",
-        "targetRestrictions": null
+        "targetRestrictions": {
+          "excludedKeywords": [
+            "Monster",
+            "Vehicle"
+          ]
+        }
       },
       "source_id": "methodical-murder-cursed-legion",
       "target_id": "necrons:detachment:cursed-legion",
@@ -2114,7 +2419,12 @@
           "shooting"
         ],
         "playerTurn": "either",
-        "restrictions": null
+        "restrictions": {
+          "excludedKeywords": [
+            "Monster",
+            "Vehicle"
+          ]
+        }
       },
       "source_id": "methodical-murder-cursed-legion",
       "target_id": "methodical-murder-cursed-legion:targets",
@@ -2231,7 +2541,12 @@
           "shooting"
         ],
         "playerTurn": "either",
-        "targetRestrictions": null
+        "targetRestrictions": {
+          "excludedKeywords": [
+            "Monster",
+            "Vehicle"
+          ]
+        }
       },
       "source_id": "mortis-protocols-cursed-legion",
       "target_id": "necrons:detachment:cursed-legion",
@@ -2248,7 +2563,12 @@
           "shooting"
         ],
         "playerTurn": "either",
-        "restrictions": null
+        "restrictions": {
+          "excludedKeywords": [
+            "Monster",
+            "Vehicle"
+          ]
+        }
       },
       "source_id": "mortis-protocols-cursed-legion",
       "target_id": "mortis-protocols-cursed-legion:targets",
@@ -2330,7 +2650,12 @@
           "shooting"
         ],
         "playerTurn": "opponent-turn",
-        "targetRestrictions": null
+        "targetRestrictions": {
+          "unitNames": [
+            "Immortals",
+            "Necron Warriors"
+          ]
+        }
       },
       "source_id": "nanosaturation-hand-of-the-dynasty",
       "target_id": "necrons:detachment:hand-of-the-dynasty",
@@ -2346,7 +2671,12 @@
           "shooting"
         ],
         "playerTurn": "opponent-turn",
-        "restrictions": null
+        "restrictions": {
+          "unitNames": [
+            "Immortals",
+            "Necron Warriors"
+          ]
+        }
       },
       "source_id": "nanosaturation-hand-of-the-dynasty",
       "target_id": "nanosaturation-hand-of-the-dynasty:targets",
@@ -2950,7 +3280,12 @@
           "charge"
         ],
         "playerTurn": "your-turn",
-        "targetRestrictions": null
+        "targetRestrictions": {
+          "excludedKeywords": [
+            "Monster",
+            "Vehicle"
+          ]
+        }
       },
       "source_id": "spreading-madness-cursed-legion",
       "target_id": "necrons:detachment:cursed-legion",
@@ -2966,7 +3301,12 @@
           "charge"
         ],
         "playerTurn": "your-turn",
-        "restrictions": null
+        "restrictions": {
+          "excludedKeywords": [
+            "Monster",
+            "Vehicle"
+          ]
+        }
       },
       "source_id": "spreading-madness-cursed-legion",
       "target_id": "spreading-madness-cursed-legion:targets",
@@ -3210,7 +3550,12 @@
           "charge"
         ],
         "playerTurn": "opponent-turn",
-        "targetRestrictions": null
+        "targetRestrictions": {
+          "excludedKeywords": [
+            "Monster",
+            "Vehicle"
+          ]
+        }
       },
       "source_id": "unnatural-aggression-cursed-legion",
       "target_id": "necrons:detachment:cursed-legion",
@@ -3226,7 +3571,12 @@
           "charge"
         ],
         "playerTurn": "opponent-turn",
-        "restrictions": null
+        "restrictions": {
+          "excludedKeywords": [
+            "Monster",
+            "Vehicle"
+          ]
+        }
       },
       "source_id": "unnatural-aggression-cursed-legion",
       "target_id": "unnatural-aggression-cursed-legion:targets",
@@ -3308,7 +3658,12 @@
           "movement"
         ],
         "playerTurn": "either",
-        "targetRestrictions": null
+        "targetRestrictions": {
+          "unitNames": [
+            "Immortals",
+            "Necron Warriors"
+          ]
+        }
       },
       "source_id": "will-of-the-conqueror-hand-of-the-dynasty",
       "target_id": "necrons:detachment:hand-of-the-dynasty",
@@ -3324,7 +3679,12 @@
           "movement"
         ],
         "playerTurn": "either",
-        "restrictions": null
+        "restrictions": {
+          "unitNames": [
+            "Immortals",
+            "Necron Warriors"
+          ]
+        }
       },
       "source_id": "will-of-the-conqueror-hand-of-the-dynasty",
       "target_id": "will-of-the-conqueror-hand-of-the-dynasty:targets",
