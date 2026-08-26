@@ -1,6 +1,6 @@
 const COLLAPSIBLE_CARD_SELECTOR = 'article.card';
 const COLLAPSIBLE_DETAILS_SELECTOR = 'details';
-const INTERACTIVE_SELECTOR = 'button,a,input,select,textarea,label,summary,[role="button"]';
+const INTERACTIVE_SELECTOR = 'button,a,input,select,textarea,label,summary';
 
 function collapseDetails(details: HTMLDetailsElement) {
   if (details.dataset.defaultCollapseReady === 'true') return;
@@ -68,7 +68,7 @@ export function initializeResponsiveTiles() {
     if (!card) return;
     const header = card.firstElementChild;
     if (!(header instanceof HTMLElement) || !header.contains(target)) return;
-    if (target.closest(INTERACTIVE_SELECTOR) && target !== header) return;
+    if (target.closest(INTERACTIVE_SELECTOR)) return;
     toggleCard(card);
   });
 
