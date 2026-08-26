@@ -73,6 +73,44 @@
   word-break:break-word;
 }
 
+/* Selected detachment rules are individual, independently collapsible tiles. */
+.selectedDetachmentRulesPanel>.selectedDetachmentTile{
+  display:block;
+  margin-top:var(--responsive-tile-gap);
+  padding:12px;
+  border-radius:10px;
+}
+
+.selectedDetachmentTile>.selectedDetachmentToggle{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  cursor:pointer;
+  min-width:0;
+  overflow-wrap:anywhere;
+}
+
+.selectedDetachmentTile>.selectedDetachmentToggle::after{
+  content:'▾';
+  flex:0 0 auto;
+  transition:transform .15s ease;
+}
+
+.selectedDetachmentTile.selectedDetachmentCollapsed>.selectedDetachmentToggle::after{
+  transform:rotate(-90deg);
+}
+
+.selectedDetachmentTile.selectedDetachmentCollapsed>:not(.selectedDetachmentToggle){
+  display:none !important;
+}
+
+.selectedDetachmentTile>.selectedDetachmentToggle:focus-visible{
+  outline:2px solid currentColor;
+  outline-offset:4px;
+  border-radius:6px;
+}
+
 /* Non-details cards get a lightweight collapsed state while preserving their existing text size. */
 article.card.collapsibleTile{
   min-width:0;
