@@ -1,6 +1,7 @@
 const COLLAPSIBLE_CARD_SELECTOR = 'article.card';
 const COLLAPSIBLE_DETAILS_SELECTOR = 'details';
 const INTERACTIVE_SELECTOR = 'button,a,input,select,textarea,label,summary,[role="button"]';
+const SELECTED_DETACHMENT_HEADING = 'SELECTED DETACHMENT RULES';
 
 function collapseDetails(details: HTMLDetailsElement) {
   if (details.dataset.defaultCollapseReady === 'true') return;
@@ -28,7 +29,39 @@ function prepareCard(card: HTMLElement) {
   setCardExpanded(card, false);
 }
 
+function setSelectedDetachmentExpanded(panel: HTMLElement, expanded: boolean) {
+  panel.classList.toggle('selectedDetachmentCollapsed', !expanded);
+  panel.dataset.selectedDetachmentExpanded = String(expanded);
+  const header = panel.querySelector<HTMLElement>(':scope > strong');
+  if (header) header.setAttribute('aria-expanded', String(expanded));
+}
+
+function prepareSelectedDetachmentPanel(section: HTMLElement) {
+  const heading = section.querySelector<HTMLElement>(':scope > .eyebrow');
+  if (heading?.textContent?.trim() !== SELECTED_DETACHMENT_HEADING) return;
+
+  section.classList.add('selectedDetachmentRulesPanel');
+  section.querySelectorAll<HTMLElement>(':scope > .rulePanel').forEach(panel => {
+    if (panel.dataset.selectedDetachmentCollapseReady === 'true') return;
+    panel.dataset.selectedDetachmentCollapseReady = 'true';
+    panel.classList.add('selectedDetachmentTile');
+    const header = panel.querySelector<HTMLElement>(':scope > strong');
+    if (header) {
+      header.classList.add('selectedDetachmentToggle');
+      header.tabIndex = 0;
+      header.setAttribute('role', 'button');
+    }
+    setSelectedDetachmentExpanded(panel, false);
+  });
+}
+
+function prepareSelectedDetachmentRules(element: Element) {
+  if (element.matches('section.panel')) prepareSelectedDetachmentPanel(element as HTMLElement);
+  element.querySelectorAll<HTMLElement>('section.panel').forEach(prepareSelectedDetachmentPanel);
+}
+
 function prepareElement(element: Element) {
+  prepareSelectedDetachmentRules(element);
   if (element.matches(COLLAPSIBLE_DETAILS_SELECTOR)) {
     const details = element as HTMLDetailsElement;
     window.setTimeout(() => collapseDetails(details), 60);
@@ -48,6 +81,10 @@ function toggleCard(card: HTMLElement) {
   setCardExpanded(card, card.dataset.tileExpanded !== 'true');
 }
 
+function toggleSelectedDetachment(panel: HTMLElement) {
+  setSelectedDetachmentExpanded(panel, panel.dataset.selectedDetachmentExpanded !== 'true');
+}
+
 export function initializeResponsiveTiles() {
   const root = document.documentElement;
   prepareElement(root);
@@ -64,6 +101,16 @@ export function initializeResponsiveTiles() {
   document.addEventListener('click', event => {
     const target = event.target;
     if (!(target instanceof Element)) return;
+
+    const detachmentPanel = target.closest<HTMLElement>('.selectedDetachmentTile');
+    if (detachmentPanel) {
+      const detachmentHeader = detachmentPanel.querySelector<HTMLElement>(':scope > strong.selectedDetachmentToggle');
+      if (detachmentHeader?.contains(target)) {
+        toggleSelectedDetachment(detachmentPanel);
+        return;
+      }
+    }
+
     const card = target.closest<HTMLElement>('article.card.collapsibleTile');
     if (!card) return;
     const header = card.firstElementChild;
@@ -82,7 +129,17 @@ export function initializeResponsiveTiles() {
   document.addEventListener('keydown', event => {
     if (event.key !== 'Enter' && event.key !== ' ') return;
     const target = event.target;
-    if (!(target instanceof HTMLElement) || !target.classList.contains('tileToggle')) return;
+    if (!(target instanceof HTMLElement)) return;
+
+    if (target.classList.contains('selectedDetachmentToggle')) {
+      const panel = target.closest<HTMLElement>('.selectedDetachmentTile');
+      if (!panel) return;
+      event.preventDefault();
+      toggleSelectedDetachment(panel);
+      return;
+    }
+
+    if (!target.classList.contains('tileToggle')) return;
     const card = target.closest<HTMLElement>('article.card.collapsibleTile');
     if (!card) return;
     event.preventDefault();
