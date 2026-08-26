@@ -57,7 +57,8 @@ if(!resolvedUnits.length)throw new Error('Supabase runtime graph has no units.')
 if(!resolvedDetachments.length)throw new Error('Supabase runtime graph has no detachments.');
 if(!relationships.length)throw new Error('Supabase runtime graph has no resolved relationships.');
 for(const edge of relationships){
-  if(!edge.source_id||!edge.target_id||!edge.relationship_type)throw new Error('Malformed Supabase resolved relationship.');
+  const sharedCoreStratagem=edge.source_type==='stratagem'&&edge.target_type==='detachment'&&edge.relationship_type==='belongs_to'&&String(edge.source_id||'').startsWith('core:')&&edge.target_id==null;
+  if(!edge.source_id||!edge.relationship_type||(!edge.target_id&&!sharedCoreStratagem))throw new Error(`Malformed Supabase resolved relationship: ${edge.source_id||'unknown'} -> ${edge.target_id||'null'} (${edge.relationship_type||'unknown'}).`);
 }
 
 const packages=await rest(
