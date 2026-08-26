@@ -22,6 +22,57 @@
   margin-bottom:0;
 }
 
+/* Keep catalogue card actions inside narrow tiles. The visible action is only the + icon;
+   the existing Add text remains in the DOM as the button's accessible name. */
+.catalogueGroup .card>.row{
+  min-width:0;
+  align-items:flex-start;
+}
+.catalogueGroup .card>.row>div{
+  min-width:0;
+  flex:1 1 auto;
+}
+.catalogueGroup .card h3{
+  overflow-wrap:anywhere;
+}
+.catalogueGroup .card>.row>.addButton{
+  flex:0 0 40px;
+  width:40px;
+  height:40px;
+  padding:0;
+  gap:0;
+  justify-content:center;
+  font-size:0;
+}
+.catalogueGroup .card>.row>.addButton svg{
+  width:18px;
+  height:18px;
+}
+
+/* Detachment names, DP badges and long rule text must never escape their tile. */
+.det{
+  min-width:0;
+  max-width:100%;
+  overflow:hidden;
+}
+.det .row{
+  min-width:0;
+}
+.det .row strong{
+  min-width:0;
+  overflow-wrap:anywhere;
+}
+.det .row span{
+  flex:0 0 auto;
+  white-space:normal;
+}
+.det p,
+.det small{
+  max-width:100%;
+  overflow-wrap:anywhere;
+  word-break:break-word;
+}
+
 /* Non-details cards get a lightweight collapsed state while preserving their existing text size. */
 article.card.collapsibleTile{
   min-width:0;
