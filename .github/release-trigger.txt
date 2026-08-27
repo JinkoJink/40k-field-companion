@@ -1,3 +1,3 @@
 Manual Android release trigger file.
-Last triggered: 2026-08-21T12:34:00-04:00
-Reason: rebuild APK installer after Supabase rules mirror refresh
+Last triggered: 2026-08-27T03:25:00Z
+Reason: rebuild Command Protocols with current roster support for multiple independent copies of the same datasheet
