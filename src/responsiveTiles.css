@@ -1,3 +1,5 @@
+@import './uiHighlights.css';
+
 :root{
   --responsive-tile-min:156px;
   --responsive-tile-gap:8px;
