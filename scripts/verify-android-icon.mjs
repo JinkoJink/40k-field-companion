@@ -1,28 +1,16 @@
 import { readFileSync, existsSync } from 'node:fs';
 
 const manifest = readFileSync('android/app/src/main/AndroidManifest.xml', 'utf8');
-if (!manifest.includes('android:icon="@mipmap/ic_launcher"')) {
-  throw new Error('Android manifest is not using generated @mipmap/ic_launcher');
+if (!manifest.includes('android:icon="@drawable/command_protocols_art"')) {
+  throw new Error('Android manifest is not using the Command Protocols launcher art');
 }
-if (!manifest.includes('android:roundIcon="@mipmap/ic_launcher_round"')) {
-  throw new Error('Android manifest is not using generated @mipmap/ic_launcher_round');
-}
-
-const required = [
-  'android/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml',
-  'android/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml',
-  'android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png',
-  'android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png',
-  'android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png',
-];
-
-for (const path of required) {
-  if (!existsSync(path)) throw new Error(`Generated Android launcher asset missing: ${path}`);
+if (!manifest.includes('android:roundIcon="@drawable/command_protocols_art"')) {
+  throw new Error('Android manifest round icon is not using the Command Protocols launcher art');
 }
 
-const adaptive = readFileSync(required[0], 'utf8');
-if (!adaptive.includes('ic_launcher_foreground')) {
-  throw new Error('Generated adaptive icon does not reference ic_launcher_foreground');
+const art = 'android/app/src/main/res/drawable-nodpi/command_protocols_art.png';
+if (!existsSync(art)) {
+  throw new Error(`Command Protocols launcher art missing: ${art}`);
 }
 
-console.log('Verified Capacitor-generated Android launcher resources');
+console.log('Verified Command Protocols launcher art is wired directly into Android manifest');
