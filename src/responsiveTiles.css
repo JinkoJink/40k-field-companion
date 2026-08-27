@@ -22,13 +22,27 @@
   margin-bottom:0;
 }
 
-/* Expanded unit tiles span the full available row; collapsed tiles remain compact. */
-.stack>article.card.collapsibleTile:not(.tileCollapsed),
-.grid>article.card.collapsibleTile:not(.tileCollapsed),
-.stack>details.card[open],
-.grid>details.card[open]{
+/* Expanded unit tiles span the full available row; collapsed tiles remain compact.
+   Use descendant selectors as well as direct-child selectors because attached Leader/
+   Support compositions can introduce a wrapper around roster tiles. */
+.stack article.card.collapsibleTile:not(.tileCollapsed),
+.grid article.card.collapsibleTile:not(.tileCollapsed),
+.stack details.card[open],
+.grid details.card[open]{
   grid-column:1 / -1;
   width:100%;
+  max-width:100%;
+  min-width:0;
+}
+
+/* If an attached-unit wrapper itself participates in a tile grid, make sure an
+   expanded child can claim the complete row instead of being constrained to its
+   former compact column. */
+.stack :has(> article.card.collapsibleTile:not(.tileCollapsed)),
+.grid :has(> article.card.collapsibleTile:not(.tileCollapsed)){
+  grid-column:1 / -1;
+  min-width:0;
+  max-width:100%;
 }
 
 /* Keep catalogue card actions inside narrow tiles. The visible action is only the + icon;
