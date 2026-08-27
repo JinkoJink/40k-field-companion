@@ -10,24 +10,17 @@ export type ModifiedValue={
   explanation?:React.ReactNode;
 };
 
-/**
- * Shared 40K Field Companion primitive for any value changed by an active rule.
- * Faction apps should use this instead of burying characteristic changes in prose.
- */
+/** Shared 40K Field Companion primitive for any value changed by an active rule. */
 export function HighlightedValue({value,baseValue,modified=false,label,explanation}:ModifiedValue){
   const content=<span className={`uiHighlightedValue ${modified?'isModified':''}`} aria-label={label}>
     {baseValue!==undefined&&modified&&<span className='uiBaseValue'>{baseValue}</span>}
     <span className='uiCurrentValue'>{value}</span>
   </span>;
   if(!explanation)return content;
-  return <RuleReminder title={label||'Modified value'} tone='modified'>{explanation}</RuleReminderWithTrigger>;
-
-  function RuleReminderWithTrigger(){
-    return <span className='uiInlineHighlight'>
-      {content}
-      <RuleReminder title={label||'Modified value'} tone='modified'>{explanation}</RuleReminder>
-    </span>;
-  }
+  return <span className='uiInlineHighlight'>
+    {content}
+    <RuleReminder title={label||'Modified value'} tone='modified'>{explanation}</RuleReminder>
+  </span>;
 }
 
 export function ModifiedStat({label,value,baseValue,explanation}:{label:string;value:React.ReactNode;baseValue?:React.ReactNode;explanation?:React.ReactNode}){
@@ -38,10 +31,7 @@ export function ModifiedStat({label,value,baseValue,explanation}:{label:string;v
   </span>;
 }
 
-/**
- * Highlighted, tappable reminder used for faction rules, detachment rules,
- * enhancements, stratagem reminders and temporary battle effects.
- */
+/** Highlighted, tappable reminder shared by faction, detachment and battle UIs. */
 export function RuleReminder({title,children,tone='reminder',active=true,defaultOpen=false}:React.PropsWithChildren<{title:string;tone?:HighlightTone;active?:boolean;defaultOpen?:boolean}>){
   const[open,setOpen]=useState(defaultOpen);
   const bodyId=useId();
