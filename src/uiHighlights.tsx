@@ -47,6 +47,6 @@ export function RuleReminder({title,children,tone='reminder',active=true,default
 }
 
 /** Convenience helper for rule engines before rendering. */
-export function modifiedValue<T>(baseValue:T,value:T,explanation?:React.ReactNode):ModifiedValue{
+export function modifiedValue(baseValue:React.ReactNode,value:React.ReactNode,explanation?:React.ReactNode):ModifiedValue{
   return{baseValue,value,modified:String(baseValue)!==String(value),explanation};
 }
