@@ -64,8 +64,14 @@ const foregroundXml = readFileSync(foreground, 'utf8');
 if (!foregroundXml.includes('@drawable/command_protocols_art')) {
   throw new Error('Adaptive launcher foreground must use @drawable/command_protocols_art');
 }
-if (!foregroundXml.includes('android:scaleWidth="72%"') || !foregroundXml.includes('android:scaleHeight="72%"')) {
-  throw new Error('Adaptive launcher foreground must preserve the approved safe-zone scaling');
+if (!foregroundXml.includes('<layer-list') ||
+    !foregroundXml.includes('android:width="72dp"') ||
+    !foregroundXml.includes('android:height="72dp"') ||
+    !foregroundXml.includes('android:gravity="center"')) {
+  throw new Error('Adaptive launcher foreground must use the fixed 72dp centered safe-zone layout');
+}
+if (foregroundXml.includes('<scale')) {
+  throw new Error('Adaptive launcher foreground must not use ScaleDrawable; its unset level can make the launcher art invisible');
 }
 
 for (const path of [
@@ -77,8 +83,8 @@ for (const path of [
   if (!existsSync(path)) throw new Error(`Adaptive launcher resource missing: ${path}`);
   const xml = readFileSync(path, 'utf8');
   if (!xml.includes('@drawable/command_protocols_foreground')) {
-    throw new Error(`Adaptive launcher resource is not using the safe-zone foreground: ${path}`);
+    throw new Error(`Adaptive launcher resource is not using the fixed safe-zone foreground: ${path}`);
   }
 }
 
-console.log(`Verified Command Protocols launcher artwork (${canonicalPng.width}x${canonicalPng.height}) and adaptive icon safe zone`);
+console.log(`Verified Command Protocols launcher artwork (${canonicalPng.width}x${canonicalPng.height}) and fixed adaptive icon safe zone`);
