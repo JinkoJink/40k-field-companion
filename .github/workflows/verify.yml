@@ -24,6 +24,8 @@ jobs:
           node-version: 24
           cache: npm
       - run: npm ci
+      - name: Apply shared phase-context UI standard
+        run: npm run phase:ui
       - name: Typecheck
         run: npm run typecheck
       - name: Unit tests
