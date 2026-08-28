@@ -7,7 +7,7 @@
     "dev": "vite",
     "prebuild": "node scripts/apply-phase-context.mjs",
     "build": "vite build && node scripts/validate-built-packages.mjs && node scripts/validate-resolved-snapshot.mjs dist/data",
-    "postbuild": "npx --yes @capacitor/assets@3.0.5 generate --android --assetPath assets --iconBackgroundColor '#0b0e0d' --iconBackgroundColorDark '#0b0e0d' --splashBackgroundColor '#0b0e0d' --splashBackgroundColorDark '#0b0e0d' && node scripts/verify-android-icon.mjs",
+    "postbuild": "node scripts/verify-android-icon.mjs",
     "preview": "vite preview",
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
