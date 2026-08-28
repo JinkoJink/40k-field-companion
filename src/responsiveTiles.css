@@ -25,13 +25,16 @@
 }
 
 /* Expanded unit tiles span the full available row; collapsed tiles remain compact.
-   Use descendant selectors as well as direct-child selectors because attached Leader/
-   Support compositions can introduce a wrapper around roster tiles. */
+   Anchor this to the explicit expanded data state so attachment-related form content
+   cannot interfere with the selector or intrinsic grid sizing. */
+.stack > article.card.collapsibleTile[data-tile-expanded='true'],
+.grid > article.card.collapsibleTile[data-tile-expanded='true'],
 .stack article.card.collapsibleTile:not(.tileCollapsed),
 .grid article.card.collapsibleTile:not(.tileCollapsed),
 .stack details.card[open],
 .grid details.card[open]{
-  grid-column:1 / -1;
+  grid-column:1 / -1 !important;
+  justify-self:stretch;
   width:100%;
   max-width:100%;
   min-width:0;
@@ -160,12 +163,30 @@ article.card.collapsibleTile>.tileToggle:focus-visible{
   border-radius:8px;
 }
 
-/* Let dense content expand to the full tile width without shrinking its type. */
+/* Let dense content expand to the full tile width without shrinking its type.
+   Attachment selectors can contain very long unit names; their intrinsic width must
+   not force the roster card/grid track wider than the viewport. */
+.card,
+.rosterCard,
 .card .stats,
 .card .weaponGrid,
 .card .formGrid,
-.card .trackerGrid{
+.card .trackerGrid,
+.card .formGrid > *,
+.card label{
   min-width:0;
+  max-width:100%;
+}
+
+.card select,
+.card input,
+.card textarea{
+  min-width:0;
+  max-width:100%;
+}
+
+.rosterCard{
+  overflow-x:hidden;
 }
 
 @media (max-width:720px){
