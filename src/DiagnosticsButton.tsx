@@ -1,4 +1,5 @@
-import {appConfig} from './appConfig';\nimport React,{useEffect,useRef,useState} from 'react';
+import {appConfig} from './appConfig';
+import React,{useEffect,useRef,useState} from 'react';
 
 type DiagnosticError={time:string;type:string;message:string;source?:string;line?:number;column?:number};
 
