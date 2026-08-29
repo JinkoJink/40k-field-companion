@@ -12,7 +12,7 @@ const configs={
     manifestPath:'./data/version.json',
     remoteManifestUrl:'https://raw.githubusercontent.com/JinkoJink/40k-field-companion/main/public/data/version.json',
     defaultDetachment:'Cursed Legion',
-    contentLabel:'Published rules bundle',
+    contentLabel:'Published rules bundle',\n    recoveryLabel:'Reanimation',
   },
   genestealer_cults:{
     factionId:'genestealer_cults' as const,
@@ -23,7 +23,7 @@ const configs={
     manifestPath:'./data/gsc-version.json',
     remoteManifestUrl:'https://raw.githubusercontent.com/JinkoJink/40k-field-companion/main/public/data/gsc-version.json',
     defaultDetachment:'Biosanctic Broodsurge',
-    contentLabel:'Supabase draft rules bundle',
+    contentLabel:'Supabase draft rules bundle',\n    recoveryLabel:'Restore wounds',
   },
 };
 
