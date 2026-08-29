@@ -1,4 +1,5 @@
-import type {AttachmentRole,Detachment,Enhancement,Phase,RetinueCondition,RosterUnit,Stratagem,TargetRestrictions,UnitIndex} from './types';\nimport {appConfig} from './appConfig';
+import type {AttachmentRole,Detachment,Enhancement,Phase,RetinueCondition,RosterUnit,Stratagem,TargetRestrictions,UnitIndex} from './types';
+import {appConfig} from './appConfig';
 
 export const canon=(value:unknown)=>String(value??'').toLowerCase().replace(/[’‘]/g,"'").replace(/[^a-z0-9]+/g,' ').trim();
 export const slug=(value:unknown)=>canon(value).replace(/\s+/g,'-');
