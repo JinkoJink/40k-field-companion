@@ -1,0 +1,559 @@
+{
+  "schemaVersion": 2,
+  "edition": "11th",
+  "faction": "genestealer_cults",
+  "package": "weapons",
+  "records": [
+    {
+      "id": "gsc:unit:abominant:weapon:1",
+      "unitId": "gsc:unit:abominant",
+      "name": "Power sledgehammer",
+      "type": "Melee Weapons",
+      "characteristics": {
+        "A": "4",
+        "D": "D6+1",
+        "S": "12",
+        "AP": "-2",
+        "WS": "3+",
+        "Range": "Melee",
+        "Keywords": ""
+      },
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:achilles-ridgerunners:weapon:1",
+      "unitId": "gsc:unit:achilles-ridgerunners",
+      "name": "Achilles missile launcher",
+      "type": "Ranged Weapons",
+      "characteristics": {
+        "A": "3",
+        "D": "3",
+        "S": "9",
+        "AP": "-2",
+        "BS": "4+",
+        "Range": "36\"",
+        "Keywords": ""
+      },
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:achilles-ridgerunners:weapon:2",
+      "unitId": "gsc:unit:achilles-ridgerunners",
+      "name": "Armoured hull",
+      "type": "Melee Weapons",
+      "characteristics": {
+        "A": "3",
+        "D": "1",
+        "S": "5",
+        "AP": "0",
+        "WS": "4+",
+        "Range": "Melee",
+        "Keywords": ""
+      },
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:achilles-ridgerunners:weapon:3",
+      "unitId": "gsc:unit:achilles-ridgerunners",
+      "name": "Heavy mortar",
+      "type": "Ranged Weapons",
+      "characteristics": {
+        "A": "D6+3",
+        "D": "1",
+        "S": "6",
+        "AP": "0",
+        "BS": "4+",
+        "Range": "48\"",
+        "Keywords": "Blast, Indirect Fire"
+      },
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:achilles-ridgerunners:weapon:4",
+      "unitId": "gsc:unit:achilles-ridgerunners",
+      "name": "Twin heavy stubber",
+      "type": "Ranged Weapons",
+      "characteristics": {
+        "A": "3",
+        "D": "1",
+        "S": "4",
+        "AP": "0",
+        "BS": "4+",
+        "Range": "36\"",
+        "Keywords": "Twin-linked, Rapid Fire 3"
+      },
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:acolyte-hybrids-with-autopistols:weapon:1",
+      "unitId": "gsc:unit:acolyte-hybrids-with-autopistols",
+      "name": "Heavy mining tool",
+      "type": "Melee Weapons",
+      "characteristics": {
+        "A": "2",
+        "D": "3",
+        "S": "5",
+        "AP": "-2",
+        "WS": "3+",
+        "Range": "Melee",
+        "Keywords": "Anti-Vehicle 4+"
+      },
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:acolyte-hybrids-with-autopistols:weapon:2",
+      "unitId": "gsc:unit:acolyte-hybrids-with-autopistols",
+      "name": "Leader's Bio-weapons",
+      "type": "Melee Weapons",
+      "characteristics": {
+        "A": "5",
+        "D": "1",
+        "S": "5",
+        "AP": "-2",
+        "WS": "3+",
+        "Range": "Melee",
+        "Keywords": ""
+      },
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:acolyte-hybrids-with-hand-flamers:weapon:1",
+      "unitId": "gsc:unit:acolyte-hybrids-with-hand-flamers",
+      "name": "Demolition charge",
+      "type": "Ranged Weapons",
+      "characteristics": {
+        "A": "D6",
+        "D": "2",
+        "S": "9",
+        "AP": "-2",
+        "BS": "5+",
+        "Range": "8\"",
+        "Keywords": "Assault, Blast, Hazardous, One Shot"
+      },
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:acolyte-hybrids-with-hand-flamers:weapon:2",
+      "unitId": "gsc:unit:acolyte-hybrids-with-hand-flamers",
+      "name": "Leader's bio-weapons",
+      "type": "Melee Weapons",
+      "characteristics": {
+        "A": "5",
+        "D": "1",
+        "S": "5",
+        "AP": "-2",
+        "WS": "3+",
+        "Range": "Melee",
+        "Keywords": ""
+      },
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:acolyte-iconward:weapon:1",
+      "unitId": "gsc:unit:acolyte-iconward",
+      "name": "Cult claws",
+      "type": "Melee Weapons",
+      "characteristics": {
+        "A": "4",
+        "D": "1",
+        "S": "4",
+        "AP": "-1",
+        "WS": "3+",
+        "Range": "Melee",
+        "Keywords": ""
+      },
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:atalan-jackals:weapon:1",
+      "unitId": "gsc:unit:atalan-jackals",
+      "name": "Atalan incinerator",
+      "type": "Ranged Weapons",
+      "characteristics": {
+        "A": "D6",
+        "D": "1",
+        "S": "5",
+        "AP": "-1",
+        "BS": "N/A",
+        "Range": "12\"",
+        "Keywords": "Ignores Cover, Torrent"
+      },
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:atalan-jackals:weapon:2",
+      "unitId": "gsc:unit:atalan-jackals",
+      "name": "Heavy stubber",
+      "type": "Ranged Weapons",
+      "characteristics": {
+        "A": "3",
+        "D": "1",
+        "S": "4",
+        "AP": "0",
+        "BS": "4+",
+        "Range": "36\"",
+        "Keywords": "Assault, Rapid Fire 3"
+      },
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:atalan-jackals:weapon:3",
+      "unitId": "gsc:unit:atalan-jackals",
+      "name": "Mining laser",
+      "type": "Ranged Weapons",
+      "characteristics": {
+        "A": "1",
+        "D": "D6+1",
+        "S": "12",
+        "AP": "-3",
+        "BS": "4+",
+        "Range": "24\"",
+        "Keywords": ""
+      },
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:goliath-rockgrinder:weapon:1",
+      "unitId": "gsc:unit:goliath-rockgrinder",
+      "name": "Clearance incinerator",
+      "type": "Ranged Weapons",
+      "characteristics": {
+        "A": "2D6",
+        "D": "1",
+        "S": "6",
+        "AP": "-1",
+        "BS": "N/A",
+        "Range": "12\"",
+        "Keywords": "Ignores Cover, Torrent"
+      },
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:goliath-rockgrinder:weapon:2",
+      "unitId": "gsc:unit:goliath-rockgrinder",
+      "name": "Drilldozer blade",
+      "type": "Melee Weapons",
+      "characteristics": {
+        "A": "8",
+        "D": "2",
+        "S": "10",
+        "AP": "-2",
+        "WS": "3+",
+        "Range": "Melee",
+        "Keywords": ""
+      },
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:goliath-rockgrinder:weapon:3",
+      "unitId": "gsc:unit:goliath-rockgrinder",
+      "name": "Heavy seismic cannon",
+      "type": "Ranged Weapons",
+      "characteristics": {
+        "A": "4",
+        "D": "D3",
+        "S": "8",
+        "AP": "-2",
+        "BS": "4+",
+        "Range": "24\"",
+        "Keywords": "Rapid Fire 2"
+      },
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:goliath-truck:weapon:1",
+      "unitId": "gsc:unit:goliath-truck",
+      "name": "Goliath wheels",
+      "type": "Melee Weapons",
+      "characteristics": {
+        "A": "3",
+        "D": "1",
+        "S": "6",
+        "AP": "0",
+        "WS": "4+",
+        "Range": "Melee",
+        "Keywords": ""
+      },
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:goliath-truck:weapon:2",
+      "unitId": "gsc:unit:goliath-truck",
+      "name": "Twin autocannon",
+      "type": "Ranged Weapons",
+      "characteristics": {
+        "A": "2",
+        "D": "3",
+        "S": "9",
+        "AP": "-1",
+        "BS": "4+",
+        "Range": "48\"",
+        "Keywords": "Twin-linked"
+      },
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:hybrid-metamorphs:weapon:1",
+      "unitId": "gsc:unit:hybrid-metamorphs",
+      "name": "Leader's Bio-weapons",
+      "type": "Melee Weapons",
+      "characteristics": {
+        "A": "5",
+        "D": "2",
+        "S": "5",
+        "AP": "-1",
+        "WS": "3+",
+        "Range": "Melee",
+        "Keywords": ""
+      },
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:jackal-alphus:weapon:1",
+      "unitId": "gsc:unit:jackal-alphus",
+      "name": "Cult sniper rifle",
+      "type": "Ranged Weapons",
+      "characteristics": {
+        "A": "1",
+        "D": "3",
+        "S": "5",
+        "AP": "-2",
+        "BS": "3+",
+        "Range": "36\"",
+        "Keywords": "Heavy, Precision"
+      },
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:kelermorph:weapon:1",
+      "unitId": "gsc:unit:kelermorph",
+      "name": "Liberator autostubs",
+      "type": "Ranged Weapons",
+      "characteristics": {
+        "A": "6",
+        "D": "1",
+        "S": "6",
+        "AP": "-2",
+        "BS": "2+",
+        "Range": "12\"",
+        "Keywords": "Devastating Wounds, Pistol"
+      },
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:locus:weapon:1",
+      "unitId": "gsc:unit:locus",
+      "name": "Locus blades",
+      "type": "Melee Weapons",
+      "characteristics": {
+        "A": "5",
+        "D": "2",
+        "S": "5",
+        "AP": "-2",
+        "WS": "2+",
+        "Range": "Melee",
+        "Keywords": ""
+      },
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:neophyte-hybrids:weapon:1",
+      "unitId": "gsc:unit:neophyte-hybrids",
+      "name": "Chainsword",
+      "type": "Melee Weapons",
+      "characteristics": {
+        "A": "2",
+        "D": "1",
+        "S": "3",
+        "AP": "0",
+        "WS": "4+",
+        "Range": "Melee",
+        "Keywords": ""
+      },
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:neophyte-hybrids:weapon:2",
+      "unitId": "gsc:unit:neophyte-hybrids",
+      "name": "Mining laser",
+      "type": "Ranged Weapons",
+      "characteristics": {
+        "A": "1",
+        "D": "D6+1",
+        "S": "10",
+        "AP": "-3",
+        "BS": "5+",
+        "Range": "24\"",
+        "Keywords": "Heavy"
+      },
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:neophyte-hybrids:weapon:3",
+      "unitId": "gsc:unit:neophyte-hybrids",
+      "name": "Power weapon",
+      "type": "Melee Weapons",
+      "characteristics": {
+        "A": "1",
+        "D": "1",
+        "S": "4",
+        "AP": "-2",
+        "WS": "4+",
+        "Range": "Melee",
+        "Keywords": ""
+      },
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:neophyte-hybrids:weapon:4",
+      "unitId": "gsc:unit:neophyte-hybrids",
+      "name": "Seismic cannon",
+      "type": "Ranged Weapons",
+      "characteristics": {
+        "A": "2",
+        "D": "D3",
+        "S": "6",
+        "AP": "-1",
+        "BS": "5+",
+        "Range": "24\"",
+        "Keywords": "Heavy, Rapid Fire 2"
+      },
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:patriarch:weapon:1",
+      "unitId": "gsc:unit:patriarch",
+      "name": "Patriarch's claws",
+      "type": "Melee Weapons",
+      "characteristics": {
+        "A": "5",
+        "D": "2",
+        "S": "6",
+        "AP": "-2",
+        "WS": "2+",
+        "Range": "Melee",
+        "Keywords": "Devastating Wounds, Twin-linked"
+      },
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:reductus-saboteur:weapon:1",
+      "unitId": "gsc:unit:reductus-saboteur",
+      "name": "Demolition charges",
+      "type": "Ranged Weapons",
+      "characteristics": {
+        "A": "D6",
+        "D": "2",
+        "S": "9",
+        "AP": "-2",
+        "BS": "3+",
+        "Range": "8\"",
+        "Keywords": "Assault, Blast, One Shot"
+      },
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:sanctus:weapon:1",
+      "unitId": "gsc:unit:sanctus",
+      "name": "Sanctus bio-dagger",
+      "type": "Melee Weapons",
+      "characteristics": {
+        "A": "6",
+        "D": "2",
+        "S": "3",
+        "AP": "-2",
+        "WS": "2+",
+        "Range": "Melee",
+        "Keywords": "Anti-infantry 3+, Precision"
+      },
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    }
+  ]
+}
