@@ -2,6 +2,15 @@
 
 A mobile-first, offline-first Necron army builder, rules reference, and tabletop battle tracker for Warhammer 40,000 11th edition.
 
+## Faction apps
+
+The repository now builds separate faction applications from the shared 40K Field Companion codebase:
+
+- **Command Protocols** — Necrons. This remains the default build and keeps its existing IndexedDB storage and Android application ID.
+- **Broodmind** — Genestealer Cults. Build with `npm run build:gsc`; Android uses `com.jinkojink.broodmind` and a separate local rules/user database.
+
+Broodmind's checked-in offline bundle is generated from the Supabase Genestealer Cults release `2026-08-26.1`. That release is currently marked **draft** in Supabase. The bundle contains 24 units, datasheet profiles, weapons, abilities, points, nested unit options, 36 leader/support attachment edges, nine detachments, and eight detachment relationship rules. Supabase currently has no normalized GSC Enhancements or Stratagems for this release, so those sections intentionally remain empty rather than inventing content.
+
 ## Current features
 
 - Offline-first normalized Necron rules database in IndexedDB
