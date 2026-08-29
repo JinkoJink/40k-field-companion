@@ -42,7 +42,8 @@ export type BattleState = {
   score:Record<number,RoundScore>;
   objectives:ObjectiveState[];
   units:Record<string,BattleUnitState>;
-  notes:string;\n  factionResources?:{cultAmbushMarkers?:number};
+  notes:string;
+  factionResources?:{cultAmbushMarkers?:number};
   /** Frozen army configuration for this battle. Older saved battles fall back to the live roster. */
   rosterSnapshot?:RosterUnit[];
   /** Frozen selected detachments/rules for this battle. */
