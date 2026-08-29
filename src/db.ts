@@ -11,7 +11,8 @@ import type {
   UnitDetail,
   UnitIndex,
 } from './types';
-import {canon} from './rules';\nimport {appConfig} from './appConfig';
+import {canon} from './rules';
+import {appConfig} from './appConfig';
 
 const DB=appConfig.dbName;
 const VERSION=2;
