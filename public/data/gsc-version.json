@@ -12,7 +12,11 @@
   "source": {
     "supabaseProject": "mvslxmzuecwtsbkhocpg",
     "releaseId": "96a4e6ae-2021-4e1a-9179-8f801643a3af",
-    "releaseStatus": "draft"
+    "releaseStatus": "draft",
+    "normalizationFallbacks": [
+      "Acolyte Hybrids with Autopistols statline",
+      "Acolyte Hybrids with Hand Flamers statline"
+    ]
   },
   "counts": {
     "units": 24,
@@ -32,7 +36,7 @@
       "packages": {
         "units": {
           "file": "data/genestealer_cults/units.json",
-          "hash": "eeca1a5b02465635c651c158792c6c61d2f8cc1b279cfbd79668ade3089671b2"
+          "hash": "1437ed2c14977fe3e6b4178d06c7c5f03e8dd34f1171dea0aa595031067ef463"
         },
         "profiles": {
           "file": "data/genestealer_cults/profiles.json",
