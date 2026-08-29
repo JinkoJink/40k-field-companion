@@ -1,0 +1,179 @@
+{
+  "schemaVersion": 2,
+  "edition": "11th",
+  "faction": "genestealer_cults",
+  "package": "leaders",
+  "records": [
+    {
+      "id": "gsc:leader:abominant",
+      "leaderUnitId": "gsc:unit:abominant",
+      "attachmentRole": "leader",
+      "targetUnitIds": [
+        "gsc:unit:aberrants"
+      ],
+      "targetNames": [
+        "Aberrants"
+      ]
+    },
+    {
+      "id": "gsc:leader:acolyte-iconward",
+      "leaderUnitId": "gsc:unit:acolyte-iconward",
+      "attachmentRole": "leader",
+      "targetUnitIds": [
+        "gsc:unit:acolyte-hybrids-with-autopistols",
+        "gsc:unit:acolyte-hybrids-with-hand-flamers",
+        "gsc:unit:hybrid-metamorphs",
+        "gsc:unit:neophyte-hybrids"
+      ],
+      "targetNames": [
+        "Acolyte Hybrids with Autopistols",
+        "Acolyte Hybrids with Hand Flamers",
+        "Hybrid Metamorphs",
+        "Neophyte Hybrids"
+      ]
+    },
+    {
+      "id": "gsc:leader:benefictus",
+      "leaderUnitId": "gsc:unit:benefictus",
+      "attachmentRole": "leader",
+      "targetUnitIds": [
+        "gsc:unit:acolyte-hybrids-with-autopistols",
+        "gsc:unit:acolyte-hybrids-with-hand-flamers",
+        "gsc:unit:hybrid-metamorphs",
+        "gsc:unit:neophyte-hybrids"
+      ],
+      "targetNames": [
+        "Acolyte Hybrids with Autopistols",
+        "Acolyte Hybrids with Hand Flamers",
+        "Hybrid Metamorphs",
+        "Neophyte Hybrids"
+      ]
+    },
+    {
+      "id": "gsc:leader:biophagus",
+      "leaderUnitId": "gsc:unit:biophagus",
+      "attachmentRole": "support",
+      "targetUnitIds": [
+        "gsc:unit:aberrants",
+        "gsc:unit:acolyte-hybrids-with-autopistols",
+        "gsc:unit:acolyte-hybrids-with-hand-flamers",
+        "gsc:unit:hybrid-metamorphs",
+        "gsc:unit:neophyte-hybrids"
+      ],
+      "targetNames": [
+        "Aberrants",
+        "Acolyte Hybrids with Autopistols",
+        "Acolyte Hybrids with Hand Flamers",
+        "Hybrid Metamorphs",
+        "Neophyte Hybrids"
+      ]
+    },
+    {
+      "id": "gsc:leader:clamavus",
+      "leaderUnitId": "gsc:unit:clamavus",
+      "attachmentRole": "support",
+      "targetUnitIds": [
+        "gsc:unit:acolyte-hybrids-with-autopistols",
+        "gsc:unit:acolyte-hybrids-with-hand-flamers",
+        "gsc:unit:hybrid-metamorphs",
+        "gsc:unit:neophyte-hybrids"
+      ],
+      "targetNames": [
+        "Acolyte Hybrids with Autopistols",
+        "Acolyte Hybrids with Hand Flamers",
+        "Hybrid Metamorphs",
+        "Neophyte Hybrids"
+      ]
+    },
+    {
+      "id": "gsc:leader:jackal-alphus",
+      "leaderUnitId": "gsc:unit:jackal-alphus",
+      "attachmentRole": "leader",
+      "targetUnitIds": [
+        "gsc:unit:atalan-jackals"
+      ],
+      "targetNames": [
+        "Atalan Jackals"
+      ]
+    },
+    {
+      "id": "gsc:leader:locus",
+      "leaderUnitId": "gsc:unit:locus",
+      "attachmentRole": "support",
+      "targetUnitIds": [
+        "gsc:unit:acolyte-hybrids-with-autopistols",
+        "gsc:unit:acolyte-hybrids-with-hand-flamers",
+        "gsc:unit:hybrid-metamorphs",
+        "gsc:unit:neophyte-hybrids"
+      ],
+      "targetNames": [
+        "Acolyte Hybrids with Autopistols",
+        "Acolyte Hybrids with Hand Flamers",
+        "Hybrid Metamorphs",
+        "Neophyte Hybrids"
+      ]
+    },
+    {
+      "id": "gsc:leader:magus",
+      "leaderUnitId": "gsc:unit:magus",
+      "attachmentRole": "leader",
+      "targetUnitIds": [
+        "gsc:unit:acolyte-hybrids-with-autopistols",
+        "gsc:unit:acolyte-hybrids-with-hand-flamers",
+        "gsc:unit:hybrid-metamorphs",
+        "gsc:unit:neophyte-hybrids"
+      ],
+      "targetNames": [
+        "Acolyte Hybrids with Autopistols",
+        "Acolyte Hybrids with Hand Flamers",
+        "Hybrid Metamorphs",
+        "Neophyte Hybrids"
+      ]
+    },
+    {
+      "id": "gsc:leader:nexos",
+      "leaderUnitId": "gsc:unit:nexos",
+      "attachmentRole": "support",
+      "targetUnitIds": [
+        "gsc:unit:acolyte-hybrids-with-autopistols",
+        "gsc:unit:acolyte-hybrids-with-hand-flamers",
+        "gsc:unit:hybrid-metamorphs",
+        "gsc:unit:neophyte-hybrids"
+      ],
+      "targetNames": [
+        "Acolyte Hybrids with Autopistols",
+        "Acolyte Hybrids with Hand Flamers",
+        "Hybrid Metamorphs",
+        "Neophyte Hybrids"
+      ]
+    },
+    {
+      "id": "gsc:leader:patriarch",
+      "leaderUnitId": "gsc:unit:patriarch",
+      "attachmentRole": "leader",
+      "targetUnitIds": [
+        "gsc:unit:purestrain-genestealers"
+      ],
+      "targetNames": [
+        "Purestrain Genestealers"
+      ]
+    },
+    {
+      "id": "gsc:leader:primus",
+      "leaderUnitId": "gsc:unit:primus",
+      "attachmentRole": "leader",
+      "targetUnitIds": [
+        "gsc:unit:acolyte-hybrids-with-autopistols",
+        "gsc:unit:acolyte-hybrids-with-hand-flamers",
+        "gsc:unit:hybrid-metamorphs",
+        "gsc:unit:neophyte-hybrids"
+      ],
+      "targetNames": [
+        "Acolyte Hybrids with Autopistols",
+        "Acolyte Hybrids with Hand Flamers",
+        "Hybrid Metamorphs",
+        "Neophyte Hybrids"
+      ]
+    }
+  ]
+}
