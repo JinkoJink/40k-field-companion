@@ -10,7 +10,7 @@ android {
         // v2 is intentionally distinct from the original one-off debug-signed package.
         // Keep this applicationId stable from here forward so every CI build upgrades
         // the same installed test application instead of creating another copy.
-        applicationId "com.jinkojink.commandprotocols.v2"
+        applicationId broodmind ? "com.jinkojink.broodmind" : "com.jinkojink.commandprotocols.v2"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode ciVersionCode ? ciVersionCode.toInteger() : 2
