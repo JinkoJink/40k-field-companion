@@ -1,0 +1,15 @@
+{
+  "name": "Broodmind",
+  "short_name": "Broodmind",
+  "description": "Offline Genestealer Cults army building, datasheets, and battle reference.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0b0e0d",
+  "theme_color": "#0b0e0d",
+  "icons": [
+    {"src":"./icon-192.png","sizes":"192x192","type":"image/png","purpose":"any"},
+    {"src":"./icon-512.png","sizes":"512x512","type":"image/png","purpose":"any"}
+  ]
+}
