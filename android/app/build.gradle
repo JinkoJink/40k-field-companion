@@ -11,6 +11,7 @@ android {
         // Keep this applicationId stable from here forward so every CI build upgrades
         // the same installed test application instead of creating another copy.
         applicationId broodmind ? "com.jinkojink.broodmind" : "com.jinkojink.commandprotocols.v2"
+        manifestPlaceholders = [appLabel: broodmind ? "Broodmind" : "Command Protocols"]
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode ciVersionCode ? ciVersionCode.toInteger() : 2
