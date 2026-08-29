@@ -2,7 +2,7 @@ import React,{useEffect,useMemo,useRef,useState} from 'react';
 import {AlertTriangle,CheckCircle2,ChevronDown,Database,ExternalLink,Minus,Plus,RotateCcw,Search,Settings,Shield,Trash2} from 'lucide-react';
 import {checkForUpdates,migrateLegacy,readBattle,readUser,system,writeBattle,writeUser} from './db';
 import {createBattleState,ensureBattleSnapshots,phases,remainingUnitWounds,stateForModelWounds,stateForRemainingWounds,totalScore,totalUnitWounds,unitWounds} from './battle';
-import {availableSizes,defaultSize,isCategory,loadNecrons,pointsFor,subfactionKeyword} from './data';
+import {availableSizes,defaultSize,isCategory,loadFaction,pointsFor,subfactionKeyword} from './data';\nimport {appConfig} from './appConfig';
 import {applyRequiredBindings,compatibleBodyguards,configurationGroups,createRosterUnit,defaultWargear,removeUnavailableEnhancements,rosterPoints,validateRoster} from './roster';
 import {attachmentRoleFor,connectionNotesForEntry,eligibleEnhancementsForUnit,eligibleStratagemTargets,requiredBindingForUnit,retinueConditionFor,ruleMetaLine,stratagemAvailable} from './rules';
 import type {BattleState,Detachment,Enhancement,InstalledRulesMeta,Phase,RosterUnit,Stratagem,UnitDetail,UnitIndex,ValidationIssue} from './types';
@@ -10,7 +10,7 @@ import type {BattleState,Detachment,Enhancement,InstalledRulesMeta,Phase,RosterU
 const CORE_RULES_URL='https://www.warhammer-community.com/en-gb/downloads/warhammer-40000/';
 const POINTS_LIMIT=2000;
 type UpdateSettings={automatic:boolean;wifiOnly:boolean;manualOnly:boolean};
-type LoadedRules=Awaited<ReturnType<typeof loadNecrons>>;
+type LoadedRules=Awaited<ReturnType<typeof loadFaction>>;
 
 function unitSearchText(unit:UnitIndex,detail?:UnitDetail){
   return JSON.stringify({...unit,details:detail}).toLowerCase();
@@ -36,7 +36,7 @@ export function App(){
   const[details,setDetails]=useState<Map<string,UnitDetail>>(new Map());
   const[detachments,setDetachments]=useState<Detachment[]>([]);
   const[stratagems,setStratagems]=useState<Stratagem[]>([]);
-  const[selected,setSelected]=useState<string[]>(['Cursed Legion']);
+  const[selected,setSelected]=useState<string[]>([appConfig.defaultDetachment]);
   const[roster,setRoster]=useState<RosterUnit[]>([]);
   const[battle,setBattle]=useState<BattleState|null>(null);
   const[tab,setTab]=useState<'build'|'battle'|'search'|'settings'>('build');
@@ -75,8 +75,8 @@ export function App(){
         // Migration must finish before durable reads so first launch cannot race stale localStorage against IndexedDB.
         await migrateLegacy();
         const[data,storedDetachments,storedRoster,storedBattle,storedSettings]=await Promise.all([
-          loadNecrons(),
-          readUser<string[]>('detachments',['Cursed Legion']),
+          loadFaction(),
+          readUser<string[]>('detachments',[appConfig.defaultDetachment]),
           readUser<RosterUnit[]>('roster',[]),
           readBattle(),
           readUser<UpdateSettings>('settings',{automatic:true,wifiOnly:false,manualOnly:false}),
@@ -118,7 +118,7 @@ export function App(){
       void checkForUpdates().then(async result=>{
         if(cancelled)return;
         if(result.status==='updated'){
-          const data=await loadNecrons();
+          const data=await loadFaction();
           if(cancelled)return;
           applyLoadedRules(data);
           setUpdateMessage(`Background update installed: ${result.changed.join(', ')}`);
@@ -178,7 +178,7 @@ export function App(){
       setUpdateMessage('Checking…');
       const result=await checkForUpdates(true);
       if(result.status==='updated'){
-        const data=await loadNecrons();
+        const data=await loadFaction();
         applyLoadedRules(data);
         setUpdateMessage(`Installed: ${result.changed.join(', ')}`);
       }else if(result.status==='deferred'){
@@ -196,12 +196,12 @@ export function App(){
 
   return <main className='app'>
     <header className='top'>
-      <div><div className='eyebrow'>40K FIELD COMPANION</div><h1>Necrons — Strike Force</h1><p>Configure the army, validate it, then carry the same roster into battle.</p></div>
+      <div><div className='eyebrow'>40K FIELD COMPANION · {appConfig.appName.toUpperCase()}</div><h1>{appConfig.factionName} — Strike Force</h1><p>Configure the army, validate it, then carry the same roster into battle.</p></div>
       <div className={`points ${totalPoints>POINTS_LIMIT?'over':''}`}><b>{totalPoints}</b><span>/ {POINTS_LIMIT} pts</span></div>
     </header>
     <div className='status'>
       <span><Database size={14}/>{loading?'Loading rules data…':error?'Rules data unavailable':'Rules data ready'}</span>
-      <span>{totalDP}/3 DP selected</span>
+      <span>{totalDP}/3 DP selected · {appConfig.contentLabel}</span>
       <span className={errors.length?'invalid':'valid'}>{errors.length?<AlertTriangle size={14}/>:<CheckCircle2 size={14}/>} {errors.length?`${errors.length} legality issue${errors.length===1?'':'s'}`:'Army legal'}</span>
     </div>
     {error&&<div className='error'>{error}</div>}
