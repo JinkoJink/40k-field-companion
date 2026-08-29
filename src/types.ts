@@ -49,5 +49,5 @@ export type BattleState = {
   detachmentSnapshot?:Detachment[];
 };
 export type PackageManifest={file:string;hash:string};
-export type RulesManifest={datasetVersion:string;schemaVersion:number;factions:{necrons:{packages:Record<string,PackageManifest>}}};
+export type RulesManifest={datasetVersion:string;schemaVersion:number;scope?:{factions?:string[];[key:string]:unknown};factions:Record<string,{packages:Record<string,PackageManifest>}>;};
 export type InstalledRulesMeta={datasetVersion:string;schemaVersion:number;packages:Record<string,PackageManifest>;lastSuccessfulUpdate?:string;lastKnownGood?:string;mode?:'bootstrap'|'update';};
