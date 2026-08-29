@@ -77,6 +77,12 @@ function packageUrl(file:string,remote:boolean){
   return remote?`https://raw.githubusercontent.com/JinkoJink/40k-field-companion/main/public/${file}`:`./${file}`;
 }
 
+function factionPackages(manifest:RulesManifest){
+  const faction=manifest.factions?.[appConfig.factionId];
+  if(!faction?.packages)throw new Error(`Rules manifest does not contain ${appConfig.factionName} packages.`);
+  return faction.packages;
+}
+
 export async function system<T>(id:string,fallback:T):Promise<T>{
   const db=await open();
   const tx=db.transaction('system','readonly');
