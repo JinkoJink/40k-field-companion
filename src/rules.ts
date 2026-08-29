@@ -2,6 +2,8 @@ import type {AttachmentRole,Detachment,Enhancement,Phase,RetinueCondition,Roster
 
 export const canon=(value:unknown)=>String(value??'').toLowerCase().replace(/[’‘]/g,"'").replace(/[^a-z0-9]+/g,' ').trim();
 export const slug=(value:unknown)=>canon(value).replace(/\s+/g,'-');
+const factionTerms=new Set([canon(appConfig.factionName),canon(appConfig.factionId.replace(/_/g,' '))]);
+const isFactionTerm=(value:unknown)=>factionTerms.has(canon(value));
 function baseKeywords(unit:UnitIndex){return new Set([unit.name,...unit.categories.map(value=>value.replace(/^Faction:\s*/i,''))].map(canon).filter(Boolean));}
 function matchesTerm(unit:UnitIndex,term:string,extras:string[]=[]){const wanted=canon(term);if(!wanted)return true;const values=new Set([...baseKeywords(unit),...extras.map(canon)]);if(values.has(wanted))return true;return[...values].some(value=>value===wanted||value.endsWith(` ${wanted}`)||wanted.endsWith(` ${value}`));}
 export function selectedEnhancement(entry:RosterUnit,enhancements:Enhancement[]|undefined){return entry.enhancement?(enhancements||[]).find(candidate=>canon(candidate.name)===canon(entry.enhancement)):undefined;}
