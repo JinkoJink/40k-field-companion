@@ -8,7 +8,7 @@ const configs={
     factionName:'Necrons',
     appName:'Command Protocols',
     appId:'com.jinkojink.commandprotocols.v2',
-    dbName:'field-companion-necrons',
+    dbName:'field-companion',
     manifestPath:'./data/version.json',
     remoteManifestUrl:'https://raw.githubusercontent.com/JinkoJink/40k-field-companion/main/public/data/version.json',
     defaultDetachment:'Cursed Legion',
