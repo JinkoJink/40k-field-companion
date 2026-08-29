@@ -1,0 +1,464 @@
+{
+  "schemaVersion": 2,
+  "edition": "11th",
+  "faction": "genestealer_cults",
+  "package": "profiles",
+  "records": [
+    {
+      "id": "gsc:unit:aberrants:profile:1",
+      "unitId": "gsc:unit:aberrants",
+      "name": "Aberrant",
+      "type": "Unit",
+      "characteristics": {
+        "M": "6\"",
+        "T": "6",
+        "W": "3",
+        "LD": "7+",
+        "OC": "1",
+        "Sv": "5+",
+        "InSv": ""
+      },
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:aberrants:profile:2",
+      "unitId": "gsc:unit:aberrants",
+      "name": "Aberrant Hypermorph",
+      "type": "Unit",
+      "characteristics": {
+        "M": "6\"",
+        "T": "6",
+        "W": "3",
+        "LD": "7+",
+        "OC": "1",
+        "Sv": "5+",
+        "InSv": ""
+      },
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:abominant:profile:1",
+      "unitId": "gsc:unit:abominant",
+      "name": "Abominant",
+      "type": "Unit",
+      "characteristics": {
+        "M": "6\"",
+        "T": "6",
+        "W": "5",
+        "LD": "7+",
+        "OC": "1",
+        "Sv": "5+",
+        "InSv": ""
+      },
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:achilles-ridgerunners:profile:1",
+      "unitId": "gsc:unit:achilles-ridgerunners",
+      "name": "Achilles Ridge Runner",
+      "type": "Unit",
+      "characteristics": {
+        "M": "12\"",
+        "T": "7",
+        "W": "8",
+        "LD": "7+",
+        "OC": "3",
+        "Sv": "3+",
+        "InSv": ""
+      },
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:acolyte-iconward:profile:1",
+      "unitId": "gsc:unit:acolyte-iconward",
+      "name": "Acolyte Iconward",
+      "type": "Unit",
+      "characteristics": {
+        "M": "6\"",
+        "T": "4",
+        "W": "3",
+        "LD": "6+",
+        "OC": "1",
+        "Sv": "5+",
+        "InSv": ""
+      },
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:atalan-jackals:profile:1",
+      "unitId": "gsc:unit:atalan-jackals",
+      "name": "Atalan Jackal",
+      "type": "Unit",
+      "characteristics": {
+        "M": "12\"",
+        "T": "4",
+        "W": "2",
+        "LD": "7+",
+        "OC": "1",
+        "Sv": "5+",
+        "InSv": ""
+      },
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:atalan-jackals:profile:2",
+      "unitId": "gsc:unit:atalan-jackals",
+      "name": "Atalan Wolfquad",
+      "type": "Unit",
+      "characteristics": {
+        "M": "12\"",
+        "T": "4",
+        "W": "4",
+        "LD": "7+",
+        "OC": "1",
+        "Sv": "5+",
+        "InSv": ""
+      },
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:benefictus:profile:1",
+      "unitId": "gsc:unit:benefictus",
+      "name": "Benefictus",
+      "type": "Unit",
+      "characteristics": {
+        "M": "6\"",
+        "T": "3",
+        "W": "3",
+        "LD": "7+",
+        "OC": "1",
+        "Sv": "5+",
+        "InSv": "5+"
+      },
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:biophagus:profile:1",
+      "unitId": "gsc:unit:biophagus",
+      "name": "Biophagus",
+      "type": "Unit",
+      "characteristics": {
+        "M": "6\"",
+        "T": "3",
+        "W": "3",
+        "LD": "7+",
+        "OC": "1",
+        "Sv": "5+",
+        "InSv": ""
+      },
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:clamavus:profile:1",
+      "unitId": "gsc:unit:clamavus",
+      "name": "Clamavus",
+      "type": "Unit",
+      "characteristics": {
+        "M": "6\"",
+        "T": "3",
+        "W": "3",
+        "LD": "6+",
+        "OC": "1",
+        "Sv": "5+",
+        "InSv": ""
+      },
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:goliath-rockgrinder:profile:1",
+      "unitId": "gsc:unit:goliath-rockgrinder",
+      "name": "Goliath Rockgrinder",
+      "type": "Unit",
+      "characteristics": {
+        "M": "12\"",
+        "T": "10",
+        "W": "10",
+        "LD": "7+",
+        "OC": "3",
+        "Sv": "3+",
+        "InSv": ""
+      },
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:goliath-truck:profile:1",
+      "unitId": "gsc:unit:goliath-truck",
+      "name": "Goliath Truck",
+      "type": "Unit",
+      "characteristics": {
+        "M": "12\"",
+        "T": "9",
+        "W": "10",
+        "LD": "7+",
+        "OC": "2",
+        "Sv": "3+",
+        "InSv": ""
+      },
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:hybrid-metamorphs:profile:1",
+      "unitId": "gsc:unit:hybrid-metamorphs",
+      "name": "Hybrid Leader",
+      "type": "Unit",
+      "characteristics": {
+        "M": "6\"",
+        "T": "4",
+        "W": "1",
+        "LD": "7+",
+        "OC": "1",
+        "Sv": "5+",
+        "InSv": ""
+      },
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:jackal-alphus:profile:1",
+      "unitId": "gsc:unit:jackal-alphus",
+      "name": "Jackal Alphus",
+      "type": "Unit",
+      "characteristics": {
+        "M": "12\"",
+        "T": "4",
+        "W": "4",
+        "LD": "7+",
+        "OC": "1",
+        "Sv": "5+",
+        "InSv": ""
+      },
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:kelermorph:profile:1",
+      "unitId": "gsc:unit:kelermorph",
+      "name": "Kelermorph",
+      "type": "Unit",
+      "characteristics": {
+        "M": "6\"",
+        "T": "3",
+        "W": "3",
+        "LD": "7+",
+        "OC": "1",
+        "Sv": "5+",
+        "InSv": "5+"
+      },
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:locus:profile:1",
+      "unitId": "gsc:unit:locus",
+      "name": "Locus",
+      "type": "Unit",
+      "characteristics": {
+        "M": "6\"",
+        "T": "4",
+        "W": "3",
+        "LD": "7+",
+        "OC": "1",
+        "Sv": "5+",
+        "InSv": "4+"
+      },
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:magus:profile:1",
+      "unitId": "gsc:unit:magus",
+      "name": "Magus",
+      "type": "Unit",
+      "characteristics": {
+        "M": "6\"",
+        "T": "3",
+        "W": "4",
+        "LD": "6+",
+        "OC": "1",
+        "Sv": "5+",
+        "InSv": "5+"
+      },
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:neophyte-hybrids:profile:1",
+      "unitId": "gsc:unit:neophyte-hybrids",
+      "name": "Neophyte Hybrid",
+      "type": "Unit",
+      "characteristics": {
+        "M": "6\"",
+        "T": "3",
+        "W": "1",
+        "LD": "7+",
+        "OC": "2",
+        "Sv": "5+",
+        "InSv": ""
+      },
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:nexos:profile:1",
+      "unitId": "gsc:unit:nexos",
+      "name": "Nexos",
+      "type": "Unit",
+      "characteristics": {
+        "M": "6\"",
+        "T": "3",
+        "W": "3",
+        "LD": "7+",
+        "OC": "1",
+        "Sv": "5+",
+        "InSv": ""
+      },
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:patriarch:profile:1",
+      "unitId": "gsc:unit:patriarch",
+      "name": "Patriarch",
+      "type": "Unit",
+      "characteristics": {
+        "M": "8\"",
+        "T": "5",
+        "W": "6",
+        "LD": "6+",
+        "OC": "1",
+        "Sv": "4+",
+        "InSv": "4+"
+      },
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:primus:profile:1",
+      "unitId": "gsc:unit:primus",
+      "name": "Primus",
+      "type": "Unit",
+      "characteristics": {
+        "M": "6\"",
+        "T": "3",
+        "W": "4",
+        "LD": "6+",
+        "OC": "1",
+        "Sv": "5+",
+        "InSv": "5+"
+      },
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:purestrain-genestealers:profile:1",
+      "unitId": "gsc:unit:purestrain-genestealers",
+      "name": "Purestrain Genestealer",
+      "type": "Unit",
+      "characteristics": {
+        "M": "8\"",
+        "T": "4",
+        "W": "2",
+        "LD": "7+",
+        "OC": "1",
+        "Sv": "5+",
+        "InSv": "5+"
+      },
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:reductus-saboteur:profile:1",
+      "unitId": "gsc:unit:reductus-saboteur",
+      "name": "Reductus Saboteur",
+      "type": "Unit",
+      "characteristics": {
+        "M": "6\"",
+        "T": "3",
+        "W": "3",
+        "LD": "7+",
+        "OC": "1",
+        "Sv": "5+",
+        "InSv": "5+"
+      },
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:sanctus:profile:1",
+      "unitId": "gsc:unit:sanctus",
+      "name": "Sanctus",
+      "type": "Unit",
+      "characteristics": {
+        "M": "6\"",
+        "T": "3",
+        "W": "3",
+        "LD": "7+",
+        "OC": "1",
+        "Sv": "5+",
+        "InSv": "5+"
+      },
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    }
+  ]
+}
