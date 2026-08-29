@@ -24,7 +24,8 @@
     "leaderEdges": 36,
     "unitOptions": 270,
     "enhancements": 0,
-    "stratagems": 0
+    "stratagems": 0,
+    "detachmentRelationships": 8
   },
   "factions": {
     "genestealer_cults": {
@@ -51,7 +52,7 @@
         },
         "detachments": {
           "file": "data/genestealer_cults/detachments.json",
-          "hash": "30c853f5ef0c6bbd78064d0251e858585868c7322167602ffc09c4579cf4da7a"
+          "hash": "2afd1da9964edec6d77ad5802a760652e2915ab5df83c85afd2eb95fffb268d3"
         },
         "enhancements": {
           "file": "data/genestealer_cults/enhancements.json",
