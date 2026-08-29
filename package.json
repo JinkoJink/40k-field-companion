@@ -17,7 +17,7 @@
     "polish:ui": "node scripts/polish-app-ui.mjs",
     "phase:ui": "node scripts/apply-phase-context.mjs",
     "validate:gsc-data": "node scripts/validate-gsc-packages.mjs",
-    "build:gsc": "VITE_APP_FACTION=genestealer_cults vite build && APP_FACTION=genestealer_cults APP_MANIFEST=gsc-version.json node scripts/validate-built-packages.mjs"
+    "build:gsc": "node scripts/apply-phase-context.mjs && VITE_APP_FACTION=genestealer_cults vite build && APP_FACTION=genestealer_cults APP_MANIFEST=gsc-version.json node scripts/validate-built-packages.mjs"
   },
   "dependencies": {
     "@capacitor/android": "^8.5.0",
