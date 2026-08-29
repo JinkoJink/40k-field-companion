@@ -1,0 +1,164 @@
+{
+  "schemaVersion": 2,
+  "edition": "11th",
+  "faction": "genestealer_cults",
+  "package": "keywords",
+  "records": [
+    {
+      "id": "gsc:keyword:01c10d3eeb152d0111d55607b3494773",
+      "name": "Acolyte Hybrids with Hand Flamers"
+    },
+    {
+      "id": "gsc:keyword:164b13545a63a259d20b47f061774369",
+      "name": "Purestrain Genestealers"
+    },
+    {
+      "id": "gsc:keyword:2236c4d43b032245dbc02d8f33d6c7f0",
+      "name": "Battleline"
+    },
+    {
+      "id": "gsc:keyword:256b695302abefc88598d1d69de648d6",
+      "name": "Atalan Jackals"
+    },
+    {
+      "id": "gsc:keyword:27d2cf75e1bca7e918cb0c8557aea1ce",
+      "name": "Achilles Ridgerunners"
+    },
+    {
+      "id": "gsc:keyword:2c880c79614904a802440ea07e11cf82",
+      "name": "Goliath Rockgrinder"
+    },
+    {
+      "id": "gsc:keyword:2f22937a18e3d76202329384bd08ae23",
+      "name": "Sanctus"
+    },
+    {
+      "id": "gsc:keyword:2f864e2038b7e8ef6944e751e2cc5721",
+      "name": "Locus"
+    },
+    {
+      "id": "gsc:keyword:37d9a22b8a8b04711dfc7f0186c8970d",
+      "name": "Acolyte Hybrids with Autopistols"
+    },
+    {
+      "id": "gsc:keyword:393936af6c0391ca9e00f8ee852c1205",
+      "name": "Primus"
+    },
+    {
+      "id": "gsc:keyword:40e3d39abee106afe63bd5361c9d00ac",
+      "name": "Patriarch"
+    },
+    {
+      "id": "gsc:keyword:434990c8a25d2be94863561ae98bd682",
+      "name": "Support"
+    },
+    {
+      "id": "gsc:keyword:4618ce9962c71d6cd72baca7c64f48bd",
+      "name": "Grenades"
+    },
+    {
+      "id": "gsc:keyword:4cc7fecba61eba1c4d85ba243dbd52bb",
+      "name": "Nexos"
+    },
+    {
+      "id": "gsc:keyword:5a76e813d6a0a40548b91acc11557bd2",
+      "name": "Vehicle"
+    },
+    {
+      "id": "gsc:keyword:5cb62bee6b39ac0bfe71535d99e416f1",
+      "name": "Clamavus"
+    },
+    {
+      "id": "gsc:keyword:629542c40009f57b83642febef1efbbf",
+      "name": "Goliath Truck"
+    },
+    {
+      "id": "gsc:keyword:6aeb68d1bdff2c5e503eed93c51dd74d",
+      "name": "Magus"
+    },
+    {
+      "id": "gsc:keyword:6c6081f8a0c00e348785163bd8bcf38c",
+      "name": "Benefictus"
+    },
+    {
+      "id": "gsc:keyword:6d26a96b4de8293c84c60f5dcc6dd015",
+      "name": "Faction: Genestealer Cults"
+    },
+    {
+      "id": "gsc:keyword:7aea8075b2485a9d69ef869dae2f854e",
+      "name": "Aberrants"
+    },
+    {
+      "id": "gsc:keyword:7b334b7260361141659fa9862e803476",
+      "name": "Transport"
+    },
+    {
+      "id": "gsc:keyword:81c4e3af4002170ab76fe2e53488b6a4",
+      "name": "Mounted"
+    },
+    {
+      "id": "gsc:keyword:8ae10ddb538091ba8abeb31f8cb2fd05",
+      "name": "Kelermorph"
+    },
+    {
+      "id": "gsc:keyword:90dd77e220a5074e3f543840492d9e40",
+      "name": "Abominant"
+    },
+    {
+      "id": "gsc:keyword:9f097255a23d922f688acf273c1509a0",
+      "name": "Psyker"
+    },
+    {
+      "id": "gsc:keyword:a956161a69928cd130a889b88082fb6e",
+      "name": "Character"
+    },
+    {
+      "id": "gsc:keyword:b485bee93624b6d92d66f0eb3e7784d6",
+      "name": "Dedicated Transport"
+    },
+    {
+      "id": "gsc:keyword:b4abcb4e0e732cb50faf0afdee566414",
+      "name": "Biophagus"
+    },
+    {
+      "id": "gsc:keyword:c1d650b7f5f563776f8a71701f6e4482",
+      "name": "Acolyte Hybrids"
+    },
+    {
+      "id": "gsc:keyword:c444858e0aaeb727da73d2eae62321ad",
+      "name": "Leader"
+    },
+    {
+      "id": "gsc:keyword:cc68c2e977cdc3a5d8179f0a2b97ff58",
+      "name": "Acolyte Iconward"
+    },
+    {
+      "id": "gsc:keyword:d581dda39ce2a1986387a2fb0e83aae4",
+      "name": "Infantry"
+    },
+    {
+      "id": "gsc:keyword:dcce57980af1260571316382edd84080",
+      "name": "Jackal Alphus"
+    },
+    {
+      "id": "gsc:keyword:dcf3e36ee8115282aad46485cab6a4be",
+      "name": "Frame"
+    },
+    {
+      "id": "gsc:keyword:ddfe9f12c849fe1e5029394ff146dd19",
+      "name": "Reductus Saboteur"
+    },
+    {
+      "id": "gsc:keyword:de8dda5570e12607fade9a0635a38111",
+      "name": "Great Devourer"
+    },
+    {
+      "id": "gsc:keyword:eb89626bedb84ef875b1be8c2e276365",
+      "name": "Neophyte Hybrids"
+    },
+    {
+      "id": "gsc:keyword:ec232a7ed7f78367f4f6ce481443a110",
+      "name": "Hybrid Metamorphs"
+    }
+  ]
+}

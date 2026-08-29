@@ -1,8 +1,9 @@
+import {appConfig} from './appConfig';
 import React,{useEffect,useRef,useState} from 'react';
 
 type DiagnosticError={time:string;type:string;message:string;source?:string;line?:number;column?:number};
 
-const DB_NAME='field-companion';
+const DB_NAME=appConfig.dbName;
 const STORE_NAMES=['system','factions','units','profiles','weapons','abilities','keywords','detachments','enhancements','stratagems','points','leaders','source','coreRules','community40kdc','dependencies','searchIndex','user','battle','staging'];
 
 function req<T>(request:IDBRequest<T>){
@@ -71,7 +72,7 @@ async function fetchText(path:string){
 
 async function fetchManifest(){
   try{
-    const response=await fetch('./data/version.json',{cache:'no-store'});
+    const response=await fetch(appConfig.manifestPath,{cache:'no-store'});
     if(!response.ok)return{error:`HTTP ${response.status}`};
     const manifest=await response.json();
     return{
@@ -80,7 +81,7 @@ async function fetchManifest(){
       edition:manifest?.edition??null,
       scope:manifest?.scope??null,
       resolved:manifest?.resolved??null,
-      packages:Object.fromEntries(Object.entries(manifest?.factions?.necrons?.packages||{}).map(([name,value]:[string,any])=>[name,{file:value?.file,hash:value?.hash}])),
+      packages:Object.fromEntries(Object.entries(manifest?.factions?.[appConfig.factionId]?.packages||{}).map(([name,value]:[string,any])=>[name,{file:value?.file,hash:value?.hash}])),
     };
   }catch(cause){return{error:String(cause)};}
 }

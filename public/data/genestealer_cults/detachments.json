@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 2,
+  "edition": "11th",
+  "faction": "genestealer_cults",
+  "package": "detachments",
+  "records": [
+    {
+      "id": "gsc:detachment:biosanctic-broodsurge",
+      "name": "Biosanctic Broodsurge",
+      "dp": 2,
+      "objective": "Take and Hold",
+      "tags": [
+        "Take and Hold"
+      ],
+      "relationshipNotes": []
+    },
+    {
+      "id": "gsc:detachment:brood-brothers-auxilia",
+      "name": "Brood Brothers Auxilia",
+      "dp": 2,
+      "objective": "Take and Hold",
+      "tags": [
+        "Take and Hold"
+      ],
+      "relationshipNotes": [
+        "Ally access — Astra Militarum · excludes Aircraft, Commissar, Epic Hero, Militarum Tempestus, Ogryn, Ratling, Tech-Priest Enginseer, Ministorum Priest · allies lose Voice of Command · Warlord must be Genestealer Cults."
+      ]
+    },
+    {
+      "id": "gsc:detachment:final-day",
+      "name": "Final Day",
+      "dp": 2,
+      "objective": "Purge the Foe",
+      "tags": [
+        "Purge the Foe"
+      ],
+      "relationshipNotes": [
+        "Ally access — Tyranids · requires Vanguard Invader · excludes Aircraft, Broodlord, Genestealers · Strike Force cap 1000 pts · allies gain Catalyst · allied units cannot be Warlord."
+      ]
+    },
+    {
+      "id": "gsc:detachment:heroes-of-the-uprising",
+      "name": "Heroes of the Uprising",
+      "dp": 1,
+      "objective": "Purge the Foe",
+      "tags": [
+        "Purge the Foe"
+      ],
+      "relationshipNotes": [
+        "Kelermorph: gains KILLER · re-roll Hit rolls of 1 · re-roll Wound rolls of 1.",
+        "Reductus Saboteur: gains KILLER · re-roll Hit rolls of 1 · re-roll Wound rolls of 1.",
+        "Sanctus: gains KILLER · re-roll Hit rolls of 1 · re-roll Wound rolls of 1.",
+        "Locus: gains KILLER · re-roll Hit rolls of 1 · re-roll Wound rolls of 1."
+      ]
+    },
+    {
+      "id": "gsc:detachment:host-of-ascension",
+      "name": "Host of Ascension",
+      "dp": 3,
+      "objective": "Take and Hold",
+      "tags": [
+        "Take and Hold"
+      ],
+      "relationshipNotes": []
+    },
+    {
+      "id": "gsc:detachment:outlander-claw",
+      "name": "Outlander Claw",
+      "dp": 2,
+      "objective": "Reconnaissance",
+      "tags": [
+        "Reconnaissance"
+      ],
+      "relationshipNotes": []
+    },
+    {
+      "id": "gsc:detachment:purestrain-broodswarm",
+      "name": "Purestrain Broodswarm",
+      "dp": 1,
+      "objective": "Priority Assets",
+      "tags": [
+        "Priority Assets"
+      ],
+      "relationshipNotes": [
+        "Purestrain Genestealers: At end of opponent Fight phase, friendly unengaged Purestrain Genestealers can enter Strategic Reserves."
+      ]
+    },
+    {
+      "id": "gsc:detachment:xenocreed-congregation",
+      "name": "Xenocreed Congregation",
+      "dp": 2,
+      "objective": "Priority Assets",
+      "tags": [
+        "Priority Assets"
+      ],
+      "relationshipNotes": []
+    },
+    {
+      "id": "gsc:detachment:xenocult-masses",
+      "name": "Xenocult Masses",
+      "dp": 1,
+      "objective": "Disruption",
+      "tags": [
+        "Disruption"
+      ],
+      "relationshipNotes": [
+        "Neophyte Hybrids: terrain interaction can restore up to 3 wounds."
+      ]
+    }
+  ]
+}

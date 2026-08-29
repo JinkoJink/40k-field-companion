@@ -1,0 +1,778 @@
+{
+  "schemaVersion": 2,
+  "edition": "11th",
+  "faction": "genestealer_cults",
+  "package": "abilities",
+  "records": [
+    {
+      "id": "gsc:unit:aberrants:ability:1",
+      "unitId": "gsc:unit:aberrants",
+      "name": "Feel No Pain 5+",
+      "type": "datasheet",
+      "characteristics": {
+        "Description": "This unit has a 5+ Feel No Pain"
+      },
+      "description": "This unit has a 5+ Feel No Pain",
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:aberrants:ability:2",
+      "unitId": "gsc:unit:aberrants",
+      "name": "Hulking Bodyguards",
+      "type": "datasheet",
+      "characteristics": {
+        "Description": "While a CHARACTER is leading this unit, each time an attack targets this unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of this unit, subtract 1 from the Wound roll."
+      },
+      "description": "While a CHARACTER is leading this unit, each time an attack targets this unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of this unit, subtract 1 from the Wound roll.",
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:abominant:ability:1",
+      "unitId": "gsc:unit:abominant",
+      "name": "Feel No Pain 5+",
+      "type": "datasheet",
+      "characteristics": {
+        "Description": "This model has a 5+ Feel No Pain"
+      },
+      "description": "This model has a 5+ Feel No Pain",
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:abominant:ability:2",
+      "unitId": "gsc:unit:abominant",
+      "name": "Leader",
+      "type": "datasheet",
+      "characteristics": {
+        "Description": "This model can be attached to the following unit:\n- **ABERRANTS**"
+      },
+      "description": "This model can be attached to the following unit:\n- **ABERRANTS**",
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:abominant:ability:3",
+      "unitId": "gsc:unit:abominant",
+      "name": "Regenerating Gene-mass",
+      "type": "datasheet",
+      "characteristics": {
+        "Description": "The first time this model is destroyed, roll one D6 at the end of the phase. On a 2+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with its full wounds remaining."
+      },
+      "description": "The first time this model is destroyed, roll one D6 at the end of the phase. On a 2+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with its full wounds remaining.",
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:abominant:ability:4",
+      "unitId": "gsc:unit:abominant",
+      "name": "The Chosen One",
+      "type": "datasheet",
+      "characteristics": {
+        "Description": "While this model is leading a unit, each time a model in that unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6. On a 4+ do not remove the destroyed model from play, it can fight after the attacking model's unit has finished making it's attacks and is then removed from play."
+      },
+      "description": "While this model is leading a unit, each time a model in that unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6. On a 4+ do not remove the destroyed model from play, it can fight after the attacking model's unit has finished making it's attacks and is then removed from play.",
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:achilles-ridgerunners:ability:1",
+      "unitId": "gsc:unit:achilles-ridgerunners",
+      "name": "Crossfire",
+      "type": "datasheet",
+      "characteristics": {
+        "Description": "in your Shooting phase, after this unit has shot, select one enemy unit hit by one or more of those attacks. Until the end of the turn, each time a friendly **^^Genestealer Cults^^** unit makes an attack that targets that enemy unit, improve the Armour Penetration characteristic of that attack by 1. The same enemy unit can only be affected by this ability once per turn."
+      },
+      "description": "in your Shooting phase, after this unit has shot, select one enemy unit hit by one or more of those attacks. Until the end of the turn, each time a friendly **^^Genestealer Cults^^** unit makes an attack that targets that enemy unit, improve the Armour Penetration characteristic of that attack by 1. The same enemy unit can only be affected by this ability once per turn.",
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:acolyte-hybrids-with-autopistols:ability:1",
+      "unitId": "gsc:unit:acolyte-hybrids-with-autopistols",
+      "name": "Claimed for the Cult",
+      "type": "datasheet",
+      "characteristics": {
+        "Description": "At the start of your Command phase, roll one D6 for each objective marker that you control that has one or more units from your army with this ability within range of it. If one or more of the results is a 4+, you gain 1CP."
+      },
+      "description": "At the start of your Command phase, roll one D6 for each objective marker that you control that has one or more units from your army with this ability within range of it. If one or more of the results is a 4+, you gain 1CP.",
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:acolyte-hybrids-with-hand-flamers:ability:1",
+      "unitId": "gsc:unit:acolyte-hybrids-with-hand-flamers",
+      "name": "Industrialised Destruction",
+      "type": "datasheet",
+      "characteristics": {
+        "Description": "Each time a model in this unit makes an attack, re-roll a Wound Roll of 1. If the target of that attack is an enemy unit within range of an objective marker, you can re-roll the wound roll."
+      },
+      "description": "Each time a model in this unit makes an attack, re-roll a Wound Roll of 1. If the target of that attack is an enemy unit within range of an objective marker, you can re-roll the wound roll.",
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:acolyte-iconward:ability:1",
+      "unitId": "gsc:unit:acolyte-iconward",
+      "name": "Leader",
+      "type": "datasheet",
+      "characteristics": {
+        "Description": "This model can be attached to the following units:\n- **^^Acolyte Hybrids^^**\n- **^^Hybrid Metamorphs^^**\n- **^^Neophyte Hybrids^^**"
+      },
+      "description": "This model can be attached to the following units:\n- **^^Acolyte Hybrids^^**\n- **^^Hybrid Metamorphs^^**\n- **^^Neophyte Hybrids^^**",
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:acolyte-iconward:ability:2",
+      "unitId": "gsc:unit:acolyte-iconward",
+      "name": "Nexus of Devotion",
+      "type": "datasheet",
+      "characteristics": {
+        "Description": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability. If that unit has the **HYBRID METAMORPHS** keyword, models in that unit have the Feel No Pain 4+ ability instead."
+      },
+      "description": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability. If that unit has the **HYBRID METAMORPHS** keyword, models in that unit have the Feel No Pain 4+ ability instead.",
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:acolyte-iconward:ability:3",
+      "unitId": "gsc:unit:acolyte-iconward",
+      "name": "Summon the Cult",
+      "type": "datasheet",
+      "characteristics": {
+        "Description": "Once per battle, when you have to remove a Cult Ambush marker because your opponent has moved too close to it, if one or more models from your army with this ability are on the battlefield, you can use this ability. If you do, instead of removing that marker, you can place it anywhere on the battlefield that is within 12\" of a model from your army with this ability and more than 8\" horizontally away from all enemy units (if this is not possible, this ability is not considered to have been used and that marker is removed as normal)."
+      },
+      "description": "Once per battle, when you have to remove a Cult Ambush marker because your opponent has moved too close to it, if one or more models from your army with this ability are on the battlefield, you can use this ability. If you do, instead of removing that marker, you can place it anywhere on the battlefield that is within 12\" of a model from your army with this ability and more than 8\" horizontally away from all enemy units (if this is not possible, this ability is not considered to have been used and that marker is removed as normal).",
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:atalan-jackals:ability:1",
+      "unitId": "gsc:unit:atalan-jackals",
+      "name": "Demolition Run",
+      "type": "datasheet",
+      "characteristics": {
+        "Description": "Once per battle round, in your Movement phase, when this unit ends a Normal, Advance, or Fall Back move, you can select one enemy unit within 6\" of and visible to this unit and roll one D6 for each ATALAN JACKALS model in this unit: for each 4+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds.)"
+      },
+      "description": "Once per battle round, in your Movement phase, when this unit ends a Normal, Advance, or Fall Back move, you can select one enemy unit within 6\" of and visible to this unit and roll one D6 for each ATALAN JACKALS model in this unit: for each 4+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds.)",
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:atalan-jackals:ability:2",
+      "unitId": "gsc:unit:atalan-jackals",
+      "name": "Outrider Gangs",
+      "type": "datasheet",
+      "characteristics": {
+        "Description": "Each time you use the Cult Ambush ability to set this unit back up on the battlefield, in addition to the normal rules, all of its models must be set up wholly within 9\" of a battlefield edge and at least one of its models must be touching one of your Cult Ambush markers (that marker is then removed from the battlefield). If this cannot be done, this unit cannot be set back up."
+      },
+      "description": "Each time you use the Cult Ambush ability to set this unit back up on the battlefield, in addition to the normal rules, all of its models must be set up wholly within 9\" of a battlefield edge and at least one of its models must be touching one of your Cult Ambush markers (that marker is then removed from the battlefield). If this cannot be done, this unit cannot be set back up.",
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:benefictus:ability:1",
+      "unitId": "gsc:unit:benefictus",
+      "name": "Bio-horror Disruption (Psychic)",
+      "type": "datasheet",
+      "characteristics": {
+        "Description": "While this model is leading a unit, ranged weapons equipped by models in that unit have the **[LETHAL HITS]** ability."
+      },
+      "description": "While this model is leading a unit, ranged weapons equipped by models in that unit have the **[LETHAL HITS]** ability.",
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:benefictus:ability:2",
+      "unitId": "gsc:unit:benefictus",
+      "name": "Leader",
+      "type": "datasheet",
+      "characteristics": {
+        "Description": "This model can be attached to the following units:\n- **^^Acolyte Hybrids^^**\n- **^^Hybrid Metamorphs^^**\n- **^^Neophyte Hybrids^^**"
+      },
+      "description": "This model can be attached to the following units:\n- **^^Acolyte Hybrids^^**\n- **^^Hybrid Metamorphs^^**\n- **^^Neophyte Hybrids^^**",
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:benefictus:ability:3",
+      "unitId": "gsc:unit:benefictus",
+      "name": "Psionic Shield (Psychic)",
+      "type": "datasheet",
+      "characteristics": {
+        "Description": "Once per battle, at the start of any phase, this model can use this ability. If it does, until the end of the phase, this model has a 4+ invulnerable save."
+      },
+      "description": "Once per battle, at the start of any phase, this model can use this ability. If it does, until the end of the phase, this model has a 4+ invulnerable save.",
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:biophagus:ability:1",
+      "unitId": "gsc:unit:biophagus",
+      "name": "Biological Warfare",
+      "type": "datasheet",
+      "characteristics": {
+        "Description": "Once per battle, when this model’s unit is selected to fight, this model can use this ability. If it does, until the end of the phase, improve the Attacks and Damage characteristics of its injector goad by 3."
+      },
+      "description": "Once per battle, when this model’s unit is selected to fight, this model can use this ability. If it does, until the end of the phase, improve the Attacks and Damage characteristics of its injector goad by 3.",
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:biophagus:ability:2",
+      "unitId": "gsc:unit:biophagus",
+      "name": "Leader",
+      "type": "datasheet",
+      "characteristics": {
+        "Description": "This model can be attached to the following units:\n- ABERRANTS\n\n- ACOLYTE HYBRIDS WITH AUTOPISTOLS\n- ACOLYTE HYBRIDS WITH HANDFLAMERS\n- HYBRID METAMORPHS\n- NEOPHYTE HYBRIDS\n\nYou can attach this model to an ACOLYTE HYBRIDS or NEOPHYTE HYBRID unit, even if a PRIMUS, MAGUS, or ACOLYTE ICONWARD model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+      },
+      "description": "This model can be attached to the following units:\n- ABERRANTS\n\n- ACOLYTE HYBRIDS WITH AUTOPISTOLS\n- ACOLYTE HYBRIDS WITH HANDFLAMERS\n- HYBRID METAMORPHS\n- NEOPHYTE HYBRIDS\n\nYou can attach this model to an ACOLYTE HYBRIDS or NEOPHYTE HYBRID unit, even if a PRIMUS, MAGUS, or ACOLYTE ICONWARD model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths.",
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:biophagus:ability:3",
+      "unitId": "gsc:unit:biophagus",
+      "name": "Twisted Science",
+      "type": "datasheet",
+      "characteristics": {
+        "Description": "While this model is leading a unit, melee weapons equipped by models in that unit have the **[LETHAL HITS]** ability."
+      },
+      "description": "While this model is leading a unit, melee weapons equipped by models in that unit have the **[LETHAL HITS]** ability.",
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:clamavus:ability:1",
+      "unitId": "gsc:unit:clamavus",
+      "name": "Leader",
+      "type": "datasheet",
+      "characteristics": {
+        "Description": "This model can be attached to the following units:\n- ACOLYTE HYBRIDS\n- HYBRID METAMORPHS\n- NEOPHYTE HYBRIDS\nYou can attach this model to an ACOLYTE HYBRIDS or NEOPHYTE HYBRID unit, even if a PRIMUS, MAGUS, or ACOLYTE ICONWARD model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+      },
+      "description": "This model can be attached to the following units:\n- ACOLYTE HYBRIDS\n- HYBRID METAMORPHS\n- NEOPHYTE HYBRIDS\nYou can attach this model to an ACOLYTE HYBRIDS or NEOPHYTE HYBRID unit, even if a PRIMUS, MAGUS, or ACOLYTE ICONWARD model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths.",
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:clamavus:ability:2",
+      "unitId": "gsc:unit:clamavus",
+      "name": "Scrambler Array",
+      "type": "datasheet",
+      "characteristics": {
+        "Description": "Enemy units that are set up on the battlefield as Reinforcements cannot be set up within 12\" of this model."
+      },
+      "description": "Enemy units that are set up on the battlefield as Reinforcements cannot be set up within 12\" of this model.",
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:clamavus:ability:3",
+      "unitId": "gsc:unit:clamavus",
+      "name": "Voice of New Truths",
+      "type": "datasheet",
+      "characteristics": {
+        "Description": "In your Command phase, one model from your army with this ability can use it, if it does, select one enemy unit with 18\" of it, that enemy unit must take a Battle-shock test."
+      },
+      "description": "In your Command phase, one model from your army with this ability can use it, if it does, select one enemy unit with 18\" of it, that enemy unit must take a Battle-shock test.",
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:goliath-rockgrinder:ability:1",
+      "unitId": "gsc:unit:goliath-rockgrinder",
+      "name": "Grinding Line-breaker",
+      "type": "datasheet",
+      "characteristics": {
+        "Description": "Each time an enemy unit (excluding MONSTER and VEHICLES) that is within Engagement Range of this model Falls Back, all models in that enemy unit must take a Desperate Escape test. When doing so, if that enemy unit is Battle-shocked, subtract 1 from each of those tests."
+      },
+      "description": "Each time an enemy unit (excluding MONSTER and VEHICLES) that is within Engagement Range of this model Falls Back, all models in that enemy unit must take a Desperate Escape test. When doing so, if that enemy unit is Battle-shocked, subtract 1 from each of those tests.",
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:goliath-truck:ability:1",
+      "unitId": "gsc:unit:goliath-truck",
+      "name": "Fire Support",
+      "type": "datasheet",
+      "characteristics": {
+        "Description": "In your Shooting phase, after this model has shot, select one enemy unit it scored one or more hits against this phase. Until the end of the phase, each time a friendly model that disembarked from this TRANSPORT this turn makes an attack that targets that enemy unit, you can re-roll the Wound roll."
+      },
+      "description": "In your Shooting phase, after this model has shot, select one enemy unit it scored one or more hits against this phase. Until the end of the phase, each time a friendly model that disembarked from this TRANSPORT this turn makes an attack that targets that enemy unit, you can re-roll the Wound roll.",
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:hybrid-metamorphs:ability:1",
+      "unitId": "gsc:unit:hybrid-metamorphs",
+      "name": "Brood Surge",
+      "type": "datasheet",
+      "characteristics": {
+        "Description": "In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit was **destroyed** as a result of those attacks, this unit can make a **surge move** of up to D6\"."
+      },
+      "description": "In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit was **destroyed** as a result of those attacks, this unit can make a **surge move** of up to D6\".",
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:jackal-alphus:ability:1",
+      "unitId": "gsc:unit:jackal-alphus",
+      "name": "Master Outrider",
+      "type": "datasheet",
+      "characteristics": {
+        "Description": "In your Shooting phase, after this model’s unit has shot, if it is not within Engagement Range of any enemy units, that unit can make a Normal move of up to 6\" as if it were your Movement phase. If it does, until the end of the turn, that unit is not eligible to declare a charge."
+      },
+      "description": "In your Shooting phase, after this model’s unit has shot, if it is not within Engagement Range of any enemy units, that unit can make a Normal move of up to 6\" as if it were your Movement phase. If it does, until the end of the turn, that unit is not eligible to declare a charge.",
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:jackal-alphus:ability:2",
+      "unitId": "gsc:unit:jackal-alphus",
+      "name": "Priority Target",
+      "type": "datasheet",
+      "characteristics": {
+        "Description": "In your Shooting phase, after this model's unit has shot, select one enemy unit hit by one or more of those attacks made with a cult sniper rifle. Until the end of the phase, each time a friendly **^^Genestealer Cults^^** model makes an attack that targets that enemy unit, re-roll a Hit roll of 1."
+      },
+      "description": "In your Shooting phase, after this model's unit has shot, select one enemy unit hit by one or more of those attacks made with a cult sniper rifle. Until the end of the phase, each time a friendly **^^Genestealer Cults^^** model makes an attack that targets that enemy unit, re-roll a Hit roll of 1.",
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:kelermorph:ability:1",
+      "unitId": "gsc:unit:kelermorph",
+      "name": "Heroic Fusillade",
+      "type": "datasheet",
+      "characteristics": {
+        "Description": "Once per turn, after one model from your army with this ability has shot, you can select one INFANTRY unit hit by one or more of those attacks. That unit must take a Battle-shock test."
+      },
+      "description": "Once per turn, after one model from your army with this ability has shot, you can select one INFANTRY unit hit by one or more of those attacks. That unit must take a Battle-shock test.",
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:kelermorph:ability:2",
+      "unitId": "gsc:unit:kelermorph",
+      "name": "Hypersensory Abilities",
+      "type": "datasheet",
+      "characteristics": {
+        "Description": "Once per turn, in your opponent’s Movement phase, when an enemy unit ends a Normal, Advance or Fall Back move within 8\" of this model, if this model is not within Engagement Range of one or more enemy units, it can shoot at that unit as if it were your Shooting phase and then make a Normal move of up to D6\" (it cannot embark within a Transport as part of this move)."
+      },
+      "description": "Once per turn, in your opponent’s Movement phase, when an enemy unit ends a Normal, Advance or Fall Back move within 8\" of this model, if this model is not within Engagement Range of one or more enemy units, it can shoot at that unit as if it were your Shooting phase and then make a Normal move of up to D6\" (it cannot embark within a Transport as part of this move).",
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:locus:ability:1",
+      "unitId": "gsc:unit:locus",
+      "name": "Bodyguard",
+      "type": "datasheet",
+      "characteristics": {
+        "Description": "While this model is leading a unit, other Character models attached to that unit have the Feel No Pain 4+ ability"
+      },
+      "description": "While this model is leading a unit, other Character models attached to that unit have the Feel No Pain 4+ ability",
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:locus:ability:2",
+      "unitId": "gsc:unit:locus",
+      "name": "Leader",
+      "type": "datasheet",
+      "characteristics": {
+        "Description": "This model can be attached to the following units:\n- **^^Acolyte Hybrids^^**\n- **^^Hybrid Metamorphs^^**\n- **^^Neophyte Hybrids^^**\nYou can attach this model to an **^^Acolyte Hybrids^^** or **^^Neophyte Hybrids^^** unit, even if a **^^Primus^^**, **^^Magus^^**, or **^^Acolyte Iconward^^** model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+      },
+      "description": "This model can be attached to the following units:\n- **^^Acolyte Hybrids^^**\n- **^^Hybrid Metamorphs^^**\n- **^^Neophyte Hybrids^^**\nYou can attach this model to an **^^Acolyte Hybrids^^** or **^^Neophyte Hybrids^^** unit, even if a **^^Primus^^**, **^^Magus^^**, or **^^Acolyte Iconward^^** model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths.",
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:locus:ability:3",
+      "unitId": "gsc:unit:locus",
+      "name": "Sudden Assault",
+      "type": "datasheet",
+      "characteristics": {
+        "Description": "While this model is leading a unit, models in that unit have the **Fights First** ability."
+      },
+      "description": "While this model is leading a unit, models in that unit have the **Fights First** ability.",
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:magus:ability:1",
+      "unitId": "gsc:unit:magus",
+      "name": "Leader",
+      "type": "datasheet",
+      "characteristics": {
+        "Description": "This model can be attached to the following units:\n- **^^Acolyte Hybrids^^**\n- **^^Hybrid Metamorphs^^**\n- **^^Neophyte Hybrids^^**"
+      },
+      "description": "This model can be attached to the following units:\n- **^^Acolyte Hybrids^^**\n- **^^Hybrid Metamorphs^^**\n- **^^Neophyte Hybrids^^**",
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:magus:ability:2",
+      "unitId": "gsc:unit:magus",
+      "name": "Mind Control (Psychic)",
+      "type": "datasheet",
+      "characteristics": {
+        "Description": "At the start of your opponent’s Shooting phase, one PSYKER model from your army with this ability can use it. If used, select one enemy unit within 18\" of and visible to that PSYKER model and roll one D6: on a 1, that PSYKER model suffers D3 mortal wounds; on a 2-5, until the end of the phase, each time a model in that enemy unit makes an attack, subtract 1 from the Hit roll; on a 6, each time a model in that enemy unit makes an attack, subtract 1 from the Hit roll and subtract 1 from the Wound Roll."
+      },
+      "description": "At the start of your opponent’s Shooting phase, one PSYKER model from your army with this ability can use it. If used, select one enemy unit within 18\" of and visible to that PSYKER model and roll one D6: on a 1, that PSYKER model suffers D3 mortal wounds; on a 2-5, until the end of the phase, each time a model in that enemy unit makes an attack, subtract 1 from the Hit roll; on a 6, each time a model in that enemy unit makes an attack, subtract 1 from the Hit roll and subtract 1 from the Wound Roll.",
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:magus:ability:3",
+      "unitId": "gsc:unit:magus",
+      "name": "Psychic Familiar",
+      "type": "datasheet",
+      "characteristics": {
+        "Description": "Once per battle, at the start of any of your opponent’s Shooting phases, this model can use its psychic familiar. If it does, until the end of the phase, add 6\" to the range of its Mind Control ability."
+      },
+      "description": "Once per battle, at the start of any of your opponent’s Shooting phases, this model can use its psychic familiar. If it does, until the end of the phase, add 6\" to the range of its Mind Control ability.",
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:magus:ability:4",
+      "unitId": "gsc:unit:magus",
+      "name": "Spiritual Leader",
+      "type": "datasheet",
+      "characteristics": {
+        "Description": "Once per battle, at the start of any phase, you can select one friendly GENESTELERS CULTS unit that is Battle-shocked and within 12\" of this model. That unit is no longer Battle-shocked."
+      },
+      "description": "Once per battle, at the start of any phase, you can select one friendly GENESTELERS CULTS unit that is Battle-shocked and within 12\" of this model. That unit is no longer Battle-shocked.",
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:neophyte-hybrids:ability:1",
+      "unitId": "gsc:unit:neophyte-hybrids",
+      "name": "A Plan Generations in the Making",
+      "type": "datasheet",
+      "characteristics": {
+        "Description": "At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn."
+      },
+      "description": "At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn.",
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:nexos:ability:1",
+      "unitId": "gsc:unit:nexos",
+      "name": "Battlefield Analysis",
+      "type": "datasheet",
+      "characteristics": {
+        "Description": "Once per battle round, one model from your army with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP."
+      },
+      "description": "Once per battle round, one model from your army with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.",
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:nexos:ability:2",
+      "unitId": "gsc:unit:nexos",
+      "name": "Cult Infiltration",
+      "type": "datasheet",
+      "characteristics": {
+        "Description": "At the start of each player’s Command phase, if this model is on the battlefield, you can select one of your Cult Ambush markers that is on the battlefield and has not been moved this turn and move it up to 6\"."
+      },
+      "description": "At the start of each player’s Command phase, if this model is on the battlefield, you can select one of your Cult Ambush markers that is on the battlefield and has not been moved this turn and move it up to 6\".",
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:nexos:ability:3",
+      "unitId": "gsc:unit:nexos",
+      "name": "Leader",
+      "type": "datasheet",
+      "characteristics": {
+        "Description": "This model can be attached to the following units:\n- ACOLYTE HYBRIDS\n- HYBRID METAMORPHS\n- NEOPHYTE HYBRIDS\nYou can attach this model to an ACOLYTE HYBRIDS or NEOPHYTE HYBRID unit, even if a PRIMUS, MAGUS, or ACOLYTE ICONWARD model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+      },
+      "description": "This model can be attached to the following units:\n- ACOLYTE HYBRIDS\n- HYBRID METAMORPHS\n- NEOPHYTE HYBRIDS\nYou can attach this model to an ACOLYTE HYBRIDS or NEOPHYTE HYBRID unit, even if a PRIMUS, MAGUS, or ACOLYTE ICONWARD model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths.",
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:patriarch:ability:1",
+      "unitId": "gsc:unit:patriarch",
+      "name": "Cosmic Horror (Psychic)",
+      "type": "datasheet",
+      "characteristics": {
+        "Description": "At the start of the Fight phase, each enemy unit within 6\" of this model must take a Battle-shock test."
+      },
+      "description": "At the start of the Fight phase, each enemy unit within 6\" of this model must take a Battle-shock test.",
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:patriarch:ability:2",
+      "unitId": "gsc:unit:patriarch",
+      "name": "Leader",
+      "type": "datasheet",
+      "characteristics": {
+        "Description": "This model can be attached to the following units:\n- PURESTRAIN GENESTEALERS"
+      },
+      "description": "This model can be attached to the following units:\n- PURESTRAIN GENESTEALERS",
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:patriarch:ability:3",
+      "unitId": "gsc:unit:patriarch",
+      "name": "Might From Beyond",
+      "type": "datasheet",
+      "characteristics": {
+        "Description": "While this model is leading a unit, melee weapons equipped by models in that unit have the **[DEVASTATING WOUNDS]** ability."
+      },
+      "description": "While this model is leading a unit, melee weapons equipped by models in that unit have the **[DEVASTATING WOUNDS]** ability.",
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:patriarch:ability:4",
+      "unitId": "gsc:unit:patriarch",
+      "name": "Psychic Familiar",
+      "type": "datasheet",
+      "characteristics": {
+        "Description": "Once per battle, at the start of the Fight phase, this model can use its psychic familiar. If it does, until the end of the phase, add 6\" to the range of its Cosmic Horror ability."
+      },
+      "description": "Once per battle, at the start of the Fight phase, this model can use its psychic familiar. If it does, until the end of the phase, add 6\" to the range of its Cosmic Horror ability.",
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:patriarch:ability:5",
+      "unitId": "gsc:unit:patriarch",
+      "name": "Supreme Commander",
+      "type": "datasheet",
+      "characteristics": {
+        "Description": "- You cannot include more than one **^^Patriarch^^** model in your army.\n- If this model is in your army, it must be your **^^Warlord^^**."
+      },
+      "description": "- You cannot include more than one **^^Patriarch^^** model in your army.\n- If this model is in your army, it must be your **^^Warlord^^**.",
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:primus:ability:1",
+      "unitId": "gsc:unit:primus",
+      "name": "Cult Demagogue",
+      "type": "datasheet",
+      "characteristics": {
+        "Description": "While this model is leading a unit, each time a model in that unit makes an attack, you can add 1 to the Hit roll."
+      },
+      "description": "While this model is leading a unit, each time a model in that unit makes an attack, you can add 1 to the Hit roll.",
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:primus:ability:2",
+      "unitId": "gsc:unit:primus",
+      "name": "Decoys and Misdirection",
+      "type": "datasheet",
+      "characteristics": {
+        "Description": "If your army includes one or more models with this ability, after both players have deployed their armies, select up to three GENESTEALER CULTS units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves."
+      },
+      "description": "If your army includes one or more models with this ability, after both players have deployed their armies, select up to three GENESTEALER CULTS units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves.",
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:primus:ability:3",
+      "unitId": "gsc:unit:primus",
+      "name": "Leader",
+      "type": "datasheet",
+      "characteristics": {
+        "Description": "This model can be attached to the following units:\n- **^^Acolyte Hybrids^^**\n- **^^Hybrid Metamorphs^^**\n- **^^Neophyte Hybrids^^**"
+      },
+      "description": "This model can be attached to the following units:\n- **^^Acolyte Hybrids^^**\n- **^^Hybrid Metamorphs^^**\n- **^^Neophyte Hybrids^^**",
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:purestrain-genestealers:ability:1",
+      "unitId": "gsc:unit:purestrain-genestealers",
+      "name": "Swift and Deadly",
+      "type": "datasheet",
+      "characteristics": {
+        "Description": "This unit is eligible to declare a charge in a turn in which it Advanced."
+      },
+      "description": "This unit is eligible to declare a charge in a turn in which it Advanced.",
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:reductus-saboteur:ability:1",
+      "unitId": "gsc:unit:reductus-saboteur",
+      "name": "Planted Explosives",
+      "type": "datasheet",
+      "characteristics": {
+        "Description": "Once per battle, when an enemy unit ends a Normal, Advance or Fall Back move within 8\" of this model, this model can use its Reductus mine. If it does, roll one D6: on a 2+, that enemy unit suffers D3+3 mortal wounds. Only one model from your army with this ability can use it in the same battle round."
+      },
+      "description": "Once per battle, when an enemy unit ends a Normal, Advance or Fall Back move within 8\" of this model, this model can use its Reductus mine. If it does, roll one D6: on a 2+, that enemy unit suffers D3+3 mortal wounds. Only one model from your army with this ability can use it in the same battle round.",
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:reductus-saboteur:ability:2",
+      "unitId": "gsc:unit:reductus-saboteur",
+      "name": "Primed and Ready",
+      "type": "datasheet",
+      "characteristics": {
+        "Description": "In your Shooting phase, you can select one model from your army with this ability as the target of the Grenade Stratagem for 0CP, provided that model has not already been the target of that Stratagem this phase."
+      },
+      "description": "In your Shooting phase, you can select one model from your army with this ability as the target of the Grenade Stratagem for 0CP, provided that model has not already been the target of that Stratagem this phase.",
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:sanctus:ability:1",
+      "unitId": "gsc:unit:sanctus",
+      "name": "Cloaked Assassin",
+      "type": "datasheet",
+      "characteristics": {
+        "Description": "If this model is equipped with a Sanctus Bio-dagger, enemy units cannot use the Fire Overwatch Stratagem to shoot at this model. Enemy units cannot target this unit with **snap shooting** attacks."
+      },
+      "description": "If this model is equipped with a Sanctus Bio-dagger, enemy units cannot use the Fire Overwatch Stratagem to shoot at this model. Enemy units cannot target this unit with **snap shooting** attacks.",
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:sanctus:ability:2",
+      "unitId": "gsc:unit:sanctus",
+      "name": "Creeping Shadow",
+      "type": "datasheet",
+      "characteristics": {
+        "Description": "If this model is equipped with a Cult Sniper Rifle, In your opponent's Movement phase, if an enemy unit ends a move within 8” of this unit, if this unit is not within Engagement Range of one or more enemy units, this unit can make a Normal move of up to 6”."
+      },
+      "description": "If this model is equipped with a Cult Sniper Rifle, In your opponent's Movement phase, if an enemy unit ends a move within 8” of this unit, if this unit is not within Engagement Range of one or more enemy units, this unit can make a Normal move of up to 6”.",
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    },
+    {
+      "id": "gsc:unit:sanctus:ability:3",
+      "unitId": "gsc:unit:sanctus",
+      "name": "Psychic Spoor",
+      "type": "datasheet",
+      "characteristics": {
+        "Description": "At the start of the first battle round, select one enemy unit to be this model’s prey. Each time this model makes an attack that targets its prey, you can re-roll the Hit roll and you can re-roll the Wound roll."
+      },
+      "description": "At the start of the first battle round, select one enemy unit to be this model’s prey. Each time this model makes an attack that targets its prey, you can re-roll the Hit roll and you can re-roll the Wound roll.",
+      "rule": {
+        "source": "bsdata",
+        "quality": "structured"
+      }
+    }
+  ]
+}

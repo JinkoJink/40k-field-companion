@@ -2,7 +2,8 @@ import React,{useEffect,useMemo,useRef,useState} from 'react';
 import {AlertTriangle,CheckCircle2,ChevronDown,Database,ExternalLink,Minus,Plus,RotateCcw,Search,Settings,Shield,Trash2} from 'lucide-react';
 import {checkForUpdates,migrateLegacy,readBattle,readUser,system,writeBattle,writeUser} from './db';
 import {createBattleState,ensureBattleSnapshots,phases,remainingUnitWounds,stateForModelWounds,stateForRemainingWounds,totalScore,totalUnitWounds,unitWounds} from './battle';
-import {availableSizes,defaultSize,isCategory,loadNecrons,pointsFor,subfactionKeyword} from './data';
+import {availableSizes,defaultSize,isCategory,loadFaction,pointsFor,subfactionKeyword} from './data';
+import {appConfig} from './appConfig';
 import {applyRequiredBindings,compatibleBodyguards,configurationGroups,createRosterUnit,defaultWargear,removeUnavailableEnhancements,rosterPoints,validateRoster} from './roster';
 import {attachmentRoleFor,connectionNotesForEntry,eligibleEnhancementsForUnit,eligibleStratagemTargets,requiredBindingForUnit,retinueConditionFor,ruleMetaLine,stratagemAvailable} from './rules';
 import type {BattleState,Detachment,Enhancement,InstalledRulesMeta,Phase,RosterUnit,Stratagem,UnitDetail,UnitIndex,ValidationIssue} from './types';
@@ -10,7 +11,7 @@ import type {BattleState,Detachment,Enhancement,InstalledRulesMeta,Phase,RosterU
 const CORE_RULES_URL='https://www.warhammer-community.com/en-gb/downloads/warhammer-40000/';
 const POINTS_LIMIT=2000;
 type UpdateSettings={automatic:boolean;wifiOnly:boolean;manualOnly:boolean};
-type LoadedRules=Awaited<ReturnType<typeof loadNecrons>>;
+type LoadedRules=Awaited<ReturnType<typeof loadFaction>>;
 
 function unitSearchText(unit:UnitIndex,detail?:UnitDetail){
   return JSON.stringify({...unit,details:detail}).toLowerCase();
@@ -36,7 +37,7 @@ export function App(){
   const[details,setDetails]=useState<Map<string,UnitDetail>>(new Map());
   const[detachments,setDetachments]=useState<Detachment[]>([]);
   const[stratagems,setStratagems]=useState<Stratagem[]>([]);
-  const[selected,setSelected]=useState<string[]>(['Cursed Legion']);
+  const[selected,setSelected]=useState<string[]>([appConfig.defaultDetachment]);
   const[roster,setRoster]=useState<RosterUnit[]>([]);
   const[battle,setBattle]=useState<BattleState|null>(null);
   const[tab,setTab]=useState<'build'|'battle'|'search'|'settings'>('build');
@@ -75,8 +76,8 @@ export function App(){
         // Migration must finish before durable reads so first launch cannot race stale localStorage against IndexedDB.
         await migrateLegacy();
         const[data,storedDetachments,storedRoster,storedBattle,storedSettings]=await Promise.all([
-          loadNecrons(),
-          readUser<string[]>('detachments',['Cursed Legion']),
+          loadFaction(),
+          readUser<string[]>('detachments',[appConfig.defaultDetachment]),
           readUser<RosterUnit[]>('roster',[]),
           readBattle(),
           readUser<UpdateSettings>('settings',{automatic:true,wifiOnly:false,manualOnly:false}),
@@ -118,7 +119,7 @@ export function App(){
       void checkForUpdates().then(async result=>{
         if(cancelled)return;
         if(result.status==='updated'){
-          const data=await loadNecrons();
+          const data=await loadFaction();
           if(cancelled)return;
           applyLoadedRules(data);
           setUpdateMessage(`Background update installed: ${result.changed.join(', ')}`);
@@ -178,7 +179,7 @@ export function App(){
       setUpdateMessage('Checking…');
       const result=await checkForUpdates(true);
       if(result.status==='updated'){
-        const data=await loadNecrons();
+        const data=await loadFaction();
         applyLoadedRules(data);
         setUpdateMessage(`Installed: ${result.changed.join(', ')}`);
       }else if(result.status==='deferred'){
@@ -196,12 +197,12 @@ export function App(){
 
   return <main className='app'>
     <header className='top'>
-      <div><div className='eyebrow'>40K FIELD COMPANION</div><h1>Necrons — Strike Force</h1><p>Configure the army, validate it, then carry the same roster into battle.</p></div>
+      <div><div className='eyebrow'>40K FIELD COMPANION · {appConfig.appName.toUpperCase()}</div><h1>{appConfig.factionName} — Strike Force</h1><p>Configure the army, validate it, then carry the same roster into battle.</p></div>
       <div className={`points ${totalPoints>POINTS_LIMIT?'over':''}`}><b>{totalPoints}</b><span>/ {POINTS_LIMIT} pts</span></div>
     </header>
     <div className='status'>
       <span><Database size={14}/>{loading?'Loading rules data…':error?'Rules data unavailable':'Rules data ready'}</span>
-      <span>{totalDP}/3 DP selected</span>
+      <span>{totalDP}/3 DP selected · {appConfig.contentLabel}</span>
       <span className={errors.length?'invalid':'valid'}>{errors.length?<AlertTriangle size={14}/>:<CheckCircle2 size={14}/>} {errors.length?`${errors.length} legality issue${errors.length===1?'':'s'}`:'Army legal'}</span>
     </div>
     {error&&<div className='error'>{error}</div>}
@@ -275,9 +276,9 @@ function BuildView(props:{units:UnitIndex[];details:Map<string,UnitDetail>;detac
 
     {!!connectionRows.length&&<section className='panel'><div className='eyebrow'>CONDITIONAL RULE CONNECTIONS</div>{connectionRows.map(({entry,unit,notes})=><div className='rulePanel' key={entry.instanceId}><strong>{unit.name}</strong>{notes.map((note,index)=><p key={index}>{note}</p>)}</div>)}</section>}
 
-    {!!selectedDetachments.length&&<section className='panel'><div className='eyebrow'>SELECTED DETACHMENT RULES</div>{selectedDetachments.map(detachment=><div className='rulePanel' key={detachment.id||detachment.name}><strong>{detachment.name}{detachment.ruleName?` · ${detachment.ruleName}`:''}</strong><p>{detachment.ruleText||detachment.summary||'Rule text has not been supplied by the installed data package.'}</p>{(detachment.enhancements||[]).map(enhancement=><p key={enhancement.id||enhancement.name}><b>{enhancement.name} · {enhancement.points} pts:</b> {enhancementDescription(enhancement)}</p>)}</div>)}</section>}
+    {!!selectedDetachments.length&&<section className='panel'><div className='eyebrow'>SELECTED DETACHMENT RULES</div>{selectedDetachments.map(detachment=><div className='rulePanel' key={detachment.id||detachment.name}><strong>{detachment.name}{detachment.ruleName?` · ${detachment.ruleName}`:''}</strong><p>{detachment.ruleText||detachment.summary||'Rule text has not been supplied by the installed data package.'}</p>{(detachment.relationshipNotes||[]).map((note,index)=><p className='synergy' key={`relationship-${index}`}><span>{note}</span></p>)}{(detachment.enhancements||[]).map(enhancement=><p key={enhancement.id||enhancement.name}><b>{enhancement.name} · {enhancement.points} pts:</b> {enhancementDescription(enhancement)}</p>)}</div>)}</section>}
 
-    <section className='panel quickAdd'><div className='eyebrow'>ADD UNIT</div><div className='formGrid'><label>Unit<select value={quickUnitId} onChange={event=>setQuickUnitId(event.target.value)}><option value=''>Choose a Necron unit…</option>{[...units].filter(unit=>!unit.legends).sort((a,b)=>a.name.localeCompare(b.name)).map(unit=><option key={unit.id} value={unit.id}>{unit.name} · {pointsFor(unit,defaultSize(unit))} pts</option>)}</select></label><button className='addButton' disabled={!quickUnitId} onClick={()=>{const unit=units.find(candidate=>candidate.id===quickUnitId);if(unit){props.onAdd(unit);setQuickUnitId('');}}}><Plus size={15}/> Add selected unit</button></div></section>
+    <section className='panel quickAdd'><div className='eyebrow'>ADD UNIT</div><div className='formGrid'><label>Unit<select value={quickUnitId} onChange={event=>setQuickUnitId(event.target.value)}><option value=''>Choose a {appConfig.factionName} unit…</option>{[...units].filter(unit=>!unit.legends).sort((a,b)=>a.name.localeCompare(b.name)).map(unit=><option key={unit.id} value={unit.id}>{unit.name} · {pointsFor(unit,defaultSize(unit))} pts</option>)}</select></label><button className='addButton' disabled={!quickUnitId} onClick={()=>{const unit=units.find(candidate=>candidate.id===quickUnitId);if(unit){props.onAdd(unit);setQuickUnitId('');}}}><Plus size={15}/> Add selected unit</button></div></section>
 
     <section className='sectionHead'><div><h2>Your roster</h2><p>Each copy is configured separately, including unit size, loadout, Leader, Support, Retinue, Upgrade, Binding and Enhancement.</p></div></section>
     {!roster.length&&<div className='empty'>Add units from the catalogue below.</div>}
@@ -310,7 +311,7 @@ function BuildView(props:{units:UnitIndex[];details:Map<string,UnitDetail>;detac
       </article>;
     })}</div>
 
-    <section className='sectionHead'><div><h2>Necron unit catalogue</h2><p>Search, then drill into the unit category you want.</p></div></section>
+    <section className='sectionHead'><div><h2>{appConfig.factionName} unit catalogue</h2><p>Search, then drill into the unit category you want.</p></div></section>
     <div className='search catalogueSearch'><Search size={18}/><input value={catalogueQuery} onChange={event=>setCatalogueQuery(event.target.value)} placeholder='Search this catalogue by unit, role, keyword, weapon…'/></div>
     {!categories.length&&<div className='empty'>No units match that search.</div>}
     <div className='catalogueGroups'>{categories.map(([category,group])=><details className='catalogueGroup' open={Boolean(catalogueQuery)} key={category}><summary><span>{category}</span><small>{group.length} unit{group.length===1?'':'s'}</small></summary><div className='grid'>{group.map(unit=><UnitCard unit={unit} detail={details.get(unit.id)} onAdd={()=>props.onAdd(unit)} key={unit.id}/>)}</div></details>)}</div>
@@ -381,7 +382,7 @@ function BattleView({roster,units,details,selectedDetachments,stratagems,issues,
   const allExpanded=activeRoster.length>0&&activeRoster.every(entry=>expandedUnits.has(entry.instanceId));
 
   return <>
-    <section className='battleDashboard panel'><div className='row'><div><div className='eyebrow'>BATTLE ROUND {battle.round}</div><h2>{totalScore(battle)} VP</h2></div><button className='dangerButton' onClick={()=>setBattle(null)}><RotateCcw size={15}/> Reset battle</button></div><div className='trackerGrid'><Counter label='Command points' value={battle.cp} onChange={cp=>patch({cp:Math.max(0,cp)})}/><label>Battle round<select value={battle.round} onChange={event=>patch({round:Number(event.target.value)})}>{[1,2,3,4,5].map(round=><option value={round} key={round}>Round {round}</option>)}</select></label></div><div className='phaseBar'>{phases.map(phase=><button className={battle.phase===phase?'active':''} aria-pressed={battle.phase===phase} onClick={()=>patch({phase})} key={phase}>{phase}</button>)}</div></section>
+    <section className='battleDashboard panel'><div className='row'><div><div className='eyebrow'>BATTLE ROUND {battle.round}</div><h2>{totalScore(battle)} VP</h2></div><button className='dangerButton' onClick={()=>setBattle(null)}><RotateCcw size={15}/> Reset battle</button></div><div className='trackerGrid'><Counter label='Command points' value={battle.cp} onChange={cp=>patch({cp:Math.max(0,cp)})}/>{appConfig.factionId==='genestealer_cults'&&<Counter label='Cult Ambush markers' value={battle.factionResources?.cultAmbushMarkers||0} onChange={cultAmbushMarkers=>patch({factionResources:{...battle.factionResources,cultAmbushMarkers}})}/>}<label>Battle round<select value={battle.round} onChange={event=>patch({round:Number(event.target.value)})}>{[1,2,3,4,5].map(round=><option value={round} key={round}>Round {round}</option>)}</select></label></div><div className='phaseBar'>{phases.map(phase=><button className={battle.phase===phase?'active':''} aria-pressed={battle.phase===phase} onClick={()=>patch({phase})} key={phase}>{phase}</button>)}</div></section>
 
     <section className='panel'><div className='eyebrow'>ROUND SCORING</div><div className='scoreGrid'>{[1,2,3,4,5].map(round=><div className={battle.round===round?'currentRound':''} key={round}><strong>R{round}</strong><label>Primary<input type='number' min='0' value={battle.score[round]?.primary||0} onChange={event=>patch({score:{...battle.score,[round]:{...battle.score[round],primary:Number(event.target.value)}}})}/></label><label>Secondary<input type='number' min='0' value={battle.score[round]?.secondary||0} onChange={event=>patch({score:{...battle.score,[round]:{...battle.score[round],secondary:Number(event.target.value)}}})}/></label></div>)}</div></section>
 
@@ -389,7 +390,7 @@ function BattleView({roster,units,details,selectedDetachments,stratagems,issues,
 
     <StratagemPanel phase={battle.phase} stratagems={stratagems} selectedDetachments={battleDetachments} roster={activeRoster} units={units}/>
 
-    <section className='panel'><div className='eyebrow'>ACTIVE DETACHMENT RULES</div>{battleDetachments.map(detachment=><div className='rulePanel' key={detachment.name}><strong>{detachment.name}{detachment.ruleName?` · ${detachment.ruleName}`:''}</strong><p>{detachment.ruleText||detachment.summary||'No local rule text available.'}</p></div>)}</section>
+    <section className='panel'><div className='eyebrow'>ACTIVE DETACHMENT RULES</div>{battleDetachments.map(detachment=><div className='rulePanel' key={detachment.name}><strong>{detachment.name}{detachment.ruleName?` · ${detachment.ruleName}`:''}</strong><p>{detachment.ruleText||detachment.summary||'No local rule text available.'}</p>{(detachment.relationshipNotes||[]).map((note,index)=><p className='synergy' key={index}><span>{note}</span></p>)}</div>)}</section>
 
     <div className='row battleArmyHead'><div><div className='eyebrow'>ARMY STATUS</div><h2>Battle units</h2></div><button className='iconButton' onClick={()=>setExpandedUnits(allExpanded?new Set():new Set(activeRoster.map(entry=>entry.instanceId)))}>{allExpanded?'Collapse all':'Expand all'}</button></div>
     <div className='stack'>{activeRoster.map(entry=>{
@@ -446,7 +447,7 @@ function BattleView({roster,units,details,selectedDetachments,stratagems,issues,
         <div className='trackerGrid'><Counter label={`Wounds remaining (${maximumWounds} starting wounds)`} value={woundsRemaining} max={maximumWounds} onChange={setRemaining}/><div className='counterBox'><span>Models remaining</span><div><b>{modelsRemaining}</b><small>of {startingModels}</small></div></div></div>
         {wounds>1&&modelWounds.length>1&&<ModelWoundTracker values={modelWounds} woundsPerModel={wounds} onChange={setModelWound}/>} 
         <UnitDetails data={battleDetail} phase={battle.phase}/>
-        <button className='reanimate compact' disabled={woundsRemaining>=maximumWounds} onClick={()=>setRemaining(woundsRemaining+wounds)}><Plus size={13}/> Reanimation tracker: +{wounds} W</button>
+        <button className='reanimate compact' disabled={woundsRemaining>=maximumWounds} onClick={()=>setRemaining(woundsRemaining+wounds)}><Plus size={13}/> {appConfig.recoveryLabel}: +{wounds} W</button>
       </details>;
     })}</div>
     <label className='notes panel'>Battle notes<textarea value={battle.notes} onChange={event=>patch({notes:event.target.value})} placeholder='Reserves, once-per-battle abilities, target priorities…'/></label>

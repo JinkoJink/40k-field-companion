@@ -1,0 +1,156 @@
+name: Build and publish Broodmind Android installer
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/**'
+      - 'public/data/genestealer_cults/**'
+      - 'public/data/gsc-version.json'
+      - 'public/broodmind.webmanifest'
+      - 'android/**'
+      - 'capacitor.config.ts'
+      - 'package.json'
+      - 'scripts/**'
+      - '.github/workflows/broodmind-android.yml'
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: broodmind-android-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+env:
+  NODE_VERSION: '24'
+  JAVA_VERSION: '21'
+  APP_FACTION: genestealer_cults
+  VITE_APP_FACTION: genestealer_cults
+
+jobs:
+  android-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out exact commit
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: ${{ env.JAVA_VERSION }}
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Unit tests
+        run: npm test
+
+      - name: Validate frozen Genestealer Cults dataset
+        run: npm run validate:gsc-data
+
+      - name: Check service worker syntax
+        run: node --check public/sw.js
+
+      - name: Build Broodmind web app from checked-in source and frozen data
+        run: npm run build:gsc
+
+      - name: Verify Vite output contains frozen GSC rules data
+        run: |
+          test -f dist/data/gsc-version.json
+          test -f dist/data/genestealer_cults/units.json
+          test -f dist/data/genestealer_cults/profiles.json
+          test -f dist/data/genestealer_cults/leaders.json
+          node -e "const fs=require('fs'); const m=JSON.parse(fs.readFileSync('dist/data/gsc-version.json','utf8')); if(m.schemaVersion!==2||m.scope?.factions?.join(',')!=='genestealer_cults') process.exit(1); console.log('dist contains GSC schema v2 data');"
+
+      - name: Sync exact web bundle into Android assets
+        run: npx cap sync android
+
+      - name: Verify Android assets contain exact Broodmind web build
+        run: |
+          test -f android/app/src/main/assets/public/data/gsc-version.json
+          test -f android/app/src/main/assets/public/data/genestealer_cults/units.json
+          test -f android/app/src/main/assets/public/data/genestealer_cults/profiles.json
+          printf '%s\n' "${GITHUB_SHA}" > android/app/src/main/assets/public/build-commit.txt
+
+      - name: Install stable debug signing key
+        env:
+          COMMAND_PROTOCOLS_DEBUG_KEYSTORE_B64: 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
+        run: |
+          mkdir -p "$HOME/.android"
+          printf '%s' "$COMMAND_PROTOCOLS_DEBUG_KEYSTORE_B64" | base64 --decode > "$HOME/.android/debug.keystore"
+          keytool -list -keystore "$HOME/.android/debug.keystore" -storepass android -alias androiddebugkey >/dev/null
+
+      - name: Build APK
+        env:
+          FIELD_COMPANION_VERSION_CODE: ${{ github.run_number }}
+        run: cd android && ./gradlew assembleDebug --no-daemon
+
+      - name: Verify APK contains this exact commit and bundled data
+        run: |
+          APK=android/app/build/outputs/apk/debug/app-debug.apk
+          test -f "$APK"
+          unzip -l "$APK" | grep -q 'assets/public/data/gsc-version.json'
+          unzip -l "$APK" | grep -q 'assets/public/data/genestealer_cults/units.json'
+          unzip -l "$APK" | grep -q 'assets/public/build-commit.txt'
+          unzip -p "$APK" assets/public/build-commit.txt | grep -Fxq "$GITHUB_SHA"
+          echo "Verified APK is built from ${GITHUB_SHA}"
+
+      - name: Prepare release metadata
+        if: github.event_name != 'pull_request'
+        id: release
+        shell: bash
+        run: |
+          SHORT_SHA="${GITHUB_SHA::7}"
+          TAG="broodmind-android-${GITHUB_RUN_NUMBER}-${SHORT_SHA}"
+          NAME="Broodmind Android ${GITHUB_RUN_NUMBER} (${SHORT_SHA})"
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+          echo "name=$NAME" >> "$GITHUB_OUTPUT"
+          cp android/app/build/outputs/apk/debug/app-debug.apk Broodmind.apk
+          sha256sum Broodmind.apk > Broodmind.apk.sha256
+
+      - name: Publish immutable GitHub Release
+        if: github.event_name != 'pull_request'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ steps.release.outputs.tag }}
+          RELEASE_NAME: ${{ steps.release.outputs.name }}
+        run: |
+          gh release create "$RELEASE_TAG" \
+            Broodmind.apk \
+            Broodmind.apk.sha256 \
+            --target "$GITHUB_SHA" \
+            --title "$RELEASE_NAME" \
+            --notes "Built and verified from commit $GITHUB_SHA. Frozen Genestealer Cults Supabase draft bundle. Automatic rules publishing remains quarantined." \
+            --prerelease
+
+      - name: Verify published release points to this commit
+        if: github.event_name != 'pull_request'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ steps.release.outputs.tag }}
+        run: |
+          gh release view "$RELEASE_TAG" --json targetCommitish,assets,url > release.json
+          node -e "const fs=require('fs'); const r=JSON.parse(fs.readFileSync('release.json')); if(r.targetCommitish!==process.env.GITHUB_SHA) throw new Error('Release target does not match build commit'); if(!r.assets.some(a=>a.name==='Broodmind.apk')) throw new Error('APK missing from release'); console.log(r.url);"
+
+      - name: Upload Broodmind APK for pull requests
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: Broodmind-PR-${{ github.run_number }}
+          path: android/app/build/outputs/apk/debug/app-debug.apk

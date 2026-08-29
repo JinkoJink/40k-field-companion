@@ -4,12 +4,14 @@ import type {PriceTier,UnitDetail,UnitIndex} from './types';
 const battleSnapshotCache=new Map<string,UnitDetail>();
 
 /** Reads only the installed IndexedDB rule tree. No BSData request is made at runtime. */
-export async function loadNecrons(){
+export async function loadFaction(){
   const data=await loadRules();
   battleSnapshotCache.clear();
   for(const [id,detail] of data.detailMap)battleSnapshotCache.set(id,detail);
   return data;
 }
+
+export const loadNecrons=loadFaction;
 
 /** Fallback for rosters saved before build-time datasheet snapshots were added. */
 export function battleSnapshotFor(unitId:string){return battleSnapshotCache.get(unitId);}

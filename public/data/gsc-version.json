@@ -1,0 +1,80 @@
+{
+  "datasetVersion": "2026-08-26.1-gsc-draft",
+  "schemaVersion": 2,
+  "edition": "11th",
+  "scope": {
+    "factions": [
+      "genestealer_cults"
+    ],
+    "includesSharedCoreRules": false,
+    "status": "draft"
+  },
+  "source": {
+    "supabaseProject": "mvslxmzuecwtsbkhocpg",
+    "releaseId": "96a4e6ae-2021-4e1a-9179-8f801643a3af",
+    "releaseStatus": "draft",
+    "normalizationFallbacks": [
+      "Acolyte Hybrids with Autopistols statline",
+      "Acolyte Hybrids with Hand Flamers statline"
+    ]
+  },
+  "counts": {
+    "units": 24,
+    "profiles": 24,
+    "weapons": 29,
+    "abilities": 55,
+    "keywords": 39,
+    "detachments": 9,
+    "leaderEdges": 36,
+    "unitOptions": 270,
+    "enhancements": 0,
+    "stratagems": 0,
+    "detachmentRelationships": 8
+  },
+  "factions": {
+    "genestealer_cults": {
+      "packages": {
+        "units": {
+          "file": "data/genestealer_cults/units.json",
+          "hash": "1437ed2c14977fe3e6b4178d06c7c5f03e8dd34f1171dea0aa595031067ef463"
+        },
+        "profiles": {
+          "file": "data/genestealer_cults/profiles.json",
+          "hash": "0cbf5dd3d1e704b9291a222586c81f23db6551a0fe1a290686ea85818f7f3f48"
+        },
+        "weapons": {
+          "file": "data/genestealer_cults/weapons.json",
+          "hash": "00e8b87e96f6faaff55ff0a35471e5b927f225b30109fee6f099688e45ee5ffa"
+        },
+        "abilities": {
+          "file": "data/genestealer_cults/abilities.json",
+          "hash": "751b6a7ba6ecc4b6186035fa17f6139913984fe303c555fab8697ecfc39b3455"
+        },
+        "keywords": {
+          "file": "data/genestealer_cults/keywords.json",
+          "hash": "e9200a6baa8fa9bd526dade61bf70571eefb31cafbad5748eef393a17b527c85"
+        },
+        "detachments": {
+          "file": "data/genestealer_cults/detachments.json",
+          "hash": "2afd1da9964edec6d77ad5802a760652e2915ab5df83c85afd2eb95fffb268d3"
+        },
+        "enhancements": {
+          "file": "data/genestealer_cults/enhancements.json",
+          "hash": "800ee29775d349bfbf982ca19853333ef18c21abb10ab8c213d84f7d120fc1d9"
+        },
+        "stratagems": {
+          "file": "data/genestealer_cults/stratagems.json",
+          "hash": "a12710f4af86442a86d2ef0ad449bdb9205cad7d2fd1088b797989dabe305be0"
+        },
+        "points": {
+          "file": "data/genestealer_cults/points.json",
+          "hash": "278fbd71d2a0d82563b09d0b8f6735391a198a05af2d6871535243f7004dccb1"
+        },
+        "leaders": {
+          "file": "data/genestealer_cults/leaders.json",
+          "hash": "f6713c53e354ea6995bb67e06dbc80d75142b424d4645103da99d593571aa626"
+        }
+      }
+    }
+  }
+}

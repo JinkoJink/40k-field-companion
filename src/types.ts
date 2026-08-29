@@ -20,7 +20,7 @@ export type RuleMeta = {
 export type Profile = {id?:string;name:string;type?:string;characteristics:Record<string,string>;description?:string;rule?:RuleMeta;};
 export type OptionNode = {id:string;name:string;kind:'entry'|'group';type?:string;hidden:boolean;costs:{name:string;type:string;value:number}[];constraints:Constraint[];profiles:Profile[];options:OptionNode[];};
 export type Enhancement = {id?:string;name:string;points:number;description?:string;supportTo?:string[];detachmentId?:string;keywordRestrictions?:string[];keywordRestrictionGroups?:string[][];exclusionKeywords?:string[];allowedHosts?:string[];attachmentBodyguardIds?:string[];grantKeywords?:string[];upgrade?:boolean;kind?:EnhancementKind;countsTowardLimit?:boolean;mandatory?:boolean;maxTargets?:number;abilityId?:string|null;gameModes?:string[];gameVersion?:{edition?:string;dataslate?:string};rule?:RuleMeta;};
-export type Detachment = {id?:string;name:string;dp:number;objective:string;unique?:string;tags?:string[];enhancements?:Enhancement[];stratagemIds?:string[];ruleName?:string;summary?:string;ruleText?:string;};
+export type Detachment = {id?:string;name:string;dp:number;objective:string;unique?:string;tags?:string[];enhancements?:Enhancement[];stratagemIds?:string[];ruleName?:string;summary?:string;ruleText?:string;relationshipNotes?:string[];};
 export type TargetRestrictions = {requiredKeywords?:string[];anyKeywords?:string[];excludedKeywords?:string[];unitNames?:string[];};
 export type Stratagem = {id:string;name:string;phases:('command'|'movement'|'shooting'|'charge'|'fight'|'any')[];cp?:number;type?:string;timing?:string;when?:string;target?:string;effect?:string;description?:string;playerTurn?:string;detachmentId?:string;targetRestrictions?:TargetRestrictions|null;restrictionConfidence?:'exact'|'structured'|'text-derived'|'unknown';gameVersion?:{edition?:string;dataslate?:string};};
 export type RetinueCondition = {label:string;requiredAttachedKeywords:string[];forbiddenCompanionNames?:string[];maxPerBodyguard?:number;};
@@ -43,11 +43,12 @@ export type BattleState = {
   objectives:ObjectiveState[];
   units:Record<string,BattleUnitState>;
   notes:string;
+  factionResources?:{cultAmbushMarkers?:number};
   /** Frozen army configuration for this battle. Older saved battles fall back to the live roster. */
   rosterSnapshot?:RosterUnit[];
   /** Frozen selected detachments/rules for this battle. */
   detachmentSnapshot?:Detachment[];
 };
 export type PackageManifest={file:string;hash:string};
-export type RulesManifest={datasetVersion:string;schemaVersion:number;factions:{necrons:{packages:Record<string,PackageManifest>}}};
+export type RulesManifest={datasetVersion:string;schemaVersion:number;scope?:{factions?:string[];[key:string]:unknown};factions:Record<string,{packages:Record<string,PackageManifest>}>;};
 export type InstalledRulesMeta={datasetVersion:string;schemaVersion:number;packages:Record<string,PackageManifest>;lastSuccessfulUpdate?:string;lastKnownGood?:string;mode?:'bootstrap'|'update';};
