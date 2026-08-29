@@ -11,9 +11,9 @@ import type {
   UnitDetail,
   UnitIndex,
 } from './types';
-import {canon} from './rules';
+import {canon} from './rules';\nimport {appConfig} from './appConfig';
 
-const DB='field-companion';
+const DB=appConfig.dbName;
 const VERSION=2;
 const RULE_STORES=['factions','units','profiles','weapons','abilities','keywords','detachments','enhancements','stratagems','points','leaders','source','coreRules','community40kdc','dependencies','searchIndex'] as const;
 type RuleStore=typeof RULE_STORES[number];
@@ -130,8 +130,9 @@ export function validatePackagePayload(name:string,payload:any){
 }
 
 export function changedPackageNames(local:RulesManifest,remote:RulesManifest){
-  return Object.entries(remote.factions.necrons.packages)
-    .filter(([name,info])=>local.factions.necrons.packages[name]?.hash!==info.hash)
+  const localPackages=factionPackages(local),remotePackages=factionPackages(remote);
+  return Object.entries(remotePackages)
+    .filter(([name,info])=>localPackages[name]?.hash!==info.hash)
     .map(([name])=>name);
 }
 
@@ -227,7 +228,7 @@ async function install(manifest:RulesManifest,packages:Record<string,any>,mode:'
   const installed:InstalledRulesMeta={
     datasetVersion:manifest.datasetVersion,
     schemaVersion:manifest.schemaVersion,
-    packages:manifest.factions.necrons.packages,
+    packages:factionPackages(manifest),
     lastSuccessfulUpdate:new Date().toISOString(),
     lastKnownGood:manifest.datasetVersion,
     mode,
@@ -240,7 +241,7 @@ async function install(manifest:RulesManifest,packages:Record<string,any>,mode:'
 }
 
 async function bundledManifest(){
-  const response=await fetch('./data/version.json',{cache:'no-store'});
+  const response=await fetch(appConfig.manifestPath,{cache:'no-store'});
   if(!response.ok)throw new Error('Bundled rules manifest unavailable.');
   const manifest=await response.json() as RulesManifest;
   if(manifest.schemaVersion>VERSION)throw new Error('Bundled rules need a newer app database schema.');
@@ -262,7 +263,7 @@ export async function initializeRules(){
     try{
       const manifest=await bundledManifest();
       if(isSameOrNewerDataset(manifest.datasetVersion,installed.datasetVersion)){
-        const changed=Object.entries(manifest.factions.necrons.packages)
+        const changed=Object.entries(factionPackages(manifest))
           .filter(([name,info])=>installed.packages?.[name]?.hash!==info.hash) as [string,PackageManifest][];
         if(changed.length){
           const packages=await fetchPackages(changed,false);
@@ -277,7 +278,7 @@ export async function initializeRules(){
   }
 
   const manifest=await bundledManifest();
-  const entries=Object.entries(manifest.factions.necrons.packages) as [string,PackageManifest][];
+  const entries=Object.entries(factionPackages(manifest)) as [string,PackageManifest][];
   const packages=await fetchPackages(entries,false);
   await install(manifest,packages,'bootstrap');
   return system<InstalledRulesMeta|null>('installed',null);
@@ -288,12 +289,12 @@ export async function checkForUpdates(force=false){
   if(!installed)throw new Error('Initialize local rules first.');
   if(!force&&!navigator.onLine)return{status:'offline' as const,changed:[] as string[]};
 
-  const response=await fetch('https://raw.githubusercontent.com/JinkoJink/40k-field-companion/main/public/data/version.json',{cache:'no-store'});
+  const response=await fetch(appConfig.remoteManifestUrl,{cache:'no-store'});
   if(!response.ok)throw new Error('Update manifest unavailable.');
   const manifest=await response.json() as RulesManifest;
   if(manifest.schemaVersion>VERSION)throw new Error('This update needs a newer app database schema.');
 
-  const changed=Object.entries(manifest.factions.necrons.packages)
+  const changed=Object.entries(factionPackages(manifest))
     .filter(([name,info])=>installed.packages?.[name]?.hash!==info.hash) as [string,PackageManifest][];
   if(!changed.length)return{status:'current' as const,changed:[] as string[]};
 
